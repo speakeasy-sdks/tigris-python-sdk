@@ -3,7 +3,7 @@ from . import utils
 from sdk.models import operations, shared
 from typing import Optional
 
-class Authentication:
+class Auth:
     _client: requests_http.Session
     _security_client: requests_http.Session
     _server_url: str
@@ -19,7 +19,7 @@ class Authentication:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
-    def auth_get_access_token(self) -> operations.AuthGetAccessTokenResponse:
+    def get(self) -> operations.AuthGetAccessTokenResponse:
         r"""Access Token
         Endpoint for receiving access token from Tigris Server. The endpoint requires Grant Type(`grant_type`) which has
          two possible values <i>\"REFRESH_TOKEN\"</i> or <i>\"CLIENT_CREDENTIALS\"</i> based on which either Refresh token(`refresh_token`)

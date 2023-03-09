@@ -23,19 +23,18 @@ s.config_security(
     )
 )
    
-req = operations.TigrisCreateAppKeyRequest(
-    path_params=operations.TigrisCreateAppKeyPathParams(
+req = operations.TigrisDeleteAppKeyRequest(
+    path_params=operations.TigrisDeleteAppKeyPathParams(
         project="unde",
     ),
-    request=shared.CreateAppKeyRequest(
-        description="deserunt",
-        name="porro",
+    request=shared.DeleteAppKeyRequest(
+        id="deserunt",
     ),
 )
     
-res = s.application_keys.tigris_create_app_key(req)
+res = s.app_key.delete(req)
 
-if res.create_app_key_response is not None:
+if res.delete_app_key_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->
@@ -44,102 +43,105 @@ if res.create_app_key_response is not None:
 ## SDK Available Operations
 
 
-### application_keys
+### app_key
 
+* `delete` - Deletes the app key
+* `list` - List all the app keys
+* `rotate` - Rotates the app key secret
 * `tigris_create_app_key` - Creates the app key
-* `tigris_delete_app_key` - Deletes the app key
-* `tigris_list_app_keys` - List all the app keys
-* `tigris_rotate_app_key_secret` - Rotates the app key secret
-* `tigris_update_app_key` - Updates the description of the app key
+* `update` - Updates the description of the app key
 
-### authentication
+### auth
 
-* `auth_get_access_token` - Access Token
+* `get` - Access Token
 
 ### cache
 
-* `cache_create_cache` - Creates the cache
-* `cache_del` - Deletes an entry from cache
-* `cache_delete_cache` - Deletes the cache
-* `cache_get` - Reads an entry from cache
-* `cache_get_set` - Sets an entry in the cache and returns the previous value if exists
-* `cache_keys` - Lists all the key for this cache
-* `cache_list_caches` - Lists all the caches for the given project
-* `cache_set` - Sets an entry in the cache
+* `create` - Creates the cache
+* `delete` - Deletes the cache
+* `delete_keys` - Deletes an entry from cache
+* `get_key` - Reads an entry from cache
+* `get_set_key` - Sets an entry in the cache and returns the previous value if exists
+* `list` - Lists all the caches for the given project
+* `list_keys` - Lists all the key for this cache
+* `set_key` - Sets an entry in the cache
 
-### collections
+### channel
 
-* `tigris_create_or_update_collection` - Create or update a collection
-* `tigris_delete` - Delete Documents
-* `tigris_describe_collection` - Describe Collection
-* `tigris_drop_collection` - Drop Collection
-* `tigris_import` - Import Documents
-* `tigris_insert` - Insert Documents
-* `tigris_read` - Read Documents
-* `tigris_replace` - Insert or Replace Documents
-* `tigris_search` - Search Documents.
-* `tigris_update` - Update Documents.
+* `get` - Get the details about a channel
+* `get_messages` - Get all messages for a channel
+* `list` - Get all channels for your application project
+* `list_subscriptions` - Get the subscriptions details about a channel
+* `push_messages` - push messages to a single channel
+* `realtime_presence` - Presence about the channel
+
+### collection
+
+* `create` - Create or update a collection
+* `delete_documents` - Delete Documents
+* `describe` - Describe Collection
+* `drop` - Drop Collection
+* `import_documents` - Import Documents
+* `insert_documents` - Insert Documents
+* `read_documents` - Read Documents
+* `replace_documents` - Insert or Replace Documents
+* `search_documents` - Search Documents.
+* `update_documents` - Update Documents.
 
 ### database
 
-* `tigris_begin_transaction` - Begin a transaction
-* `tigris_commit_transaction` - Commit a Transaction
-* `tigris_create_branch` - Create a database branch
-* `tigris_delete_branch` - Delete a database branch
-* `tigris_describe_database` - Describe database
+* `begin_transaction` - Begin a transaction
+* `commit_transaction` - Commit a Transaction
+* `create_branch` - Create a database branch
+* `delete_branch` - Delete a database branch
+* `describe` - Describe database
+* `list_collections` - List Collections
+* `rollback_transaction` - Rollback a transaction
 * `tigris_list_branches` - List database branches
-* `tigris_list_collections` - List Collections
-* `tigris_rollback_transaction` - Rollback a transaction
 
-### management
+### namespace
 
-* `management_create_namespace` - Creates a Namespace
-* `management_describe_namespaces` - Describe the details of all namespaces
-* `management_get_namespace_metadata` - Reads the Namespace Metadata
-* `management_get_user_metadata` - Reads the User Metadata
-* `management_insert_namespace_metadata` - Inserts Namespace Metadata
-* `management_insert_user_metadata` - Inserts User Metadata
-* `management_list_namespaces` - Lists all Namespaces
-* `management_update_namespace_metadata` - Updates Namespace Metadata
-* `management_update_user_metadata` - Updates User Metadata
+* `create` - Creates a Namespace
+* `get` - Describe the details of all namespaces
+* `get_metadata` - Reads the Namespace Metadata
+* `insert_metadata` - Inserts Namespace Metadata
+* `list` - Lists all Namespaces
+* `update_metadata` - Updates Namespace Metadata
 
-### observability
+### project
 
-* `health_api_health` - Health Check
-* `observability_get_info` - Information about the server
-* `observability_query_time_series_metrics` - Queries time series metrics
-* `observability_quota_limits` - Queries current namespace quota limits
-* `observability_quota_usage` - Queries current namespace quota usage
-
-### projects
-
-* `tigris_create_project` - Create Project
-* `tigris_delete_project` - Delete Project and all resources under project
-* `tigris_list_projects` - List Projects
-
-### realtime
-
-* `realtime_get_rt_channel` - Get the details about a channel
-* `realtime_get_rt_channels` - Get all channels for your application project
-* `realtime_list_subscriptions` - Get the subscriptions details about a channel
-* `realtime_messages` - push messages to a single channel
-* `realtime_presence` - Presence about the channel
-* `realtime_read_messages` - Get all messages for a channel
+* `create` - Create Project
+* `delete_project` - Delete Project and all resources under project
+* `list` - List Projects
 
 ### search
 
-* `search_create` - Create multiple documents
-* `search_create_by_id` - Create a single document
-* `search_create_or_replace` - Create or replace documents in an index
-* `search_create_or_update_index` - Creates or updates search index
-* `search_delete` - Delete documents by ids
-* `search_delete_by_query` - Delete documents by query
-* `search_delete_index` - Deletes search index
-* `search_get` - Get a single or multiple documents
-* `search_get_index` - Get information about a search index
-* `search_list_indexes` - List search indexes
-* `search_search` - Search Documents.
-* `search_update` - Update documents in an index
+* `create_document` - Create a single document
+* `create_documents` - Create multiple documents
+* `delete_documents` - Delete documents by ids
+* `delete_index` - Deletes search index
+* `find_documents` - Search Documents.
+* `get_documents` - Get a single or multiple documents
+* `get_index` - Get information about a search index
+* `list_indexes` - List search indexes
+* `query_delete_documents` - Delete documents by query
+* `replace_documents` - Create or replace documents in an index
+* `update_documents` - Update documents in an index
+* `update_index` - Creates or updates search index
+
+### system
+
+* `get_health` - Health Check
+* `get_server_info` - Information about the server
+* `observability_quota_usage` - Queries current namespace quota usage
+* `query_quota_limits` - Queries current namespace quota limits
+* `query_time_series_metrics` - Queries time series metrics
+
+### user
+
+* `get_metadata` - Reads the User Metadata
+* `insert_metadata` - Inserts User Metadata
+* `update_metadata` - Updates User Metadata
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

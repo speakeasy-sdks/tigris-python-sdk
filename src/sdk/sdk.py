@@ -58,16 +58,17 @@ The 5xx range indicate an error with Tigris servers (these are rare).
 """
 import requests as requests_http
 from . import utils
-from .application_keys import ApplicationKeys
-from .authentication import Authentication
+from .appkey import AppKey
+from .auth import Auth
 from .cache import Cache
-from .collections import Collections
+from .channel import Channel
+from .collection import Collection
 from .database import Database
-from .management import Management
-from .observability import Observability
-from .projects import Projects
-from .realtime import Realtime
+from .namespace import Namespace
+from .project import Project
 from .search import Search
+from .system import System
+from .user import User
 from sdk.models import shared
 
 SERVERS = [
@@ -134,24 +135,25 @@ class SDK:
     # Limitations
     <li>Do not rely on case to distinguish between databases or collections names.</li> <li>Database Name and Collection Name cannot be empty and can only have the characters matches the regex: <code>^[a-zA-Z]+[a-zA-Z0-9_]+$</code>.</li> <li>Duplicate field names are not allowed. </li> <li>The maximum allowed document size is 100KB.</li> <li>The maximum allowed transaction size is 10MB.</li>
     """
-    application_keys: ApplicationKeys
-    authentication: Authentication
+    app_key: AppKey
+    auth: Auth
     cache: Cache
-    collections: Collections
+    channel: Channel
+    collection: Collection
     database: Database
-    management: Management
-    observability: Observability
-    projects: Projects
-    realtime: Realtime
+    namespace: Namespace
+    project: Project
     search: Search
+    system: System
+    user: User
     
     _client: requests_http.Session
     _security_client: requests_http.Session
     _security: shared.Security
     _server_url: str = SERVERS[0]
     _language: str = "python"
-    _sdk_version: str = "0.1.0"
-    _gen_version: str = "1.9.0"
+    _sdk_version: str = "0.0.1"
+    _gen_version: str = "1.9.1"
 
     def __init__(self) -> None:
         self._client = requests_http.Session()
@@ -181,7 +183,7 @@ class SDK:
         self._init_sdks()
     
     def _init_sdks(self):
-        self.application_keys = ApplicationKeys(
+        self.app_key = AppKey(
             self._client,
             self._security_client,
             self._server_url,
@@ -190,7 +192,7 @@ class SDK:
             self._gen_version
         )
         
-        self.authentication = Authentication(
+        self.auth = Auth(
             self._client,
             self._security_client,
             self._server_url,
@@ -208,7 +210,16 @@ class SDK:
             self._gen_version
         )
         
-        self.collections = Collections(
+        self.channel = Channel(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.collection = Collection(
             self._client,
             self._security_client,
             self._server_url,
@@ -226,7 +237,7 @@ class SDK:
             self._gen_version
         )
         
-        self.management = Management(
+        self.namespace = Namespace(
             self._client,
             self._security_client,
             self._server_url,
@@ -235,25 +246,7 @@ class SDK:
             self._gen_version
         )
         
-        self.observability = Observability(
-            self._client,
-            self._security_client,
-            self._server_url,
-            self._language,
-            self._sdk_version,
-            self._gen_version
-        )
-        
-        self.projects = Projects(
-            self._client,
-            self._security_client,
-            self._server_url,
-            self._language,
-            self._sdk_version,
-            self._gen_version
-        )
-        
-        self.realtime = Realtime(
+        self.project = Project(
             self._client,
             self._security_client,
             self._server_url,
@@ -263,6 +256,24 @@ class SDK:
         )
         
         self.search = Search(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.system = System(
+            self._client,
+            self._security_client,
+            self._server_url,
+            self._language,
+            self._sdk_version,
+            self._gen_version
+        )
+        
+        self.user = User(
             self._client,
             self._security_client,
             self._server_url,

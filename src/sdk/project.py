@@ -3,7 +3,7 @@ from . import utils
 from sdk.models import operations, shared
 from typing import Optional
 
-class Projects:
+class Project:
     _client: requests_http.Session
     _security_client: requests_http.Session
     _server_url: str
@@ -19,7 +19,7 @@ class Projects:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
-    def tigris_create_project(self, request: operations.TigrisCreateProjectRequest) -> operations.TigrisCreateProjectResponse:
+    def create(self, request: operations.TigrisCreateProjectRequest) -> operations.TigrisCreateProjectResponse:
         r"""Create Project
         Creates a new project. Returns an AlreadyExists error with a status code 409 if the project already exists.
         """
@@ -53,7 +53,7 @@ class Projects:
 
         return res
 
-    def tigris_delete_project(self, request: operations.TigrisDeleteProjectRequest) -> operations.TigrisDeleteProjectResponse:
+    def delete_project(self, request: operations.TigrisDeleteProjectRequest) -> operations.TigrisDeleteProjectResponse:
         r"""Delete Project and all resources under project
         Delete Project deletes all the collections in this project along with all of the documents, and associated metadata for these collections.
         """
@@ -87,7 +87,7 @@ class Projects:
 
         return res
 
-    def tigris_list_projects(self) -> operations.TigrisListProjectsResponse:
+    def list(self) -> operations.TigrisListProjectsResponse:
         r"""List Projects
         List returns all the projects.
         """

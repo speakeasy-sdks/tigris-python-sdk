@@ -8,12 +8,12 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class ManagementCreateNamespaceRequest:
+class CreateNamespaceRequest:
     request: shared_createnamespacerequest.CreateNamespaceRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 @dataclasses.dataclass
-class ManagementCreateNamespaceResponse:
+class CreateNamespaceResponse:
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     create_namespace_response: Optional[shared_createnamespaceresponse.CreateNamespaceResponse] = dataclasses.field(default=None)

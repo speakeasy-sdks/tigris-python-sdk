@@ -12,19 +12,18 @@ s.config_security(
     )
 )
    
-req = operations.TigrisCreateAppKeyRequest(
-    path_params=operations.TigrisCreateAppKeyPathParams(
+req = operations.TigrisDeleteAppKeyRequest(
+    path_params=operations.TigrisDeleteAppKeyPathParams(
         project="unde",
     ),
-    request=shared.CreateAppKeyRequest(
-        description="deserunt",
-        name="porro",
+    request=shared.DeleteAppKeyRequest(
+        id="deserunt",
     ),
 )
     
-res = s.application_keys.tigris_create_app_key(req)
+res = s.app_key.delete(req)
 
-if res.create_app_key_response is not None:
+if res.delete_app_key_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

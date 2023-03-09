@@ -3,7 +3,7 @@ from . import utils
 from sdk.models import operations, shared
 from typing import Optional
 
-class Collections:
+class Collection:
     _client: requests_http.Session
     _security_client: requests_http.Session
     _server_url: str
@@ -19,7 +19,7 @@ class Collections:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
-    def tigris_create_or_update_collection(self, request: operations.TigrisCreateOrUpdateCollectionRequest) -> operations.TigrisCreateOrUpdateCollectionResponse:
+    def create(self, request: operations.TigrisCreateOrUpdateCollectionRequest) -> operations.TigrisCreateOrUpdateCollectionResponse:
         r"""Create or update a collection
         Creates a new collection or atomically upgrades the collection to the new schema provided in the request.
          Schema changes are applied atomically and immediately without any downtime.
@@ -57,7 +57,7 @@ class Collections:
 
         return res
 
-    def tigris_delete(self, request: operations.TigrisDeleteRequest) -> operations.TigrisDeleteResponse:
+    def delete_documents(self, request: operations.TigrisDeleteRequest) -> operations.TigrisDeleteResponse:
         r"""Delete Documents
         Delete a range of documents in the collection using the condition provided in the filter.
         """
@@ -91,7 +91,7 @@ class Collections:
 
         return res
 
-    def tigris_describe_collection(self, request: operations.TigrisDescribeCollectionRequest) -> operations.TigrisDescribeCollectionResponse:
+    def describe(self, request: operations.TigrisDescribeCollectionRequest) -> operations.TigrisDescribeCollectionResponse:
         r"""Describe Collection
         Returns the information related to the collection. This can be used to retrieve the schema or size of the collection.
         """
@@ -125,7 +125,7 @@ class Collections:
 
         return res
 
-    def tigris_drop_collection(self, request: operations.TigrisDropCollectionRequest) -> operations.TigrisDropCollectionResponse:
+    def drop(self, request: operations.TigrisDropCollectionRequest) -> operations.TigrisDropCollectionResponse:
         r"""Drop Collection
         Drops the collection inside this project. This API deletes all of the
          documents inside this collection and any metadata associated with it.
@@ -160,7 +160,7 @@ class Collections:
 
         return res
 
-    def tigris_import(self, request: operations.TigrisImportRequest) -> operations.TigrisImportResponse:
+    def import_documents(self, request: operations.TigrisImportRequest) -> operations.TigrisImportResponse:
         r"""Import Documents
         Imports documents into the collection.
         
@@ -199,7 +199,7 @@ class Collections:
 
         return res
 
-    def tigris_insert(self, request: operations.TigrisInsertRequest) -> operations.TigrisInsertResponse:
+    def insert_documents(self, request: operations.TigrisInsertRequest) -> operations.TigrisInsertResponse:
         r"""Insert Documents
         Inserts new documents in the collection and returns an AlreadyExists error if any of the documents
          in the request already exists. Insert provides idempotency by returning an error if the document
@@ -235,7 +235,7 @@ class Collections:
 
         return res
 
-    def tigris_read(self, request: operations.TigrisReadRequest) -> operations.TigrisReadResponse:
+    def read_documents(self, request: operations.TigrisReadRequest) -> operations.TigrisReadResponse:
         r"""Read Documents
         Reads a range of documents from the collection, or messages from a collection in case of event streaming. Tigris does not require you to
          index any fields and automatically index all the fields which means you can filter by any field in the document.
@@ -274,7 +274,7 @@ class Collections:
 
         return res
 
-    def tigris_replace(self, request: operations.TigrisReplaceRequest) -> operations.TigrisReplaceResponse:
+    def replace_documents(self, request: operations.TigrisReplaceRequest) -> operations.TigrisReplaceResponse:
         r"""Insert or Replace Documents
         Inserts the documents or replaces the existing documents in the collections.
         """
@@ -308,7 +308,7 @@ class Collections:
 
         return res
 
-    def tigris_search(self, request: operations.TigrisSearchRequest) -> operations.TigrisSearchResponse:
+    def search_documents(self, request: operations.TigrisSearchRequest) -> operations.TigrisSearchResponse:
         r"""Search Documents.
         Searches a collection for the documents matching the query, or messages in case of event streaming. A search can be
          a term search or a phrase search. Search API allows filtering the result set using filters as documented <a href=\"https://docs.tigrisdata.com/overview/query#specification-1\" title=\"here\">here</a>.
@@ -345,7 +345,7 @@ class Collections:
 
         return res
 
-    def tigris_update(self, request: operations.TigrisUpdateRequest) -> operations.TigrisUpdateResponse:
+    def update_documents(self, request: operations.TigrisUpdateRequest) -> operations.TigrisUpdateResponse:
         r"""Update Documents.
         Update a range of documents in the collection using the condition provided in the filter.
         """
