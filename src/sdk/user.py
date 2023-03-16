@@ -26,10 +26,10 @@ class User:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/management/users/metadata/{metadataKey}/get', request.path_params)
+        url = utils.generate_url(operations.ManagementGetUserMetadataPathParams, base_url, '/v1/management/users/metadata/{metadataKey}/get', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -60,10 +60,10 @@ class User:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/management/users/metadata/{metadataKey}/insert', request.path_params)
+        url = utils.generate_url(operations.ManagementInsertUserMetadataPathParams, base_url, '/v1/management/users/metadata/{metadataKey}/insert', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -94,10 +94,10 @@ class User:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/management/users/metadata/{metadataKey}/update', request.path_params)
+        url = utils.generate_url(operations.ManagementUpdateUserMetadataPathParams, base_url, '/v1/management/users/metadata/{metadataKey}/update', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

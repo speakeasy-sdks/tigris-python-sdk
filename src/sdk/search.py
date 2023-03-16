@@ -29,10 +29,10 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{index}/documents/{id}', request.path_params)
+        url = utils.generate_url(operations.SearchCreateByIDPathParams, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/{id}', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -67,10 +67,10 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
+        url = utils.generate_url(operations.SearchCreatePathParams, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -103,10 +103,10 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
+        url = utils.generate_url(operations.SearchDeletePathParams, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -136,10 +136,10 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{name}', request.path_params)
+        url = utils.generate_url(operations.SearchDeleteIndexPathParams, base_url, '/v1/projects/{project}/search/indexes/{name}', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -174,10 +174,10 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{index}/documents/search', request.path_params)
+        url = utils.generate_url(operations.SearchSearchPathParams, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/search', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -209,9 +209,9 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
+        url = utils.generate_url(operations.SearchGetPathParams, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
         
-        query_params = utils.get_query_params(request.query_params)
+        query_params = utils.get_query_params(operations.SearchGetQueryParams, request.query_params)
         
         client = self._security_client
         
@@ -237,7 +237,7 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{name}', request.path_params)
+        url = utils.generate_url(operations.SearchGetIndexPathParams, base_url, '/v1/projects/{project}/search/indexes/{name}', request.path_params)
         
         
         client = self._security_client
@@ -264,9 +264,9 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes', request.path_params)
+        url = utils.generate_url(operations.SearchListIndexesPathParams, base_url, '/v1/projects/{project}/search/indexes', request.path_params)
         
-        query_params = utils.get_query_params(request.query_params)
+        query_params = utils.get_query_params(operations.SearchListIndexesQueryParams, request.query_params)
         
         client = self._security_client
         
@@ -294,10 +294,10 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery', request.path_params)
+        url = utils.generate_url(operations.SearchDeleteByQueryPathParams, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -331,10 +331,10 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
+        url = utils.generate_url(operations.SearchCreateOrReplacePathParams, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -368,10 +368,10 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
+        url = utils.generate_url(operations.SearchUpdatePathParams, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -401,10 +401,10 @@ class Search:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/search/indexes/{name}', request.path_params)
+        url = utils.generate_url(operations.SearchCreateOrUpdateIndexPathParams, base_url, '/v1/projects/{project}/search/indexes/{name}', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

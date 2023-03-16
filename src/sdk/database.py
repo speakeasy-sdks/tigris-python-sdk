@@ -28,10 +28,10 @@ class Database:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/database/transactions/begin', request.path_params)
+        url = utils.generate_url(operations.TigrisBeginTransactionPathParams, base_url, '/v1/projects/{project}/database/transactions/begin', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -63,10 +63,10 @@ class Database:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/database/transactions/commit', request.path_params)
+        url = utils.generate_url(operations.TigrisCommitTransactionPathParams, base_url, '/v1/projects/{project}/database/transactions/commit', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -97,10 +97,10 @@ class Database:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/database/branches/{branch}/create', request.path_params)
+        url = utils.generate_url(operations.TigrisCreateBranchPathParams, base_url, '/v1/projects/{project}/database/branches/{branch}/create', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -132,10 +132,10 @@ class Database:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/database/branches/{branch}/delete', request.path_params)
+        url = utils.generate_url(operations.TigrisDeleteBranchPathParams, base_url, '/v1/projects/{project}/database/branches/{branch}/delete', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -167,10 +167,10 @@ class Database:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/database/describe', request.path_params)
+        url = utils.generate_url(operations.TigrisDescribeDatabasePathParams, base_url, '/v1/projects/{project}/database/describe', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -201,9 +201,9 @@ class Database:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/database/collections', request.path_params)
+        url = utils.generate_url(operations.TigrisListCollectionsPathParams, base_url, '/v1/projects/{project}/database/collections', request.path_params)
         
-        query_params = utils.get_query_params(request.query_params)
+        query_params = utils.get_query_params(operations.TigrisListCollectionsQueryParams, request.query_params)
         
         client = self._security_client
         
@@ -231,10 +231,10 @@ class Database:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/database/transactions/rollback', request.path_params)
+        url = utils.generate_url(operations.TigrisRollbackTransactionPathParams, base_url, '/v1/projects/{project}/database/transactions/rollback', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -265,7 +265,7 @@ class Database:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/database/branches', request.path_params)
+        url = utils.generate_url(operations.TigrisListBranchesPathParams, base_url, '/v1/projects/{project}/database/branches', request.path_params)
         
         
         client = self._security_client

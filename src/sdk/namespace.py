@@ -29,7 +29,7 @@ class Namespace:
         url = base_url.removesuffix('/') + '/v1/management/namespaces/create'
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -88,10 +88,10 @@ class Namespace:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/management/namespace/metadata/{metadataKey}/get', request.path_params)
+        url = utils.generate_url(operations.ManagementGetNamespaceMetadataPathParams, base_url, '/v1/management/namespace/metadata/{metadataKey}/get', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -122,10 +122,10 @@ class Namespace:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/management/namespace/metadata/{metadataKey}/insert', request.path_params)
+        url = utils.generate_url(operations.ManagementInsertNamespaceMetadataPathParams, base_url, '/v1/management/namespace/metadata/{metadataKey}/insert', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -184,10 +184,10 @@ class Namespace:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/management/namespace/metadata/{metadataKey}/update', request.path_params)
+        url = utils.generate_url(operations.ManagementUpdateNamespaceMetadataPathParams, base_url, '/v1/management/namespace/metadata/{metadataKey}/update', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

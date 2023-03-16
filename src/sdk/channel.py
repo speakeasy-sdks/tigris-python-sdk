@@ -25,7 +25,7 @@ class Channel:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/realtime/channels/{channel}', request.path_params)
+        url = utils.generate_url(operations.RealtimeGetRTChannelPathParams, base_url, '/v1/projects/{project}/realtime/channels/{channel}', request.path_params)
         
         
         client = self._security_client
@@ -52,9 +52,9 @@ class Channel:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/realtime/channels/{channel}/messages', request.path_params)
+        url = utils.generate_url(operations.RealtimeReadMessagesPathParams, base_url, '/v1/projects/{project}/realtime/channels/{channel}/messages', request.path_params)
         
-        query_params = utils.get_query_params(request.query_params)
+        query_params = utils.get_query_params(operations.RealtimeReadMessagesQueryParams, request.query_params)
         
         client = self._security_client
         
@@ -80,7 +80,7 @@ class Channel:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/realtime/channels', request.path_params)
+        url = utils.generate_url(operations.RealtimeGetRTChannelsPathParams, base_url, '/v1/projects/{project}/realtime/channels', request.path_params)
         
         
         client = self._security_client
@@ -107,9 +107,9 @@ class Channel:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/realtime/channels/{channel}/subscriptions', request.path_params)
+        url = utils.generate_url(operations.RealtimeListSubscriptionsPathParams, base_url, '/v1/projects/{project}/realtime/channels/{channel}/subscriptions', request.path_params)
         
-        query_params = utils.get_query_params(request.query_params)
+        query_params = utils.get_query_params(operations.RealtimeListSubscriptionsQueryParams, request.query_params)
         
         client = self._security_client
         
@@ -135,10 +135,10 @@ class Channel:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/realtime/channels/{channel}/messages', request.path_params)
+        url = utils.generate_url(operations.RealtimeMessagesPathParams, base_url, '/v1/projects/{project}/realtime/channels/{channel}/messages', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -168,7 +168,7 @@ class Channel:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/realtime/channels/{channel}/presence', request.path_params)
+        url = utils.generate_url(operations.RealtimePresencePathParams, base_url, '/v1/projects/{project}/realtime/channels/{channel}/presence', request.path_params)
         
         
         client = self._security_client

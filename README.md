@@ -14,14 +14,14 @@ pip install tigris-core
 import sdk
 from sdk.models import operations, shared
 
-s = sdk.SDK()
-s.config_security(
+s = sdk.SDK(
     security=shared.Security(
         bearer_auth=shared.SchemeBearerAuth(
             authorization="Bearer YOUR_BEARER_TOKEN_HERE",
         ),
-    )
+    ),
 )
+
    
 req = operations.TigrisDeleteAppKeyRequest(
     path_params=operations.TigrisDeleteAppKeyPathParams(

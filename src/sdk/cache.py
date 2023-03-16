@@ -25,10 +25,10 @@ class Cache:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/caches/{name}/create', request.path_params)
+        url = utils.generate_url(operations.CacheCreateCachePathParams, base_url, '/v1/projects/{project}/caches/{name}/create', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -58,10 +58,10 @@ class Cache:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/caches/{name}/delete', request.path_params)
+        url = utils.generate_url(operations.CacheDeleteCachePathParams, base_url, '/v1/projects/{project}/caches/{name}/delete', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -91,10 +91,10 @@ class Cache:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/caches/{name}/{key}/delete', request.path_params)
+        url = utils.generate_url(operations.CacheDelPathParams, base_url, '/v1/projects/{project}/caches/{name}/{key}/delete', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -124,7 +124,7 @@ class Cache:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/caches/{name}/{key}/get', request.path_params)
+        url = utils.generate_url(operations.CacheGetPathParams, base_url, '/v1/projects/{project}/caches/{name}/{key}/get', request.path_params)
         
         
         client = self._security_client
@@ -151,10 +151,10 @@ class Cache:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/caches/{name}/{key}/getset', request.path_params)
+        url = utils.generate_url(operations.CacheGetSetPathParams, base_url, '/v1/projects/{project}/caches/{name}/{key}/getset', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -184,7 +184,7 @@ class Cache:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/caches/list', request.path_params)
+        url = utils.generate_url(operations.CacheListCachesPathParams, base_url, '/v1/projects/{project}/caches/list', request.path_params)
         
         
         client = self._security_client
@@ -211,9 +211,9 @@ class Cache:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/caches/{name}/keys', request.path_params)
+        url = utils.generate_url(operations.CacheKeysPathParams, base_url, '/v1/projects/{project}/caches/{name}/keys', request.path_params)
         
-        query_params = utils.get_query_params(request.query_params)
+        query_params = utils.get_query_params(operations.CacheKeysQueryParams, request.query_params)
         
         client = self._security_client
         
@@ -239,10 +239,10 @@ class Cache:
         
         base_url = self._server_url
         
-        url = utils.generate_url(base_url, '/v1/projects/{project}/caches/{name}/{key}/set', request.path_params)
+        url = utils.generate_url(operations.CacheSetPathParams, base_url, '/v1/projects/{project}/caches/{name}/{key}/set', request.path_params)
         
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request)
+        req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
