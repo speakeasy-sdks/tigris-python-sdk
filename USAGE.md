@@ -5,20 +5,16 @@ from sdk.models import operations, shared
 
 s = sdk.SDK(
     security=shared.Security(
-        bearer_auth=shared.SchemeBearerAuth(
-            authorization="Bearer YOUR_BEARER_TOKEN_HERE",
-        ),
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
 
-   
+
 req = operations.TigrisDeleteAppKeyRequest(
-    path_params=operations.TigrisDeleteAppKeyPathParams(
-        project="unde",
+    delete_app_key_request=shared.DeleteAppKeyRequest(
+        id="unde",
     ),
-    request=shared.DeleteAppKeyRequest(
-        id="deserunt",
-    ),
+    project="deserunt",
 )
     
 res = s.app_key.delete(req)
