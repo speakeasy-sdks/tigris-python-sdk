@@ -19,8 +19,8 @@ class SearchRequest:
     exclude_fields: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('exclude_fields'), 'exclude': lambda f: f is None }})
     r"""Array of document field names to exclude from results. `include_fields`, if specified, takes precedence over `exclude_fields`."""  
     facet: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('facet'), 'exclude': lambda f: f is None }})
-    r"""Facet query to aggregate results on given fields. The field name for the facet search can be passed like this `{\"brand\": { \"size\": 10 }}` where the size controls the total facets for this field."""  
-    fields: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fields'), 'exclude': lambda f: f is None }})  
+    r"""Facet query to aggregate results on given fields. The field name for the facet search can be passed like this `{\\"brand\\": { \\"size\\": 10 }}` where the size controls the total facets for this field."""  
+    fields_: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fields'), 'exclude': lambda f: f is None }})  
     filter: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('filter'), 'exclude': lambda f: f is None }})
     r"""Filter stacks on top of query results to further narrow down the results. Similar to `ReadRequest.filter`"""  
     include_fields: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('include_fields'), 'exclude': lambda f: f is None }})
@@ -34,5 +34,5 @@ class SearchRequest:
     search_fields: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('search_fields'), 'exclude': lambda f: f is None }})
     r"""Array of fields to project search query against"""  
     sort: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sort'), 'exclude': lambda f: f is None }})
-    r"""Array of fields and corresponding sort orders to order the results `[{ \"salary\": \"$desc\" }]`"""  
+    r"""Array of fields and corresponding sort orders to order the results `[{ \\"salary\\": \\"$desc\\" }]`"""  
     

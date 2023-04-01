@@ -10,7 +10,7 @@ from typing import Any, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class BeginTransactionRequest:
-    r"""Start new transaction in project specified by \"project\"."""
+    r"""Start new transaction in project specified by \\"project\\"."""
     
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
     r"""Optionally specify a project branch name to perform operation on"""  

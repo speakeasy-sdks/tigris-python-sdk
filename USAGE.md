@@ -12,9 +12,9 @@ s = sdk.SDK(
 
 req = operations.TigrisDeleteAppKeyRequest(
     delete_app_key_request=shared.DeleteAppKeyRequest(
-        id="unde",
+        id="corrupti",
     ),
-    project="deserunt",
+    project="provident",
 )
     
 res = s.app_key.delete(req)

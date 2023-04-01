@@ -16,5 +16,5 @@ class DeleteResponse:
     metadata: Optional[shared_responsemetadata.ResponseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
     r"""Has metadata related to the documents stored."""  
     status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-    r"""an enum with value set as \"deleted\""""  
+    r"""an enum with value set as \\"deleted\\" """  
     

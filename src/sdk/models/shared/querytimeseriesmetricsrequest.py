@@ -9,21 +9,21 @@ from sdk import utils
 from typing import Optional
 
 class QueryTimeSeriesMetricsRequestFunctionEnum(str, Enum):
-    RATE = "RATE"
-    COUNT = "COUNT"
-    NONE = "NONE"
+    RATE = 'RATE'
+    COUNT = 'COUNT'
+    NONE = 'NONE'
 
 class QueryTimeSeriesMetricsRequestSpaceAggregationEnum(str, Enum):
-    AVG = "AVG"
-    MIN = "MIN"
-    MAX = "MAX"
-    SUM = "SUM"
+    AVG = 'AVG'
+    MIN = 'MIN'
+    MAX = 'MAX'
+    SUM = 'SUM'
 
 class QueryTimeSeriesMetricsRequestTigrisOperationEnum(str, Enum):
-    ALL = "ALL"
-    READ = "READ"
-    WRITE = "WRITE"
-    METADATA = "METADATA"
+    ALL = 'ALL'
+    READ = 'READ'
+    WRITE = 'WRITE'
+    METADATA = 'METADATA'
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

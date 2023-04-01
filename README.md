@@ -23,9 +23,9 @@ s = sdk.SDK(
 
 req = operations.TigrisDeleteAppKeyRequest(
     delete_app_key_request=shared.DeleteAppKeyRequest(
-        id="unde",
+        id="corrupti",
     ),
-    project="deserunt",
+    project="provident",
 )
     
 res = s.app_key.delete(req)
@@ -36,7 +36,7 @@ if res.delete_app_key_response is not None:
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### app_key
