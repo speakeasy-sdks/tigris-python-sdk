@@ -6,8 +6,8 @@ management:
   generationVersion: 2.17.9
 generation:
   telemetryEnabled: false
-  sdkClassName: SDK
-  sdkFlattening: false
+  sdkClassName: Tigris
+  sdkFlattening: true
   singleTagPerOp: false
 python:
   version: 0.5.1
