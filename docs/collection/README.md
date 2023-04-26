@@ -1,0 +1,520 @@
+# collection
+
+## Overview
+
+The Collections section provide APIs that can be used to manage collections. A collection can have one or more documents.
+
+### Available Operations
+
+* [create](#create) - Create or update a collection
+* [delete_documents](#delete_documents) - Delete Documents
+* [describe](#describe) - Describe Collection
+* [drop](#drop) - Drop Collection
+* [import_documents](#import_documents) - Import Documents
+* [insert_documents](#insert_documents) - Insert Documents
+* [read_documents](#read_documents) - Read Documents
+* [replace_documents](#replace_documents) - Insert or Replace Documents
+* [search_documents](#search_documents) - Search Documents.
+* [update_documents](#update_documents) - Update Documents.
+
+## create
+
+Creates a new collection or atomically upgrades the collection to the new schema provided in the request.
+ Schema changes are applied atomically and immediately without any downtime.
+ Tigris Offers two types of collections: <p></p>
+    <li> `DOCUMENTS`: Offers rich CRUD APIs.
+    <li> `MESSAGES`: Offers event streaming APIs.
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisCreateOrUpdateCollectionRequest(
+    create_or_update_collection_request=shared.CreateOrUpdateCollectionRequest(
+        branch="ullam",
+        only_create=False,
+        options={
+            "quos": "sint",
+            "accusantium": "mollitia",
+            "reiciendis": "mollitia",
+        },
+        schema={
+            "eum": "dolor",
+            "necessitatibus": "odit",
+        },
+    ),
+    collection="nemo",
+    project="quasi",
+)
+
+res = s.collection.create(req)
+
+if res.create_or_update_collection_response is not None:
+    # handle response
+```
+
+## delete_documents
+
+Delete a range of documents in the collection using the condition provided in the filter.
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisDeleteRequest(
+    delete_request=shared.DeleteRequest(
+        branch="iure",
+        filter={
+            "debitis": "eius",
+            "maxime": "deleniti",
+            "facilis": "in",
+            "architecto": "architecto",
+        },
+        options=shared.DeleteRequestOptions(
+            collation=shared.Collation(
+                case="repudiandae",
+            ),
+            limit=352312,
+            write_options={
+                "nihil": "repellat",
+                "quibusdam": "sed",
+                "saepe": "pariatur",
+            },
+        ),
+    ),
+    collection="accusantium",
+    project="consequuntur",
+)
+
+res = s.collection.delete_documents(req)
+
+if res.delete_response is not None:
+    # handle response
+```
+
+## describe
+
+Returns the information related to the collection. This can be used to retrieve the schema or size of the collection.
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisDescribeCollectionRequest(
+    describe_collection_request=shared.DescribeCollectionRequest(
+        branch="praesentium",
+        collection="natus",
+        options={
+            "sunt": "quo",
+        },
+        project="illum",
+        schema_format="pariatur",
+    ),
+    collection="maxime",
+    project="ea",
+)
+
+res = s.collection.describe(req)
+
+if res.describe_collection_response is not None:
+    # handle response
+```
+
+## drop
+
+Drops the collection inside this project. This API deletes all of the
+ documents inside this collection and any metadata associated with it.
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisDropCollectionRequest(
+    drop_collection_request=shared.DropCollectionRequest(
+        branch="excepturi",
+        options={
+            "ea": "accusantium",
+        },
+    ),
+    collection="ab",
+    project="maiores",
+)
+
+res = s.collection.drop(req)
+
+if res.drop_collection_response is not None:
+    # handle response
+```
+
+## import_documents
+
+Imports documents into the collection.
+
+ It automatically:
+  * Detects the schema of the documents in the batch
+  * Evolves the schema as soon as it's backward compatible
+  * Creates collection with inferred schema (if requested)
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisImportRequest(
+    import_request=shared.ImportRequest(
+        autogenerated=[
+            "ipsam",
+            "voluptate",
+            "autem",
+        ],
+        branch="nam",
+        create_collection=False,
+        documents=[
+            {
+                "nemo": "voluptatibus",
+                "perferendis": "fugiat",
+                "amet": "aut",
+                "cumque": "corporis",
+            },
+        ],
+        options=shared.ImportRequestOptions(
+            write_options={
+                "libero": "nobis",
+                "dolores": "quis",
+                "totam": "dignissimos",
+                "eaque": "quis",
+            },
+        ),
+        primary_key=[
+            "eos",
+        ],
+    ),
+    collection="perferendis",
+    project="dolores",
+)
+
+res = s.collection.import_documents(req)
+
+if res.import_response is not None:
+    # handle response
+```
+
+## insert_documents
+
+Inserts new documents in the collection and returns an AlreadyExists error if any of the documents
+ in the request already exists. Insert provides idempotency by returning an error if the document
+ already exists. To replace documents, use REPLACE API instead of INSERT.
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisInsertRequest(
+    insert_request=shared.InsertRequest(
+        branch="minus",
+        documents=[
+            {
+                "vero": "nostrum",
+            },
+            {
+                "recusandae": "omnis",
+                "facilis": "perspiciatis",
+                "voluptatem": "porro",
+                "consequuntur": "blanditiis",
+            },
+        ],
+        options=shared.InsertRequestOptions(
+            write_options={
+                "eaque": "occaecati",
+                "rerum": "adipisci",
+                "asperiores": "earum",
+            },
+        ),
+    ),
+    collection="modi",
+    project="iste",
+)
+
+res = s.collection.insert_documents(req)
+
+if res.insert_response is not None:
+    # handle response
+```
+
+## read_documents
+
+Reads a range of documents from the collection, or messages from a collection in case of event streaming. Tigris does not require you to
+ index any fields and automatically index all the fields which means you can filter by any field in the document.
+ An empty filter will trigger reading all the documents inside this collection. The API supports pagination that
+ can be used by passing `Limit/Skip` parameters. The `skip` parameter skips the number of documents from the start and
+ the `limit` parameter is used to specify the number of documents to read. You can find more detailed documentation
+ of the Read API <a href="https://docs.tigrisdata.com/overview/query" title="here">here</a>.
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisReadRequest(
+    read_request=shared.ReadRequest(
+        branch="dolorum",
+        fields_={
+            "pariatur": "provident",
+            "nobis": "libero",
+            "delectus": "quaerat",
+        },
+        filter={
+            "aliquid": "dolorem",
+            "dolorem": "dolor",
+            "qui": "ipsum",
+        },
+        options=shared.ReadRequestOptions(
+            collation=shared.Collation(
+                case="hic",
+            ),
+            limit=569574,
+            offset="cum",
+            skip=452109,
+        ),
+        sort="dignissimos",
+    ),
+    collection="reiciendis",
+    project="amet",
+)
+
+res = s.collection.read_documents(req)
+
+if res.streaming_read_response is not None:
+    # handle response
+```
+
+## replace_documents
+
+Inserts the documents or replaces the existing documents in the collections.
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisReplaceRequest(
+    replace_request=shared.ReplaceRequest(
+        branch="dolorum",
+        documents=[
+            {
+                "ipsa": "ipsa",
+            },
+            {
+                "odio": "quaerat",
+                "accusamus": "quidem",
+            },
+        ],
+        options=shared.ReplaceRequestOptions(
+            write_options={
+                "voluptas": "natus",
+                "eos": "atque",
+                "sit": "fugiat",
+                "ab": "soluta",
+            },
+        ),
+    ),
+    collection="dolorum",
+    project="iusto",
+)
+
+res = s.collection.replace_documents(req)
+
+if res.replace_response is not None:
+    # handle response
+```
+
+## search_documents
+
+Searches a collection for the documents matching the query, or messages in case of event streaming. A search can be
+ a term search or a phrase search. Search API allows filtering the result set using filters as documented <a href="https://docs.tigrisdata.com/overview/query#specification-1" title="here">here</a>.
+ You can also perform a faceted search by passing the fields in the facet parameter.
+ You can find more detailed documentation of the Search API with multiple examples <a href="https://docs.tigrisdata.com/overview/search" title="here">here</a>.
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisSearchRequest(
+    search_request=shared.SearchRequest(
+        branch="voluptate",
+        collation=shared.Collation(
+            case="dolorum",
+        ),
+        exclude_fields=[
+            "omnis",
+            "necessitatibus",
+            "distinctio",
+        ],
+        facet={
+            "nihil": "ipsum",
+            "voluptate": "id",
+            "saepe": "eius",
+            "aspernatur": "perferendis",
+        },
+        fields_={
+            "optio": "accusamus",
+        },
+        filter={
+            "saepe": "suscipit",
+            "deserunt": "provident",
+        },
+        include_fields=[
+            "repellendus",
+            "totam",
+        ],
+        page=628982,
+        page_size=55,
+        q="at",
+        search_fields=[
+            "tempora",
+            "vel",
+        ],
+        sort={
+            "officiis": "qui",
+            "dolorum": "a",
+            "esse": "harum",
+            "iusto": "ipsum",
+        },
+    ),
+    collection="quisquam",
+    project="tenetur",
+)
+
+res = s.collection.search_documents(req)
+
+if res.streaming_search_response is not None:
+    # handle response
+```
+
+## update_documents
+
+Update a range of documents in the collection using the condition provided in the filter.
+
+### Example Usage
+
+```python
+import tigris
+from tigris.models import operations, shared
+
+s = tigris.Tigris(
+    security=shared.Security(
+        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
+    ),
+)
+
+
+req = operations.TigrisUpdateRequest(
+    update_request=shared.UpdateRequest(
+        branch="amet",
+        fields_={
+            "accusamus": "numquam",
+            "enim": "dolorem",
+            "sapiente": "totam",
+        },
+        filter={
+            "sit": "expedita",
+            "neque": "sed",
+        },
+        options=shared.UpdateRequestOptions(
+            collation=shared.Collation(
+                case="vel",
+            ),
+            limit=730442,
+            write_options={
+                "deserunt": "quam",
+                "ipsum": "incidunt",
+            },
+        ),
+    ),
+    collection="qui",
+    project="cupiditate",
+)
+
+res = s.collection.update_documents(req)
+
+if res.update_response is not None:
+    # handle response
+```

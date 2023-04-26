@@ -16,7 +16,7 @@ req = operations.TigrisDeleteAppKeyRequest(
     ),
     project="deserunt",
 )
-    
+
 res = s.app_key.delete(req)
 
 if res.delete_app_key_response is not None:

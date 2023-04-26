@@ -232,4 +232,16 @@ src/tigris/models/shared/updateusermetadataresponse.py
 src/tigris/models/shared/updateusermetadatarequest.py
 src/tigris/models/shared/security.py
 src/tigris/models/shared/__init__.py
+docs/tigris/README.md
+docs/appkey/README.md
+docs/auth/README.md
+docs/cache/README.md
+docs/channel/README.md
+docs/collection/README.md
+docs/database/README.md
+docs/namespace/README.md
+docs/project/README.md
+docs/search/README.md
+docs/system/README.md
+docs/user/README.md
 USAGE.md
