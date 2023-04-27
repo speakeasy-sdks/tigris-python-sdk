@@ -109,8 +109,8 @@ class Tigris:
     _security_client: requests_http.Session
     _server_url: str = SERVERS[0]
     _language: str = "python"
-    _sdk_version: str = "0.9.0"
-    _gen_version: str = "2.21.1"
+    _sdk_version: str = "0.10.0"
+    _gen_version: str = "2.22.0"
 
     def __init__(self,
                  security: shared.Security = None,
