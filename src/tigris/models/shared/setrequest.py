@@ -12,13 +12,18 @@ from typing import Optional
 class SetRequest:
     
     ex: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ex'), 'exclude': lambda f: f is None }})
-    r"""optional - ttl specific to this key in second"""  
+
+    r"""optional - ttl specific to this key in second"""
     nx: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nx'), 'exclude': lambda f: f is None }})
-    r"""set only if the key doesn't exist"""  
+
+    r"""set only if the key doesn't exist"""
     px: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('px'), 'exclude': lambda f: f is None }})
-    r"""optional - ttl specific to this key in millisecond"""  
+
+    r"""optional - ttl specific to this key in millisecond"""
     value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
-    r"""free form byte[] value"""  
+
+    r"""free form byte[] value"""
     xx: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('xx'), 'exclude': lambda f: f is None }})
-    r"""set only if the key exist"""  
+
+    r"""set only if the key exist"""
     

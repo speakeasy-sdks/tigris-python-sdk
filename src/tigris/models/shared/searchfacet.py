@@ -13,7 +13,9 @@ from typing import Optional
 @dataclasses.dataclass
 class SearchFacet:
     
-    counts: Optional[list[shared_facetcount.FacetCount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('counts'), 'exclude': lambda f: f is None }})  
+    counts: Optional[list[shared_facetcount.FacetCount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('counts'), 'exclude': lambda f: f is None }})
+
     stats: Optional[shared_facetstats.FacetStats] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stats'), 'exclude': lambda f: f is None }})
-    r"""Additional stats for faceted field"""  
+
+    r"""Additional stats for faceted field"""
     

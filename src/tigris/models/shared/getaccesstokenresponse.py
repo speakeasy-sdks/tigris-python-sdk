@@ -13,9 +13,12 @@ class GetAccessTokenResponse:
     r"""The response of GetAccessToken which contains access_token and optionally refresh_token."""
     
     access_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('access_token'), 'exclude': lambda f: f is None }})
-    r"""An Access Token."""  
+
+    r"""An Access Token."""
     expires_in: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires_in'), 'exclude': lambda f: f is None }})
-    r"""Access token expiration timeout in seconds."""  
+
+    r"""Access token expiration timeout in seconds."""
     refresh_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('refresh_token'), 'exclude': lambda f: f is None }})
-    r"""The Refresh Token."""  
+
+    r"""The Refresh Token."""
     

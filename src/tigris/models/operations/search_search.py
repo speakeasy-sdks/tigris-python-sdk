@@ -13,20 +13,28 @@ from typing import Optional
 class SearchSearchRequest:
     
     index: str = dataclasses.field(metadata={'path_param': { 'field_name': 'index', 'style': 'simple', 'explode': False }})
-    r"""The index name to search documents from."""  
+
+    r"""The index name to search documents from."""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    r"""Project name whose db is under target to search documents from."""  
-    search_index_request: shared_searchindexrequest.SearchIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+
+    r"""Project name whose db is under target to search documents from."""
+    search_index_request: shared_searchindexrequest.SearchIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     
 
 @dataclasses.dataclass
 class SearchSearchResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     search_index_response: Optional[shared_searchindexresponse.SearchIndexResponse] = dataclasses.field(default=None)
-    r"""OK"""  
+
+    r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     

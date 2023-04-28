@@ -12,21 +12,29 @@ from typing import Optional
 @dataclasses.dataclass
 class SearchCreateOrUpdateIndexRequest:
     
-    create_or_update_index_request: shared_createorupdateindexrequest.CreateOrUpdateIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+    create_or_update_index_request: shared_createorupdateindexrequest.CreateOrUpdateIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
-    r"""search index name."""  
+
+    r"""search index name."""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    r"""Tigris project name."""  
+
+    r"""Tigris project name."""
     
 
 @dataclasses.dataclass
 class SearchCreateOrUpdateIndexResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     create_or_update_index_response: Optional[shared_createorupdateindexresponse.CreateOrUpdateIndexResponse] = dataclasses.field(default=None)
-    r"""OK"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""OK"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     

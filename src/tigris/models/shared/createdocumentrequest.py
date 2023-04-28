@@ -12,9 +12,12 @@ from typing import Optional
 class CreateDocumentRequest:
     
     documents: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents'), 'exclude': lambda f: f is None }})
-    r"""An array of documents to be created or replaced. Each document is a JSON object."""  
+
+    r"""An array of documents to be created or replaced. Each document is a JSON object."""
     index: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('index'), 'exclude': lambda f: f is None }})
-    r"""index name where to create documents."""  
+
+    r"""index name where to create documents."""
     project: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project'), 'exclude': lambda f: f is None }})
-    r"""Tigris project name."""  
+
+    r"""Tigris project name."""
     

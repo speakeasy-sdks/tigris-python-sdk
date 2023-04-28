@@ -13,9 +13,12 @@ from typing import Any, Optional
 class ReplaceRequest:
     
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
-    r"""Optionally specify a database branch name to perform operation on"""  
+
+    r"""Optionally specify a database branch name to perform operation on"""
     documents: Optional[list[dict[str, Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents'), 'exclude': lambda f: f is None }})
-    r"""Array of documents to be replaced. Each document is a JSON object."""  
+
+    r"""Array of documents to be replaced. Each document is a JSON object."""
     options: Optional[shared_replacerequestoptions.ReplaceRequestOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})
-    r"""Additional options for replace requests."""  
+
+    r"""Additional options for replace requests."""
     

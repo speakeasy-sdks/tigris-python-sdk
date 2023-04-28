@@ -13,20 +13,28 @@ from typing import Optional
 class TigrisImportRequest:
     
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
-    r"""Collection name where to import documents."""  
-    import_request: shared_importrequest.ImportRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+
+    r"""Collection name where to import documents."""
+    import_request: shared_importrequest.ImportRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    r"""Project name whose db is under target to import documents."""  
+
+    r"""Project name whose db is under target to import documents."""
     
 
 @dataclasses.dataclass
 class TigrisImportResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     import_response: Optional[shared_importresponse.ImportResponse] = dataclasses.field(default=None)
-    r"""OK"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""OK"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     

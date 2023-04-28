@@ -14,5 +14,6 @@ class ListCachesResponse:
     r"""OK"""
     
     caches: Optional[list[shared_cachemetadata.CacheMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('caches'), 'exclude': lambda f: f is None }})
-    r"""List of caches metadata"""  
+
+    r"""List of caches metadata"""
     

@@ -12,7 +12,9 @@ from typing import Optional
 class DeleteIndexRequest:
     
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    r"""index name."""  
+
+    r"""index name."""
     project: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project'), 'exclude': lambda f: f is None }})
-    r"""Tigris project name."""  
+
+    r"""Tigris project name."""
     

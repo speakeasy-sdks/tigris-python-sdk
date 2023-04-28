@@ -13,5 +13,6 @@ from typing import Optional
 class ListAppKeysResponse:
     r"""ListAppKeysResponse returns one or more visible app keys to user"""
     
-    app_keys: Optional[list[shared_appkey.AppKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app_keys'), 'exclude': lambda f: f is None }})  
+    app_keys: Optional[list[shared_appkey.AppKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app_keys'), 'exclude': lambda f: f is None }})
+
     

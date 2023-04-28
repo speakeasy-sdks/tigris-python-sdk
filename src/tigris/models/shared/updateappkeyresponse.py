@@ -14,5 +14,6 @@ class UpdateAppKeyResponse:
     r"""Returns response for updating the app key description"""
     
     updated_app_key: Optional[shared_appkey.AppKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_app_key'), 'exclude': lambda f: f is None }})
-    r"""An user AppKey"""  
+
+    r"""An user AppKey"""
     

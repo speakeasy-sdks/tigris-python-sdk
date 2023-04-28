@@ -12,7 +12,9 @@ from typing import Optional
 class IndexInfo:
     
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    r"""Name of the index."""  
+
+    r"""Name of the index."""
     schema: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema'), 'exclude': lambda f: f is None }})
-    r"""Schema of the index."""  
+
+    r"""Schema of the index."""
     

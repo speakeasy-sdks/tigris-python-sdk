@@ -13,22 +13,31 @@ from typing import Optional
 class CacheSetRequest:
     
     key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
-    r"""cache key"""  
+
+    r"""cache key"""
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
-    r"""cache name"""  
+
+    r"""cache name"""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    r"""Tigris project name"""  
-    set_request: shared_setrequest.SetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+
+    r"""Tigris project name"""
+    set_request: shared_setrequest.SetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     
 
 @dataclasses.dataclass
 class CacheSetResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     set_response: Optional[shared_setresponse.SetResponse] = dataclasses.field(default=None)
-    r"""OK"""  
+
+    r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     

@@ -14,9 +14,12 @@ class InsertResponse:
     r"""OK"""
     
     keys: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('keys'), 'exclude': lambda f: f is None }})
-    r"""an array returns the value of the primary keys."""  
+
+    r"""an array returns the value of the primary keys."""
     metadata: Optional[shared_responsemetadata.ResponseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
-    r"""Has metadata related to the documents stored."""  
+
+    r"""Has metadata related to the documents stored."""
     status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-    r"""An enum with value set as \\"inserted\\" """  
+
+    r"""An enum with value set as \\"inserted\\" """
     

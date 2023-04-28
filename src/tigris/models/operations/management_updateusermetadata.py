@@ -12,18 +12,25 @@ from typing import Optional
 @dataclasses.dataclass
 class ManagementUpdateUserMetadataRequest:
     
-    metadata_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'metadataKey', 'style': 'simple', 'explode': False }})  
-    update_user_metadata_request: shared_updateusermetadatarequest.UpdateUserMetadataRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+    metadata_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'metadataKey', 'style': 'simple', 'explode': False }})
+
+    update_user_metadata_request: shared_updateusermetadatarequest.UpdateUserMetadataRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     
 
 @dataclasses.dataclass
 class ManagementUpdateUserMetadataResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     update_user_metadata_response: Optional[shared_updateusermetadataresponse.UpdateUserMetadataResponse] = dataclasses.field(default=None)
-    r"""OK"""  
+
+    r"""OK"""
     

@@ -13,20 +13,28 @@ from typing import Optional
 class TigrisCreateOrUpdateCollectionRequest:
     
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
-    r"""Collection name to create."""  
-    create_or_update_collection_request: shared_createorupdatecollectionrequest.CreateOrUpdateCollectionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+
+    r"""Collection name to create."""
+    create_or_update_collection_request: shared_createorupdatecollectionrequest.CreateOrUpdateCollectionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    r"""Project name whose db is under target to create or update collection."""  
+
+    r"""Project name whose db is under target to create or update collection."""
     
 
 @dataclasses.dataclass
 class TigrisCreateOrUpdateCollectionResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     create_or_update_collection_response: Optional[shared_createorupdatecollectionresponse.CreateOrUpdateCollectionResponse] = dataclasses.field(default=None)
-    r"""OK"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""OK"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     

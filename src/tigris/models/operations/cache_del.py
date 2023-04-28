@@ -12,22 +12,31 @@ from typing import Any, Optional
 class CacheDelRequest:
     
     key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
-    r"""cache key"""  
+
+    r"""cache key"""
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
-    r"""cache name"""  
+
+    r"""cache name"""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    r"""Tigris project name"""  
-    request_body: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+
+    r"""Tigris project name"""
+    request_body: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     
 
 @dataclasses.dataclass
 class CacheDelResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     del_response: Optional[shared_delresponse.DelResponse] = dataclasses.field(default=None)
-    r"""OK"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""OK"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     

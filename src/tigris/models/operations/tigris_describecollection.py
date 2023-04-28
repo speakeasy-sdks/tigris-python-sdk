@@ -13,20 +13,28 @@ from typing import Optional
 class TigrisDescribeCollectionRequest:
     
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
-    r"""Name of the collection."""  
-    describe_collection_request: shared_describecollectionrequest.DescribeCollectionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+
+    r"""Name of the collection."""
+    describe_collection_request: shared_describecollectionrequest.DescribeCollectionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    r"""Project name whose db is under target to get description of its collection."""  
+
+    r"""Project name whose db is under target to get description of its collection."""
     
 
 @dataclasses.dataclass
 class TigrisDescribeCollectionResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     describe_collection_response: Optional[shared_describecollectionresponse.DescribeCollectionResponse] = dataclasses.field(default=None)
-    r"""OK"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""OK"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     

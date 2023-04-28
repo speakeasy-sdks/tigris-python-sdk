@@ -12,5 +12,6 @@ from typing import Optional
 @dataclasses.dataclass
 class CreateCacheRequest:
     
-    options: Optional[shared_createcacheoptions.CreateCacheOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})  
+    options: Optional[shared_createcacheoptions.CreateCacheOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})
+
     

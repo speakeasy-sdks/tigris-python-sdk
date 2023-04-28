@@ -13,7 +13,9 @@ class GetResponse:
     r"""OK"""
     
     expires_in_ms: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('expires_in_ms'), 'exclude': lambda f: f is None }})
-    r"""expiration ms"""  
+
+    r"""expiration ms"""
     value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
-    r"""value"""  
+
+    r"""value"""
     

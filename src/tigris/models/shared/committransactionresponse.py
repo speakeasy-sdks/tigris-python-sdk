@@ -13,5 +13,6 @@ class CommitTransactionResponse:
     r"""OK"""
     
     status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
-    r"""Status of commit transaction operation."""  
+
+    r"""Status of commit transaction operation."""
     

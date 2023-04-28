@@ -12,5 +12,6 @@ from typing import Optional
 class GetInfoResponse:
     r"""OK"""
     
-    server_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('server_version'), 'exclude': lambda f: f is None }})  
+    server_version: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('server_version'), 'exclude': lambda f: f is None }})
+
     

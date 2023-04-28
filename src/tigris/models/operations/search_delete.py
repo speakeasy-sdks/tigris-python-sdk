@@ -12,21 +12,29 @@ from typing import Optional
 @dataclasses.dataclass
 class SearchDeleteRequest:
     
-    delete_document_request: shared_deletedocumentrequest.DeleteDocumentRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+    delete_document_request: shared_deletedocumentrequest.DeleteDocumentRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     index: str = dataclasses.field(metadata={'path_param': { 'field_name': 'index', 'style': 'simple', 'explode': False }})
-    r"""The index name of the documents that needs deletion."""  
+
+    r"""The index name of the documents that needs deletion."""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    r"""The project name."""  
+
+    r"""The project name."""
     
 
 @dataclasses.dataclass
 class SearchDeleteResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     delete_document_response: Optional[shared_deletedocumentresponse.DeleteDocumentResponse] = dataclasses.field(default=None)
-    r"""OK"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""OK"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     

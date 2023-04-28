@@ -13,20 +13,28 @@ from typing import Optional
 class TigrisDropCollectionRequest:
     
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
-    r"""Collection name to delete."""  
-    drop_collection_request: shared_dropcollectionrequest.DropCollectionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})  
+
+    r"""Collection name to delete."""
+    drop_collection_request: shared_dropcollectionrequest.DropCollectionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-    r"""Project name whose db is under target to delete collection."""  
+
+    r"""Project name whose db is under target to delete collection."""
     
 
 @dataclasses.dataclass
 class TigrisDropCollectionResponse:
     
-    content_type: str = dataclasses.field()  
-    status_code: int = dataclasses.field()  
+    content_type: str = dataclasses.field()
+
+    status_code: int = dataclasses.field()
+
     drop_collection_response: Optional[shared_dropcollectionresponse.DropCollectionResponse] = dataclasses.field(default=None)
-    r"""OK"""  
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
+
+    r"""OK"""
+    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-    r"""Default error response"""  
+
+    r"""Default error response"""
     

@@ -13,7 +13,9 @@ class RotateAppKeyRequest:
     r"""Request rotation of an app key secret"""
     
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    r"""app key id"""  
+
+    r"""app key id"""
     project: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project'), 'exclude': lambda f: f is None }})
-    r"""project name"""  
+
+    r"""project name"""
     

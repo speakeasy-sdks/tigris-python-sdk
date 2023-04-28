@@ -12,5 +12,6 @@ from typing import Optional
 class CacheMetadata:
     
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    r"""Cache name"""  
+
+    r"""Cache name"""
     

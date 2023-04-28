@@ -12,9 +12,12 @@ from typing import Optional
 class NamespaceInfo:
     
     code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('code'), 'exclude': lambda f: f is None }})
-    r"""The unique namespace code."""  
+
+    r"""The unique namespace code."""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-    r"""The namespace unique id."""  
+
+    r"""The namespace unique id."""
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
-    r"""The namespace display name."""  
+
+    r"""The namespace display name."""
     
