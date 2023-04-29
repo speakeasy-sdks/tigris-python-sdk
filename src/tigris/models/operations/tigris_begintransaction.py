@@ -13,9 +13,7 @@ from typing import Optional
 class TigrisBeginTransactionRequest:
     
     begin_transaction_request: shared_begintransactionrequest.BeginTransactionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-
     r"""Project name whose DB this transaction belongs to."""
     
 
@@ -23,15 +21,10 @@ class TigrisBeginTransactionRequest:
 class TigrisBeginTransactionResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     begin_transaction_response: Optional[shared_begintransactionresponse.BeginTransactionResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

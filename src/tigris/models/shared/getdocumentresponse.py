@@ -14,6 +14,5 @@ class GetDocumentResponse:
     r"""OK"""
     
     documents: Optional[list[shared_indexdoc.IndexDoc]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents'), 'exclude': lambda f: f is None }})
-
     r"""An array of documents."""
     

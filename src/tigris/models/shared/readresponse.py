@@ -13,12 +13,9 @@ from typing import Any, Optional
 class ReadResponse:
     
     data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-
     r"""Object containing the collection document."""
     metadata: Optional[shared_responsemetadata.ResponseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
-
     r"""Has metadata related to the documents stored."""
     resume_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resume_token'), 'exclude': lambda f: f is None }})
-
     r"""An internal key, used for pagination."""
     

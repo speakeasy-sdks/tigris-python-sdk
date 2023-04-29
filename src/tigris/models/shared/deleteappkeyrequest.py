@@ -13,6 +13,5 @@ class DeleteAppKeyRequest:
     r"""Request deletion of an app key"""
     
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
-
     r"""app_key id"""
     

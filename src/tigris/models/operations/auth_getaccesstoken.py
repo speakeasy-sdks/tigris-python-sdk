@@ -12,15 +12,10 @@ from typing import Optional
 class AuthGetAccessTokenResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     get_access_token_response: Optional[shared_getaccesstokenresponse.GetAccessTokenResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

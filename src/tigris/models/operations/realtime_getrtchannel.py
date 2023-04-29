@@ -12,24 +12,17 @@ from typing import Optional
 class RealtimeGetRTChannelRequest:
     
     channel: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channel', 'style': 'simple', 'explode': False }})
-
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-
     
 
 @dataclasses.dataclass
 class RealtimeGetRTChannelResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     get_rt_channel_response: Optional[shared_getrtchannelresponse.GetRTChannelResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

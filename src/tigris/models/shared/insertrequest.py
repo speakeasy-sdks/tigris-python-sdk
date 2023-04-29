@@ -13,12 +13,9 @@ from typing import Any, Optional
 class InsertRequest:
     
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
-
     r"""Optionally specify a database branch name to perform operation on"""
     documents: Optional[list[dict[str, Any]]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents'), 'exclude': lambda f: f is None }})
-
     r"""Array of documents to insert. Each document is a JSON object."""
     options: Optional[shared_insertrequestoptions.InsertRequestOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})
-
     r"""additional options for insert requests."""
     

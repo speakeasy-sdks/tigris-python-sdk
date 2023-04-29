@@ -12,15 +12,10 @@ from typing import Optional
 class ManagementDescribeNamespacesResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     describe_namespaces_response: Optional[shared_describenamespacesresponse.DescribeNamespacesResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

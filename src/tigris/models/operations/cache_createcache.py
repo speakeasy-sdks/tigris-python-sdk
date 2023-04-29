@@ -13,12 +13,9 @@ from typing import Optional
 class CacheCreateCacheRequest:
     
     create_cache_request: shared_createcacherequest.CreateCacheRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
-
     r"""cache name"""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-
     r"""Tigris project name"""
     
 
@@ -26,15 +23,10 @@ class CacheCreateCacheRequest:
 class CacheCreateCacheResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     create_cache_response: Optional[shared_createcacheresponse.CreateCacheResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

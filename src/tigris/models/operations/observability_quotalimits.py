@@ -12,15 +12,10 @@ from typing import Optional
 class ObservabilityQuotaLimitsResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     quota_limits_response: Optional[shared_quotalimitsresponse.QuotaLimitsResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

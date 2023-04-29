@@ -12,7 +12,6 @@ from typing import Optional
 class CacheListCachesRequest:
     
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-
     r"""Tigris project name"""
     
 
@@ -20,15 +19,10 @@ class CacheListCachesRequest:
 class CacheListCachesResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     list_caches_response: Optional[shared_listcachesresponse.ListCachesResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

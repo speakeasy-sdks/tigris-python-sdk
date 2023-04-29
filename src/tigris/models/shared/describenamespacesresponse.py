@@ -14,5 +14,4 @@ class DescribeNamespacesResponse:
     r"""OK"""
     
     data: Optional[shared_describenamespacesdata.DescribeNamespacesData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
-
     

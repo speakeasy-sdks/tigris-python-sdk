@@ -12,5 +12,4 @@ from typing import Optional
 class CreateCacheOptions:
     
     ttl_ms: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ttl_ms'), 'exclude': lambda f: f is None }})
-
     

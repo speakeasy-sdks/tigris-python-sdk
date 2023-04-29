@@ -13,26 +13,18 @@ from typing import Optional
 class RealtimeMessagesRequest:
     
     channel: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channel', 'style': 'simple', 'explode': False }})
-
     messages_request: shared_messagesrequest.MessagesRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-
     
 
 @dataclasses.dataclass
 class RealtimeMessagesResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     messages_response: Optional[shared_messagesresponse.MessagesResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

@@ -12,18 +12,13 @@ from typing import Any, Optional
 class DescribeCollectionRequest:
     
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
-
     r"""Optionally specify a database branch name to perform operation on"""
     collection: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection'), 'exclude': lambda f: f is None }})
-
     r"""Name of the collection."""
     options: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})
-
     r"""Collection requests modifying options."""
     project: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project'), 'exclude': lambda f: f is None }})
-
     r"""Project name whose db is under target to get description of its collection."""
     schema_format: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema_format'), 'exclude': lambda f: f is None }})
-
     r"""Return schema in the requested format. Format can be JSON, Go, TypeScript, Java. Default is JSON."""
     

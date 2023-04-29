@@ -14,5 +14,4 @@ class GetRTChannelsResponse:
     r"""OK"""
     
     channels: Optional[list[shared_channelmetadata.ChannelMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('channels'), 'exclude': lambda f: f is None }})
-
     

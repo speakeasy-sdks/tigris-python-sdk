@@ -13,6 +13,5 @@ class CommitTransactionRequest:
     r"""Commit transaction with the given ID"""
     
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
-
     r"""Optionally specify a database branch name to perform operation on"""
     

@@ -12,12 +12,9 @@ from typing import Optional
 class DescribeDatabaseRequest:
     
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
-
     r"""Optionally specify a database branch name to perform operation on"""
     project: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project'), 'exclude': lambda f: f is None }})
-
     r"""Project name whose db is under target to get description."""
     schema_format: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema_format'), 'exclude': lambda f: f is None }})
-
     r"""Return schema in the requested format. Format can be JSON, Go, TypeScript, Java. Default is JSON."""
     

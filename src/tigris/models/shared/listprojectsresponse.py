@@ -14,6 +14,5 @@ class ListProjectsResponse:
     r"""OK"""
     
     projects: Optional[list[shared_projectinfo.ProjectInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('projects'), 'exclude': lambda f: f is None }})
-
     r"""List of the projects."""
     

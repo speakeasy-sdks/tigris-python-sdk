@@ -13,12 +13,9 @@ from typing import Optional
 class SearchDeleteByQueryRequest:
     
     delete_by_query_request: shared_deletebyqueryrequest.DeleteByQueryRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-
     index: str = dataclasses.field(metadata={'path_param': { 'field_name': 'index', 'style': 'simple', 'explode': False }})
-
     r"""The index name of the documents that needs deletion."""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-
     r"""The project name."""
     
 
@@ -26,15 +23,10 @@ class SearchDeleteByQueryRequest:
 class SearchDeleteByQueryResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     delete_by_query_response: Optional[shared_deletebyqueryresponse.DeleteByQueryResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

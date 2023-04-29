@@ -13,9 +13,7 @@ from typing import Optional
 class TigrisCreateAppKeyRequest:
     
     create_app_key_request: shared_createappkeyrequest.CreateAppKeyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
-
     r"""Project name"""
     
 
@@ -23,15 +21,10 @@ class TigrisCreateAppKeyRequest:
 class TigrisCreateAppKeyResponse:
     
     content_type: str = dataclasses.field()
-
     status_code: int = dataclasses.field()
-
     create_app_key_response: Optional[shared_createappkeyresponse.CreateAppKeyResponse] = dataclasses.field(default=None)
-
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
-
     r"""Default error response"""
     

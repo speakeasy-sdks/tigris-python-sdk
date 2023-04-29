@@ -13,5 +13,4 @@ class ListSubscriptionResponse:
     r"""OK"""
     
     devices: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('devices'), 'exclude': lambda f: f is None }})
-
     

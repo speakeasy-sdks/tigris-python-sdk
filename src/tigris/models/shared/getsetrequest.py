@@ -12,6 +12,5 @@ from typing import Optional
 class GetSetRequest:
     
     value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
-
     r"""free form byte[] value"""
     

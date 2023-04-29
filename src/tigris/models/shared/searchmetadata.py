@@ -13,12 +13,9 @@ from typing import Optional
 class SearchMetadata:
     
     found: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('found'), 'exclude': lambda f: f is None }})
-
     r"""Total number of search results across all pages"""
     page: Optional[shared_page.Page] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('page'), 'exclude': lambda f: f is None }})
-
     r"""Pagination metadata for SearchResponse"""
     total_pages: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total_pages'), 'exclude': lambda f: f is None }})
-
     r"""Number representing the total pages of results"""
     

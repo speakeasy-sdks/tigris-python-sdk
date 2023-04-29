@@ -13,6 +13,5 @@ class DeleteAppKeyResponse:
     r"""AppKeys returns the flag to convey if app key was deleted"""
     
     deleted: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('deleted'), 'exclude': lambda f: f is None }})
-
     r"""status flag for delete operation"""
     
