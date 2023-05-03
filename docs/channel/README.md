@@ -31,8 +31,8 @@ s = tigris.Tigris(
 
 
 req = operations.RealtimeGetRTChannelRequest(
-    channel="eligendi",
-    project="sint",
+    channel='eligendi',
+    project='sint',
 )
 
 res = s.channel.get(req)
@@ -59,14 +59,14 @@ s = tigris.Tigris(
 
 
 req = operations.RealtimeReadMessagesRequest(
-    channel="aliquid",
-    end="provident",
-    event="necessitatibus",
+    channel='aliquid',
+    end='provident',
+    event='necessitatibus',
     limit=572252,
-    project="officia",
-    session_id="dolor",
-    socket_id="debitis",
-    start="a",
+    project='officia',
+    session_id='dolor',
+    socket_id='debitis',
+    start='a',
 )
 
 res = s.channel.get_messages(req)
@@ -93,7 +93,7 @@ s = tigris.Tigris(
 
 
 req = operations.RealtimeGetRTChannelsRequest(
-    project="dolorum",
+    project='dolorum',
 )
 
 res = s.channel.list(req)
@@ -120,10 +120,10 @@ s = tigris.Tigris(
 
 
 req = operations.RealtimeListSubscriptionsRequest(
-    channel="in",
+    channel='in',
     page=449198,
     page_size=846409,
-    project="maiores",
+    project='maiores',
 )
 
 res = s.channel.list_subscriptions(req)
@@ -151,19 +151,19 @@ s = tigris.Tigris(
 
 req = operations.RealtimeMessagesRequest(
     messages_request=shared.MessagesRequest(
-        channel="rerum",
+        channel='rerum',
         messages=[
             shared.Message(
-                data="magnam",
-                id="cd66ae39-5efb-49ba-88f3-a66997074ba4",
-                name="Laurie Mosciski",
-                sequence="vero",
+                data='magnam',
+                id='cd66ae39-5efb-49ba-88f3-a66997074ba4',
+                name='Laurie Mosciski',
+                sequence='vero',
             ),
         ],
-        project="aspernatur",
+        project='aspernatur',
     ),
-    channel="architecto",
-    project="magnam",
+    channel='architecto',
+    project='magnam',
 )
 
 res = s.channel.push_messages(req)
@@ -190,8 +190,8 @@ s = tigris.Tigris(
 
 
 req = operations.RealtimePresenceRequest(
-    channel="et",
-    project="excepturi",
+    channel='et',
+    project='excepturi',
 )
 
 res = s.channel.realtime_presence(req)

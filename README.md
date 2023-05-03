@@ -23,9 +23,9 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteAppKeyRequest(
     delete_app_key_request=shared.DeleteAppKeyRequest(
-        id="89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+        id='89bd9d8d-69a6-474e-8f46-7cc8796ed151',
     ),
-    project="deserunt",
+    project='deserunt',
 )
 
 res = s.app_key.delete(req)

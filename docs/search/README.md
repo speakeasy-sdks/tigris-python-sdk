@@ -41,14 +41,14 @@ s = tigris.Tigris(
 
 req = operations.SearchCreateByIDRequest(
     create_by_id_request=shared.CreateByIDRequest(
-        document="ex",
-        id="d9f5fce6-c556-4146-83e2-50fb008c42e1",
-        index="non",
-        project="et",
+        document='ex',
+        id='d9f5fce6-c556-4146-83e2-50fb008c42e1',
+        index='non',
+        project='et',
     ),
-    id="aac366c8-dd6b-4144-a907-474778a7bd46",
-    index="suscipit",
-    project="assumenda",
+    id='aac366c8-dd6b-4144-a907-474778a7bd46',
+    index='suscipit',
+    project='assumenda',
 )
 
 res = s.search.create_document(req)
@@ -81,13 +81,13 @@ s = tigris.Tigris(
 req = operations.SearchCreateRequest(
     create_document_request=shared.CreateDocumentRequest(
         documents=[
-            "praesentium",
+            'praesentium',
         ],
-        index="quisquam",
-        project="veritatis",
+        index='quisquam',
+        project='veritatis',
     ),
-    index="ipsa",
-    project="id",
+    index='ipsa',
+    project='id',
 )
 
 res = s.search.create_documents(req)
@@ -118,15 +118,15 @@ s = tigris.Tigris(
 req = operations.SearchDeleteRequest(
     delete_document_request=shared.DeleteDocumentRequest(
         ids=[
-            "neque",
-            "quo",
-            "illum",
+            'neque',
+            'quo',
+            'illum',
         ],
-        index="quo",
-        project="fuga",
+        index='quo',
+        project='fuga',
     ),
-    index="eius",
-    project="eos",
+    index='eius',
+    project='eos',
 )
 
 res = s.search.delete_documents(req)
@@ -154,11 +154,11 @@ s = tigris.Tigris(
 
 req = operations.SearchDeleteIndexRequest(
     delete_index_request=shared.DeleteIndexRequest(
-        name="Mrs. Virginia McGlynn",
-        project="ipsam",
+        name='Mrs. Virginia McGlynn',
+        project='ipsam',
     ),
-    name="Emily Satterfield",
-    project="aperiam",
+    name='Emily Satterfield',
+    project='aperiam',
 )
 
 res = s.search.delete_index(req)
@@ -191,35 +191,35 @@ s = tigris.Tigris(
 req = operations.SearchSearchRequest(
     search_index_request=shared.SearchIndexRequest(
         collation=shared.Collation(
-            case="distinctio",
+            case='distinctio',
         ),
         exclude_fields=[
-            "dignissimos",
-            "inventore",
-            "nihil",
-            "totam",
+            'dignissimos',
+            'inventore',
+            'nihil',
+            'totam',
         ],
-        facet="accusamus",
-        filter="aliquam",
+        facet='accusamus',
+        filter='aliquam',
         include_fields=[
-            "occaecati",
-            "commodi",
+            'occaecati',
+            'commodi',
         ],
-        index="sapiente",
+        index='sapiente',
         page=174112,
         page_size=645570,
-        project="molestiae",
-        q="accusantium",
+        project='molestiae',
+        q='accusantium',
         search_fields=[
-            "eum",
-            "quas",
-            "praesentium",
-            "consequuntur",
+            'eum',
+            'quas',
+            'praesentium',
+            'consequuntur',
         ],
-        sort="deleniti",
+        sort='deleniti',
     ),
-    index="fugit",
-    project="fuga",
+    index='fugit',
+    project='fuga',
 )
 
 res = s.search.find_documents(req)
@@ -248,12 +248,12 @@ s = tigris.Tigris(
 
 req = operations.SearchGetRequest(
     ids=[
-        "incidunt",
-        "atque",
-        "explicabo",
+        'incidunt',
+        'atque',
+        'explicabo',
     ],
-    index="minima",
-    project="nisi",
+    index='minima',
+    project='nisi',
 )
 
 res = s.search.get_documents(req)
@@ -280,8 +280,8 @@ s = tigris.Tigris(
 
 
 req = operations.SearchGetIndexRequest(
-    name="Jeannie Cronin",
-    project="saepe",
+    name='Jeannie Cronin',
+    project='saepe',
 )
 
 res = s.search.get_index(req)
@@ -308,10 +308,10 @@ s = tigris.Tigris(
 
 
 req = operations.SearchListIndexesRequest(
-    filter_branch="occaecati",
-    filter_collection="atque",
-    filter_type="et",
-    project="esse",
+    filter_branch='occaecati',
+    filter_collection='atque',
+    filter_type='et',
+    project='esse',
 )
 
 res = s.search.list_indexes(req)
@@ -340,12 +340,12 @@ s = tigris.Tigris(
 
 req = operations.SearchDeleteByQueryRequest(
     delete_by_query_request=shared.DeleteByQueryRequest(
-        filter="eveniet",
-        index="accusamus",
-        project="veritatis",
+        filter='eveniet',
+        index='accusamus',
+        project='veritatis',
     ),
-    index="esse",
-    project="quod",
+    index='esse',
+    project='quod',
 )
 
 res = s.search.query_delete_documents(req)
@@ -377,15 +377,15 @@ s = tigris.Tigris(
 req = operations.SearchCreateOrReplaceRequest(
     create_or_replace_document_request=shared.CreateOrReplaceDocumentRequest(
         documents=[
-            "vero",
-            "aliquid",
-            "quasi",
+            'vero',
+            'aliquid',
+            'quasi',
         ],
-        index="saepe",
-        project="vel",
+        index='saepe',
+        project='vel',
     ),
-    index="harum",
-    project="molestiae",
+    index='harum',
+    project='molestiae',
 )
 
 res = s.search.replace_documents(req)
@@ -417,15 +417,15 @@ s = tigris.Tigris(
 req = operations.SearchUpdateRequest(
     update_document_request=shared.UpdateDocumentRequest(
         documents=[
-            "occaecati",
-            "minima",
-            "distinctio",
+            'occaecati',
+            'minima',
+            'distinctio',
         ],
-        index="eligendi",
-        project="sit",
+        index='eligendi',
+        project='sit',
     ),
-    index="culpa",
-    project="tempore",
+    index='culpa',
+    project='tempore',
 )
 
 res = s.search.update_documents(req)
@@ -453,13 +453,13 @@ s = tigris.Tigris(
 
 req = operations.SearchCreateOrUpdateIndexRequest(
     create_or_update_index_request=shared.CreateOrUpdateIndexRequest(
-        name="Miss Blanca Cronin",
+        name='Miss Blanca Cronin',
         only_create=False,
-        project="sapiente",
-        schema="consectetur",
+        project='sapiente',
+        schema='consectetur',
     ),
-    name="Mattie McLaughlin",
-    project="quas",
+    name='Mattie McLaughlin',
+    project='quas',
 )
 
 res = s.search.update_index(req)

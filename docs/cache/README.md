@@ -38,8 +38,8 @@ req = operations.CacheCreateCacheRequest(
             ttl_ms=509624,
         ),
     ),
-    name="Jose Moen",
-    project="perferendis",
+    name='Jose Moen',
+    project='perferendis',
 )
 
 res = s.cache.create(req)
@@ -67,10 +67,10 @@ s = tigris.Tigris(
 
 req = operations.CacheDeleteCacheRequest(
     request_body={
-        "reprehenderit": "ut",
+        "reprehenderit": 'ut',
     },
-    name="Willie Hessel",
-    project="dicta",
+    name='Willie Hessel',
+    project='dicta',
 )
 
 res = s.cache.delete(req)
@@ -98,13 +98,13 @@ s = tigris.Tigris(
 
 req = operations.CacheDelRequest(
     request_body={
-        "enim": "accusamus",
-        "commodi": "repudiandae",
-        "quae": "ipsum",
+        "enim": 'accusamus',
+        "commodi": 'repudiandae',
+        "quae": 'ipsum',
     },
-    key="quidem",
-    name="Andy Streich",
-    project="rem",
+    key='quidem',
+    name='Andy Streich',
+    project='rem',
 )
 
 res = s.cache.delete_keys(req)
@@ -131,9 +131,9 @@ s = tigris.Tigris(
 
 
 req = operations.CacheGetRequest(
-    key="voluptates",
-    name="Dr. Casey Mayer",
-    project="enim",
+    key='voluptates',
+    name='Dr. Casey Mayer',
+    project='enim',
 )
 
 res = s.cache.get_key(req)
@@ -161,11 +161,11 @@ s = tigris.Tigris(
 
 req = operations.CacheGetSetRequest(
     get_set_request=shared.GetSetRequest(
-        value="consequatur",
+        value='consequatur',
     ),
-    key="est",
-    name="Benjamin O'Connell",
-    project="labore",
+    key='est',
+    name='Benjamin O'Connell',
+    project='labore',
 )
 
 res = s.cache.get_set_key(req)
@@ -192,7 +192,7 @@ s = tigris.Tigris(
 
 
 req = operations.CacheListCachesRequest(
-    project="modi",
+    project='modi',
 )
 
 res = s.cache.list(req)
@@ -221,9 +221,9 @@ s = tigris.Tigris(
 req = operations.CacheKeysRequest(
     count=183191,
     cursor=397821,
-    name="Isaac Aufderhar",
-    pattern="ipsam",
-    project="alias",
+    name='Isaac Aufderhar',
+    pattern='ipsam',
+    project='alias',
 )
 
 res = s.cache.list_keys(req)
@@ -254,12 +254,12 @@ req = operations.CacheSetRequest(
         ex=146441,
         nx=False,
         px=677817,
-        value="excepturi",
+        value='excepturi',
         xx=False,
     ),
-    key="tempora",
-    name="Geoffrey Green",
-    project="non",
+    key='tempora',
+    name='Geoffrey Green',
+    project='non',
 )
 
 res = s.cache.set_key(req)

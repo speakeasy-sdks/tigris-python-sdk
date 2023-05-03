@@ -29,10 +29,10 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateProjectRequest(
     request_body={
-        "aspernatur": "vel",
-        "possimus": "magnam",
+        "aspernatur": 'vel',
+        "possimus": 'magnam',
     },
-    project="ratione",
+    project='ratione',
 )
 
 res = s.project.create(req)
@@ -60,10 +60,10 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteProjectRequest(
     request_body={
-        "laudantium": "dicta",
-        "dolor": "maiores",
+        "laudantium": 'dicta',
+        "dolor": 'maiores',
     },
-    project="quasi",
+    project='quasi',
 )
 
 res = s.project.delete_project(req)

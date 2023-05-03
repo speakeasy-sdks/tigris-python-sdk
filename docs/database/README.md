@@ -36,15 +36,15 @@ s = tigris.Tigris(
 
 req = operations.TigrisBeginTransactionRequest(
     begin_transaction_request=shared.BeginTransactionRequest(
-        branch="maxime",
+        branch='maxime',
         options={
-            "soluta": "dicta",
-            "laborum": "totam",
-            "incidunt": "aspernatur",
-            "dolores": "distinctio",
+            "soluta": 'dicta',
+            "laborum": 'totam',
+            "incidunt": 'aspernatur',
+            "dolores": 'distinctio',
         },
     ),
-    project="facilis",
+    project='facilis',
 )
 
 res = s.database.begin_transaction(req)
@@ -73,9 +73,9 @@ s = tigris.Tigris(
 
 req = operations.TigrisCommitTransactionRequest(
     commit_transaction_request=shared.CommitTransactionRequest(
-        branch="aliquid",
+        branch='aliquid',
     ),
-    project="quam",
+    project='quam',
 )
 
 res = s.database.commit_transaction(req)
@@ -103,12 +103,12 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateBranchRequest(
     request_body={
-        "temporibus": "qui",
-        "neque": "fugit",
-        "magni": "odio",
+        "temporibus": 'qui',
+        "neque": 'fugit',
+        "magni": 'odio',
     },
-    branch="sunt",
-    project="ullam",
+    branch='sunt',
+    project='ullam',
 )
 
 res = s.database.create_branch(req)
@@ -137,12 +137,12 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteBranchRequest(
     request_body={
-        "hic": "voluptatem",
-        "cumque": "soluta",
-        "nobis": "et",
+        "hic": 'voluptatem',
+        "cumque": 'soluta',
+        "nobis": 'et',
     },
-    branch="saepe",
-    project="ipsum",
+    branch='saepe',
+    project='ipsum',
 )
 
 res = s.database.delete_branch(req)
@@ -171,11 +171,11 @@ s = tigris.Tigris(
 
 req = operations.TigrisDescribeDatabaseRequest(
     describe_database_request=shared.DescribeDatabaseRequest(
-        branch="veritatis",
-        project="nobis",
-        schema_format="quos",
+        branch='veritatis',
+        project='nobis',
+        schema_format='quos',
     ),
-    project="tempore",
+    project='tempore',
 )
 
 res = s.database.describe(req)
@@ -202,8 +202,8 @@ s = tigris.Tigris(
 
 
 req = operations.TigrisListCollectionsRequest(
-    branch="cupiditate",
-    project="aperiam",
+    branch='cupiditate',
+    project='aperiam',
 )
 
 res = s.database.list_collections(req)
@@ -232,9 +232,9 @@ s = tigris.Tigris(
 
 req = operations.TigrisRollbackTransactionRequest(
     rollback_transaction_request=shared.RollbackTransactionRequest(
-        branch="delectus",
+        branch='delectus',
     ),
-    project="dolorem",
+    project='dolorem',
 )
 
 res = s.database.rollback_transaction(req)
@@ -261,7 +261,7 @@ s = tigris.Tigris(
 
 
 req = operations.TigrisListBranchesRequest(
-    project="dolore",
+    project='dolore',
 )
 
 res = s.database.tigris_list_branches(req)
