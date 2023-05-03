@@ -13,7 +13,7 @@
 ## SDK Installation
 
 ```bash
-pip install git+https://github.com/speakeasy-sdks/tigris-python-sdk.git
+pip install tigris-core
 ```
 <!-- End SDK Installation -->
 
