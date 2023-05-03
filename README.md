@@ -13,7 +13,7 @@
 ## SDK Installation
 
 ```bash
-pip install tigris-core
+pip install git+https://github.com/speakeasy-sdks/tigris-python-sdk.git
 ```
 <!-- End SDK Installation -->
 
@@ -30,16 +30,19 @@ s = tigris.Tigris(
 )
 
 
-req = operations.TigrisDeleteAppKeyRequest(
-    delete_app_key_request=shared.DeleteAppKeyRequest(
-        id='89bd9d8d-69a6-474e-8f46-7cc8796ed151',
+req = operations.CacheCreateCacheRequest(
+    create_cache_request=shared.CreateCacheRequest(
+        options=shared.CreateCacheOptions(
+            ttl_ms=548814,
+        ),
     ),
-    project='deserunt',
+    name='Kelvin Sporer',
+    project='corrupti',
 )
 
-res = s.app_key.delete(req)
+res = s.cache.create(req)
 
-if res.delete_app_key_response is not None:
+if res.create_cache_response is not None:
     # handle response
 ```
 <!-- End SDK Example Usage -->

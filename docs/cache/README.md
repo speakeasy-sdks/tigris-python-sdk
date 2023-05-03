@@ -35,11 +35,11 @@ s = tigris.Tigris(
 req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(
         options=shared.CreateCacheOptions(
-            ttl_ms=509624,
+            ttl_ms=244425,
         ),
     ),
-    name='Jose Moen',
-    project='perferendis',
+    name='Miss Eugene Hauck',
+    project='enim',
 )
 
 res = s.cache.create(req)
@@ -67,10 +67,10 @@ s = tigris.Tigris(
 
 req = operations.CacheDeleteCacheRequest(
     request_body={
-        "reprehenderit": 'ut',
+        "quo": 'sequi',
     },
-    name='Willie Hessel',
-    project='dicta',
+    name='Vernon Ondricka Sr.',
+    project='error',
 )
 
 res = s.cache.delete(req)
@@ -98,13 +98,14 @@ s = tigris.Tigris(
 
 req = operations.CacheDelRequest(
     request_body={
-        "enim": 'accusamus',
-        "commodi": 'repudiandae',
-        "quae": 'ipsum',
+        "laborum": 'quasi',
+        "reiciendis": 'voluptatibus',
+        "vero": 'nihil',
+        "praesentium": 'voluptatibus',
     },
-    key='quidem',
-    name='Andy Streich',
-    project='rem',
+    key='ipsa',
+    name='Mr. Jared Ritchie',
+    project='ut',
 )
 
 res = s.cache.delete_keys(req)
@@ -131,8 +132,8 @@ s = tigris.Tigris(
 
 
 req = operations.CacheGetRequest(
-    key='voluptates',
-    name='Dr. Casey Mayer',
+    key='maiores',
+    name='Stacy Gulgowski MD',
     project='enim',
 )
 
@@ -161,11 +162,11 @@ s = tigris.Tigris(
 
 req = operations.CacheGetSetRequest(
     get_set_request=shared.GetSetRequest(
-        value='consequatur',
+        value='accusamus',
     ),
-    key='est',
-    name='Benjamin O'Connell',
-    project='labore',
+    key='commodi',
+    name='Eric Emmerich',
+    project='excepturi',
 )
 
 res = s.cache.get_set_key(req)
@@ -192,7 +193,7 @@ s = tigris.Tigris(
 
 
 req = operations.CacheListCachesRequest(
-    project='modi',
+    project='pariatur',
 )
 
 res = s.cache.list(req)
@@ -219,11 +220,11 @@ s = tigris.Tigris(
 
 
 req = operations.CacheKeysRequest(
-    count=183191,
-    cursor=397821,
-    name='Isaac Aufderhar',
-    pattern='ipsam',
-    project='alias',
+    count=265389,
+    cursor=508969,
+    name='Grady Botsford',
+    pattern='veritatis',
+    project='itaque',
 )
 
 res = s.cache.list_keys(req)
@@ -251,15 +252,15 @@ s = tigris.Tigris(
 
 req = operations.CacheSetRequest(
     set_request=shared.SetRequest(
-        ex=146441,
+        ex=277718,
         nx=False,
-        px=677817,
-        value='excepturi',
+        px=318569,
+        value='consequatur',
         xx=False,
     ),
-    key='tempora',
-    name='Geoffrey Green',
-    project='non',
+    key='est',
+    name='Benjamin O'Connell',
+    project='labore',
 )
 
 res = s.cache.set_key(req)
