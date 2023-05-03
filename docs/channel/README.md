@@ -31,8 +31,8 @@ s = tigris.Tigris(
 
 
 req = operations.RealtimeGetRTChannelRequest(
-    channel='eligendi',
-    project='sint',
+    channel='modi',
+    project='qui',
 )
 
 res = s.channel.get(req)
@@ -60,13 +60,13 @@ s = tigris.Tigris(
 
 req = operations.RealtimeReadMessagesRequest(
     channel='aliquid',
-    end='provident',
-    event='necessitatibus',
-    limit=572252,
-    project='officia',
-    session_id='dolor',
-    socket_id='debitis',
-    start='a',
+    end='cupiditate',
+    event='quos',
+    limit=20107,
+    project='magni',
+    session_id='assumenda',
+    socket_id='ipsam',
+    start='alias',
 )
 
 res = s.channel.get_messages(req)
@@ -93,7 +93,7 @@ s = tigris.Tigris(
 
 
 req = operations.RealtimeGetRTChannelsRequest(
-    project='dolorum',
+    project='fugit',
 )
 
 res = s.channel.list(req)
@@ -120,10 +120,10 @@ s = tigris.Tigris(
 
 
 req = operations.RealtimeListSubscriptionsRequest(
-    channel='in',
-    page=449198,
-    page_size=846409,
-    project='maiores',
+    channel='dolorum',
+    page=569618,
+    page_size=270008,
+    project='facilis',
 )
 
 res = s.channel.list_subscriptions(req)
@@ -151,19 +151,25 @@ s = tigris.Tigris(
 
 req = operations.RealtimeMessagesRequest(
     messages_request=shared.MessagesRequest(
-        channel='rerum',
+        channel='tempore',
         messages=[
             shared.Message(
-                data='magnam',
-                id='cd66ae39-5efb-49ba-88f3-a66997074ba4',
-                name='Laurie Mosciski',
-                sequence='vero',
+                data='delectus',
+                id='63c969e9-a3ef-4a77-9fb1-4cd66ae395ef',
+                name='Rene Reinger',
+                sequence='deleniti',
+            ),
+            shared.Message(
+                data='sapiente',
+                id='3a669970-74ba-4446-9b6e-2141959890af',
+                name='Tommy Kemmer',
+                sequence='odit',
             ),
         ],
-        project='aspernatur',
+        project='nemo',
     ),
-    channel='architecto',
-    project='magnam',
+    channel='quasi',
+    project='iure',
 )
 
 res = s.channel.push_messages(req)
@@ -190,8 +196,8 @@ s = tigris.Tigris(
 
 
 req = operations.RealtimePresenceRequest(
-    channel='et',
-    project='excepturi',
+    channel='doloribus',
+    project='debitis',
 )
 
 res = s.channel.realtime_presence(req)

@@ -31,9 +31,9 @@ s = tigris.Tigris(
 
 
 req = shared.CreateNamespaceRequest(
-    code=286915,
-    id='3a1108e0-adcf-44b9-a187-9fce953f73ef',
-    name='Darla Rau',
+    code=606476,
+    id='53f73ef7-fbc7-4abd-b4dd-39c0f5d2cff7',
+    name='Kurt Abernathy',
 )
 
 res = s.namespace.create(req)
@@ -84,14 +84,13 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetNamespaceMetadataRequest(
     get_namespace_metadata_request=shared.GetNamespaceMetadataRequest(
-        metadata_key='similique',
+        metadata_key='ipsam',
         value={
-            "vero": 'ducimus',
-            "dolore": 'quibusdam',
-            "illum": 'sequi',
+            "aspernatur": 'vel',
+            "possimus": 'magnam',
         },
     ),
-    metadata_key='natus',
+    metadata_key='ratione',
 )
 
 res = s.namespace.get_metadata(req)
@@ -119,12 +118,14 @@ s = tigris.Tigris(
 
 req = operations.ManagementInsertNamespaceMetadataRequest(
     insert_namespace_metadata_request=shared.InsertNamespaceMetadataRequest(
-        metadata_key='impedit',
+        metadata_key='ex',
         value={
-            "voluptatibus": 'exercitationem',
+            "dicta": 'dolor',
+            "maiores": 'quasi',
+            "ex": 'nulla',
         },
     ),
-    metadata_key='nulla',
+    metadata_key='excepturi',
 )
 
 res = s.namespace.insert_metadata(req)
@@ -175,15 +176,13 @@ s = tigris.Tigris(
 
 req = operations.ManagementUpdateNamespaceMetadataRequest(
     update_namespace_metadata_request=shared.UpdateNamespaceMetadataRequest(
-        metadata_key='fugit',
+        metadata_key='voluptatibus',
         value={
-            "maiores": 'doloribus',
-            "iusto": 'eligendi',
-            "ducimus": 'alias',
-            "officia": 'tempora',
+            "sapiente": 'quisquam',
+            "saepe": 'ea',
         },
     ),
-    metadata_key='ipsam',
+    metadata_key='impedit',
 )
 
 res = s.namespace.update_metadata(req)

@@ -29,15 +29,12 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetUserMetadataRequest(
     get_user_metadata_request=shared.GetUserMetadataRequest(
-        metadata_key='qui',
+        metadata_key='consectetur',
         value={
-            "ex": 'deleniti',
-            "itaque": 'dolorum',
-            "architecto": 'omnis',
-            "tenetur": 'quasi',
+            "iste": 'temporibus',
         },
     ),
-    metadata_key='at',
+    metadata_key='accusantium',
 )
 
 res = s.user.get_metadata(req)
@@ -65,13 +62,12 @@ s = tigris.Tigris(
 
 req = operations.ManagementInsertUserMetadataRequest(
     insert_user_metadata_request=shared.InsertUserMetadataRequest(
-        metadata_key='et',
+        metadata_key='rem',
         value={
-            "ipsa": 'minima',
-            "veritatis": 'consectetur',
+            "laudantium": 'eum',
         },
     ),
-    metadata_key='adipisci',
+    metadata_key='mollitia',
 )
 
 res = s.user.insert_metadata(req)
@@ -99,15 +95,14 @@ s = tigris.Tigris(
 
 req = operations.ManagementUpdateUserMetadataRequest(
     update_user_metadata_request=shared.UpdateUserMetadataRequest(
-        metadata_key='iste',
+        metadata_key='ab',
         value={
-            "accusantium": 'rem',
-            "aut": 'laudantium',
-            "eum": 'mollitia',
-            "ab": 'corrupti',
+            "non": 'voluptatem',
+            "dolor": 'occaecati',
+            "numquam": 'impedit',
         },
     ),
-    metadata_key='non',
+    metadata_key='explicabo',
 )
 
 res = s.user.update_metadata(req)

@@ -31,9 +31,9 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteAppKeyRequest(
     delete_app_key_request=shared.DeleteAppKeyRequest(
-        id='05dfc2dd-f7cc-478c-a1ba-928fc816742c',
+        id='d69a674e-0f46-47cc-8796-ed151a05dfc2',
     ),
-    project='cum',
+    project='at',
 )
 
 res = s.app_key.delete(req)
@@ -60,7 +60,7 @@ s = tigris.Tigris(
 
 
 req = operations.TigrisListAppKeysRequest(
-    project='esse',
+    project='at',
 )
 
 res = s.app_key.list(req)
@@ -88,10 +88,10 @@ s = tigris.Tigris(
 
 req = operations.TigrisRotateAppKeySecretRequest(
     rotate_app_key_request=shared.RotateAppKeyRequest(
-        id='39205929-396f-4ea7-996e-b10faaa2352c',
-        project='enim',
+        id='f7cc78ca-1ba9-428f-8816-742cb7392059',
+        project='sed',
     ),
-    project='omnis',
+    project='iste',
 )
 
 res = s.app_key.rotate(req)
@@ -119,10 +119,10 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateAppKeyRequest(
     create_app_key_request=shared.CreateAppKeyRequest(
-        description='nemo',
-        name='Velma Batz',
+        description='dolor',
+        name='Lester Welch',
     ),
-    project='doloribus',
+    project='in',
 )
 
 res = s.app_key.tigris_create_app_key(req)
@@ -150,11 +150,11 @@ s = tigris.Tigris(
 
 req = operations.TigrisUpdateAppKeyRequest(
     update_app_key_request=shared.UpdateAppKeyRequest(
-        description='sapiente',
-        id='1a3a2fa9-4677-4392-91aa-52c3f5ad019d',
-        name='Ryan Witting',
+        description='corporis',
+        id='96eb10fa-aa23-452c-9955-907aff1a3a2f',
+        name='Tracy Fritsch',
     ),
-    project='nihil',
+    project='molestiae',
 )
 
 res = s.app_key.update(req)
