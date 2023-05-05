@@ -26,15 +26,12 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisCreateProjectRequest(
-    request_body={
-        "veniam": 'aliquid',
-        "inventore": 'magnam',
-    },
-    project='ea',
-)
 
-res = s.project.create(req)
+res = s.project.create({
+    "aliquid": 'quam',
+    "molestias": 'temporibus',
+    "qui": 'neque',
+}, 'fugit')
 
 if res.create_project_response is not None:
     # handle response
@@ -56,17 +53,10 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisDeleteProjectRequest(
-    request_body={
-        "consectetur": 'recusandae',
-        "aspernatur": 'minima',
-        "eaque": 'a',
-        "libero": 'aut',
-    },
-    project='aut',
-)
 
-res = s.project.delete_project(req)
+res = s.project.delete_project({
+    "odio": 'sunt',
+}, 'ullam')
 
 if res.delete_project_response is not None:
     # handle response

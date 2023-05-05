@@ -85,10 +85,15 @@ class Namespace:
         return res
 
     
-    def get_metadata(self, request: operations.ManagementGetNamespaceMetadataRequest) -> operations.ManagementGetNamespaceMetadataResponse:
+    def get_metadata(self, get_namespace_metadata_request: shared.GetNamespaceMetadataRequest, metadata_key: str) -> operations.ManagementGetNamespaceMetadataResponse:
         r"""Reads the Namespace Metadata
         GetNamespaceMetadata inserts the user metadata object
         """
+        request = operations.ManagementGetNamespaceMetadataRequest(
+            get_namespace_metadata_request=get_namespace_metadata_request,
+            metadata_key=metadata_key,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.ManagementGetNamespaceMetadataRequest, base_url, '/v1/management/namespace/metadata/{metadataKey}/get', request)
@@ -119,10 +124,15 @@ class Namespace:
         return res
 
     
-    def insert_metadata(self, request: operations.ManagementInsertNamespaceMetadataRequest) -> operations.ManagementInsertNamespaceMetadataResponse:
+    def insert_metadata(self, insert_namespace_metadata_request: shared.InsertNamespaceMetadataRequest, metadata_key: str) -> operations.ManagementInsertNamespaceMetadataResponse:
         r"""Inserts Namespace Metadata
         InsertNamespaceMetadata inserts the namespace metadata object
         """
+        request = operations.ManagementInsertNamespaceMetadataRequest(
+            insert_namespace_metadata_request=insert_namespace_metadata_request,
+            metadata_key=metadata_key,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.ManagementInsertNamespaceMetadataRequest, base_url, '/v1/management/namespace/metadata/{metadataKey}/insert', request)
@@ -181,10 +191,15 @@ class Namespace:
         return res
 
     
-    def update_metadata(self, request: operations.ManagementUpdateNamespaceMetadataRequest) -> operations.ManagementUpdateNamespaceMetadataResponse:
+    def update_metadata(self, update_namespace_metadata_request: shared.UpdateNamespaceMetadataRequest, metadata_key: str) -> operations.ManagementUpdateNamespaceMetadataResponse:
         r"""Updates Namespace Metadata
         UpdateNamespaceMetadata updates the user metadata object
         """
+        request = operations.ManagementUpdateNamespaceMetadataRequest(
+            update_namespace_metadata_request=update_namespace_metadata_request,
+            metadata_key=metadata_key,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.ManagementUpdateNamespaceMetadataRequest, base_url, '/v1/management/namespace/metadata/{metadataKey}/update', request)

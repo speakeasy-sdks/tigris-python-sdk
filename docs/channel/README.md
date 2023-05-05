@@ -29,12 +29,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.RealtimeGetRTChannelRequest(
-    channel='modi',
-    project='qui',
-)
 
-res = s.channel.get(req)
+res = s.channel.get('quasi', 'reiciendis')
 
 if res.get_rt_channel_response is not None:
     # handle response
@@ -57,14 +53,14 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeReadMessagesRequest(
-    channel='aliquid',
-    end='cupiditate',
-    event='quos',
-    limit=20107,
-    project='magni',
-    session_id='assumenda',
-    socket_id='ipsam',
-    start='alias',
+    channel='voluptatibus',
+    end='vero',
+    event='nihil',
+    limit=509624,
+    project='voluptatibus',
+    session_id='ipsa',
+    socket_id='omnis',
+    start='voluptate',
 )
 
 res = s.channel.get_messages(req)
@@ -89,11 +85,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.RealtimeGetRTChannelsRequest(
-    project='fugit',
-)
 
-res = s.channel.list(req)
+res = s.channel.list('cum')
 
 if res.get_rt_channels_response is not None:
     # handle response
@@ -115,12 +108,6 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.RealtimeListSubscriptionsRequest(
-    channel='dolorum',
-    page=569618,
-    page_size=270008,
-    project='facilis',
-)
 
 res = s.channel.list_subscriptions(req)
 
@@ -144,30 +131,19 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.RealtimeMessagesRequest(
-    messages_request=shared.MessagesRequest(
-        channel='tempore',
-        messages=[
-            shared.Message(
-                data='delectus',
-                id='63c969e9-a3ef-4a77-9fb1-4cd66ae395ef',
-                name='Rene Reinger',
-                sequence='deleniti',
-            ),
-            shared.Message(
-                data='sapiente',
-                id='3a669970-74ba-4446-9b6e-2141959890af',
-                name='Tommy Kemmer',
-                sequence='odit',
-            ),
-        ],
-        project='nemo',
-    ),
-    channel='quasi',
-    project='iure',
-)
 
-res = s.channel.push_messages(req)
+res = s.channel.push_messages(shared.MessagesRequest(
+    channel='perferendis',
+    messages=[
+        shared.Message(
+            data='reprehenderit',
+            id='4f15471b-5e6e-413b-99d4-88e1e91e450a',
+            name='Benjamin O'Connell',
+            sequence='labore',
+        ),
+    ],
+    project='modi',
+), 'qui', 'aliquid')
 
 if res.messages_response is not None:
     # handle response
@@ -189,12 +165,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.RealtimePresenceRequest(
-    channel='doloribus',
-    project='debitis',
-)
 
-res = s.channel.realtime_presence(req)
+res = s.channel.realtime_presence('cupiditate', 'quos')
 
 if res.presence_response is not None:
     # handle response
