@@ -33,20 +33,13 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisBeginTransactionRequest(
-    begin_transaction_request=shared.BeginTransactionRequest(
-        branch='et',
-        options={
-            "ipsum": 'veritatis',
-            "nobis": 'quos',
-            "tempore": 'cupiditate',
-            "aperiam": 'delectus',
-        },
-    ),
-    project='dolorem',
-)
 
-res = s.database.begin_transaction(req)
+res = s.database.begin_transaction(shared.BeginTransactionRequest(
+    branch='ipsa',
+    options={
+        "iure": 'odio',
+    },
+), 'quaerat')
 
 if res.begin_transaction_response is not None:
     # handle response
@@ -69,14 +62,10 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisCommitTransactionRequest(
-    commit_transaction_request=shared.CommitTransactionRequest(
-        branch='dolore',
-    ),
-    project='labore',
-)
 
-res = s.database.commit_transaction(req)
+res = s.database.commit_transaction(shared.CommitTransactionRequest(
+    branch='accusamus',
+), 'quidem')
 
 if res.commit_transaction_response is not None:
     # handle response
@@ -98,15 +87,13 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisCreateBranchRequest(
-    request_body={
-        "dolorum": 'architecto',
-    },
-    branch='quae',
-    project='aut',
-)
 
-res = s.database.create_branch(req)
+res = s.database.create_branch({
+    "voluptas": 'natus',
+    "eos": 'atque',
+    "sit": 'fugiat',
+    "ab": 'soluta',
+}, 'dolorum', 'iusto')
 
 if res.create_branch_response is not None:
     # handle response
@@ -129,17 +116,11 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisDeleteBranchRequest(
-    request_body={
-        "itaque": 'consequatur',
-        "est": 'repellendus',
-        "porro": 'doloribus',
-    },
-    branch='ut',
-    project='facilis',
-)
 
-res = s.database.delete_branch(req)
+res = s.database.delete_branch({
+    "dolorum": 'deleniti',
+    "omnis": 'necessitatibus',
+}, 'distinctio', 'asperiores')
 
 if res.delete_branch_response is not None:
     # handle response
@@ -162,16 +143,12 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisDescribeDatabaseRequest(
-    describe_database_request=shared.DescribeDatabaseRequest(
-        branch='cupiditate',
-        project='qui',
-        schema_format='quae',
-    ),
-    project='laudantium',
-)
 
-res = s.database.describe(req)
+res = s.database.describe(shared.DescribeDatabaseRequest(
+    branch='nihil',
+    project='ipsum',
+    schema_format='voluptate',
+), 'id')
 
 if res.describe_database_response is not None:
     # handle response
@@ -193,12 +170,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisListCollectionsRequest(
-    branch='odio',
-    project='occaecati',
-)
 
-res = s.database.list_collections(req)
+res = s.database.list_collections('saepe', 'eius')
 
 if res.list_collections_response is not None:
     # handle response
@@ -221,14 +194,10 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisRollbackTransactionRequest(
-    rollback_transaction_request=shared.RollbackTransactionRequest(
-        branch='voluptatibus',
-    ),
-    project='quisquam',
-)
 
-res = s.database.rollback_transaction(req)
+res = s.database.rollback_transaction(shared.RollbackTransactionRequest(
+    branch='aspernatur',
+), 'perferendis')
 
 if res.rollback_transaction_response is not None:
     # handle response
@@ -250,11 +219,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisListBranchesRequest(
-    project='vero',
-)
 
-res = s.database.tigris_list_branches(req)
+res = s.database.tigris_list_branches('amet')
 
 if res.list_branches_response is not None:
     # handle response
