@@ -22,6 +22,7 @@ class Cache:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create(self, request: operations.CacheCreateCacheRequest) -> operations.CacheCreateCacheResponse:
         r"""Creates the cache"""
         base_url = self._server_url
@@ -53,6 +54,7 @@ class Cache:
 
         return res
 
+    
     def delete(self, request: operations.CacheDeleteCacheRequest) -> operations.CacheDeleteCacheResponse:
         r"""Deletes the cache"""
         base_url = self._server_url
@@ -84,6 +86,7 @@ class Cache:
 
         return res
 
+    
     def delete_keys(self, request: operations.CacheDelRequest) -> operations.CacheDelResponse:
         r"""Deletes an entry from cache"""
         base_url = self._server_url
@@ -115,6 +118,7 @@ class Cache:
 
         return res
 
+    
     def get_key(self, request: operations.CacheGetRequest) -> operations.CacheGetResponse:
         r"""Reads an entry from cache"""
         base_url = self._server_url
@@ -140,6 +144,7 @@ class Cache:
 
         return res
 
+    
     def get_set_key(self, request: operations.CacheGetSetRequest) -> operations.CacheGetSetResponse:
         r"""Sets an entry in the cache and returns the previous value if exists"""
         base_url = self._server_url
@@ -171,6 +176,7 @@ class Cache:
 
         return res
 
+    
     def list(self, request: operations.CacheListCachesRequest) -> operations.CacheListCachesResponse:
         r"""Lists all the caches for the given project"""
         base_url = self._server_url
@@ -196,6 +202,7 @@ class Cache:
 
         return res
 
+    
     def list_keys(self, request: operations.CacheKeysRequest) -> operations.CacheKeysResponse:
         r"""Lists all the key for this cache"""
         base_url = self._server_url
@@ -222,6 +229,7 @@ class Cache:
 
         return res
 
+    
     def set_key(self, request: operations.CacheSetRequest) -> operations.CacheSetResponse:
         r"""Sets an entry in the cache"""
         base_url = self._server_url

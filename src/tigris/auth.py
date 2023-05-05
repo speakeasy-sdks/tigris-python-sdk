@@ -22,6 +22,7 @@ class Auth:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def get(self) -> operations.AuthGetAccessTokenResponse:
         r"""Access Token
         Endpoint for receiving access token from Tigris Server. The endpoint requires Grant Type(`grant_type`) which has

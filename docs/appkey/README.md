@@ -28,7 +28,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisDeleteAppKeyRequest(
     delete_app_key_request=shared.DeleteAppKeyRequest(
         id='d69a674e-0f46-47cc-8796-ed151a05dfc2',
@@ -58,7 +57,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisListAppKeysRequest(
     project='at',
 )
@@ -84,7 +82,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisRotateAppKeySecretRequest(
     rotate_app_key_request=shared.RotateAppKeyRequest(
@@ -116,7 +113,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisCreateAppKeyRequest(
     create_app_key_request=shared.CreateAppKeyRequest(
         description='dolor',
@@ -146,7 +142,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisUpdateAppKeyRequest(
     update_app_key_request=shared.UpdateAppKeyRequest(

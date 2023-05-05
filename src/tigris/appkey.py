@@ -22,6 +22,7 @@ class AppKey:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def delete(self, request: operations.TigrisDeleteAppKeyRequest) -> operations.TigrisDeleteAppKeyResponse:
         r"""Deletes the app key
         Delete an app key.
@@ -55,6 +56,7 @@ class AppKey:
 
         return res
 
+    
     def list(self, request: operations.TigrisListAppKeysRequest) -> operations.TigrisListAppKeysResponse:
         r"""List all the app keys
         Lists all app keys visible to requesting actor.
@@ -82,6 +84,7 @@ class AppKey:
 
         return res
 
+    
     def rotate(self, request: operations.TigrisRotateAppKeySecretRequest) -> operations.TigrisRotateAppKeySecretResponse:
         r"""Rotates the app key secret
         Endpoint is used to rotate the secret for the app key.
@@ -115,6 +118,7 @@ class AppKey:
 
         return res
 
+    
     def tigris_create_app_key(self, request: operations.TigrisCreateAppKeyRequest) -> operations.TigrisCreateAppKeyResponse:
         r"""Creates the app key
         Create an app key.
@@ -148,6 +152,7 @@ class AppKey:
 
         return res
 
+    
     def update(self, request: operations.TigrisUpdateAppKeyRequest) -> operations.TigrisUpdateAppKeyResponse:
         r"""Updates the description of the app key
         Update the description of an app key.

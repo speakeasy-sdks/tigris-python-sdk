@@ -38,7 +38,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.SearchCreateByIDRequest(
     create_by_id_request=shared.CreateByIDRequest(
         document='deleniti',
@@ -77,7 +76,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.SearchCreateRequest(
     create_document_request=shared.CreateDocumentRequest(
         documents=[
@@ -113,7 +111,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.SearchDeleteRequest(
     delete_document_request=shared.DeleteDocumentRequest(
@@ -151,7 +148,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.SearchDeleteIndexRequest(
     delete_index_request=shared.DeleteIndexRequest(
         name='Fernando Barton',
@@ -186,7 +182,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.SearchSearchRequest(
     search_index_request=shared.SearchIndexRequest(
@@ -241,7 +236,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.SearchGetRequest(
     ids=[
         'vero',
@@ -274,7 +268,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.SearchGetIndexRequest(
     name='Javier Price',
     project='distinctio',
@@ -301,7 +294,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.SearchListIndexesRequest(
     filter_branch='eligendi',
@@ -332,7 +324,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.SearchDeleteByQueryRequest(
     delete_by_query_request=shared.DeleteByQueryRequest(
@@ -368,7 +359,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.SearchCreateOrReplaceRequest(
     create_or_replace_document_request=shared.CreateOrReplaceDocumentRequest(
@@ -408,7 +398,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.SearchUpdateRequest(
     update_document_request=shared.UpdateDocumentRequest(
         documents=[
@@ -445,7 +434,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.SearchCreateOrUpdateIndexRequest(
     create_or_update_index_request=shared.CreateOrUpdateIndexRequest(

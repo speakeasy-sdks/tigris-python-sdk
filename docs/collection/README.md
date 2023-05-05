@@ -37,7 +37,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisCreateOrUpdateCollectionRequest(
     create_or_update_collection_request=shared.CreateOrUpdateCollectionRequest(
         branch='eius',
@@ -78,7 +77,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisDeleteRequest(
     delete_request=shared.DeleteRequest(
@@ -126,7 +124,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisDescribeCollectionRequest(
     describe_collection_request=shared.DescribeCollectionRequest(
         branch='autem',
@@ -163,7 +160,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisDropCollectionRequest(
     drop_collection_request=shared.DropCollectionRequest(
@@ -205,7 +201,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisImportRequest(
     import_request=shared.ImportRequest(
@@ -262,7 +257,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisInsertRequest(
     insert_request=shared.InsertRequest(
@@ -322,7 +316,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisReadRequest(
     read_request=shared.ReadRequest(
         branch='quaerat',
@@ -370,7 +363,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisReplaceRequest(
     replace_request=shared.ReplaceRequest(
@@ -421,7 +413,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisSearchRequest(
     search_request=shared.SearchRequest(
@@ -492,7 +483,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisUpdateRequest(
     update_request=shared.UpdateRequest(

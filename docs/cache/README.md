@@ -31,7 +31,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(
         options=shared.CreateCacheOptions(
@@ -64,7 +63,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.CacheDeleteCacheRequest(
     request_body={
         "quo": 'sequi',
@@ -94,7 +92,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.CacheDelRequest(
     request_body={
@@ -130,7 +127,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.CacheGetRequest(
     key='maiores',
     name='Stacy Gulgowski MD',
@@ -158,7 +154,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.CacheGetSetRequest(
     get_set_request=shared.GetSetRequest(
@@ -191,7 +186,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.CacheListCachesRequest(
     project='pariatur',
 )
@@ -217,7 +211,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.CacheKeysRequest(
     count=265389,
@@ -248,7 +241,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.CacheSetRequest(
     set_request=shared.SetRequest(

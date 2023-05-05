@@ -33,7 +33,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisBeginTransactionRequest(
     begin_transaction_request=shared.BeginTransactionRequest(
         branch='et',
@@ -70,7 +69,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisCommitTransactionRequest(
     commit_transaction_request=shared.CommitTransactionRequest(
         branch='dolore',
@@ -99,7 +97,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisCreateBranchRequest(
     request_body={
@@ -131,7 +128,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisDeleteBranchRequest(
     request_body={
@@ -166,7 +162,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisDescribeDatabaseRequest(
     describe_database_request=shared.DescribeDatabaseRequest(
         branch='cupiditate',
@@ -198,7 +193,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisListCollectionsRequest(
     branch='odio',
     project='occaecati',
@@ -226,7 +220,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisRollbackTransactionRequest(
     rollback_transaction_request=shared.RollbackTransactionRequest(
@@ -256,7 +249,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisListBranchesRequest(
     project='vero',

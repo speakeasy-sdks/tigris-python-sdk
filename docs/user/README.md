@@ -26,7 +26,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.ManagementGetUserMetadataRequest(
     get_user_metadata_request=shared.GetUserMetadataRequest(
         metadata_key='consectetur',
@@ -59,7 +58,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.ManagementInsertUserMetadataRequest(
     insert_user_metadata_request=shared.InsertUserMetadataRequest(
         metadata_key='rem',
@@ -91,7 +89,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.ManagementUpdateUserMetadataRequest(
     update_user_metadata_request=shared.UpdateUserMetadataRequest(

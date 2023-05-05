@@ -22,6 +22,7 @@ class User:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def get_metadata(self, request: operations.ManagementGetUserMetadataRequest) -> operations.ManagementGetUserMetadataResponse:
         r"""Reads the User Metadata
         GetUserMetadata inserts the user metadata object
@@ -55,6 +56,7 @@ class User:
 
         return res
 
+    
     def insert_metadata(self, request: operations.ManagementInsertUserMetadataRequest) -> operations.ManagementInsertUserMetadataResponse:
         r"""Inserts User Metadata
         insertUserMetadata inserts the user metadata object
@@ -88,6 +90,7 @@ class User:
 
         return res
 
+    
     def update_metadata(self, request: operations.ManagementUpdateUserMetadataRequest) -> operations.ManagementUpdateUserMetadataResponse:
         r"""Updates User Metadata
         updateUserMetadata updates the user metadata object

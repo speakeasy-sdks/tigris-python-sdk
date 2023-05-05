@@ -29,7 +29,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = shared.CreateNamespaceRequest(
     code=606476,
     id='53f73ef7-fbc7-4abd-b4dd-39c0f5d2cff7',
@@ -81,7 +80,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.ManagementGetNamespaceMetadataRequest(
     get_namespace_metadata_request=shared.GetNamespaceMetadataRequest(
         metadata_key='ipsam',
@@ -114,7 +112,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.ManagementInsertNamespaceMetadataRequest(
     insert_namespace_metadata_request=shared.InsertNamespaceMetadataRequest(
@@ -172,7 +169,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.ManagementUpdateNamespaceMetadataRequest(
     update_namespace_metadata_request=shared.UpdateNamespaceMetadataRequest(
