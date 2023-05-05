@@ -29,7 +29,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.RealtimeGetRTChannelRequest(
     channel='modi',
     project='qui',
@@ -56,7 +55,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.RealtimeReadMessagesRequest(
     channel='aliquid',
@@ -91,7 +89,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.RealtimeGetRTChannelsRequest(
     project='fugit',
 )
@@ -117,7 +114,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.RealtimeListSubscriptionsRequest(
     channel='dolorum',
@@ -147,7 +143,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.RealtimeMessagesRequest(
     messages_request=shared.MessagesRequest(
@@ -193,7 +188,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.RealtimePresenceRequest(
     channel='doloribus',

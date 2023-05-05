@@ -22,6 +22,7 @@ class Database:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def begin_transaction(self, request: operations.TigrisBeginTransactionRequest) -> operations.TigrisBeginTransactionResponse:
         r"""Begin a transaction
         Starts a new transaction and returns a transactional object. All reads/writes performed
@@ -57,6 +58,7 @@ class Database:
 
         return res
 
+    
     def commit_transaction(self, request: operations.TigrisCommitTransactionRequest) -> operations.TigrisCommitTransactionResponse:
         r"""Commit a Transaction
         Atomically commit all the changes performed in the context of the transaction. Commit provides all
@@ -91,6 +93,7 @@ class Database:
 
         return res
 
+    
     def create_branch(self, request: operations.TigrisCreateBranchRequest) -> operations.TigrisCreateBranchResponse:
         r"""Create a database branch
         Creates a new database branch, if not already existing.
@@ -124,6 +127,7 @@ class Database:
 
         return res
 
+    
     def delete_branch(self, request: operations.TigrisDeleteBranchRequest) -> operations.TigrisDeleteBranchResponse:
         r"""Delete a database branch
         Deletes a database branch, if exists.
@@ -158,6 +162,7 @@ class Database:
 
         return res
 
+    
     def describe(self, request: operations.TigrisDescribeDatabaseRequest) -> operations.TigrisDescribeDatabaseResponse:
         r"""Describe database
         This API returns information related to the project along with all the collections inside the project.
@@ -192,6 +197,7 @@ class Database:
 
         return res
 
+    
     def list_collections(self, request: operations.TigrisListCollectionsRequest) -> operations.TigrisListCollectionsResponse:
         r"""List Collections
         List all the collections present in the project passed in the request.
@@ -220,6 +226,7 @@ class Database:
 
         return res
 
+    
     def rollback_transaction(self, request: operations.TigrisRollbackTransactionRequest) -> operations.TigrisRollbackTransactionResponse:
         r"""Rollback a transaction
         Rollback transaction discards all the changes
@@ -254,6 +261,7 @@ class Database:
 
         return res
 
+    
     def tigris_list_branches(self, request: operations.TigrisListBranchesRequest) -> operations.TigrisListBranchesResponse:
         r"""List database branches
         List database branches

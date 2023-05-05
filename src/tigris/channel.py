@@ -22,6 +22,7 @@ class Channel:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def get(self, request: operations.RealtimeGetRTChannelRequest) -> operations.RealtimeGetRTChannelResponse:
         r"""Get the details about a channel"""
         base_url = self._server_url
@@ -47,6 +48,7 @@ class Channel:
 
         return res
 
+    
     def get_messages(self, request: operations.RealtimeReadMessagesRequest) -> operations.RealtimeReadMessagesResponse:
         r"""Get all messages for a channel"""
         base_url = self._server_url
@@ -73,6 +75,7 @@ class Channel:
 
         return res
 
+    
     def list(self, request: operations.RealtimeGetRTChannelsRequest) -> operations.RealtimeGetRTChannelsResponse:
         r"""Get all channels for your application project"""
         base_url = self._server_url
@@ -98,6 +101,7 @@ class Channel:
 
         return res
 
+    
     def list_subscriptions(self, request: operations.RealtimeListSubscriptionsRequest) -> operations.RealtimeListSubscriptionsResponse:
         r"""Get the subscriptions details about a channel"""
         base_url = self._server_url
@@ -124,6 +128,7 @@ class Channel:
 
         return res
 
+    
     def push_messages(self, request: operations.RealtimeMessagesRequest) -> operations.RealtimeMessagesResponse:
         r"""push messages to a single channel"""
         base_url = self._server_url
@@ -155,6 +160,7 @@ class Channel:
 
         return res
 
+    
     def realtime_presence(self, request: operations.RealtimePresenceRequest) -> operations.RealtimePresenceResponse:
         r"""Presence about the channel"""
         base_url = self._server_url

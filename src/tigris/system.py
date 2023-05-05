@@ -22,6 +22,7 @@ class System:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def get_health(self) -> operations.HealthAPIHealthResponse:
         r"""Health Check
         This endpoint can be used to check the liveness of the server.
@@ -49,6 +50,7 @@ class System:
 
         return res
 
+    
     def get_server_info(self) -> operations.ObservabilityGetInfoResponse:
         r"""Information about the server
         Provides the information about the server. This information includes returning the server version, etc.
@@ -76,6 +78,7 @@ class System:
 
         return res
 
+    
     def observability_quota_usage(self, request: dict[str, Any]) -> operations.ObservabilityQuotaUsageResponse:
         r"""Queries current namespace quota usage
         Returns current namespace quota limits
@@ -109,6 +112,7 @@ class System:
 
         return res
 
+    
     def query_quota_limits(self, request: dict[str, Any]) -> operations.ObservabilityQuotaLimitsResponse:
         r"""Queries current namespace quota limits
         Returns current namespace quota limits
@@ -142,6 +146,7 @@ class System:
 
         return res
 
+    
     def query_time_series_metrics(self, request: shared.QueryTimeSeriesMetricsRequest) -> operations.ObservabilityQueryTimeSeriesMetricsResponse:
         r"""Queries time series metrics
         Queries time series metrics

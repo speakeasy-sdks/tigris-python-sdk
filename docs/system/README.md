@@ -74,7 +74,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = {
     "libero": 'illum',
     "soluta": 'accusantium',
@@ -102,7 +101,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = {
     "sapiente": 'dicta',
     "ullam": 'reprehenderit',
@@ -129,7 +127,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = shared.QueryTimeSeriesMetricsRequest(
     additional_functions=[

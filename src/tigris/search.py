@@ -22,6 +22,7 @@ class Search:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create_document(self, request: operations.SearchCreateByIDRequest) -> operations.SearchCreateByIDResponse:
         r"""Create a single document
         CreateById is used for indexing a single document. The API expects a single document. An \"id\" is optional
@@ -58,6 +59,7 @@ class Search:
 
         return res
 
+    
     def create_documents(self, request: operations.SearchCreateRequest) -> operations.SearchCreateResponse:
         r"""Create multiple documents
         Create is used for indexing a single or multiple documents. The API expects an array of documents.
@@ -95,6 +97,7 @@ class Search:
 
         return res
 
+    
     def delete_documents(self, request: operations.SearchDeleteRequest) -> operations.SearchDeleteResponse:
         r"""Delete documents by ids
         Delete one or more documents by id. Returns an array of status indicating the status of each document. Each status
@@ -130,6 +133,7 @@ class Search:
 
         return res
 
+    
     def delete_index(self, request: operations.SearchDeleteIndexRequest) -> operations.SearchDeleteIndexResponse:
         r"""Deletes search index"""
         base_url = self._server_url
@@ -161,6 +165,7 @@ class Search:
 
         return res
 
+    
     def find_documents(self, request: operations.SearchSearchRequest) -> operations.SearchSearchResponse:
         r"""Search Documents.
         Searches an index for the documents matching the query. A search can be a term search or a phrase search.
@@ -198,6 +203,7 @@ class Search:
 
         return res
 
+    
     def get_documents(self, request: operations.SearchGetRequest) -> operations.SearchGetResponse:
         r"""Get a single or multiple documents
         Retrieves one or more documents by id. The response is an array of documents in the same order it is requests.
@@ -227,6 +233,7 @@ class Search:
 
         return res
 
+    
     def get_index(self, request: operations.SearchGetIndexRequest) -> operations.SearchGetIndexResponse:
         r"""Get information about a search index"""
         base_url = self._server_url
@@ -252,6 +259,7 @@ class Search:
 
         return res
 
+    
     def list_indexes(self, request: operations.SearchListIndexesRequest) -> operations.SearchListIndexesResponse:
         r"""List search indexes"""
         base_url = self._server_url
@@ -278,6 +286,7 @@ class Search:
 
         return res
 
+    
     def query_delete_documents(self, request: operations.SearchDeleteByQueryRequest) -> operations.SearchDeleteByQueryResponse:
         r"""Delete documents by query
         DeleteByQuery is used to delete documents that match the filter. A filter is required. To delete document by id,
@@ -312,6 +321,7 @@ class Search:
 
         return res
 
+    
     def replace_documents(self, request: operations.SearchCreateOrReplaceRequest) -> operations.SearchCreateOrReplaceResponse:
         r"""Create or replace documents in an index
         Creates or replaces one or more documents. Each document is a JSON object. A document is replaced
@@ -348,6 +358,7 @@ class Search:
 
         return res
 
+    
     def update_documents(self, request: operations.SearchUpdateRequest) -> operations.SearchUpdateResponse:
         r"""Update documents in an index
         Updates one or more documents by \"id\". Each document is required to have the
@@ -384,6 +395,7 @@ class Search:
 
         return res
 
+    
     def update_index(self, request: operations.SearchCreateOrUpdateIndexRequest) -> operations.SearchCreateOrUpdateIndexResponse:
         r"""Creates or updates search index"""
         base_url = self._server_url

@@ -22,6 +22,7 @@ class Project:
         self._sdk_version = sdk_version
         self._gen_version = gen_version
         
+    
     def create(self, request: operations.TigrisCreateProjectRequest) -> operations.TigrisCreateProjectResponse:
         r"""Create Project
         Creates a new project. Returns an AlreadyExists error with a status code 409 if the project already exists.
@@ -55,6 +56,7 @@ class Project:
 
         return res
 
+    
     def delete_project(self, request: operations.TigrisDeleteProjectRequest) -> operations.TigrisDeleteProjectResponse:
         r"""Delete Project and all resources under project
         Delete Project deletes all the collections in this project along with all of the documents, and associated metadata for these collections.
@@ -88,6 +90,7 @@ class Project:
 
         return res
 
+    
     def list(self) -> operations.TigrisListProjectsResponse:
         r"""List Projects
         List returns all the projects.

@@ -26,7 +26,6 @@ s = tigris.Tigris(
     ),
 )
 
-
 req = operations.TigrisCreateProjectRequest(
     request_body={
         "veniam": 'aliquid',
@@ -56,7 +55,6 @@ s = tigris.Tigris(
         bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
     ),
 )
-
 
 req = operations.TigrisDeleteProjectRequest(
     request_body={
