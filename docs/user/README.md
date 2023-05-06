@@ -26,17 +26,13 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.ManagementGetUserMetadataRequest(
-    get_user_metadata_request=shared.GetUserMetadataRequest(
-        metadata_key='consectetur',
-        value={
-            "iste": 'temporibus',
-        },
-    ),
-    metadata_key='accusantium',
-)
 
-res = s.user.get_metadata(req)
+res = s.user.get_metadata(shared.GetUserMetadataRequest(
+    metadata_key='recusandae',
+    value={
+        "minima": 'eaque',
+    },
+), 'a')
 
 if res.get_user_metadata_response is not None:
     # handle response
@@ -58,17 +54,13 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.ManagementInsertUserMetadataRequest(
-    insert_user_metadata_request=shared.InsertUserMetadataRequest(
-        metadata_key='rem',
-        value={
-            "laudantium": 'eum',
-        },
-    ),
-    metadata_key='mollitia',
-)
 
-res = s.user.insert_metadata(req)
+res = s.user.insert_metadata(shared.InsertUserMetadataRequest(
+    metadata_key='libero',
+    value={
+        "aut": 'deleniti',
+    },
+), 'impedit')
 
 if res.insert_user_metadata_response is not None:
     # handle response
@@ -90,19 +82,13 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.ManagementUpdateUserMetadataRequest(
-    update_user_metadata_request=shared.UpdateUserMetadataRequest(
-        metadata_key='ab',
-        value={
-            "non": 'voluptatem',
-            "dolor": 'occaecati',
-            "numquam": 'impedit',
-        },
-    ),
-    metadata_key='explicabo',
-)
 
-res = s.user.update_metadata(req)
+res = s.user.update_metadata(shared.UpdateUserMetadataRequest(
+    metadata_key='aliquam',
+    value={
+        "accusamus": 'inventore',
+    },
+), 'non')
 
 if res.update_user_metadata_response is not None:
     # handle response

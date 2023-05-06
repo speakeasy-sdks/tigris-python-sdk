@@ -28,14 +28,10 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisDeleteAppKeyRequest(
-    delete_app_key_request=shared.DeleteAppKeyRequest(
-        id='d69a674e-0f46-47cc-8796-ed151a05dfc2',
-    ),
-    project='at',
-)
 
-res = s.app_key.delete(req)
+res = s.app_key.delete(shared.DeleteAppKeyRequest(
+    id='d9d8d69a-674e-40f4-a7cc-8796ed151a05',
+), 'repellendus')
 
 if res.delete_app_key_response is not None:
     # handle response
@@ -57,11 +53,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisListAppKeysRequest(
-    project='at',
-)
 
-res = s.app_key.list(req)
+res = s.app_key.list('sapiente')
 
 if res.list_app_keys_response is not None:
     # handle response
@@ -83,15 +76,11 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisRotateAppKeySecretRequest(
-    rotate_app_key_request=shared.RotateAppKeyRequest(
-        id='f7cc78ca-1ba9-428f-8816-742cb7392059',
-        project='sed',
-    ),
-    project='iste',
-)
 
-res = s.app_key.rotate(req)
+res = s.app_key.rotate(shared.RotateAppKeyRequest(
+    id='c2ddf7cc-78ca-41ba-928f-c816742cb739',
+    project='aspernatur',
+), 'perferendis')
 
 if res.rotate_app_key_response is not None:
     # handle response
@@ -113,15 +102,11 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisCreateAppKeyRequest(
-    create_app_key_request=shared.CreateAppKeyRequest(
-        description='dolor',
-        name='Lester Welch',
-    ),
-    project='in',
-)
 
-res = s.app_key.tigris_create_app_key(req)
+res = s.app_key.tigris_create_app_key(shared.CreateAppKeyRequest(
+    description='ad',
+    name='Louis Moore',
+), 'laboriosam')
 
 if res.create_app_key_response is not None:
     # handle response
@@ -143,16 +128,12 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.TigrisUpdateAppKeyRequest(
-    update_app_key_request=shared.UpdateAppKeyRequest(
-        description='corporis',
-        id='96eb10fa-aa23-452c-9955-907aff1a3a2f',
-        name='Tracy Fritsch',
-    ),
-    project='molestiae',
-)
 
-res = s.app_key.update(req)
+res = s.app_key.update(shared.UpdateAppKeyRequest(
+    description='hic',
+    id='ea7596eb-10fa-4aa2-b52c-5955907aff1a',
+    name='Cecilia Crooks',
+), 'occaecati')
 
 if res.update_app_key_response is not None:
     # handle response

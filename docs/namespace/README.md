@@ -30,9 +30,9 @@ s = tigris.Tigris(
 )
 
 req = shared.CreateNamespaceRequest(
-    code=606476,
-    id='53f73ef7-fbc7-4abd-b4dd-39c0f5d2cff7',
-    name='Kurt Abernathy',
+    code=758379,
+    id='e5e6a95d-8a0d-4446-8e2a-f7a73cf3be45',
+    name='Jeannie Leannon MD',
 )
 
 res = s.namespace.create(req)
@@ -80,18 +80,13 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.ManagementGetNamespaceMetadataRequest(
-    get_namespace_metadata_request=shared.GetNamespaceMetadataRequest(
-        metadata_key='ipsam',
-        value={
-            "aspernatur": 'vel',
-            "possimus": 'magnam',
-        },
-    ),
-    metadata_key='ratione',
-)
 
-res = s.namespace.get_metadata(req)
+res = s.namespace.get_metadata(shared.GetNamespaceMetadataRequest(
+    metadata_key='neque',
+    value={
+        "vel": 'libero',
+    },
+), 'voluptas')
 
 if res.get_namespace_metadata_response is not None:
     # handle response
@@ -113,19 +108,14 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.ManagementInsertNamespaceMetadataRequest(
-    insert_namespace_metadata_request=shared.InsertNamespaceMetadataRequest(
-        metadata_key='ex',
-        value={
-            "dicta": 'dolor',
-            "maiores": 'quasi',
-            "ex": 'nulla',
-        },
-    ),
-    metadata_key='excepturi',
-)
 
-res = s.namespace.insert_metadata(req)
+res = s.namespace.insert_metadata(shared.InsertNamespaceMetadataRequest(
+    metadata_key='deserunt',
+    value={
+        "ipsum": 'incidunt',
+        "qui": 'cupiditate',
+    },
+), 'maxime')
 
 if res.insert_namespace_metadata_response is not None:
     # handle response
@@ -170,18 +160,15 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.ManagementUpdateNamespaceMetadataRequest(
-    update_namespace_metadata_request=shared.UpdateNamespaceMetadataRequest(
-        metadata_key='voluptatibus',
-        value={
-            "sapiente": 'quisquam',
-            "saepe": 'ea',
-        },
-    ),
-    metadata_key='impedit',
-)
 
-res = s.namespace.update_metadata(req)
+res = s.namespace.update_metadata(shared.UpdateNamespaceMetadataRequest(
+    metadata_key='pariatur',
+    value={
+        "dicta": 'laborum',
+        "totam": 'incidunt',
+        "aspernatur": 'dolores',
+    },
+), 'distinctio')
 
 if res.update_namespace_metadata_response is not None:
     # handle response
