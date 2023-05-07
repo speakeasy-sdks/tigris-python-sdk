@@ -29,17 +29,12 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.CacheCreateCacheRequest(
-    create_cache_request=shared.CreateCacheRequest(
-        options=shared.CreateCacheOptions(
-            ttl_ms=548814,
-        ),
-    ),
-    name='Kelvin Sporer',
-    project='corrupti',
-)
 
-res = s.cache.create(req)
+res = s.cache.create(shared.CreateCacheRequest(
+    options=shared.CreateCacheOptions(
+        ttl_ms=548814,
+    ),
+), 'provident', 'distinctio')
 
 if res.create_cache_response is not None:
     # handle response
