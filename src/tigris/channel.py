@@ -23,8 +23,13 @@ class Channel:
         self._gen_version = gen_version
         
     
-    def get(self, request: operations.RealtimeGetRTChannelRequest) -> operations.RealtimeGetRTChannelResponse:
+    def get(self, channel: str, project: str) -> operations.RealtimeGetRTChannelResponse:
         r"""Get the details about a channel"""
+        request = operations.RealtimeGetRTChannelRequest(
+            channel=channel,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimeGetRTChannelRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}', request)
@@ -76,8 +81,12 @@ class Channel:
         return res
 
     
-    def list(self, request: operations.RealtimeGetRTChannelsRequest) -> operations.RealtimeGetRTChannelsResponse:
+    def list(self, project: str) -> operations.RealtimeGetRTChannelsResponse:
         r"""Get all channels for your application project"""
+        request = operations.RealtimeGetRTChannelsRequest(
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimeGetRTChannelsRequest, base_url, '/v1/projects/{project}/realtime/channels', request)
@@ -102,8 +111,15 @@ class Channel:
         return res
 
     
-    def list_subscriptions(self, request: operations.RealtimeListSubscriptionsRequest) -> operations.RealtimeListSubscriptionsResponse:
+    def list_subscriptions(self, channel: str, project: str, page: Optional[int] = None, page_size: Optional[int] = None) -> operations.RealtimeListSubscriptionsResponse:
         r"""Get the subscriptions details about a channel"""
+        request = operations.RealtimeListSubscriptionsRequest(
+            channel=channel,
+            project=project,
+            page=page,
+            page_size=page_size,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimeListSubscriptionsRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/subscriptions', request)
@@ -129,8 +145,14 @@ class Channel:
         return res
 
     
-    def push_messages(self, request: operations.RealtimeMessagesRequest) -> operations.RealtimeMessagesResponse:
+    def push_messages(self, messages_request: shared.MessagesRequest, channel: str, project: str) -> operations.RealtimeMessagesResponse:
         r"""push messages to a single channel"""
+        request = operations.RealtimeMessagesRequest(
+            messages_request=messages_request,
+            channel=channel,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimeMessagesRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/messages', request)
@@ -161,8 +183,13 @@ class Channel:
         return res
 
     
-    def realtime_presence(self, request: operations.RealtimePresenceRequest) -> operations.RealtimePresenceResponse:
+    def realtime_presence(self, channel: str, project: str) -> operations.RealtimePresenceResponse:
         r"""Presence about the channel"""
+        request = operations.RealtimePresenceRequest(
+            channel=channel,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimePresenceRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/presence', request)

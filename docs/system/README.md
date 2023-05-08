@@ -75,8 +75,8 @@ s = tigris.Tigris(
 )
 
 req = {
-    "libero": 'illum',
-    "soluta": 'accusantium',
+    "ratione": 'ex',
+    "laudantium": 'dicta',
 }
 
 res = s.system.observability_quota_usage(req)
@@ -102,8 +102,7 @@ s = tigris.Tigris(
 )
 
 req = {
-    "sapiente": 'dicta',
-    "ullam": 'reprehenderit',
+    "maiores": 'quasi',
 }
 
 res = s.system.query_quota_limits(req)
@@ -132,33 +131,31 @@ req = shared.QueryTimeSeriesMetricsRequest(
     additional_functions=[
         shared.AdditionalFunction(
             rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_COUNT,
-                interval=16328,
+                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_AVG,
+                interval=569211,
             ),
         ),
         shared.AdditionalFunction(
             rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_MIN,
-                interval=185232,
+                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_AVG,
+                interval=343605,
             ),
         ),
     ],
-    branch='quibusdam',
-    collection='ex',
-    db='deleniti',
-    from_=929292,
+    branch='sapiente',
+    collection='quisquam',
+    db='saepe',
+    from_=411372,
     function=shared.QueryTimeSeriesMetricsRequestFunctionEnum.NONE,
-    metric_name='architecto',
-    quantile=6091.78,
+    metric_name='corporis',
+    quantile=3331.45,
     space_aggregated_by=[
-        'quasi',
-        'at',
-        'et',
-        'voluptate',
+        'inventore',
+        'magnam',
     ],
-    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregationEnum.AVG,
-    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperationEnum.READ,
-    to=86532,
+    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregationEnum.MIN,
+    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperationEnum.METADATA,
+    to=232234,
 )
 
 res = s.system.query_time_series_metrics(req)
