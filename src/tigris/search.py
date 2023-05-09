@@ -23,13 +23,20 @@ class Search:
         self._gen_version = gen_version
         
     
-    def create_document(self, request: operations.SearchCreateByIDRequest) -> operations.SearchCreateByIDResponse:
+    def create_document(self, create_by_id_request: shared.CreateByIDRequest, id: str, index: str, project: str) -> operations.SearchCreateByIDResponse:
         r"""Create a single document
         CreateById is used for indexing a single document. The API expects a single document. An \"id\" is optional
          and the server can automatically generate it for you in case it is missing. In cases an id is provided in
          the document and the document already exists then that document will not be indexed and an error is returned
          with HTTP status code 409.
         """
+        request = operations.SearchCreateByIDRequest(
+            create_by_id_request=create_by_id_request,
+            id=id,
+            index=index,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchCreateByIDRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/{id}', request)
@@ -60,7 +67,7 @@ class Search:
         return res
 
     
-    def create_documents(self, request: operations.SearchCreateRequest) -> operations.SearchCreateResponse:
+    def create_documents(self, create_document_request: shared.CreateDocumentRequest, index: str, project: str) -> operations.SearchCreateResponse:
         r"""Create multiple documents
         Create is used for indexing a single or multiple documents. The API expects an array of documents.
          Each document is a JSON object. An \"id\" is optional and the server can automatically generate it for you in
@@ -68,6 +75,12 @@ class Search:
          document will not be indexed and in the response there will be an error corresponding to that document id other
          documents will succeed. Returns an array of status indicating the status of each document.
         """
+        request = operations.SearchCreateRequest(
+            create_document_request=create_document_request,
+            index=index,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchCreateRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
@@ -98,12 +111,18 @@ class Search:
         return res
 
     
-    def delete_documents(self, request: operations.SearchDeleteRequest) -> operations.SearchDeleteResponse:
+    def delete_documents(self, delete_document_request: shared.DeleteDocumentRequest, index: str, project: str) -> operations.SearchDeleteResponse:
         r"""Delete documents by ids
         Delete one or more documents by id. Returns an array of status indicating the status of each document. Each status
          has an error field that is set to null in case document is deleted successfully otherwise it will non null with
          an error code and message.
         """
+        request = operations.SearchDeleteRequest(
+            delete_document_request=delete_document_request,
+            index=index,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchDeleteRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
@@ -134,8 +153,14 @@ class Search:
         return res
 
     
-    def delete_index(self, request: operations.SearchDeleteIndexRequest) -> operations.SearchDeleteIndexResponse:
+    def delete_index(self, delete_index_request: shared.DeleteIndexRequest, name: str, project: str) -> operations.SearchDeleteIndexResponse:
         r"""Deletes search index"""
+        request = operations.SearchDeleteIndexRequest(
+            delete_index_request=delete_index_request,
+            name=name,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchDeleteIndexRequest, base_url, '/v1/projects/{project}/search/indexes/{name}', request)
@@ -166,7 +191,7 @@ class Search:
         return res
 
     
-    def find_documents(self, request: operations.SearchSearchRequest) -> operations.SearchSearchResponse:
+    def find_documents(self, search_index_request: shared.SearchIndexRequest, index: str, project: str) -> operations.SearchSearchResponse:
         r"""Search Documents.
         Searches an index for the documents matching the query. A search can be a term search or a phrase search.
          Search API allows filtering the result set using filters as documented
@@ -174,6 +199,12 @@ class Search:
          a faceted search by passing the fields in the facet parameter. You can find more detailed documentation of the
          Search API with multiple examples <a href=\"https://docs.tigrisdata.com/overview/search\" title=\"here\">here</a>.
         """
+        request = operations.SearchSearchRequest(
+            search_index_request=search_index_request,
+            index=index,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchSearchRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/search', request)
@@ -204,11 +235,17 @@ class Search:
         return res
 
     
-    def get_documents(self, request: operations.SearchGetRequest) -> operations.SearchGetResponse:
+    def get_documents(self, index: str, project: str, ids: Optional[list[str]] = None) -> operations.SearchGetResponse:
         r"""Get a single or multiple documents
         Retrieves one or more documents by id. The response is an array of documents in the same order it is requests.
          A null is returned for the documents that are not found.
         """
+        request = operations.SearchGetRequest(
+            index=index,
+            project=project,
+            ids=ids,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchGetRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
@@ -234,8 +271,13 @@ class Search:
         return res
 
     
-    def get_index(self, request: operations.SearchGetIndexRequest) -> operations.SearchGetIndexResponse:
+    def get_index(self, name: str, project: str) -> operations.SearchGetIndexResponse:
         r"""Get information about a search index"""
+        request = operations.SearchGetIndexRequest(
+            name=name,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchGetIndexRequest, base_url, '/v1/projects/{project}/search/indexes/{name}', request)
@@ -260,8 +302,15 @@ class Search:
         return res
 
     
-    def list_indexes(self, request: operations.SearchListIndexesRequest) -> operations.SearchListIndexesResponse:
+    def list_indexes(self, project: str, filter_branch: Optional[str] = None, filter_collection: Optional[str] = None, filter_type: Optional[str] = None) -> operations.SearchListIndexesResponse:
         r"""List search indexes"""
+        request = operations.SearchListIndexesRequest(
+            project=project,
+            filter_branch=filter_branch,
+            filter_collection=filter_collection,
+            filter_type=filter_type,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchListIndexesRequest, base_url, '/v1/projects/{project}/search/indexes', request)
@@ -287,11 +336,17 @@ class Search:
         return res
 
     
-    def query_delete_documents(self, request: operations.SearchDeleteByQueryRequest) -> operations.SearchDeleteByQueryResponse:
+    def query_delete_documents(self, delete_by_query_request: shared.DeleteByQueryRequest, index: str, project: str) -> operations.SearchDeleteByQueryResponse:
         r"""Delete documents by query
         DeleteByQuery is used to delete documents that match the filter. A filter is required. To delete document by id,
          you can pass the filter as follows ```{\"id\": \"test\"}```. Returns a count of number of documents deleted.
         """
+        request = operations.SearchDeleteByQueryRequest(
+            delete_by_query_request=delete_by_query_request,
+            index=index,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchDeleteByQueryRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery', request)
@@ -322,13 +377,19 @@ class Search:
         return res
 
     
-    def replace_documents(self, request: operations.SearchCreateOrReplaceRequest) -> operations.SearchCreateOrReplaceResponse:
+    def replace_documents(self, create_or_replace_document_request: shared.CreateOrReplaceDocumentRequest, index: str, project: str) -> operations.SearchCreateOrReplaceResponse:
         r"""Create or replace documents in an index
         Creates or replaces one or more documents. Each document is a JSON object. A document is replaced
          if it already exists. An \"id\" is generated automatically in case it is missing in the document. The
          document is created if \"id\" doesn't exists otherwise it is replaced. Returns an array of status indicating
          the status of each document.
         """
+        request = operations.SearchCreateOrReplaceRequest(
+            create_or_replace_document_request=create_or_replace_document_request,
+            index=index,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchCreateOrReplaceRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
@@ -359,13 +420,19 @@ class Search:
         return res
 
     
-    def update_documents(self, request: operations.SearchUpdateRequest) -> operations.SearchUpdateResponse:
+    def update_documents(self, update_document_request: shared.UpdateDocumentRequest, index: str, project: str) -> operations.SearchUpdateResponse:
         r"""Update documents in an index
         Updates one or more documents by \"id\". Each document is required to have the
          \"id\" field in it. Returns an array of status indicating the status of each document. Each status
          has an error field that is set to null in case document is updated successfully otherwise the error
          field is set with a code and message.
         """
+        request = operations.SearchUpdateRequest(
+            update_document_request=update_document_request,
+            index=index,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchUpdateRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
@@ -396,8 +463,14 @@ class Search:
         return res
 
     
-    def update_index(self, request: operations.SearchCreateOrUpdateIndexRequest) -> operations.SearchCreateOrUpdateIndexResponse:
+    def update_index(self, create_or_update_index_request: shared.CreateOrUpdateIndexRequest, name: str, project: str) -> operations.SearchCreateOrUpdateIndexResponse:
         r"""Creates or updates search index"""
+        request = operations.SearchCreateOrUpdateIndexRequest(
+            create_or_update_index_request=create_or_update_index_request,
+            name=name,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchCreateOrUpdateIndexRequest, base_url, '/v1/projects/{project}/search/indexes/{name}', request)
