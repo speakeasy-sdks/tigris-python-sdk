@@ -75,8 +75,7 @@ s = tigris.Tigris(
 )
 
 req = {
-    "libero": 'illum',
-    "soluta": 'accusantium',
+    "quibusdam": 'ex',
 }
 
 res = s.system.observability_quota_usage(req)
@@ -102,8 +101,9 @@ s = tigris.Tigris(
 )
 
 req = {
-    "sapiente": 'dicta',
-    "ullam": 'reprehenderit',
+    "itaque": 'dolorum',
+    "architecto": 'omnis',
+    "tenetur": 'quasi',
 }
 
 res = s.system.query_quota_limits(req)
@@ -132,33 +132,42 @@ req = shared.QueryTimeSeriesMetricsRequest(
     additional_functions=[
         shared.AdditionalFunction(
             rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_COUNT,
-                interval=16328,
+                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_SUM,
+                interval=454162,
             ),
         ),
         shared.AdditionalFunction(
             rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_MIN,
-                interval=185232,
+                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_SUM,
+                interval=326701,
+            ),
+        ),
+        shared.AdditionalFunction(
+            rollup=shared.RollupFunction(
+                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_SUM,
+                interval=232744,
+            ),
+        ),
+        shared.AdditionalFunction(
+            rollup=shared.RollupFunction(
+                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_COUNT,
+                interval=614465,
             ),
         ),
     ],
-    branch='quibusdam',
-    collection='ex',
-    db='deleniti',
-    from_=929292,
-    function=shared.QueryTimeSeriesMetricsRequestFunctionEnum.NONE,
-    metric_name='architecto',
-    quantile=6091.78,
+    branch='temporibus',
+    collection='accusantium',
+    db='rem',
+    from_=15606,
+    function=shared.QueryTimeSeriesMetricsRequestFunctionEnum.COUNT,
+    metric_name='eum',
+    quantile=6498.32,
     space_aggregated_by=[
-        'quasi',
-        'at',
-        'et',
-        'voluptate',
+        'corrupti',
     ],
-    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregationEnum.AVG,
-    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperationEnum.READ,
-    to=86532,
+    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregationEnum.MIN,
+    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperationEnum.ALL,
+    to=221161,
 )
 
 res = s.system.query_time_series_metrics(req)

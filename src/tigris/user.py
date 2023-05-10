@@ -23,10 +23,15 @@ class User:
         self._gen_version = gen_version
         
     
-    def get_metadata(self, request: operations.ManagementGetUserMetadataRequest) -> operations.ManagementGetUserMetadataResponse:
+    def get_metadata(self, get_user_metadata_request: shared.GetUserMetadataRequest, metadata_key: str) -> operations.ManagementGetUserMetadataResponse:
         r"""Reads the User Metadata
         GetUserMetadata inserts the user metadata object
         """
+        request = operations.ManagementGetUserMetadataRequest(
+            get_user_metadata_request=get_user_metadata_request,
+            metadata_key=metadata_key,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.ManagementGetUserMetadataRequest, base_url, '/v1/management/users/metadata/{metadataKey}/get', request)
@@ -57,10 +62,15 @@ class User:
         return res
 
     
-    def insert_metadata(self, request: operations.ManagementInsertUserMetadataRequest) -> operations.ManagementInsertUserMetadataResponse:
+    def insert_metadata(self, insert_user_metadata_request: shared.InsertUserMetadataRequest, metadata_key: str) -> operations.ManagementInsertUserMetadataResponse:
         r"""Inserts User Metadata
         insertUserMetadata inserts the user metadata object
         """
+        request = operations.ManagementInsertUserMetadataRequest(
+            insert_user_metadata_request=insert_user_metadata_request,
+            metadata_key=metadata_key,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.ManagementInsertUserMetadataRequest, base_url, '/v1/management/users/metadata/{metadataKey}/insert', request)
@@ -91,10 +101,15 @@ class User:
         return res
 
     
-    def update_metadata(self, request: operations.ManagementUpdateUserMetadataRequest) -> operations.ManagementUpdateUserMetadataResponse:
+    def update_metadata(self, update_user_metadata_request: shared.UpdateUserMetadataRequest, metadata_key: str) -> operations.ManagementUpdateUserMetadataResponse:
         r"""Updates User Metadata
         updateUserMetadata updates the user metadata object
         """
+        request = operations.ManagementUpdateUserMetadataRequest(
+            update_user_metadata_request=update_user_metadata_request,
+            metadata_key=metadata_key,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.ManagementUpdateUserMetadataRequest, base_url, '/v1/management/users/metadata/{metadataKey}/update', request)

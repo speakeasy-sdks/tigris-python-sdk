@@ -31,17 +31,12 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.CacheCreateCacheRequest(
-    create_cache_request=shared.CreateCacheRequest(
-        options=shared.CreateCacheOptions(
-            ttl_ms=244425,
-        ),
-    ),
-    name='Miss Eugene Hauck',
-    project='enim',
-)
 
-res = s.cache.create(req)
+res = s.cache.create(shared.CreateCacheRequest(
+    options=shared.CreateCacheOptions(
+        ttl_ms=253291,
+    ),
+), 'commodi', 'quam')
 
 if res.create_cache_response is not None:
     # handle response
@@ -63,15 +58,11 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.CacheDeleteCacheRequest(
-    request_body={
-        "quo": 'sequi',
-    },
-    name='Vernon Ondricka Sr.',
-    project='error',
-)
 
-res = s.cache.delete(req)
+res = s.cache.delete({
+    "velit": 'error',
+    "quia": 'quis',
+}, 'vitae', 'laborum')
 
 if res.delete_cache_response is not None:
     # handle response
@@ -93,19 +84,12 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.CacheDelRequest(
-    request_body={
-        "laborum": 'quasi',
-        "reiciendis": 'voluptatibus',
-        "vero": 'nihil',
-        "praesentium": 'voluptatibus',
-    },
-    key='ipsa',
-    name='Mr. Jared Ritchie',
-    project='ut',
-)
 
-res = s.cache.delete_keys(req)
+res = s.cache.delete_keys({
+    "enim": 'odit',
+    "quo": 'sequi',
+    "tenetur": 'ipsam',
+}, 'id', 'possimus', 'aut')
 
 if res.del_response is not None:
     # handle response
@@ -127,13 +111,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.CacheGetRequest(
-    key='maiores',
-    name='Stacy Gulgowski MD',
-    project='enim',
-)
 
-res = s.cache.get_key(req)
+res = s.cache.get_key('quasi', 'error', 'temporibus')
 
 if res.get_response is not None:
     # handle response
@@ -155,16 +134,10 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.CacheGetSetRequest(
-    get_set_request=shared.GetSetRequest(
-        value='accusamus',
-    ),
-    key='commodi',
-    name='Eric Emmerich',
-    project='excepturi',
-)
 
-res = s.cache.get_set_key(req)
+res = s.cache.get_set_key(shared.GetSetRequest(
+    value='laborum',
+), 'quasi', 'reiciendis', 'voluptatibus')
 
 if res.get_set_response is not None:
     # handle response
@@ -186,11 +159,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.CacheListCachesRequest(
-    project='pariatur',
-)
 
-res = s.cache.list(req)
+res = s.cache.list('vero')
 
 if res.list_caches_response is not None:
     # handle response
@@ -213,11 +183,11 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheKeysRequest(
-    count=265389,
-    cursor=508969,
-    name='Grady Botsford',
-    pattern='veritatis',
-    project='itaque',
+    count=468651,
+    cursor=509624,
+    name='Jose Moen',
+    pattern='perferendis',
+    project='doloremque',
 )
 
 res = s.cache.list_keys(req)
@@ -242,20 +212,14 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.CacheSetRequest(
-    set_request=shared.SetRequest(
-        ex=277718,
-        nx=False,
-        px=318569,
-        value='consequatur',
-        xx=False,
-    ),
-    key='est',
-    name='Benjamin O'Connell',
-    project='labore',
-)
 
-res = s.cache.set_key(req)
+res = s.cache.set_key(shared.SetRequest(
+    ex=441711,
+    nx=False,
+    px=282807,
+    value='maiores',
+    xx=False,
+), 'dicta', 'corporis', 'dolore')
 
 if res.set_response is not None:
     # handle response

@@ -38,19 +38,13 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchCreateByIDRequest(
-    create_by_id_request=shared.CreateByIDRequest(
-        document='deleniti',
-        id='c42e141a-ac36-46c8-9d6b-144290747477',
-        index='rem',
-        project='fuga',
-    ),
-    id='7bd466d2-8c10-4ab3-8dca-4251904e523c',
-    index='esse',
-    project='recusandae',
-)
 
-res = s.search.create_document(req)
+res = s.search.create_document(shared.CreateByIDRequest(
+    document='quo',
+    id='dca42519-04e5-423c-be0b-c7178e4796f2',
+    index='deserunt',
+    project='molestiae',
+), 'accusantium', 'porro', 'eum')
 
 if res.create_by_id_response is not None:
     # handle response
@@ -76,19 +70,16 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchCreateRequest(
-    create_document_request=shared.CreateDocumentRequest(
-        documents=[
-            'distinctio',
-        ],
-        index='quod',
-        project='dignissimos',
-    ),
-    index='inventore',
-    project='nihil',
-)
 
-res = s.search.create_documents(req)
+res = s.search.create_documents(shared.CreateDocumentRequest(
+    documents=[
+        'praesentium',
+        'consequuntur',
+        'deleniti',
+    ],
+    index='fugit',
+    project='fuga',
+), 'mollitia', 'incidunt')
 
 if res.create_document_response is not None:
     # handle response
@@ -112,21 +103,16 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchDeleteRequest(
-    delete_document_request=shared.DeleteDocumentRequest(
-        ids=[
-            'accusamus',
-            'aliquam',
-            'odio',
-        ],
-        index='occaecati',
-        project='commodi',
-    ),
-    index='sapiente',
-    project='dolores',
-)
 
-res = s.search.delete_documents(req)
+res = s.search.delete_documents(shared.DeleteDocumentRequest(
+    ids=[
+        'explicabo',
+        'minima',
+        'nisi',
+    ],
+    index='fugit',
+    project='sapiente',
+), 'consequuntur', 'ratione')
 
 if res.delete_document_response is not None:
     # handle response
@@ -148,16 +134,11 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchDeleteIndexRequest(
-    delete_index_request=shared.DeleteIndexRequest(
-        name='Fernando Barton',
-        project='quas',
-    ),
-    name='Eugene Leuschke',
-    project='mollitia',
-)
 
-res = s.search.delete_index(req)
+res = s.search.delete_index(shared.DeleteIndexRequest(
+    name='Kerry Mayert IV',
+    project='eveniet',
+), 'accusamus', 'veritatis')
 
 if res.delete_index_response is not None:
     # handle response
@@ -183,37 +164,36 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchSearchRequest(
-    search_index_request=shared.SearchIndexRequest(
-        collation=shared.Collation(
-            case='incidunt',
-        ),
-        exclude_fields=[
-            'explicabo',
-            'minima',
-            'nisi',
-        ],
-        facet='fugit',
-        filter='sapiente',
-        include_fields=[
-            'ratione',
-        ],
-        index='explicabo',
-        page=903984,
-        page_size=578922,
-        project='atque',
-        q='et',
-        search_fields=[
-            'eveniet',
-            'accusamus',
-        ],
-        sort='veritatis',
-    ),
-    index='esse',
-    project='quod',
-)
 
-res = s.search.find_documents(req)
+res = s.search.find_documents(shared.SearchIndexRequest(
+    collation=shared.Collation(
+        case='esse',
+    ),
+    exclude_fields=[
+        'nam',
+        'vero',
+        'aliquid',
+        'quasi',
+    ],
+    facet='saepe',
+    filter='vel',
+    include_fields=[
+        'molestiae',
+        'rerum',
+        'occaecati',
+    ],
+    index='minima',
+    page=716244,
+    page_size=756779,
+    project='sit',
+    q='culpa',
+    search_fields=[
+        'adipisci',
+        'cumque',
+        'consequuntur',
+    ],
+    sort='consequatur',
+), 'minus', 'quaerat')
 
 if res.search_index_response is not None:
     # handle response
@@ -236,17 +216,11 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchGetRequest(
-    ids=[
-        'vero',
-        'aliquid',
-        'quasi',
-    ],
-    index='saepe',
-    project='vel',
-)
 
-res = s.search.get_documents(req)
+res = s.search.get_documents('sapiente', 'consectetur', [
+    'blanditiis',
+    'provident',
+])
 
 if res.get_document_response is not None:
     # handle response
@@ -268,12 +242,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchGetIndexRequest(
-    name='Javier Price',
-    project='distinctio',
-)
 
-res = s.search.get_index(req)
+res = s.search.get_index('a', 'nulla')
 
 if res.get_index_response is not None:
     # handle response
@@ -295,14 +265,8 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchListIndexesRequest(
-    filter_branch='eligendi',
-    filter_collection='sit',
-    filter_type='culpa',
-    project='tempore',
-)
 
-res = s.search.list_indexes(req)
+res = s.search.list_indexes('quas', 'esse', 'quasi', 'a')
 
 if res.list_indexes_response is not None:
     # handle response
@@ -325,17 +289,12 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchDeleteByQueryRequest(
-    delete_by_query_request=shared.DeleteByQueryRequest(
-        filter='adipisci',
-        index='cumque',
-        project='consequuntur',
-    ),
-    index='consequatur',
-    project='minus',
-)
 
-res = s.search.query_delete_documents(req)
+res = s.search.query_delete_documents(shared.DeleteByQueryRequest(
+    filter='error',
+    index='sint',
+    project='pariatur',
+), 'possimus', 'quia')
 
 if res.delete_by_query_response is not None:
     # handle response
@@ -360,20 +319,17 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchCreateOrReplaceRequest(
-    create_or_replace_document_request=shared.CreateOrReplaceDocumentRequest(
-        documents=[
-            'sapiente',
-            'consectetur',
-        ],
-        index='esse',
-        project='blanditiis',
-    ),
-    index='provident',
-    project='a',
-)
 
-res = s.search.replace_documents(req)
+res = s.search.replace_documents(shared.CreateOrReplaceDocumentRequest(
+    documents=[
+        'asperiores',
+        'facere',
+        'veritatis',
+        'consequuntur',
+    ],
+    index='quasi',
+    project='similique',
+), 'culpa', 'aliquid')
 
 if res.create_or_replace_document_response is not None:
     # handle response
@@ -398,22 +354,17 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchUpdateRequest(
-    update_document_request=shared.UpdateDocumentRequest(
-        documents=[
-            'quas',
-            'esse',
-            'quasi',
-            'a',
-        ],
-        index='error',
-        project='sint',
-    ),
-    index='pariatur',
-    project='possimus',
-)
 
-res = s.search.update_documents(req)
+res = s.search.update_documents(shared.UpdateDocumentRequest(
+    documents=[
+        'quae',
+        'earum',
+        'vel',
+        'in',
+    ],
+    index='eius',
+    project='libero',
+), 'illum', 'soluta')
 
 if res.update_document_response is not None:
     # handle response
@@ -435,18 +386,13 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.SearchCreateOrUpdateIndexRequest(
-    create_or_update_index_request=shared.CreateOrUpdateIndexRequest(
-        name='Laverne Zemlak Sr.',
-        only_create=False,
-        project='quasi',
-        schema='similique',
-    ),
-    name='Dr. Gene Wiegand',
-    project='in',
-)
 
-res = s.search.update_index(req)
+res = s.search.update_index(shared.CreateOrUpdateIndexRequest(
+    name='Mrs. Michele Williamson',
+    only_create=False,
+    project='ullam',
+    schema='nisi',
+), 'aut', 'voluptatum')
 
 if res.create_or_update_index_response is not None:
     # handle response

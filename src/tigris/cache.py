@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from tigris.models import operations, shared
-from typing import Optional
+from typing import Any, Optional
 
 class Cache:
     r"""The cache section provide APIs that can be used to perform cache operations."""
@@ -23,8 +23,14 @@ class Cache:
         self._gen_version = gen_version
         
     
-    def create(self, request: operations.CacheCreateCacheRequest) -> operations.CacheCreateCacheResponse:
+    def create(self, create_cache_request: shared.CreateCacheRequest, name: str, project: str) -> operations.CacheCreateCacheResponse:
         r"""Creates the cache"""
+        request = operations.CacheCreateCacheRequest(
+            create_cache_request=create_cache_request,
+            name=name,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.CacheCreateCacheRequest, base_url, '/v1/projects/{project}/caches/{name}/create', request)
@@ -55,8 +61,14 @@ class Cache:
         return res
 
     
-    def delete(self, request: operations.CacheDeleteCacheRequest) -> operations.CacheDeleteCacheResponse:
+    def delete(self, request_body: dict[str, Any], name: str, project: str) -> operations.CacheDeleteCacheResponse:
         r"""Deletes the cache"""
+        request = operations.CacheDeleteCacheRequest(
+            request_body=request_body,
+            name=name,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.CacheDeleteCacheRequest, base_url, '/v1/projects/{project}/caches/{name}/delete', request)
@@ -87,8 +99,15 @@ class Cache:
         return res
 
     
-    def delete_keys(self, request: operations.CacheDelRequest) -> operations.CacheDelResponse:
+    def delete_keys(self, request_body: dict[str, Any], key: str, name: str, project: str) -> operations.CacheDelResponse:
         r"""Deletes an entry from cache"""
+        request = operations.CacheDelRequest(
+            request_body=request_body,
+            key=key,
+            name=name,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.CacheDelRequest, base_url, '/v1/projects/{project}/caches/{name}/{key}/delete', request)
@@ -119,8 +138,14 @@ class Cache:
         return res
 
     
-    def get_key(self, request: operations.CacheGetRequest) -> operations.CacheGetResponse:
+    def get_key(self, key: str, name: str, project: str) -> operations.CacheGetResponse:
         r"""Reads an entry from cache"""
+        request = operations.CacheGetRequest(
+            key=key,
+            name=name,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.CacheGetRequest, base_url, '/v1/projects/{project}/caches/{name}/{key}/get', request)
@@ -145,8 +170,15 @@ class Cache:
         return res
 
     
-    def get_set_key(self, request: operations.CacheGetSetRequest) -> operations.CacheGetSetResponse:
+    def get_set_key(self, get_set_request: shared.GetSetRequest, key: str, name: str, project: str) -> operations.CacheGetSetResponse:
         r"""Sets an entry in the cache and returns the previous value if exists"""
+        request = operations.CacheGetSetRequest(
+            get_set_request=get_set_request,
+            key=key,
+            name=name,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.CacheGetSetRequest, base_url, '/v1/projects/{project}/caches/{name}/{key}/getset', request)
@@ -177,8 +209,12 @@ class Cache:
         return res
 
     
-    def list(self, request: operations.CacheListCachesRequest) -> operations.CacheListCachesResponse:
+    def list(self, project: str) -> operations.CacheListCachesResponse:
         r"""Lists all the caches for the given project"""
+        request = operations.CacheListCachesRequest(
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.CacheListCachesRequest, base_url, '/v1/projects/{project}/caches/list', request)
@@ -230,8 +266,15 @@ class Cache:
         return res
 
     
-    def set_key(self, request: operations.CacheSetRequest) -> operations.CacheSetResponse:
+    def set_key(self, set_request: shared.SetRequest, key: str, name: str, project: str) -> operations.CacheSetResponse:
         r"""Sets an entry in the cache"""
+        request = operations.CacheSetRequest(
+            set_request=set_request,
+            key=key,
+            name=name,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.CacheSetRequest, base_url, '/v1/projects/{project}/caches/{name}/{key}/set', request)
