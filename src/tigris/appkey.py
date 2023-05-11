@@ -23,10 +23,15 @@ class AppKey:
         self._gen_version = gen_version
         
     
-    def delete(self, request: operations.TigrisDeleteAppKeyRequest) -> operations.TigrisDeleteAppKeyResponse:
+    def delete(self, delete_app_key_request: shared.DeleteAppKeyRequest, project: str) -> operations.TigrisDeleteAppKeyResponse:
         r"""Deletes the app key
         Delete an app key.
         """
+        request = operations.TigrisDeleteAppKeyRequest(
+            delete_app_key_request=delete_app_key_request,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisDeleteAppKeyRequest, base_url, '/v1/projects/{project}/apps/keys/delete', request)
@@ -57,10 +62,14 @@ class AppKey:
         return res
 
     
-    def list(self, request: operations.TigrisListAppKeysRequest) -> operations.TigrisListAppKeysResponse:
+    def list(self, project: str) -> operations.TigrisListAppKeysResponse:
         r"""List all the app keys
         Lists all app keys visible to requesting actor.
         """
+        request = operations.TigrisListAppKeysRequest(
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisListAppKeysRequest, base_url, '/v1/projects/{project}/apps/keys', request)
@@ -85,10 +94,15 @@ class AppKey:
         return res
 
     
-    def rotate(self, request: operations.TigrisRotateAppKeySecretRequest) -> operations.TigrisRotateAppKeySecretResponse:
+    def rotate(self, rotate_app_key_request: shared.RotateAppKeyRequest, project: str) -> operations.TigrisRotateAppKeySecretResponse:
         r"""Rotates the app key secret
         Endpoint is used to rotate the secret for the app key.
         """
+        request = operations.TigrisRotateAppKeySecretRequest(
+            rotate_app_key_request=rotate_app_key_request,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisRotateAppKeySecretRequest, base_url, '/v1/projects/{project}/apps/keys/rotate', request)
@@ -119,10 +133,15 @@ class AppKey:
         return res
 
     
-    def tigris_create_app_key(self, request: operations.TigrisCreateAppKeyRequest) -> operations.TigrisCreateAppKeyResponse:
+    def tigris_create_app_key(self, create_app_key_request: shared.CreateAppKeyRequest, project: str) -> operations.TigrisCreateAppKeyResponse:
         r"""Creates the app key
         Create an app key.
         """
+        request = operations.TigrisCreateAppKeyRequest(
+            create_app_key_request=create_app_key_request,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisCreateAppKeyRequest, base_url, '/v1/projects/{project}/apps/keys/create', request)
@@ -153,10 +172,15 @@ class AppKey:
         return res
 
     
-    def update(self, request: operations.TigrisUpdateAppKeyRequest) -> operations.TigrisUpdateAppKeyResponse:
+    def update(self, update_app_key_request: shared.UpdateAppKeyRequest, project: str) -> operations.TigrisUpdateAppKeyResponse:
         r"""Updates the description of the app key
         Update the description of an app key.
         """
+        request = operations.TigrisUpdateAppKeyRequest(
+            update_app_key_request=update_app_key_request,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisUpdateAppKeyRequest, base_url, '/v1/projects/{project}/apps/keys/update', request)

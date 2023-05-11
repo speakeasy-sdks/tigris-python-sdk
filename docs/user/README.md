@@ -26,17 +26,14 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.ManagementGetUserMetadataRequest(
-    get_user_metadata_request=shared.GetUserMetadataRequest(
-        metadata_key='consectetur',
-        value={
-            "iste": 'temporibus',
-        },
-    ),
-    metadata_key='accusantium',
-)
 
-res = s.user.get_metadata(req)
+res = s.user.get_metadata(shared.GetUserMetadataRequest(
+    metadata_key='occaecati',
+    value={
+        "impedit": 'explicabo',
+        "voluptas": 'aut',
+    },
+), 'dignissimos')
 
 if res.get_user_metadata_response is not None:
     # handle response
@@ -58,17 +55,16 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.ManagementInsertUserMetadataRequest(
-    insert_user_metadata_request=shared.InsertUserMetadataRequest(
-        metadata_key='rem',
-        value={
-            "laudantium": 'eum',
-        },
-    ),
-    metadata_key='mollitia',
-)
 
-res = s.user.insert_metadata(req)
+res = s.user.insert_metadata(shared.InsertUserMetadataRequest(
+    metadata_key='dicta',
+    value={
+        "natus": 'velit',
+        "voluptatibus": 'voluptas',
+        "asperiores": 'aperiam',
+        "ea": 'quaerat',
+    },
+), 'consequuntur')
 
 if res.insert_user_metadata_response is not None:
     # handle response
@@ -90,19 +86,15 @@ s = tigris.Tigris(
     ),
 )
 
-req = operations.ManagementUpdateUserMetadataRequest(
-    update_user_metadata_request=shared.UpdateUserMetadataRequest(
-        metadata_key='ab',
-        value={
-            "non": 'voluptatem',
-            "dolor": 'occaecati',
-            "numquam": 'impedit',
-        },
-    ),
-    metadata_key='explicabo',
-)
 
-res = s.user.update_metadata(req)
+res = s.user.update_metadata(shared.UpdateUserMetadataRequest(
+    metadata_key='repellendus',
+    value={
+        "maxime": 'dignissimos',
+        "officia": 'asperiores',
+        "nemo": 'quae',
+    },
+), 'quaerat')
 
 if res.update_user_metadata_response is not None:
     # handle response

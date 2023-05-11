@@ -189,3 +189,9 @@ Based on:
 Based on:
 - OpenAPI Doc 0.0.1 https://prod.speakeasyapi.dev/v1/apis/tigris-api/version/0.0.1/schema/download
 - Speakeasy CLI 1.29.0 (2.26.0) https://github.com/speakeasy-api/speakeasy
+
+## 2023-05-11 00:36:56
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 https://prod.speakeasyapi.dev/v1/apis/tigris-api/version/0.0.1/schema/download
+- Speakeasy CLI 1.30.0 (2.26.3) https://github.com/speakeasy-api/speakeasy

@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from tigris.models import operations, shared
-from typing import Optional
+from typing import Any, Optional
 
 class Project:
     r"""Every Tigris projects comes with a transactional document database built on FoundationDB, one of the most resilient and battle-tested open source distributed key-value store. A database is created automatically for you when you create a project."""
@@ -23,10 +23,15 @@ class Project:
         self._gen_version = gen_version
         
     
-    def create(self, request: operations.TigrisCreateProjectRequest) -> operations.TigrisCreateProjectResponse:
+    def create(self, request_body: dict[str, Any], project: str) -> operations.TigrisCreateProjectResponse:
         r"""Create Project
         Creates a new project. Returns an AlreadyExists error with a status code 409 if the project already exists.
         """
+        request = operations.TigrisCreateProjectRequest(
+            request_body=request_body,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisCreateProjectRequest, base_url, '/v1/projects/{project}/create', request)
@@ -57,10 +62,15 @@ class Project:
         return res
 
     
-    def delete_project(self, request: operations.TigrisDeleteProjectRequest) -> operations.TigrisDeleteProjectResponse:
+    def delete_project(self, request_body: dict[str, Any], project: str) -> operations.TigrisDeleteProjectResponse:
         r"""Delete Project and all resources under project
         Delete Project deletes all the collections in this project along with all of the documents, and associated metadata for these collections.
         """
+        request = operations.TigrisDeleteProjectRequest(
+            request_body=request_body,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisDeleteProjectRequest, base_url, '/v1/projects/{project}/delete', request)

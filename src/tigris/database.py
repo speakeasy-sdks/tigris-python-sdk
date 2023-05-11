@@ -3,7 +3,7 @@
 import requests as requests_http
 from . import utils
 from tigris.models import operations, shared
-from typing import Optional
+from typing import Any, Optional
 
 class Database:
     r"""The Database section provide APIs that can be used to interact with the database. A single Database can have one or more collections. A database is created automatically for you when you create a project."""
@@ -23,12 +23,17 @@ class Database:
         self._gen_version = gen_version
         
     
-    def begin_transaction(self, request: operations.TigrisBeginTransactionRequest) -> operations.TigrisBeginTransactionResponse:
+    def begin_transaction(self, begin_transaction_request: shared.BeginTransactionRequest, project: str) -> operations.TigrisBeginTransactionResponse:
         r"""Begin a transaction
         Starts a new transaction and returns a transactional object. All reads/writes performed
          within a transaction will run with serializable isolation. Tigris offers global transactions,
          with ACID properties and strict serializability.
         """
+        request = operations.TigrisBeginTransactionRequest(
+            begin_transaction_request=begin_transaction_request,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisBeginTransactionRequest, base_url, '/v1/projects/{project}/database/transactions/begin', request)
@@ -59,11 +64,16 @@ class Database:
         return res
 
     
-    def commit_transaction(self, request: operations.TigrisCommitTransactionRequest) -> operations.TigrisCommitTransactionResponse:
+    def commit_transaction(self, commit_transaction_request: shared.CommitTransactionRequest, project: str) -> operations.TigrisCommitTransactionResponse:
         r"""Commit a Transaction
         Atomically commit all the changes performed in the context of the transaction. Commit provides all
          or nothing semantics by ensuring no partial updates are in the project due to a transaction failure.
         """
+        request = operations.TigrisCommitTransactionRequest(
+            commit_transaction_request=commit_transaction_request,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisCommitTransactionRequest, base_url, '/v1/projects/{project}/database/transactions/commit', request)
@@ -94,10 +104,16 @@ class Database:
         return res
 
     
-    def create_branch(self, request: operations.TigrisCreateBranchRequest) -> operations.TigrisCreateBranchResponse:
+    def create_branch(self, request_body: dict[str, Any], branch: str, project: str) -> operations.TigrisCreateBranchResponse:
         r"""Create a database branch
         Creates a new database branch, if not already existing.
         """
+        request = operations.TigrisCreateBranchRequest(
+            request_body=request_body,
+            branch=branch,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisCreateBranchRequest, base_url, '/v1/projects/{project}/database/branches/{branch}/create', request)
@@ -128,11 +144,17 @@ class Database:
         return res
 
     
-    def delete_branch(self, request: operations.TigrisDeleteBranchRequest) -> operations.TigrisDeleteBranchResponse:
+    def delete_branch(self, request_body: dict[str, Any], branch: str, project: str) -> operations.TigrisDeleteBranchResponse:
         r"""Delete a database branch
         Deletes a database branch, if exists.
          Throws 400 Bad Request if \"main\" branch is being deleted
         """
+        request = operations.TigrisDeleteBranchRequest(
+            request_body=request_body,
+            branch=branch,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisDeleteBranchRequest, base_url, '/v1/projects/{project}/database/branches/{branch}/delete', request)
@@ -163,11 +185,16 @@ class Database:
         return res
 
     
-    def describe(self, request: operations.TigrisDescribeDatabaseRequest) -> operations.TigrisDescribeDatabaseResponse:
+    def describe(self, describe_database_request: shared.DescribeDatabaseRequest, project: str) -> operations.TigrisDescribeDatabaseResponse:
         r"""Describe database
         This API returns information related to the project along with all the collections inside the project.
          This can be used to retrieve the size of the project or to retrieve schemas, branches and the size of all the collections present in this project.
         """
+        request = operations.TigrisDescribeDatabaseRequest(
+            describe_database_request=describe_database_request,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisDescribeDatabaseRequest, base_url, '/v1/projects/{project}/database/describe', request)
@@ -198,10 +225,15 @@ class Database:
         return res
 
     
-    def list_collections(self, request: operations.TigrisListCollectionsRequest) -> operations.TigrisListCollectionsResponse:
+    def list_collections(self, project: str, branch: Optional[str] = None) -> operations.TigrisListCollectionsResponse:
         r"""List Collections
         List all the collections present in the project passed in the request.
         """
+        request = operations.TigrisListCollectionsRequest(
+            project=project,
+            branch=branch,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisListCollectionsRequest, base_url, '/v1/projects/{project}/database/collections', request)
@@ -227,11 +259,16 @@ class Database:
         return res
 
     
-    def rollback_transaction(self, request: operations.TigrisRollbackTransactionRequest) -> operations.TigrisRollbackTransactionResponse:
+    def rollback_transaction(self, rollback_transaction_request: shared.RollbackTransactionRequest, project: str) -> operations.TigrisRollbackTransactionResponse:
         r"""Rollback a transaction
         Rollback transaction discards all the changes
          performed in the transaction
         """
+        request = operations.TigrisRollbackTransactionRequest(
+            rollback_transaction_request=rollback_transaction_request,
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisRollbackTransactionRequest, base_url, '/v1/projects/{project}/database/transactions/rollback', request)
@@ -262,10 +299,14 @@ class Database:
         return res
 
     
-    def tigris_list_branches(self, request: operations.TigrisListBranchesRequest) -> operations.TigrisListBranchesResponse:
+    def tigris_list_branches(self, project: str) -> operations.TigrisListBranchesResponse:
         r"""List database branches
         List database branches
         """
+        request = operations.TigrisListBranchesRequest(
+            project=project,
+        )
+        
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisListBranchesRequest, base_url, '/v1/projects/{project}/database/branches', request)
