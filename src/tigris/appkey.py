@@ -30,13 +30,13 @@ class AppKey:
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisDeleteAppKeyRequest, base_url, '/v1/projects/{project}/apps/keys/delete', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "delete_app_key_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -64,11 +64,12 @@ class AppKey:
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisListAppKeysRequest, base_url, '/v1/projects/{project}/apps/keys', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.TigrisListAppKeysResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -92,13 +93,13 @@ class AppKey:
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisRotateAppKeySecretRequest, base_url, '/v1/projects/{project}/apps/keys/rotate', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "rotate_app_key_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -126,13 +127,13 @@ class AppKey:
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisCreateAppKeyRequest, base_url, '/v1/projects/{project}/apps/keys/create', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "create_app_key_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -160,13 +161,13 @@ class AppKey:
         base_url = self._server_url
         
         url = utils.generate_url(operations.TigrisUpdateAppKeyRequest, base_url, '/v1/projects/{project}/apps/keys/update', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "update_app_key_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         

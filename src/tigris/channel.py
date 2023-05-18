@@ -28,11 +28,12 @@ class Channel:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimeGetRTChannelRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RealtimeGetRTChannelResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -54,12 +55,13 @@ class Channel:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimeReadMessagesRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/messages', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.RealtimeReadMessagesRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RealtimeReadMessagesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -81,11 +83,12 @@ class Channel:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimeGetRTChannelsRequest, base_url, '/v1/projects/{project}/realtime/channels', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RealtimeGetRTChannelsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -107,12 +110,13 @@ class Channel:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimeListSubscriptionsRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/subscriptions', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.RealtimeListSubscriptionsRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RealtimeListSubscriptionsResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -134,13 +138,13 @@ class Channel:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimeMessagesRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/messages', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "messages_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -166,11 +170,12 @@ class Channel:
         base_url = self._server_url
         
         url = utils.generate_url(operations.RealtimePresenceRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/presence', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.RealtimePresenceResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)

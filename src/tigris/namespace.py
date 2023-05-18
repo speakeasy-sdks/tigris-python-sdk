@@ -30,13 +30,13 @@ class Namespace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/management/namespaces/create'
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -64,11 +64,12 @@ class Namespace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/management/namespaces/describe'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('POST', url)
+        http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ManagementDescribeNamespacesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -92,13 +93,13 @@ class Namespace:
         base_url = self._server_url
         
         url = utils.generate_url(operations.ManagementGetNamespaceMetadataRequest, base_url, '/v1/management/namespace/metadata/{metadataKey}/get', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "get_namespace_metadata_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -126,13 +127,13 @@ class Namespace:
         base_url = self._server_url
         
         url = utils.generate_url(operations.ManagementInsertNamespaceMetadataRequest, base_url, '/v1/management/namespace/metadata/{metadataKey}/insert', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "insert_namespace_metadata_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -160,11 +161,12 @@ class Namespace:
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/v1/management/namespaces/list'
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('POST', url)
+        http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.ManagementListNamespacesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -188,13 +190,13 @@ class Namespace:
         base_url = self._server_url
         
         url = utils.generate_url(operations.ManagementUpdateNamespaceMetadataRequest, base_url, '/v1/management/namespace/metadata/{metadataKey}/update', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "update_namespace_metadata_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         

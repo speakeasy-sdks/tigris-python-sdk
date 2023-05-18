@@ -33,13 +33,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchCreateByIDRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/{id}', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "create_by_id_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -71,13 +71,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchCreateRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "create_document_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -107,13 +107,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchDeleteRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "delete_document_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -139,13 +139,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchDeleteIndexRequest, base_url, '/v1/projects/{project}/search/indexes/{name}', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "delete_index_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -177,13 +177,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchSearchRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/search', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "search_index_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -212,12 +212,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchGetRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.SearchGetRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.SearchGetResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -239,11 +240,12 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchGetIndexRequest, base_url, '/v1/projects/{project}/search/indexes/{name}', request)
-        
+        headers = {}
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('GET', url)
+        http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.SearchGetIndexResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -265,12 +267,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchListIndexesRequest, base_url, '/v1/projects/{project}/search/indexes', request)
-        
+        headers = {}
         query_params = utils.get_query_params(operations.SearchListIndexesRequest, request)
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
-        http_res = client.request('GET', url, params=query_params)
+        http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
 
         res = operations.SearchListIndexesResponse(status_code=http_res.status_code, content_type=content_type, raw_response=http_res)
@@ -295,13 +298,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchDeleteByQueryRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "delete_by_query_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -332,13 +335,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchCreateOrReplaceRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "create_or_replace_document_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -369,13 +372,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchUpdateRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "update_document_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
@@ -401,13 +404,13 @@ class Search:
         base_url = self._server_url
         
         url = utils.generate_url(operations.SearchCreateOrUpdateIndexRequest, base_url, '/v1/projects/{project}/search/indexes/{name}', request)
-        
         headers = {}
         req_content_type, data, form = utils.serialize_request_body(request, "create_or_update_index_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
+        headers['user-agent'] = f'speakeasy-sdk/{self._language} {self._sdk_version} {self._gen_version}'
         
         client = self._security_client
         
