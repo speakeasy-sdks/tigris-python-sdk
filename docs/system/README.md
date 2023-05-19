@@ -132,13 +132,13 @@ req = shared.QueryTimeSeriesMetricsRequest(
     additional_functions=[
         shared.AdditionalFunction(
             rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_COUNT,
+                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_COUNT,
                 interval=16328,
             ),
         ),
         shared.AdditionalFunction(
             rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregatorEnum.ROLLUP_AGGREGATOR_MIN,
+                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_MIN,
                 interval=185232,
             ),
         ),
@@ -147,7 +147,7 @@ req = shared.QueryTimeSeriesMetricsRequest(
     collection='ex',
     db='deleniti',
     from_=929292,
-    function=shared.QueryTimeSeriesMetricsRequestFunctionEnum.NONE,
+    function=shared.QueryTimeSeriesMetricsRequestFunction.NONE,
     metric_name='architecto',
     quantile=6091.78,
     space_aggregated_by=[
@@ -156,8 +156,8 @@ req = shared.QueryTimeSeriesMetricsRequest(
         'et',
         'voluptate',
     ],
-    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregationEnum.AVG,
-    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperationEnum.READ,
+    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregation.AVG,
+    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperation.READ,
     to=86532,
 )
 
