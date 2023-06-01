@@ -10,6 +10,7 @@ src/tigris/search.py
 src/tigris/system.py
 src/tigris/user.py
 src/tigris/sdk.py
+.gitignore
 pylintrc
 setup.py
 src/tigris/__init__.py
