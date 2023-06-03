@@ -1,3 +1,4 @@
+src/tigris/sdkconfiguration.py
 src/tigris/appkey.py
 src/tigris/auth.py
 src/tigris/cache.py
