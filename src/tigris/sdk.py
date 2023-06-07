@@ -17,7 +17,7 @@ from tigris import utils
 from tigris.models import shared
 
 class Tigris:
-    r"""# Overview
+    r"""Tigris API Reference: # Overview
     This section is organized around HTTP APIs. The APIs accepts JSON requests and returns JSON-encoded responses.The APIs conforms to standard HTTP status codes.
     
     # Errors
