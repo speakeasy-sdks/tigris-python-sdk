@@ -25,7 +25,7 @@ from tigris.models import shared
 
 s = tigris.Tigris(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -53,7 +53,7 @@ import tigris
 
 s = tigris.Tigris(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -76,7 +76,7 @@ from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -109,7 +109,7 @@ from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -143,7 +143,7 @@ import tigris
 
 s = tigris.Tigris(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -166,7 +166,7 @@ from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
