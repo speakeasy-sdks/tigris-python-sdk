@@ -8,10 +8,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class QuotaLimitsResponse:
     r"""Contains current quota limits"""
-    
     read_units: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ReadUnits'), 'exclude': lambda f: f is None }})
     r"""Number of allowed read units per second"""
     storage_size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('StorageSize'), 'exclude': lambda f: f is None }})
@@ -19,3 +19,4 @@ class QuotaLimitsResponse:
     write_units: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('WriteUnits'), 'exclude': lambda f: f is None }})
     r"""Number of allowed write units per second"""
     
+

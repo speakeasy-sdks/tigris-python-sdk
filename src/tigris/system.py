@@ -3,7 +3,7 @@
 from .sdkconfiguration import SDKConfiguration
 from tigris import utils
 from tigris.models import operations, shared
-from typing import Any, Optional
+from typing import Optional
 
 class System:
     r"""The Observability section has APIs that provides full visibility into the health, metrics, and monitoring of the Server."""
@@ -73,7 +73,7 @@ class System:
         return res
 
     
-    def observability_quota_usage(self, request: dict[str, Any]) -> operations.ObservabilityQuotaUsageResponse:
+    def observability_quota_usage(self, request: shared.QuotaUsageRequest) -> operations.ObservabilityQuotaUsageResponse:
         r"""Queries current namespace quota usage
         Returns current namespace quota limits
         """
@@ -108,7 +108,7 @@ class System:
         return res
 
     
-    def query_quota_limits(self, request: dict[str, Any]) -> operations.ObservabilityQuotaLimitsResponse:
+    def query_quota_limits(self, request: shared.QuotaLimitsRequest) -> operations.ObservabilityQuotaLimitsResponse:
         r"""Queries current namespace quota limits
         Returns current namespace quota limits
         """

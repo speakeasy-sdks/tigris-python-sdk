@@ -8,9 +8,9 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ObservabilityQueryTimeSeriesMetricsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     query_time_series_metrics_response: Optional[shared_querytimeseriesmetricsresponse.QueryTimeSeriesMetricsResponse] = dataclasses.field(default=None)
@@ -19,3 +19,4 @@ class ObservabilityQueryTimeSeriesMetricsResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

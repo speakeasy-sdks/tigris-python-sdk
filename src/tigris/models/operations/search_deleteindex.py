@@ -9,9 +9,9 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class SearchDeleteIndexRequest:
-    
     delete_index_request: shared_deleteindexrequest.DeleteIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     r"""index name."""
@@ -19,9 +19,11 @@ class SearchDeleteIndexRequest:
     r"""Tigris project name."""
     
 
+
+
+
 @dataclasses.dataclass
 class SearchDeleteIndexResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     delete_index_response: Optional[shared_deleteindexresponse.DeleteIndexResponse] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class SearchDeleteIndexResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

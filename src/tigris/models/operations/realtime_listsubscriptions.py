@@ -8,18 +8,20 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class RealtimeListSubscriptionsRequest:
-    
     channel: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channel', 'style': 'simple', 'explode': False }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     page: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page', 'style': 'form', 'explode': True }})
     page_size: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'page_size', 'style': 'form', 'explode': True }})
     
 
+
+
+
 @dataclasses.dataclass
 class RealtimeListSubscriptionsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     list_subscription_response: Optional[shared_listsubscriptionresponse.ListSubscriptionResponse] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class RealtimeListSubscriptionsResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

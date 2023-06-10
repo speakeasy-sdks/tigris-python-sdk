@@ -9,10 +9,11 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CreateAppKeyResponse:
     r"""CreateAppKeyResponse returns created app keys"""
-    
     created_app_key: Optional[shared_appkey.AppKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_app_key'), 'exclude': lambda f: f is None }})
     r"""An user AppKey"""
     
+

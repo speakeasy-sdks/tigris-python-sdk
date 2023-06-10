@@ -8,15 +8,17 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class RealtimeGetRTChannelsRequest:
-    
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
+
+
+
 @dataclasses.dataclass
 class RealtimeGetRTChannelsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     get_rt_channels_response: Optional[shared_getrtchannelsresponse.GetRTChannelsResponse] = dataclasses.field(default=None)
@@ -25,3 +27,4 @@ class RealtimeGetRTChannelsResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

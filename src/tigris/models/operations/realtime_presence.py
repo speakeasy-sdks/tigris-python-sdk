@@ -8,16 +8,18 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class RealtimePresenceRequest:
-    
     channel: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channel', 'style': 'simple', 'explode': False }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
+
+
+
 @dataclasses.dataclass
 class RealtimePresenceResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     presence_response: Optional[shared_presenceresponse.PresenceResponse] = dataclasses.field(default=None)
@@ -26,3 +28,4 @@ class RealtimePresenceResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

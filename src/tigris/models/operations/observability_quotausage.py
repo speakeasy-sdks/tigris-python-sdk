@@ -8,9 +8,9 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ObservabilityQuotaUsageResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     quota_usage_response: Optional[shared_quotausageresponse.QuotaUsageResponse] = dataclasses.field(default=None)
@@ -19,3 +19,4 @@ class ObservabilityQuotaUsageResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

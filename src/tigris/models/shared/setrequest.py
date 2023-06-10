@@ -8,9 +8,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class SetRequest:
-    
     ex: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ex'), 'exclude': lambda f: f is None }})
     r"""optional - ttl specific to this key in second"""
     nx: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('nx'), 'exclude': lambda f: f is None }})
@@ -22,3 +22,4 @@ class SetRequest:
     xx: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('xx'), 'exclude': lambda f: f is None }})
     r"""set only if the key exist"""
     
+

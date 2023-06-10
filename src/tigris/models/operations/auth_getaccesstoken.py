@@ -8,9 +8,9 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class AuthGetAccessTokenResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     get_access_token_response: Optional[shared_getaccesstokenresponse.GetAccessTokenResponse] = dataclasses.field(default=None)
@@ -19,3 +19,4 @@ class AuthGetAccessTokenResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

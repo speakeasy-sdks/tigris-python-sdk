@@ -8,16 +8,18 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CacheListCachesRequest:
-    
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Tigris project name"""
     
 
+
+
+
 @dataclasses.dataclass
 class CacheListCachesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     list_caches_response: Optional[shared_listcachesresponse.ListCachesResponse] = dataclasses.field(default=None)
@@ -26,3 +28,4 @@ class CacheListCachesResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

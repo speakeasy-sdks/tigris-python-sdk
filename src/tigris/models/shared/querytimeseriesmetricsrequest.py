@@ -27,10 +27,10 @@ class QueryTimeSeriesMetricsRequestTigrisOperation(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class QueryTimeSeriesMetricsRequest:
     r"""Requests the time series metrics"""
-    
     additional_functions: Optional[list[shared_additionalfunction.AdditionalFunction]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additionalFunctions'), 'exclude': lambda f: f is None }})
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
     collection: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection'), 'exclude': lambda f: f is None }})
@@ -44,3 +44,4 @@ class QueryTimeSeriesMetricsRequest:
     tigris_operation: Optional[QueryTimeSeriesMetricsRequestTigrisOperation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('tigris_operation'), 'exclude': lambda f: f is None }})
     to: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('to'), 'exclude': lambda f: f is None }})
     
+

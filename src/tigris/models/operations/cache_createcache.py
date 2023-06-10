@@ -9,9 +9,9 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CacheCreateCacheRequest:
-    
     create_cache_request: shared_createcacherequest.CreateCacheRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     r"""cache name"""
@@ -19,9 +19,11 @@ class CacheCreateCacheRequest:
     r"""Tigris project name"""
     
 
+
+
+
 @dataclasses.dataclass
 class CacheCreateCacheResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     create_cache_response: Optional[shared_createcacheresponse.CreateCacheResponse] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class CacheCreateCacheResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

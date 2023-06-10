@@ -9,10 +9,11 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ListCollectionsResponse:
     r"""OK"""
-    
     collections: Optional[list[shared_collectioninfo.CollectionInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collections'), 'exclude': lambda f: f is None }})
     r"""List of the collections info in the database."""
     
+

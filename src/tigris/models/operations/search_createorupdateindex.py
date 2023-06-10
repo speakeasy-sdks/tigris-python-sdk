@@ -9,9 +9,9 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class SearchCreateOrUpdateIndexRequest:
-    
     create_or_update_index_request: shared_createorupdateindexrequest.CreateOrUpdateIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     r"""search index name."""
@@ -19,9 +19,11 @@ class SearchCreateOrUpdateIndexRequest:
     r"""Tigris project name."""
     
 
+
+
+
 @dataclasses.dataclass
 class SearchCreateOrUpdateIndexResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     create_or_update_index_response: Optional[shared_createorupdateindexresponse.CreateOrUpdateIndexResponse] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class SearchCreateOrUpdateIndexResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

@@ -8,9 +8,9 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class SearchListIndexesRequest:
-    
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Tigris project name."""
     filter_branch: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter.branch', 'style': 'form', 'explode': True }})
@@ -21,9 +21,11 @@ class SearchListIndexesRequest:
     r"""An index can be either managed by user explicitly then the type is set as \\"user\\" or the index is backed by Tigris collection. In case it is backed by Tigris collection the type is \\"tigris\\"."""
     
 
+
+
+
 @dataclasses.dataclass
 class SearchListIndexesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     list_indexes_response: Optional[shared_listindexesresponse.ListIndexesResponse] = dataclasses.field(default=None)
@@ -32,3 +34,4 @@ class SearchListIndexesResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

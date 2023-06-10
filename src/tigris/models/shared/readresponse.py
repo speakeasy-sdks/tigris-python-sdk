@@ -5,17 +5,25 @@ import dataclasses
 from ..shared import responsemetadata as shared_responsemetadata
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
-from typing import Any, Optional
+from typing import Optional
+
+
+
+@dataclasses.dataclass
+class ReadResponseData:
+    r"""Object containing the collection document."""
+    pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ReadResponse:
-    
-    data: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
+    data: Optional[ReadResponseData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})
     r"""Object containing the collection document."""
     metadata: Optional[shared_responsemetadata.ResponseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
     r"""Has metadata related to the documents stored."""
     resume_token: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('resume_token'), 'exclude': lambda f: f is None }})
     r"""An internal key, used for pagination."""
     
+

@@ -52,7 +52,7 @@ class Cache:
         
         url = utils.generate_url(operations.CacheDeleteCacheRequest, base_url, '/v1/projects/{project}/caches/{name}/delete', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "delete_cache_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -85,7 +85,7 @@ class Cache:
         
         url = utils.generate_url(operations.CacheDelRequest, base_url, '/v1/projects/{project}/caches/{name}/{key}/delete', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request_body", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "del_request", 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

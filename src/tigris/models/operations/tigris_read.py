@@ -9,9 +9,9 @@ from ..shared import streamingreadresponse as shared_streamingreadresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class TigrisReadRequest:
-    
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
     r"""Collection name to read documents from."""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class TigrisReadRequest:
     read_request: shared_readrequest.ReadRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
+
 @dataclasses.dataclass
 class TigrisReadResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class TigrisReadResponse:
     streaming_read_response: Optional[shared_streamingreadresponse.StreamingReadResponse] = dataclasses.field(default=None)
     r"""OK"""
     
+

@@ -3,22 +3,25 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
+from ..shared import deleteprojectrequest as shared_deleteprojectrequest
 from ..shared import deleteprojectresponse as shared_deleteprojectresponse
 from ..shared import status as shared_status
-from typing import Any, Optional
+from typing import Optional
+
 
 
 @dataclasses.dataclass
 class TigrisDeleteProjectRequest:
-    
+    delete_project_request: shared_deleteprojectrequest.DeleteProjectRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Delete Project with this name. <p></p>**Note**: Deletes all resources under this project. Use with caution."""
-    request_body: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
+
+
+
 
 @dataclasses.dataclass
 class TigrisDeleteProjectResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     delete_project_response: Optional[shared_deleteprojectresponse.DeleteProjectResponse] = dataclasses.field(default=None)
@@ -27,3 +30,4 @@ class TigrisDeleteProjectResponse:
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

@@ -1,0 +1,11 @@
+# CollectionDescription
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `collection`                                                                                | *Optional[str]*                                                                             | :heavy_minus_sign:                                                                          | Name of the collection.                                                                     |
+| `metadata`                                                                                  | [Optional[CollectionMetadata]](../../models/shared/collectionmetadata.md)                   | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `schema`                                                                                    | [Optional[CollectionDescriptionSchema]](../../models/shared/collectiondescriptionschema.md) | :heavy_minus_sign:                                                                          | Collections schema                                                                          |
+| `size`                                                                                      | *Optional[int]*                                                                             | :heavy_minus_sign:                                                                          | Collection size in bytes                                                                    |
