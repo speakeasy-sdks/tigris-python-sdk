@@ -12,7 +12,8 @@ from typing import Optional
 @dataclasses.dataclass
 class ReadResponseData:
     r"""Object containing the collection document."""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

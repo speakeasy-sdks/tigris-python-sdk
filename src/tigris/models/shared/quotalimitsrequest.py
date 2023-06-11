@@ -8,4 +8,5 @@ import dataclasses
 @dataclasses.dataclass
 class QuotaLimitsRequest:
     r"""Request current namespace quota limits"""
-    pass
+    
+

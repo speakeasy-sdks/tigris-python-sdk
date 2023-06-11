@@ -12,7 +12,8 @@ from typing import Optional
 @dataclasses.dataclass
 class SearchRequestFacet:
     r"""Facet query to aggregate results on given fields. The field name for the facet search can be passed like this `{\\"brand\\": { \\"size\\": 10 }}` where the size controls the total facets for this field."""
-    pass
+    
+
 
 
 
@@ -25,14 +26,16 @@ class SearchRequestFields:
 @dataclasses.dataclass
 class SearchRequestFilter:
     r"""Filter stacks on top of query results to further narrow down the results. Similar to `ReadRequest.filter`"""
-    pass
+    
+
 
 
 
 @dataclasses.dataclass
 class SearchRequestSort:
     r"""Array of fields and corresponding sort orders to order the results `[{ \\"salary\\": \\"$desc\\" }]`"""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

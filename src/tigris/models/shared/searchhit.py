@@ -12,7 +12,8 @@ from typing import Optional
 @dataclasses.dataclass
 class SearchHitData:
     r"""Actual search document"""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

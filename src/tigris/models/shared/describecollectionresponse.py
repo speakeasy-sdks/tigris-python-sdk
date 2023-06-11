@@ -12,7 +12,8 @@ from typing import Optional
 @dataclasses.dataclass
 class DescribeCollectionResponseSchema:
     r"""Schema of this collection."""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

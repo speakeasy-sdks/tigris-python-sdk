@@ -12,7 +12,8 @@ from typing import Optional
 @dataclasses.dataclass
 class CollectionDescriptionSchema:
     r"""Collections schema"""
-    pass
+    
+
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)

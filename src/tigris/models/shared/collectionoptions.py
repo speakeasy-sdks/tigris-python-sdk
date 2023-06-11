@@ -8,4 +8,5 @@ import dataclasses
 @dataclasses.dataclass
 class CollectionOptions:
     r"""Collection requests modifying options."""
-    pass
+    
+
