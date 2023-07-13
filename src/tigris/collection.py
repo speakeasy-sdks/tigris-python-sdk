@@ -161,7 +161,7 @@ class Collection:
     def import_documents(self, request: operations.TigrisImportRequest) -> operations.TigrisImportResponse:
         r"""Import Documents
         Imports documents into the collection.
-        
+
          It automatically:
           * Detects the schema of the documents in the batch
           * Evolves the schema as soon as it's backward compatible
