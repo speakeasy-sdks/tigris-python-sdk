@@ -20,7 +20,7 @@ This endpoint can be used to check the liveness of the server.
 
 ```python
 import tigris
-
+from tigris.models import shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -49,7 +49,7 @@ Provides the information about the server. This information includes returning t
 
 ```python
 import tigris
-
+from tigris.models import shared
 
 s = tigris.Tigris(
     security=shared.Security(

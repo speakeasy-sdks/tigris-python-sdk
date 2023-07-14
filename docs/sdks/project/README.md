@@ -96,7 +96,7 @@ List returns all the projects.
 
 ```python
 import tigris
-
+from tigris.models import shared
 
 s = tigris.Tigris(
     security=shared.Security(

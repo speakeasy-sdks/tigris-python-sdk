@@ -234,7 +234,7 @@ List all the collections present in the project passed in the request.
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -315,7 +315,7 @@ List database branches
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(

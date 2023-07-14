@@ -291,7 +291,7 @@ Retrieves one or more documents by id. The response is an array of documents in 
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -336,7 +336,7 @@ Get information about a search index
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -375,7 +375,7 @@ List search indexes
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(

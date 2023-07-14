@@ -148,7 +148,7 @@ Reads an entry from cache
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -231,7 +231,7 @@ Lists all the caches for the given project
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -269,7 +269,7 @@ Lists all the key for this cache
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(

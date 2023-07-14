@@ -21,7 +21,7 @@ Get the details about a channel
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -60,7 +60,7 @@ Get all messages for a channel
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -105,7 +105,7 @@ Get all channels for your application project
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -143,7 +143,7 @@ Get the subscriptions details about a channel
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -235,7 +235,7 @@ Presence about the channel
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(

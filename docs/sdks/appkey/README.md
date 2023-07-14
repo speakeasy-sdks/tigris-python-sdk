@@ -61,7 +61,7 @@ Lists all app keys visible to requesting actor.
 
 ```python
 import tigris
-from tigris.models import operations
+from tigris.models import operations, shared
 
 s = tigris.Tigris(
     security=shared.Security(

@@ -61,7 +61,7 @@ Get details for all namespaces
 
 ```python
 import tigris
-
+from tigris.models import shared
 
 s = tigris.Tigris(
     security=shared.Security(
@@ -174,7 +174,7 @@ List all namespace
 
 ```python
 import tigris
-
+from tigris.models import shared
 
 s = tigris.Tigris(
     security=shared.Security(
