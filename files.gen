@@ -15,6 +15,7 @@ pylintrc
 setup.py
 src/tigris/__init__.py
 src/tigris/models/__init__.py
+src/tigris/models/errors/sdkerror.py
 src/tigris/utils/__init__.py
 src/tigris/utils/retries.py
 src/tigris/utils/utils.py
@@ -248,6 +249,7 @@ src/tigris/models/shared/updateusermetadataresponse.py
 src/tigris/models/shared/updateusermetadatarequest.py
 src/tigris/models/shared/security.py
 src/tigris/models/shared/__init__.py
+src/tigris/models/errors/__init__.py
 docs/sdks/tigris/README.md
 docs/sdks/appkey/README.md
 docs/sdks/auth/README.md
