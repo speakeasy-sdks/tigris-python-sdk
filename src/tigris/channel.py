@@ -19,7 +19,7 @@ class Channel:
         
         url = utils.generate_url(operations.RealtimeGetRTChannelRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}', request)
         headers = {}
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -52,7 +52,7 @@ class Channel:
         url = utils.generate_url(operations.RealtimeReadMessagesRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/messages', request)
         headers = {}
         query_params = utils.get_query_params(operations.RealtimeReadMessagesRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -84,7 +84,7 @@ class Channel:
         
         url = utils.generate_url(operations.RealtimeGetRTChannelsRequest, base_url, '/v1/projects/{project}/realtime/channels', request)
         headers = {}
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -117,7 +117,7 @@ class Channel:
         url = utils.generate_url(operations.RealtimeListSubscriptionsRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/subscriptions', request)
         headers = {}
         query_params = utils.get_query_params(operations.RealtimeListSubscriptionsRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -154,7 +154,7 @@ class Channel:
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -186,7 +186,7 @@ class Channel:
         
         url = utils.generate_url(operations.RealtimePresenceRequest, base_url, '/v1/projects/{project}/realtime/channels/{channel}/presence', request)
         headers = {}
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
