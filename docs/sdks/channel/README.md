@@ -197,9 +197,9 @@ req = operations.RealtimeMessagesRequest(
         channel='modi',
         messages=[
             shared.Message(
-                data='aliquid',
-                id='9802d502-a94b-4b4f-a3c9-69e9a3efa77d',
-                name='Jean Buckridge',
+                data='qui',
+                id='69802d50-2a94-4bb4-b63c-969e9a3efa77',
+                name='Mrs. Emilio Price',
                 sequence='facere',
             ),
         ],

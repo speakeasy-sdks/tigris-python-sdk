@@ -28,10 +28,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetUserMetadataRequest(
     get_user_metadata_request=shared.GetUserMetadataRequest(
-        metadata_key='distinctio',
+        metadata_key='nobis',
         value=shared.GetUserMetadataRequestValue(),
     ),
-    metadata_key='quod',
+    metadata_key='et',
 )
 
 res = s.user.get_metadata(req)
@@ -70,10 +70,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementInsertUserMetadataRequest(
     insert_user_metadata_request=shared.InsertUserMetadataRequest(
-        metadata_key='odio',
+        metadata_key='saepe',
         value=shared.InsertUserMetadataRequestValue(),
     ),
-    metadata_key='similique',
+    metadata_key='ipsum',
 )
 
 res = s.user.insert_metadata(req)
@@ -112,10 +112,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementUpdateUserMetadataRequest(
     update_user_metadata_request=shared.UpdateUserMetadataRequest(
-        metadata_key='facilis',
+        metadata_key='veritatis',
         value=shared.UpdateUserMetadataRequestValue(),
     ),
-    metadata_key='vero',
+    metadata_key='nobis',
 )
 
 res = s.user.update_metadata(req)

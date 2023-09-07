@@ -30,9 +30,9 @@ s = tigris.Tigris(
 )
 
 req = shared.CreateNamespaceRequest(
-    code=982575,
-    id='b576b0d5-f0d3-40c5-bbb2-587053202c73',
-    name='Dean Welch',
+    code=868126,
+    id='028921cd-dc69-4260-9fb5-76b0d5f0d30c',
+    name='Mindy Renner',
 )
 
 res = s.namespace.create(req)
@@ -100,10 +100,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetNamespaceMetadataRequest(
     get_namespace_metadata_request=shared.GetNamespaceMetadataRequest(
-        metadata_key='facilis',
+        metadata_key='quis',
         value=shared.GetNamespaceMetadataRequestValue(),
     ),
-    metadata_key='perspiciatis',
+    metadata_key='totam',
 )
 
 res = s.namespace.get_metadata(req)
@@ -142,10 +142,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementInsertNamespaceMetadataRequest(
     insert_namespace_metadata_request=shared.InsertNamespaceMetadataRequest(
-        metadata_key='voluptatem',
+        metadata_key='dignissimos',
         value=shared.InsertNamespaceMetadataRequestValue(),
     ),
-    metadata_key='porro',
+    metadata_key='eaque',
 )
 
 res = s.namespace.insert_metadata(req)
@@ -213,10 +213,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementUpdateNamespaceMetadataRequest(
     update_namespace_metadata_request=shared.UpdateNamespaceMetadataRequest(
-        metadata_key='consequuntur',
+        metadata_key='quis',
         value=shared.UpdateNamespaceMetadataRequestValue(),
     ),
-    metadata_key='blanditiis',
+    metadata_key='nesciunt',
 )
 
 res = s.namespace.update_metadata(req)

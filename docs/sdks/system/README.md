@@ -162,36 +162,24 @@ req = shared.QueryTimeSeriesMetricsRequest(
     additional_functions=[
         shared.AdditionalFunction(
             rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_SUM,
-                interval=63955,
-            ),
-        ),
-        shared.AdditionalFunction(
-            rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_MIN,
-                interval=485628,
-            ),
-        ),
-        shared.AdditionalFunction(
-            rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_MIN,
-                interval=977496,
+                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_AVG,
+                interval=183280,
             ),
         ),
     ],
-    branch='quisquam',
-    collection='vero',
-    db='omnis',
-    from_=338159,
+    branch='neque',
+    collection='fugit',
+    db='magni',
+    from_=488056,
     function=shared.QueryTimeSeriesMetricsRequestFunction.RATE,
-    metric_name='delectus',
-    quantile=4551.69,
+    metric_name='ullam',
+    quantile=7220.81,
     space_aggregated_by=[
-        'vero',
+        'hic',
     ],
-    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregation.SUM,
-    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperation.READ,
-    to=941378,
+    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregation.AVG,
+    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperation.METADATA,
+    to=746994,
 )
 
 res = s.system.query_time_series_metrics(req)
