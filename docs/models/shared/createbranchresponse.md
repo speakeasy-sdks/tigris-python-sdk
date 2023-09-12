@@ -1,7 +1,5 @@
 # CreateBranchResponse
 
-OK
-
 
 ## Fields
 

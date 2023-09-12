@@ -1,7 +1,5 @@
 # ListNamespacesResponse
 
-OK
-
 
 ## Fields
 

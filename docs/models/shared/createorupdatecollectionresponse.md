@@ -1,7 +1,5 @@
 # CreateOrUpdateCollectionResponse
 
-OK
-
 
 ## Fields
 

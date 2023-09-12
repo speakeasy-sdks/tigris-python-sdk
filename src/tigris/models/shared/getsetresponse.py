@@ -11,7 +11,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class GetSetResponse:
-    r"""OK"""
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
     r"""A detailed response message."""
     old_value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('old_value'), 'exclude': lambda f: f is None }})

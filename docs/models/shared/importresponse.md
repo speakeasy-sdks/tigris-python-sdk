@@ -1,7 +1,5 @@
 # ImportResponse
 
-OK
-
 
 ## Fields
 

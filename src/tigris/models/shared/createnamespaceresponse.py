@@ -12,7 +12,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class CreateNamespaceResponse:
-    r"""OK"""
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
     r"""A detailed response message."""
     namespace: Optional[shared_namespaceinfo.NamespaceInfo] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespace'), 'exclude': lambda f: f is None }})

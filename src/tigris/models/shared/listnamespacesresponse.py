@@ -12,7 +12,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class ListNamespacesResponse:
-    r"""OK"""
     namespaces: Optional[list[shared_namespaceinfo.NamespaceInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('namespaces'), 'exclude': lambda f: f is None }})
     
 

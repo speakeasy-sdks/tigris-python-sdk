@@ -12,7 +12,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class ListIndexesResponse:
-    r"""OK"""
     indexes: Optional[list[shared_indexinfo.IndexInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('indexes'), 'exclude': lambda f: f is None }})
     r"""List of indexes."""
     

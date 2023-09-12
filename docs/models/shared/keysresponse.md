@@ -1,7 +1,5 @@
 # KeysResponse
 
-OK
-
 
 ## Fields
 

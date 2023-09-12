@@ -1,7 +1,5 @@
 # UpdateResponse
 
-OK
-
 
 ## Fields
 

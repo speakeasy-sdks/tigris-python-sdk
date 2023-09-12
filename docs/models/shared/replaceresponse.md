@@ -1,7 +1,5 @@
 # ReplaceResponse
 
-OK
-
 
 ## Fields
 

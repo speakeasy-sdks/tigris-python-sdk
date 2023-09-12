@@ -1,7 +1,5 @@
 # CreateCacheResponse
 
-OK
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # CreateByIDResponse
 
-OK
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # DeleteDocumentResponse
 
-OK
-
 
 ## Fields
 

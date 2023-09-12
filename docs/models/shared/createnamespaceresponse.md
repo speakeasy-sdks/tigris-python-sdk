@@ -1,7 +1,5 @@
 # CreateNamespaceResponse
 
-OK
-
 
 ## Fields
 

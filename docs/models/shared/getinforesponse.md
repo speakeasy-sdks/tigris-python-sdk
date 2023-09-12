@@ -1,7 +1,5 @@
 # GetInfoResponse
 
-OK
-
 
 ## Fields
 

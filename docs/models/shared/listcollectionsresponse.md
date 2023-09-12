@@ -1,7 +1,5 @@
 # ListCollectionsResponse
 
-OK
-
 
 ## Fields
 

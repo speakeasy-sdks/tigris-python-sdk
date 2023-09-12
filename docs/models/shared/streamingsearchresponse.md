@@ -1,7 +1,5 @@
 # StreamingSearchResponse
 
-OK
-
 
 ## Fields
 

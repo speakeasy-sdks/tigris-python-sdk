@@ -1,7 +1,5 @@
 # SetResponse
 
-OK
-
 
 ## Fields
 

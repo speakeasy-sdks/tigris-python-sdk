@@ -1,7 +1,5 @@
 # DeleteCacheResponse
 
-OK
-
 
 ## Fields
 

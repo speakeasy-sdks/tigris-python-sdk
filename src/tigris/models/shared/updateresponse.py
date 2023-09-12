@@ -12,7 +12,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class UpdateResponse:
-    r"""OK"""
     metadata: Optional[shared_responsemetadata.ResponseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
     r"""Has metadata related to the documents stored."""
     modified_count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('modified_count'), 'exclude': lambda f: f is None }})

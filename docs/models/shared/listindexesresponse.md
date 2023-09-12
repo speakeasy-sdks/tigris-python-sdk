@@ -1,7 +1,5 @@
 # ListIndexesResponse
 
-OK
-
 
 ## Fields
 

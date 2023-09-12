@@ -1,7 +1,5 @@
 # CreateDocumentResponse
 
-OK
-
 
 ## Fields
 

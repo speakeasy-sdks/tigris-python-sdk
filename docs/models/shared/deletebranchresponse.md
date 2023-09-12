@@ -1,7 +1,5 @@
 # DeleteBranchResponse
 
-OK
-
 
 ## Fields
 

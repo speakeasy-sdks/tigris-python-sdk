@@ -1,7 +1,5 @@
 # ListBranchesResponse
 
-OK
-
 
 ## Fields
 

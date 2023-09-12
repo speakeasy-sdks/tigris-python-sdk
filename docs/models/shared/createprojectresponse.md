@@ -1,7 +1,5 @@
 # CreateProjectResponse
 
-OK
-
 
 ## Fields
 

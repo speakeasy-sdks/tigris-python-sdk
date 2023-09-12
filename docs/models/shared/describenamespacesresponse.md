@@ -1,7 +1,5 @@
 # DescribeNamespacesResponse
 
-OK
-
 
 ## Fields
 

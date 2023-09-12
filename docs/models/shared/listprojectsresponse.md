@@ -1,7 +1,5 @@
 # ListProjectsResponse
 
-OK
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # GetDocumentResponse
 
-OK
-
 
 ## Fields
 

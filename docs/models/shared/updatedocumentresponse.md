@@ -1,7 +1,5 @@
 # UpdateDocumentResponse
 
-OK
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # CreateOrReplaceDocumentResponse
 
-OK
-
 
 ## Fields
 

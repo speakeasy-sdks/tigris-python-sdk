@@ -1,7 +1,5 @@
 # ListCachesResponse
 
-OK
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # Status
 
-Default error response
-
 
 ## Fields
 

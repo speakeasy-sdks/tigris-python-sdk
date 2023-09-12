@@ -12,7 +12,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class InsertResponse:
-    r"""OK"""
     keys: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('keys'), 'exclude': lambda f: f is None }})
     r"""an array returns the value of the primary keys."""
     metadata: Optional[shared_responsemetadata.ResponseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})

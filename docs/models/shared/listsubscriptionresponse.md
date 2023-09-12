@@ -1,7 +1,5 @@
 # ListSubscriptionResponse
 
-OK
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # PresenceResponse
 
-OK
-
 
 ## Fields
 

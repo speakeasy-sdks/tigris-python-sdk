@@ -1,7 +1,5 @@
 # GetRTChannelResponse
 
-OK
-
 
 ## Fields
 

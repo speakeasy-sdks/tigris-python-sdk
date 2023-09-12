@@ -1,7 +1,5 @@
 # DropCollectionResponse
 
-OK
-
 
 ## Fields
 

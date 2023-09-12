@@ -1,7 +1,5 @@
 # DeleteByQueryResponse
 
-OK
-
 
 ## Fields
 

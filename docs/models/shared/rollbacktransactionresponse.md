@@ -1,7 +1,5 @@
 # RollbackTransactionResponse
 
-OK
-
 
 ## Fields
 

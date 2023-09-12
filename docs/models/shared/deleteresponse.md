@@ -1,7 +1,5 @@
 # DeleteResponse
 
-OK
-
 
 ## Fields
 

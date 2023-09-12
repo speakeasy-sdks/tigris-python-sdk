@@ -1,7 +1,5 @@
 # CreateOrUpdateIndexResponse
 
-OK
-
 
 ## Fields
 

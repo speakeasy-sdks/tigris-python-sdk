@@ -1,7 +1,5 @@
 # DeleteProjectResponse
 
-OK
-
 
 ## Fields
 

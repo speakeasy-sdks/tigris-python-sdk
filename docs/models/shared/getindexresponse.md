@@ -1,7 +1,5 @@
 # GetIndexResponse
 
-OK
-
 
 ## Fields
 

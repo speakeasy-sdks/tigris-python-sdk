@@ -1,7 +1,5 @@
 # CommitTransactionResponse
 
-OK
-
 
 ## Fields
 

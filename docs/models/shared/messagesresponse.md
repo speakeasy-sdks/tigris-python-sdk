@@ -1,7 +1,5 @@
 # MessagesResponse
 
-OK
-
 
 ## Fields
 

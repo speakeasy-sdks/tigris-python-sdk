@@ -13,7 +13,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class StreamingSearchResponse:
-    r"""OK"""
     error: Optional[shared_error.Error] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('error'), 'exclude': lambda f: f is None }})
     r"""The Error type defines a logical error model"""
     result: Optional[shared_searchresponse.SearchResponse] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('result'), 'exclude': lambda f: f is None }})

@@ -1,7 +1,5 @@
 # ReadMessagesResponse
 
-OK
-
 
 ## Fields
 

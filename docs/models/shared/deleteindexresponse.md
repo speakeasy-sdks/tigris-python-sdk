@@ -1,7 +1,5 @@
 # DeleteIndexResponse
 
-OK
-
 
 ## Fields
 

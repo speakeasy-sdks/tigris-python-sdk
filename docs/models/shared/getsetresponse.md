@@ -1,7 +1,5 @@
 # GetSetResponse
 
-OK
-
 
 ## Fields
 

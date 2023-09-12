@@ -1,7 +1,5 @@
 # GetResponse
 
-OK
-
 
 ## Fields
 
