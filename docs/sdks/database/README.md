@@ -1,4 +1,4 @@
-# database
+# Database
 
 ## Overview
 

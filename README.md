@@ -52,7 +52,7 @@ if res.create_cache_response is not None:
 ## Available Resources and Operations
 
 
-### [app_key](docs/sdks/appkey/README.md)
+### [AppKey](docs/sdks/appkey/README.md)
 
 * [delete](docs/sdks/appkey/README.md#delete) - Deletes the app key
 * [list](docs/sdks/appkey/README.md#list) - List all the app keys
@@ -60,11 +60,11 @@ if res.create_cache_response is not None:
 * [tigris_create_app_key](docs/sdks/appkey/README.md#tigris_create_app_key) - Creates the app key
 * [update](docs/sdks/appkey/README.md#update) - Updates the description of the app key
 
-### [auth](docs/sdks/auth/README.md)
+### [Auth](docs/sdks/auth/README.md)
 
 * [get](docs/sdks/auth/README.md#get) - Access Token
 
-### [cache](docs/sdks/cache/README.md)
+### [Cache](docs/sdks/cache/README.md)
 
 * [create](docs/sdks/cache/README.md#create) - Creates the cache
 * [delete](docs/sdks/cache/README.md#delete) - Deletes the cache
@@ -75,7 +75,7 @@ if res.create_cache_response is not None:
 * [list_keys](docs/sdks/cache/README.md#list_keys) - Lists all the key for this cache
 * [set_key](docs/sdks/cache/README.md#set_key) - Sets an entry in the cache
 
-### [channel](docs/sdks/channel/README.md)
+### [Channel](docs/sdks/channel/README.md)
 
 * [get](docs/sdks/channel/README.md#get) - Get the details about a channel
 * [get_messages](docs/sdks/channel/README.md#get_messages) - Get all messages for a channel
@@ -84,7 +84,7 @@ if res.create_cache_response is not None:
 * [push_messages](docs/sdks/channel/README.md#push_messages) - push messages to a single channel
 * [realtime_presence](docs/sdks/channel/README.md#realtime_presence) - Presence about the channel
 
-### [collection](docs/sdks/collection/README.md)
+### [Collection](docs/sdks/collection/README.md)
 
 * [create](docs/sdks/collection/README.md#create) - Create or update a collection
 * [delete_documents](docs/sdks/collection/README.md#delete_documents) - Delete Documents
@@ -97,7 +97,7 @@ if res.create_cache_response is not None:
 * [search_documents](docs/sdks/collection/README.md#search_documents) - Search Documents.
 * [update_documents](docs/sdks/collection/README.md#update_documents) - Update Documents.
 
-### [database](docs/sdks/database/README.md)
+### [Database](docs/sdks/database/README.md)
 
 * [begin_transaction](docs/sdks/database/README.md#begin_transaction) - Begin a transaction
 * [commit_transaction](docs/sdks/database/README.md#commit_transaction) - Commit a Transaction
@@ -108,7 +108,7 @@ if res.create_cache_response is not None:
 * [rollback_transaction](docs/sdks/database/README.md#rollback_transaction) - Rollback a transaction
 * [tigris_list_branches](docs/sdks/database/README.md#tigris_list_branches) - List database branches
 
-### [namespace](docs/sdks/namespace/README.md)
+### [Namespace](docs/sdks/namespace/README.md)
 
 * [create](docs/sdks/namespace/README.md#create) - Creates a Namespace
 * [get](docs/sdks/namespace/README.md#get) - Describe the details of all namespaces
@@ -117,13 +117,13 @@ if res.create_cache_response is not None:
 * [list](docs/sdks/namespace/README.md#list) - Lists all Namespaces
 * [update_metadata](docs/sdks/namespace/README.md#update_metadata) - Updates Namespace Metadata
 
-### [project](docs/sdks/project/README.md)
+### [Project](docs/sdks/project/README.md)
 
 * [create](docs/sdks/project/README.md#create) - Create Project
 * [delete_project](docs/sdks/project/README.md#delete_project) - Delete Project and all resources under project
 * [list](docs/sdks/project/README.md#list) - List Projects
 
-### [search](docs/sdks/search/README.md)
+### [Search](docs/sdks/search/README.md)
 
 * [create_document](docs/sdks/search/README.md#create_document) - Create a single document
 * [create_documents](docs/sdks/search/README.md#create_documents) - Create multiple documents
@@ -138,7 +138,7 @@ if res.create_cache_response is not None:
 * [update_documents](docs/sdks/search/README.md#update_documents) - Update documents in an index
 * [update_index](docs/sdks/search/README.md#update_index) - Creates or updates search index
 
-### [system](docs/sdks/system/README.md)
+### [System](docs/sdks/system/README.md)
 
 * [get_health](docs/sdks/system/README.md#get_health) - Health Check
 * [get_server_info](docs/sdks/system/README.md#get_server_info) - Information about the server
@@ -146,7 +146,7 @@ if res.create_cache_response is not None:
 * [query_quota_limits](docs/sdks/system/README.md#query_quota_limits) - Queries current namespace quota limits
 * [query_time_series_metrics](docs/sdks/system/README.md#query_time_series_metrics) - Queries time series metrics
 
-### [user](docs/sdks/user/README.md)
+### [User](docs/sdks/user/README.md)
 
 * [get_metadata](docs/sdks/user/README.md#get_metadata) - Reads the User Metadata
 * [insert_metadata](docs/sdks/user/README.md#insert_metadata) - Inserts User Metadata

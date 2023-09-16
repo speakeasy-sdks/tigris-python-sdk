@@ -1,4 +1,4 @@
-# channel
+# Channel
 
 ## Overview
 

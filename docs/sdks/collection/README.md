@@ -1,4 +1,4 @@
-# collection
+# Collection
 
 ## Overview
 
