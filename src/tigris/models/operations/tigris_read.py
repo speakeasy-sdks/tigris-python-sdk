@@ -25,8 +25,11 @@ class TigrisReadRequest:
 @dataclasses.dataclass
 class TigrisReadResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     streaming_read_response: Optional[shared_streamingreadresponse.StreamingReadResponse] = dataclasses.field(default=None)

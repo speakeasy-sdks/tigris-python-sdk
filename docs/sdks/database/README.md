@@ -35,10 +35,10 @@ s = tigris.Tigris(
 
 req = operations.TigrisBeginTransactionRequest(
     begin_transaction_request=shared.BeginTransactionRequest(
-        branch='doloribus',
+        branch='architecto',
         options=shared.TransactionOptions(),
     ),
-    project='debitis',
+    project='architecto',
 )
 
 res = s.database.begin_transaction(req)
@@ -78,9 +78,9 @@ s = tigris.Tigris(
 
 req = operations.TigrisCommitTransactionRequest(
     commit_transaction_request=shared.CommitTransactionRequest(
-        branch='eius',
+        branch='repudiandae',
     ),
-    project='maxime',
+    project='ullam',
 )
 
 res = s.database.commit_transaction(req)
@@ -119,8 +119,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateBranchRequest(
     create_branch_request=shared.CreateBranchRequest(),
-    branch='deleniti',
-    project='facilis',
+    branch='expedita',
+    project='nihil',
 )
 
 res = s.database.create_branch(req)
@@ -160,8 +160,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteBranchRequest(
     delete_branch_request=shared.DeleteBranchRequest(),
-    branch='in',
-    project='architecto',
+    branch='repellat',
+    project='quibusdam',
 )
 
 res = s.database.delete_branch(req)
@@ -201,11 +201,11 @@ s = tigris.Tigris(
 
 req = operations.TigrisDescribeDatabaseRequest(
     describe_database_request=shared.DescribeDatabaseRequest(
-        branch='architecto',
-        project='repudiandae',
-        schema_format='ullam',
+        branch='sed',
+        project='saepe',
+        schema_format='pariatur',
     ),
-    project='expedita',
+    project='accusantium',
 )
 
 res = s.database.describe(req)
@@ -243,8 +243,8 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisListCollectionsRequest(
-    branch='nihil',
-    project='repellat',
+    branch='consequuntur',
+    project='praesentium',
 )
 
 res = s.database.list_collections(req)
@@ -284,9 +284,9 @@ s = tigris.Tigris(
 
 req = operations.TigrisRollbackTransactionRequest(
     rollback_transaction_request=shared.RollbackTransactionRequest(
-        branch='quibusdam',
+        branch='natus',
     ),
-    project='sed',
+    project='magni',
 )
 
 res = s.database.rollback_transaction(req)
@@ -324,7 +324,7 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisListBranchesRequest(
-    project='saepe',
+    project='sunt',
 )
 
 res = s.database.tigris_list_branches(req)

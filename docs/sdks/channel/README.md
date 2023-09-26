@@ -30,8 +30,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeGetRTChannelRequest(
-    channel='quasi',
-    project='repudiandae',
+    channel='est',
+    project='quibusdam',
 )
 
 res = s.channel.get(req)
@@ -69,14 +69,14 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeReadMessagesRequest(
-    channel='sint',
-    end='veritatis',
-    event='itaque',
-    limit=277718,
-    project='enim',
-    session_id='consequatur',
-    socket_id='est',
-    start='quibusdam',
+    channel='explicabo',
+    end='deserunt',
+    event='distinctio',
+    limit=841386,
+    project='labore',
+    session_id='modi',
+    socket_id='qui',
+    start='aliquid',
 )
 
 res = s.channel.get_messages(req)
@@ -114,7 +114,7 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeGetRTChannelsRequest(
-    project='explicabo',
+    project='cupiditate',
 )
 
 res = s.channel.list(req)
@@ -152,10 +152,10 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeListSubscriptionsRequest(
-    channel='deserunt',
-    page=716327,
-    page_size=841386,
-    project='labore',
+    channel='quos',
+    page=20107,
+    page_size=164940,
+    project='assumenda',
 )
 
 res = s.channel.list_subscriptions(req)
@@ -194,19 +194,19 @@ s = tigris.Tigris(
 
 req = operations.RealtimeMessagesRequest(
     messages_request=shared.MessagesRequest(
-        channel='modi',
+        channel='ipsam',
         messages=[
             shared.Message(
-                data='qui',
-                id='69802d50-2a94-4bb4-b63c-969e9a3efa77',
-                name='Mrs. Emilio Price',
-                sequence='facere',
+                data='alias',
+                id='2a94bb4f-63c9-469e-9a3e-fa77dfb14cd6',
+                name='Kayla Thompson',
+                sequence='enim',
             ),
         ],
-        project='ea',
+        project='accusamus',
     ),
-    channel='aliquid',
-    project='laborum',
+    channel='delectus',
+    project='quidem',
 )
 
 res = s.channel.push_messages(req)
@@ -244,8 +244,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimePresenceRequest(
-    channel='accusamus',
-    project='non',
+    channel='provident',
+    project='nam',
 )
 
 res = s.channel.realtime_presence(req)

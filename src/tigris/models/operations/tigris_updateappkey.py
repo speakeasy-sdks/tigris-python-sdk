@@ -23,8 +23,11 @@ class TigrisUpdateAppKeyRequest:
 @dataclasses.dataclass
 class TigrisUpdateAppKeyResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     update_app_key_response: Optional[shared_updateappkeyresponse.UpdateAppKeyResponse] = dataclasses.field(default=None)

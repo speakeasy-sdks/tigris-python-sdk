@@ -23,8 +23,11 @@ class TigrisRotateAppKeySecretRequest:
 @dataclasses.dataclass
 class TigrisRotateAppKeySecretResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     rotate_app_key_response: Optional[shared_rotateappkeyresponse.RotateAppKeyResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)

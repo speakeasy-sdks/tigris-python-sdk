@@ -25,10 +25,13 @@ class SearchCreateOrUpdateIndexRequest:
 @dataclasses.dataclass
 class SearchCreateOrUpdateIndexResponse:
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     create_or_update_index_response: Optional[shared_createorupdateindexresponse.CreateOrUpdateIndexResponse] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     

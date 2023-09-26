@@ -162,24 +162,24 @@ req = shared.QueryTimeSeriesMetricsRequest(
     additional_functions=[
         shared.AdditionalFunction(
             rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_AVG,
-                interval=183280,
+                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_SUM,
+                interval=355613,
             ),
         ),
     ],
-    branch='neque',
-    collection='fugit',
-    db='magni',
-    from_=488056,
-    function=shared.QueryTimeSeriesMetricsRequestFunction.RATE,
-    metric_name='ullam',
-    quantile=7220.81,
+    branch='nam',
+    collection='hic',
+    db='voluptatem',
+    from_=765326,
+    function=shared.QueryTimeSeriesMetricsRequestFunction.NONE,
+    metric_name='nobis',
+    quantile=925.96,
     space_aggregated_by=[
-        'hic',
+        'saepe',
     ],
     space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregation.AVG,
-    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperation.METADATA,
-    to=746994,
+    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperation.ALL,
+    to=749255,
 )
 
 res = s.system.query_time_series_metrics(req)
