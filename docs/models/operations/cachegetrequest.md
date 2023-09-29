@@ -5,6 +5,6 @@
 
 | Field               | Type                | Required            | Description         |
 | ------------------- | ------------------- | ------------------- | ------------------- |
-| `key`               | *str*               | :heavy_check_mark:  | cache key           |
-| `name`              | *str*               | :heavy_check_mark:  | cache name          |
-| `project`           | *str*               | :heavy_check_mark:  | Tigris project name |
+| `key`               | *Optional[str]*     | :heavy_check_mark:  | cache key           |
+| `name`              | *Optional[str]*     | :heavy_check_mark:  | cache name          |
+| `project`           | *Optional[str]*     | :heavy_check_mark:  | Tigris project name |

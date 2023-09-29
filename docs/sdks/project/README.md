@@ -29,7 +29,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateProjectRequest(
     create_project_request=shared.CreateProjectRequest(),
-    project='nostrum',
+    project='Electric pirouette',
 )
 
 res = s.project.create(req)
@@ -68,7 +68,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteProjectRequest(
     delete_project_request=shared.DeleteProjectRequest(),
-    project='hic',
+    project='Suriname coulomb which',
 )
 
 res = s.project.delete_project(req)

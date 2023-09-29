@@ -31,9 +31,9 @@ s = tigris.Tigris(
 )
 
 req = shared.CreateNamespaceRequest(
-    code=779051,
-    id='ddc69260-1fb5-476b-8d5f-0d30c5fbb258',
-    name='Cynthia Hayes',
+    code=481196,
+    id='<ID>',
+    name='Tasty island Southwest',
 )
 
 res = s.namespace.create(req)
@@ -101,10 +101,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetNamespaceMetadataRequest(
     get_namespace_metadata_request=shared.GetNamespaceMetadataRequest(
-        metadata_key='perferendis',
+        metadata_key='or Plastic',
         value=shared.GetNamespaceMetadataRequestValue(),
     ),
-    metadata_key='dolores',
+    metadata_key='offensively Electric',
 )
 
 res = s.namespace.get_metadata(req)
@@ -143,10 +143,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementInsertNamespaceMetadataRequest(
     insert_namespace_metadata_request=shared.InsertNamespaceMetadataRequest(
-        metadata_key='minus',
+        metadata_key='Curve Liaison calculate',
         value=shared.InsertNamespaceMetadataRequestValue(),
     ),
-    metadata_key='quam',
+    metadata_key='female Tantalum',
 )
 
 res = s.namespace.insert_metadata(req)
@@ -214,10 +214,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementUpdateNamespaceMetadataRequest(
     update_namespace_metadata_request=shared.UpdateNamespaceMetadataRequest(
-        metadata_key='dolor',
+        metadata_key='platforms Concrete Tempe',
         value=shared.UpdateNamespaceMetadataRequestValue(),
     ),
-    metadata_key='vero',
+    metadata_key='transmitting Silicon North',
 )
 
 res = s.namespace.update_metadata(req)

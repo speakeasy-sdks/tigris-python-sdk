@@ -35,11 +35,11 @@ s = tigris.Tigris(
 req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(
         options=shared.CreateCacheOptions(
-            ttl_ms=138183,
+            ttl_ms=481196,
         ),
     ),
-    name='Jimmy Wiegand',
-    project='possimus',
+    name='Tasty island Southwest',
+    project='National Lauderhill',
 )
 
 res = s.cache.create(req)
@@ -78,8 +78,8 @@ s = tigris.Tigris(
 
 req = operations.CacheDeleteCacheRequest(
     delete_cache_request=shared.DeleteCacheRequest(),
-    name='Joyce Mueller',
-    project='quasi',
+    name='Architect Cotton port',
+    project='qua',
 )
 
 res = s.cache.delete(req)
@@ -118,9 +118,9 @@ s = tigris.Tigris(
 
 req = operations.CacheDelRequest(
     del_request=shared.DelRequest(),
-    key='reiciendis',
-    name='Caleb Koss',
-    project='ipsa',
+    key='<key>',
+    name='man Seamless before',
+    project='Diesel',
 )
 
 res = s.cache.delete_keys(req)
@@ -158,9 +158,9 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheGetRequest(
-    key='omnis',
-    name='Ms. Karla Aufderhar',
-    project='maiores',
+    key='<key>',
+    name='lux robust',
+    project='index',
 )
 
 res = s.cache.get_key(req)
@@ -199,11 +199,11 @@ s = tigris.Tigris(
 
 req = operations.CacheGetSetRequest(
     get_set_request=shared.GetSetRequest(
-        value='dicta',
+        value='Bronze',
     ),
-    key='corporis',
-    name='Heidi Carter',
-    project='accusamus',
+    key='<key>',
+    name='portal salmon',
+    project='kelvin Harbors',
 )
 
 res = s.cache.get_set_key(req)
@@ -241,7 +241,7 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheListCachesRequest(
-    project='commodi',
+    project='Bronze Architect',
 )
 
 res = s.cache.list(req)
@@ -279,11 +279,11 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheKeysRequest(
-    count=918236,
-    cursor=64147,
-    name='Alison Mann',
-    pattern='modi',
-    project='praesentium',
+    count=618311,
+    cursor=739921,
+    name='invoice pink',
+    pattern='whose West vivid',
+    project='compelling duh',
 )
 
 res = s.cache.list_keys(req)
@@ -322,15 +322,15 @@ s = tigris.Tigris(
 
 req = operations.CacheSetRequest(
     set_request=shared.SetRequest(
-        ex=523248,
+        ex=170966,
         nx=False,
-        px=916723,
-        value='quasi',
+        px=17597,
+        value='monetize',
         xx=False,
     ),
-    key='repudiandae',
-    name='Patrick Ward',
-    project='consequatur',
+    key='<key>',
+    name='Shanahan Phased',
+    project='Gasoline',
 )
 
 res = s.cache.set_key(req)

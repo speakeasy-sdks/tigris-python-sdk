@@ -21,13 +21,13 @@ class User:
         
         url = utils.generate_url(operations.ManagementGetUserMetadataRequest, base_url, '/v1/management/users/metadata/{metadataKey}/get', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "get_user_metadata_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "get_user_metadata_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -60,13 +60,13 @@ class User:
         
         url = utils.generate_url(operations.ManagementInsertUserMetadataRequest, base_url, '/v1/management/users/metadata/{metadataKey}/insert', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "insert_user_metadata_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "insert_user_metadata_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -99,13 +99,13 @@ class User:
         
         url = utils.generate_url(operations.ManagementUpdateUserMetadataRequest, base_url, '/v1/management/users/metadata/{metadataKey}/update', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "update_user_metadata_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "update_user_metadata_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

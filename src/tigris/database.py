@@ -23,13 +23,13 @@ class Database:
         
         url = utils.generate_url(operations.TigrisBeginTransactionRequest, base_url, '/v1/projects/{project}/database/transactions/begin', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "begin_transaction_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "begin_transaction_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -63,13 +63,13 @@ class Database:
         
         url = utils.generate_url(operations.TigrisCommitTransactionRequest, base_url, '/v1/projects/{project}/database/transactions/commit', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "commit_transaction_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "commit_transaction_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -102,13 +102,13 @@ class Database:
         
         url = utils.generate_url(operations.TigrisCreateBranchRequest, base_url, '/v1/projects/{project}/database/branches/{branch}/create', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_branch_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "create_branch_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -142,13 +142,13 @@ class Database:
         
         url = utils.generate_url(operations.TigrisDeleteBranchRequest, base_url, '/v1/projects/{project}/database/branches/{branch}/delete', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "delete_branch_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "delete_branch_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -182,13 +182,13 @@ class Database:
         
         url = utils.generate_url(operations.TigrisDescribeDatabaseRequest, base_url, '/v1/projects/{project}/database/describe', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "describe_database_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "describe_database_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -223,7 +223,7 @@ class Database:
         headers = {}
         query_params = utils.get_query_params(operations.TigrisListCollectionsRequest, request)
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -257,13 +257,13 @@ class Database:
         
         url = utils.generate_url(operations.TigrisRollbackTransactionRequest, base_url, '/v1/projects/{project}/database/transactions/rollback', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "rollback_transaction_request", 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, "rollback_transaction_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
             raise Exception('request body is required')
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         
@@ -297,7 +297,7 @@ class Database:
         url = utils.generate_url(operations.TigrisListBranchesRequest, base_url, '/v1/projects/{project}/database/branches', request)
         headers = {}
         headers['Accept'] = 'application/json'
-        headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
+        headers['user-agent'] = self.sdk_configuration.user_agent
         
         client = self.sdk_configuration.security_client
         

@@ -163,24 +163,24 @@ req = shared.QueryTimeSeriesMetricsRequest(
     additional_functions=[
         shared.AdditionalFunction(
             rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_SUM,
-                interval=355613,
+                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_COUNT,
+                interval=724082,
             ),
         ),
     ],
-    branch='nam',
-    collection='hic',
-    db='voluptatem',
-    from_=765326,
+    branch='Coordinator',
+    collection='against regional',
+    db='provided Gasoline',
+    from_=93300,
     function=shared.QueryTimeSeriesMetricsRequestFunction.NONE,
-    metric_name='nobis',
-    quantile=925.96,
+    metric_name='Card Southwest Hat',
+    quantile=4863.24,
     space_aggregated_by=[
-        'saepe',
+        'optimal',
     ],
-    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregation.AVG,
-    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperation.ALL,
-    to=749255,
+    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregation.MIN,
+    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperation.METADATA,
+    to=60030,
 )
 
 res = s.system.query_time_series_metrics(req)

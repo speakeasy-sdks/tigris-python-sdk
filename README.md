@@ -32,11 +32,11 @@ s = tigris.Tigris(
 req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(
         options=shared.CreateCacheOptions(
-            ttl_ms=847252,
+            ttl_ms=481196,
         ),
     ),
-    name='Sabrina Oberbrunner',
-    project='magnam',
+    name='Tasty island Southwest',
+    project='National Lauderhill',
 )
 
 res = s.cache.create(req)

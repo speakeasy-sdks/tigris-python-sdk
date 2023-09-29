@@ -29,10 +29,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetUserMetadataRequest(
     get_user_metadata_request=shared.GetUserMetadataRequest(
-        metadata_key='quos',
+        metadata_key='or Plastic',
         value=shared.GetUserMetadataRequestValue(),
     ),
-    metadata_key='tempore',
+    metadata_key='offensively Electric',
 )
 
 res = s.user.get_metadata(req)
@@ -71,10 +71,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementInsertUserMetadataRequest(
     insert_user_metadata_request=shared.InsertUserMetadataRequest(
-        metadata_key='cupiditate',
+        metadata_key='Curve Liaison calculate',
         value=shared.InsertUserMetadataRequestValue(),
     ),
-    metadata_key='aperiam',
+    metadata_key='female Tantalum',
 )
 
 res = s.user.insert_metadata(req)
@@ -113,10 +113,10 @@ s = tigris.Tigris(
 
 req = operations.ManagementUpdateUserMetadataRequest(
     update_user_metadata_request=shared.UpdateUserMetadataRequest(
-        metadata_key='delectus',
+        metadata_key='platforms Concrete Tempe',
         value=shared.UpdateUserMetadataRequestValue(),
     ),
-    metadata_key='dolorem',
+    metadata_key='transmitting Silicon North',
 )
 
 res = s.user.update_metadata(req)
