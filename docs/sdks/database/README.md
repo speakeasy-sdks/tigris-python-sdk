@@ -36,10 +36,9 @@ s = tigris.Tigris(
 
 req = operations.TigrisBeginTransactionRequest(
     begin_transaction_request=shared.BeginTransactionRequest(
-        branch='Steel East microchip',
         options=shared.TransactionOptions(),
     ),
-    project='Tandem',
+    project='Steel East microchip',
 )
 
 res = s.database.begin_transaction(req)
@@ -78,10 +77,8 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisCommitTransactionRequest(
-    commit_transaction_request=shared.CommitTransactionRequest(
-        branch='drop Assurance',
-    ),
-    project='female Diesel',
+    commit_transaction_request=shared.CommitTransactionRequest(),
+    project='drop Assurance',
 )
 
 res = s.database.commit_transaction(req)
@@ -201,12 +198,8 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisDescribeDatabaseRequest(
-    describe_database_request=shared.DescribeDatabaseRequest(
-        branch='morph Pickup',
-        project='Home',
-        schema_format='payment And Cloned',
-    ),
-    project='South whoever',
+    describe_database_request=shared.DescribeDatabaseRequest(),
+    project='morph Pickup',
 )
 
 res = s.database.describe(req)
@@ -244,8 +237,7 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisListCollectionsRequest(
-    branch='Buckinghamshire green Djibouti',
-    project='Hybrid',
+    project='Buckinghamshire green Djibouti',
 )
 
 res = s.database.list_collections(req)
@@ -284,10 +276,8 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisRollbackTransactionRequest(
-    rollback_transaction_request=shared.RollbackTransactionRequest(
-        branch='woman Convertible Hafnium',
-    ),
-    project='Whittier Hip',
+    rollback_transaction_request=shared.RollbackTransactionRequest(),
+    project='woman Convertible Hafnium',
 )
 
 res = s.database.rollback_transaction(req)

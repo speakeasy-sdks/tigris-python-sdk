@@ -30,11 +30,7 @@ s = tigris.Tigris(
     ),
 )
 
-req = shared.CreateNamespaceRequest(
-    code=481196,
-    id='<ID>',
-    name='Tasty island Southwest',
-)
+req = shared.CreateNamespaceRequest()
 
 res = s.namespace.create(req)
 
@@ -101,10 +97,9 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetNamespaceMetadataRequest(
     get_namespace_metadata_request=shared.GetNamespaceMetadataRequest(
-        metadata_key='or Plastic',
         value=shared.GetNamespaceMetadataRequestValue(),
     ),
-    metadata_key='offensively Electric',
+    metadata_key='or Plastic',
 )
 
 res = s.namespace.get_metadata(req)
@@ -143,10 +138,9 @@ s = tigris.Tigris(
 
 req = operations.ManagementInsertNamespaceMetadataRequest(
     insert_namespace_metadata_request=shared.InsertNamespaceMetadataRequest(
-        metadata_key='Curve Liaison calculate',
         value=shared.InsertNamespaceMetadataRequestValue(),
     ),
-    metadata_key='female Tantalum',
+    metadata_key='Curve Liaison calculate',
 )
 
 res = s.namespace.insert_metadata(req)
@@ -214,10 +208,9 @@ s = tigris.Tigris(
 
 req = operations.ManagementUpdateNamespaceMetadataRequest(
     update_namespace_metadata_request=shared.UpdateNamespaceMetadataRequest(
-        metadata_key='platforms Concrete Tempe',
         value=shared.UpdateNamespaceMetadataRequestValue(),
     ),
-    metadata_key='transmitting Silicon North',
+    metadata_key='platforms Concrete Tempe',
 )
 
 res = s.namespace.update_metadata(req)

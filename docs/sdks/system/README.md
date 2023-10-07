@@ -162,25 +162,12 @@ s = tigris.Tigris(
 req = shared.QueryTimeSeriesMetricsRequest(
     additional_functions=[
         shared.AdditionalFunction(
-            rollup=shared.RollupFunction(
-                aggregator=shared.RollupFunctionAggregator.ROLLUP_AGGREGATOR_COUNT,
-                interval=724082,
-            ),
+            rollup=shared.RollupFunction(),
         ),
     ],
-    branch='Coordinator',
-    collection='against regional',
-    db='provided Gasoline',
-    from_=93300,
-    function=shared.QueryTimeSeriesMetricsRequestFunction.NONE,
-    metric_name='Card Southwest Hat',
-    quantile=4863.24,
     space_aggregated_by=[
-        'optimal',
+        'Concrete',
     ],
-    space_aggregation=shared.QueryTimeSeriesMetricsRequestSpaceAggregation.MIN,
-    tigris_operation=shared.QueryTimeSeriesMetricsRequestTigrisOperation.METADATA,
-    to=60030,
 )
 
 res = s.system.query_time_series_metrics(req)

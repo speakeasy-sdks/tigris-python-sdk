@@ -34,12 +34,10 @@ s = tigris.Tigris(
 
 req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(
-        options=shared.CreateCacheOptions(
-            ttl_ms=481196,
-        ),
+        options=shared.CreateCacheOptions(),
     ),
-    name='Tasty island Southwest',
-    project='National Lauderhill',
+    name='Electric pirouette',
+    project='Sausages ASCII',
 )
 
 res = s.cache.create(req)
@@ -198,12 +196,10 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheGetSetRequest(
-    get_set_request=shared.GetSetRequest(
-        value='Bronze',
-    ),
+    get_set_request=shared.GetSetRequest(),
     key='<key>',
-    name='portal salmon',
-    project='kelvin Harbors',
+    name='Bronze',
+    project='portal salmon',
 )
 
 res = s.cache.get_set_key(req)
@@ -279,11 +275,8 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheKeysRequest(
-    count=618311,
-    cursor=739921,
-    name='invoice pink',
-    pattern='whose West vivid',
-    project='compelling duh',
+    name='Iodine invoice',
+    project='Synchronised',
 )
 
 res = s.cache.list_keys(req)
@@ -321,16 +314,10 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheSetRequest(
-    set_request=shared.SetRequest(
-        ex=170966,
-        nx=False,
-        px=17597,
-        value='monetize',
-        xx=False,
-    ),
+    set_request=shared.SetRequest(),
     key='<key>',
-    name='Shanahan Phased',
-    project='Gasoline',
+    name='North',
+    project='synergize',
 )
 
 res = s.cache.set_key(req)

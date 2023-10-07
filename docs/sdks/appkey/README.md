@@ -30,9 +30,7 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisDeleteAppKeyRequest(
-    delete_app_key_request=shared.DeleteAppKeyRequest(
-        id='<ID>',
-    ),
+    delete_app_key_request=shared.DeleteAppKeyRequest(),
     project='Architect Cotton port',
 )
 
@@ -109,11 +107,8 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisRotateAppKeySecretRequest(
-    rotate_app_key_request=shared.RotateAppKeyRequest(
-        id='<ID>',
-        project='Facilitator',
-    ),
-    project='efficient compress',
+    rotate_app_key_request=shared.RotateAppKeyRequest(),
+    project='Facilitator',
 )
 
 res = s.app_key.rotate(req)
@@ -151,11 +146,8 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisCreateAppKeyRequest(
-    create_app_key_request=shared.CreateAppKeyRequest(
-        description='User-centric bifurcated product',
-        name='magenta',
-    ),
-    project='indigo',
+    create_app_key_request=shared.CreateAppKeyRequest(),
+    project='Rhode magenta Florida',
 )
 
 res = s.app_key.tigris_create_app_key(req)
@@ -193,12 +185,8 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisUpdateAppKeyRequest(
-    update_app_key_request=shared.UpdateAppKeyRequest(
-        description='Optimized 24/7 middleware',
-        id='<ID>',
-        name='Clothing Tempe',
-    ),
-    project='Ohio ADP',
+    update_app_key_request=shared.UpdateAppKeyRequest(),
+    project='South complexity',
 )
 
 res = s.app_key.update(req)

@@ -13,12 +13,10 @@ s = tigris.Tigris(
 
 req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(
-        options=shared.CreateCacheOptions(
-            ttl_ms=481196,
-        ),
+        options=shared.CreateCacheOptions(),
     ),
-    name='Tasty island Southwest',
-    project='National Lauderhill',
+    name='Electric pirouette',
+    project='Sausages ASCII',
 )
 
 res = s.cache.create(req)

@@ -40,15 +40,10 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchCreateByIDRequest(
-    create_by_id_request=shared.CreateByIDRequest(
-        document='Radon mRNA female',
-        id='<ID>',
-        index='Electric pioneer',
-        project='Rock',
-    ),
+    create_by_id_request=shared.CreateByIDRequest(),
     id='<ID>',
-    index='cyan',
-    project='Tesla Concrete Metrics',
+    index='Radon mRNA female',
+    project='Electric pioneer',
 )
 
 res = s.search.create_document(req)
@@ -94,11 +89,9 @@ req = operations.SearchCreateRequest(
         documents=[
             'Assistant',
         ],
-        index='Cadmium monitor West',
-        project='majestically Israeli',
     ),
-    index='Northeast Tala Plastic',
-    project='tempting Iron South',
+    index='Cadmium monitor West',
+    project='majestically Israeli',
 )
 
 res = s.search.create_documents(req)
@@ -142,11 +135,9 @@ req = operations.SearchDeleteRequest(
         ids=[
             'times',
         ],
-        index='consequently',
-        project='Plastic Samarium Programmable',
     ),
-    index='likewise Awesome turquoise',
-    project='North Handmade lime',
+    index='consequently',
+    project='Plastic Samarium Programmable',
 )
 
 res = s.search.delete_documents(req)
@@ -184,12 +175,9 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchDeleteIndexRequest(
-    delete_index_request=shared.DeleteIndexRequest(
-        name='New Tandem Romania',
-        project='Executive minor Brooklyn',
-    ),
-    name='however Trans woman',
-    project='standardization National bait',
+    delete_index_request=shared.DeleteIndexRequest(),
+    name='New Tandem Romania',
+    project='Executive minor Brooklyn',
 )
 
 res = s.search.delete_index(req)
@@ -232,29 +220,19 @@ s = tigris.Tigris(
 
 req = operations.SearchSearchRequest(
     search_index_request=shared.SearchIndexRequest(
-        collation=shared.Collation(
-            case='deify',
-        ),
+        collation=shared.Collation(),
         exclude_fields=[
-            'how',
+            'Cambridgeshire',
         ],
-        facet='Tesla Stage Salad',
-        filter='Senior Terbium',
         include_fields=[
-            'World',
+            'Unbranded',
         ],
-        index='that so volt',
-        page=337935,
-        page_size=65006,
-        project='degree Indiana infomediaries',
-        q='Diesel',
         search_fields=[
-            'Southeast',
+            'Soft',
         ],
-        sort='Buckinghamshire woot Steel',
     ),
-    index='Guiana Rock deliverables',
-    project='yum by 24/7',
+    index='noxious Senior Terbium',
+    project='enterprise that',
 )
 
 res = s.search.find_documents(req)
@@ -374,10 +352,7 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchListIndexesRequest(
-    filter_branch='dynamic',
-    filter_collection='bolívar Flat',
-    filter_type='Officer Franc Denar',
-    project='Mountain SUV',
+    project='dynamic',
 )
 
 res = s.search.list_indexes(req)
@@ -416,13 +391,9 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchDeleteByQueryRequest(
-    delete_by_query_request=shared.DeleteByQueryRequest(
-        filter='visible whose IB',
-        index='Wyoming',
-        project='Diesel male',
-    ),
-    index='Table Ytterbium',
-    project='harness',
+    delete_by_query_request=shared.DeleteByQueryRequest(),
+    index='visible whose IB',
+    project='Wyoming',
 )
 
 res = s.search.query_delete_documents(req)
@@ -467,11 +438,9 @@ req = operations.SearchCreateOrReplaceRequest(
         documents=[
             'female West Southeast',
         ],
-        index='Total phew',
-        project='gee Coupe Bicycle',
     ),
-    index='Chief',
-    project='coolly Bicycle temporibus',
+    index='Total phew',
+    project='gee Coupe Bicycle',
 )
 
 res = s.search.replace_documents(req)
@@ -516,11 +485,9 @@ req = operations.SearchUpdateRequest(
         documents=[
             'Northwest',
         ],
-        index='West',
-        project='Jewelery black Functionality',
     ),
-    index='Market',
-    project='Trans Ramp services',
+    index='West',
+    project='Jewelery black Functionality',
 )
 
 res = s.search.update_documents(req)
@@ -558,14 +525,9 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchCreateOrUpdateIndexRequest(
-    create_or_update_index_request=shared.CreateOrUpdateIndexRequest(
-        name='maiores when male',
-        only_create=False,
-        project='eius optical West',
-        schema='pointed',
-    ),
-    name='parse East Arsenic',
-    project='capacity Bicycle',
+    create_or_update_index_request=shared.CreateOrUpdateIndexRequest(),
+    name='maiores when male',
+    project='eius optical West',
 )
 
 res = s.search.update_index(req)

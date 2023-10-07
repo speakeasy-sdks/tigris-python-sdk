@@ -71,13 +71,7 @@ s = tigris.Tigris(
 
 req = operations.RealtimeReadMessagesRequest(
     channel='parallelism',
-    end='sympathetic array',
-    event='withdrawal',
-    limit=451433,
-    project='Account',
-    session_id='Northeast',
-    socket_id='green',
-    start='Rock Automotive Grove',
+    project='sympathetic array',
 )
 
 res = s.channel.get_messages(req)
@@ -154,9 +148,7 @@ s = tigris.Tigris(
 
 req = operations.RealtimeListSubscriptionsRequest(
     channel='UTF8 doting Brazil',
-    page=980290,
-    page_size=408746,
-    project='Crew',
+    project='Account Incredible North',
 )
 
 res = s.channel.list_subscriptions(req)
@@ -195,19 +187,12 @@ s = tigris.Tigris(
 
 req = operations.RealtimeMessagesRequest(
     messages_request=shared.MessagesRequest(
-        channel='Representative Manager',
         messages=[
-            shared.Message(
-                data='Man',
-                id='<ID>',
-                name='phew',
-                sequence='Concrete',
-            ),
+            shared.Message(),
         ],
-        project='Directives purple',
     ),
-    channel='amass RSS solutions',
-    project='Road',
+    channel='Representative Manager',
+    project='Man',
 )
 
 res = s.channel.push_messages(req)
