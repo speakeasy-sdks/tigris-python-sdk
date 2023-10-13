@@ -5,5 +5,5 @@
 
 | Field                | Type                 | Required             | Description          |
 | -------------------- | -------------------- | -------------------- | -------------------- |
-| `name`               | *Optional[str]*      | :heavy_check_mark:   | index name.          |
-| `project`            | *Optional[str]*      | :heavy_check_mark:   | Tigris project name. |
+| `name`               | *str*                | :heavy_check_mark:   | index name.          |
+| `project`            | *str*                | :heavy_check_mark:   | Tigris project name. |

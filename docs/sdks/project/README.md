@@ -36,6 +36,7 @@ res = s.project.create(req)
 
 if res.create_project_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -75,6 +76,7 @@ res = s.project.delete_project(req)
 
 if res.delete_project_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -110,6 +112,7 @@ res = s.project.list()
 
 if res.list_projects_response is not None:
     # handle response
+    pass
 ```
 
 

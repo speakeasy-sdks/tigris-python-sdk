@@ -34,6 +34,7 @@ res = s.system.get_health()
 
 if res.health_check_response is not None:
     # handle response
+    pass
 ```
 
 
@@ -63,6 +64,7 @@ res = s.system.get_server_info()
 
 if res.get_info_response is not None:
     # handle response
+    pass
 ```
 
 
@@ -93,6 +95,7 @@ res = s.system.observability_quota_usage(req)
 
 if res.quota_usage_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -129,6 +132,7 @@ res = s.system.query_quota_limits(req)
 
 if res.quota_limits_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -174,6 +178,7 @@ res = s.system.query_time_series_metrics(req)
 
 if res.query_time_series_metrics_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

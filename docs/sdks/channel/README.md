@@ -39,6 +39,7 @@ res = s.channel.get(req)
 
 if res.get_rt_channel_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -78,6 +79,7 @@ res = s.channel.get_messages(req)
 
 if res.read_messages_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -116,6 +118,7 @@ res = s.channel.list(req)
 
 if res.get_rt_channels_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -155,6 +158,7 @@ res = s.channel.list_subscriptions(req)
 
 if res.list_subscription_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -199,6 +203,7 @@ res = s.channel.push_messages(req)
 
 if res.messages_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -238,6 +243,7 @@ res = s.channel.realtime_presence(req)
 
 if res.presence_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters

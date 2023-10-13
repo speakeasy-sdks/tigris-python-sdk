@@ -41,6 +41,7 @@ res = s.cache.create(req)
 
 if res.create_cache_response is not None:
     # handle response
+    pass
 ```
 <!-- End SDK Example Usage -->
 

@@ -38,6 +38,7 @@ res = s.app_key.delete(req)
 
 if res.delete_app_key_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -76,6 +77,7 @@ res = s.app_key.list(req)
 
 if res.list_app_keys_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -115,6 +117,7 @@ res = s.app_key.rotate(req)
 
 if res.rotate_app_key_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -154,6 +157,7 @@ res = s.app_key.tigris_create_app_key(req)
 
 if res.create_app_key_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
@@ -193,6 +197,7 @@ res = s.app_key.update(req)
 
 if res.update_app_key_response is not None:
     # handle response
+    pass
 ```
 
 ### Parameters
