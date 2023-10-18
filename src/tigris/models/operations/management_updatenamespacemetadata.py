@@ -9,13 +9,11 @@ from ..shared import updatenamespacemetadataresponse as shared_updatenamespaceme
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ManagementUpdateNamespaceMetadataRequest:
     metadata_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'metadataKey', 'style': 'simple', 'explode': False }})
     update_namespace_metadata_request: shared_updatenamespacemetadatarequest.UpdateNamespaceMetadataRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

@@ -8,7 +8,6 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateOrUpdateCollectionRequestSchema:
     r"""The schema specifications are same as JSON schema specification defined <a href=\\"https://json-schema.org/specification.html\\" title=\\"here\\">here</a>.<p></p> Schema example: `{  \\"title\\": \\"user\\",  \\"description\\": \\"Collection of documents with details of users\\",  \\"properties\\": {    \\"id\\": {      \\"description\\": \\"A unique identifier for the user\\",      \\"type\\": \\"integer\\"    },    \\"name\\": {      \\"description\\": \\"Name of the user\\",      \\"type\\": \\"string\\",      \\"maxLength\\": 128    },    \\"balance\\": {      \\"description\\": \\"User account balance\\",      \\"type\\": \\"number\\"    }  },  \\"primary_key\\": [\\"id\\"] }`"""
@@ -17,7 +16,6 @@ class CreateOrUpdateCollectionRequestSchema:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CreateOrUpdateCollectionRequest:
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})

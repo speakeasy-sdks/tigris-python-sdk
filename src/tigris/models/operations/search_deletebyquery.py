@@ -9,7 +9,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SearchDeleteByQueryRequest:
     delete_by_query_request: shared_deletebyqueryrequest.DeleteByQueryRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -18,7 +17,6 @@ class SearchDeleteByQueryRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""The project name."""
     
-
 
 
 

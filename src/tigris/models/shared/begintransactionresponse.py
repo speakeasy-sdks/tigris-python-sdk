@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class BeginTransactionResponse:
     r"""Start transaction returns transaction context  which uniquely identifies the transaction"""

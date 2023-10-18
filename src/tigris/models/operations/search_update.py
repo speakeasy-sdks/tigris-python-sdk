@@ -9,7 +9,6 @@ from ..shared import updatedocumentresponse as shared_updatedocumentresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SearchUpdateRequest:
     index: str = dataclasses.field(metadata={'path_param': { 'field_name': 'index', 'style': 'simple', 'explode': False }})
@@ -18,7 +17,6 @@ class SearchUpdateRequest:
     r"""Project name whose db is under target to insert documents."""
     update_document_request: shared_updatedocumentrequest.UpdateDocumentRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

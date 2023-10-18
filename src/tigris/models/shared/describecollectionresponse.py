@@ -8,7 +8,6 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class DescribeCollectionResponseSchema:
     r"""Schema of this collection."""
@@ -17,7 +16,6 @@ class DescribeCollectionResponseSchema:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DescribeCollectionResponse:
     r"""A detailed description of the collection. The description returns collection metadata and the schema."""

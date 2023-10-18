@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class InsertRequestOptions:
     r"""additional options for insert requests."""

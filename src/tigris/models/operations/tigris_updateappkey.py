@@ -9,14 +9,12 @@ from ..shared import updateappkeyresponse as shared_updateappkeyresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class TigrisUpdateAppKeyRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""project name -  this is not allowed to update"""
     update_app_key_request: shared_updateappkeyrequest.UpdateAppKeyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

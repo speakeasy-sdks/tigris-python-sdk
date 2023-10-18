@@ -8,7 +8,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CacheGetRequest:
     key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
@@ -18,7 +17,6 @@ class CacheGetRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Tigris project name"""
     
-
 
 
 

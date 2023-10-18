@@ -7,14 +7,12 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateNamespaceMetadataResponseValue:
     pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class UpdateNamespaceMetadataResponse:
     r"""Update of namespace metadata response"""

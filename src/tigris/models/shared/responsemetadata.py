@@ -10,7 +10,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ResponseMetadata:
     r"""Has metadata related to the documents stored."""

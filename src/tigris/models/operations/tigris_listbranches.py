@@ -8,13 +8,11 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class TigrisListBranchesRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""List database branches in this project"""
     
-
 
 
 

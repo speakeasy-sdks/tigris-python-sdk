@@ -38,7 +38,7 @@ req = operations.TigrisBeginTransactionRequest(
     begin_transaction_request=shared.BeginTransactionRequest(
         options=shared.TransactionOptions(),
     ),
-    project='Steel East microchip',
+    project='ew',
 )
 
 res = s.database.begin_transaction(req)
@@ -79,7 +79,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisCommitTransactionRequest(
     commit_transaction_request=shared.CommitTransactionRequest(),
-    project='drop Assurance',
+    project='Metrics',
 )
 
 res = s.database.commit_transaction(req)
@@ -119,8 +119,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateBranchRequest(
     create_branch_request=shared.CreateBranchRequest(),
-    branch='Dubnium UDP Garden',
-    project='solid hence Ramp',
+    branch='Nissan',
+    project='majestically',
 )
 
 res = s.database.create_branch(req)
@@ -161,8 +161,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteBranchRequest(
     delete_branch_request=shared.DeleteBranchRequest(),
-    branch='withdrawal',
-    project='West Coupe solutions',
+    branch='Berkshire',
+    project='Shoes',
 )
 
 res = s.database.delete_branch(req)
@@ -203,7 +203,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisDescribeDatabaseRequest(
     describe_database_request=shared.DescribeDatabaseRequest(),
-    project='morph Pickup',
+    project='copy',
 )
 
 res = s.database.describe(req)
@@ -242,7 +242,7 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisListCollectionsRequest(
-    project='Buckinghamshire green Djibouti',
+    project='blah',
 )
 
 res = s.database.list_collections(req)
@@ -283,7 +283,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisRollbackTransactionRequest(
     rollback_transaction_request=shared.RollbackTransactionRequest(),
-    project='woman Convertible Hafnium',
+    project='optimisation',
 )
 
 res = s.database.rollback_transaction(req)
@@ -322,7 +322,7 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisListBranchesRequest(
-    project='Funk',
+    project='withdrawal',
 )
 
 res = s.database.tigris_list_branches(req)

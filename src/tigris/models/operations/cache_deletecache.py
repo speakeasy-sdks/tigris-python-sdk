@@ -9,7 +9,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CacheDeleteCacheRequest:
     delete_cache_request: shared_deletecacherequest.DeleteCacheRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -18,7 +17,6 @@ class CacheDeleteCacheRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Tigris project name"""
     
-
 
 
 

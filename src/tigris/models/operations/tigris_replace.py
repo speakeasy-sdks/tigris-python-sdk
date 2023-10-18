@@ -9,7 +9,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class TigrisReplaceRequest:
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
@@ -18,7 +17,6 @@ class TigrisReplaceRequest:
     r"""Project name whose db is under target to replace documents."""
     replace_request: shared_replacerequest.ReplaceRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

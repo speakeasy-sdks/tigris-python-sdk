@@ -4,7 +4,6 @@ from __future__ import annotations
 import dataclasses
 
 
-
 @dataclasses.dataclass
 class TransactionOptions:
     r"""Options that can be used to modify the transaction semantics."""

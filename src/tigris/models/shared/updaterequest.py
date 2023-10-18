@@ -8,12 +8,10 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateRequestFields:
     r"""Fields contains set of fields with the values which need to be updated. Should be proper JSON object."""
     
-
 
 
 
@@ -25,7 +23,6 @@ class UpdateRequestFilter:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class UpdateRequest:
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})

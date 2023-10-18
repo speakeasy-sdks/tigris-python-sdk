@@ -5,14 +5,13 @@ import dataclasses
 from ..shared import appkey as shared_appkey
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ListAppKeysResponse:
     r"""ListAppKeysResponse returns one or more visible app keys to user"""
-    app_keys: Optional[list[shared_appkey.AppKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app_keys'), 'exclude': lambda f: f is None }})
+    app_keys: Optional[List[shared_appkey.AppKey]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('app_keys'), 'exclude': lambda f: f is None }})
     
 

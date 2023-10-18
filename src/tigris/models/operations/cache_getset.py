@@ -9,7 +9,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CacheGetSetRequest:
     get_set_request: shared_getsetrequest.GetSetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -20,7 +19,6 @@ class CacheGetSetRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Tigris project name"""
     
-
 
 
 

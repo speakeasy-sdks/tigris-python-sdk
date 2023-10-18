@@ -32,7 +32,6 @@ class ErrorCode(str, Enum):
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class Error:
     r"""The Error type defines a logical error model"""

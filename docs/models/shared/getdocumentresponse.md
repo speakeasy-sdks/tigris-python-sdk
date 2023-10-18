@@ -5,4 +5,4 @@
 
 | Field                                             | Type                                              | Required                                          | Description                                       |
 | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------- |
-| `documents`                                       | list[[IndexDoc](../../models/shared/indexdoc.md)] | :heavy_minus_sign:                                | An array of documents.                            |
+| `documents`                                       | List[[IndexDoc](../../models/shared/indexdoc.md)] | :heavy_minus_sign:                                | An array of documents.                            |

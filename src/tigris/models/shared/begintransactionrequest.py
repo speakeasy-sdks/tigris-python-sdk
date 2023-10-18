@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class BeginTransactionRequest:
     r"""Start new transaction in project specified by \\"project\\"."""

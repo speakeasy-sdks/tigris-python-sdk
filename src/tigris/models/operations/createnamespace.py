@@ -8,7 +8,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CreateNamespaceResponse:
     content_type: str = dataclasses.field()

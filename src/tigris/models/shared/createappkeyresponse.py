@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CreateAppKeyResponse:
     r"""CreateAppKeyResponse returns created app keys"""

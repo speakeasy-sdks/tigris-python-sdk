@@ -9,7 +9,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SearchCreateOrReplaceRequest:
     create_or_replace_document_request: shared_createorreplacedocumentrequest.CreateOrReplaceDocumentRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -18,7 +17,6 @@ class SearchCreateOrReplaceRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Project name whose db is under target to insert documents."""
     
-
 
 
 

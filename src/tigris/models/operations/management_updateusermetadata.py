@@ -9,13 +9,11 @@ from ..shared import updateusermetadataresponse as shared_updateusermetadataresp
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ManagementUpdateUserMetadataRequest:
     metadata_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'metadataKey', 'style': 'simple', 'explode': False }})
     update_user_metadata_request: shared_updateusermetadatarequest.UpdateUserMetadataRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

@@ -8,7 +8,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SearchListIndexesRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
@@ -20,7 +19,6 @@ class SearchListIndexesRequest:
     filter_type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'filter.type', 'style': 'form', 'explode': True }})
     r"""An index can be either managed by user explicitly then the type is set as \\"user\\" or the index is backed by Tigris collection. In case it is backed by Tigris collection the type is \\"tigris\\"."""
     
-
 
 
 

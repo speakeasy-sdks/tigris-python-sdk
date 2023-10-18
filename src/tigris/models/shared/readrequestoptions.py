@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ReadRequestOptions:
     r"""Options that can be used to modify the results, for example \\"limit\\" to control the number of documents returned by the server."""

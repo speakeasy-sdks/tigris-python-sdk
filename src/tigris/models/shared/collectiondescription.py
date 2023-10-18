@@ -8,7 +8,6 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CollectionDescriptionSchema:
     r"""Collections schema"""
@@ -17,7 +16,6 @@ class CollectionDescriptionSchema:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class CollectionDescription:
     collection: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection'), 'exclude': lambda f: f is None }})

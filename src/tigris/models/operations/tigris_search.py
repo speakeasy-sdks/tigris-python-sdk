@@ -9,7 +9,6 @@ from ..shared import streamingsearchresponse as shared_streamingsearchresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class TigrisSearchRequest:
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
@@ -18,7 +17,6 @@ class TigrisSearchRequest:
     r"""Project name whose db is under target to search documents from."""
     search_request: shared_searchrequest.SearchRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

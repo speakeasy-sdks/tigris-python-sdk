@@ -9,7 +9,6 @@ from ..shared import streamingreadresponse as shared_streamingreadresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class TigrisReadRequest:
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
@@ -18,7 +17,6 @@ class TigrisReadRequest:
     r"""Project name whose db is under target to read documents from."""
     read_request: shared_readrequest.ReadRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

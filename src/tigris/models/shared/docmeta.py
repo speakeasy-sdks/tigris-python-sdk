@@ -10,7 +10,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DocMeta:
     r"""Contains metadata related to the search hit, has information about document created_at/updated_at as well."""

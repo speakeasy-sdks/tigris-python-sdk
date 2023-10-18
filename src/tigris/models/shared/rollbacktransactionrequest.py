@@ -8,7 +8,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class RollbackTransactionRequest:
     r"""Rollback transaction with the given ID"""

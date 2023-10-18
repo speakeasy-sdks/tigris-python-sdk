@@ -8,7 +8,6 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SearchHitData:
     r"""Actual search document"""
@@ -17,7 +16,6 @@ class SearchHitData:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class SearchHit:
     data: Optional[SearchHitData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})

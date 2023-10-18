@@ -8,12 +8,10 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ReadRequestFields:
     r"""To read specific fields from a document. Default is all."""
     
-
 
 
 
@@ -25,7 +23,6 @@ class ReadRequestFilter:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ReadRequest:
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})

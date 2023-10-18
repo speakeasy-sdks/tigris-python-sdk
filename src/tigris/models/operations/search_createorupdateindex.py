@@ -9,7 +9,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SearchCreateOrUpdateIndexRequest:
     create_or_update_index_request: shared_createorupdateindexrequest.CreateOrUpdateIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -18,7 +17,6 @@ class SearchCreateOrUpdateIndexRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Tigris project name."""
     
-
 
 
 

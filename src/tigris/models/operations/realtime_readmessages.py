@@ -8,7 +8,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class RealtimeReadMessagesRequest:
     channel: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channel', 'style': 'simple', 'explode': False }})
@@ -20,7 +19,6 @@ class RealtimeReadMessagesRequest:
     socket_id: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'socket_id', 'style': 'form', 'explode': True }})
     start: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
     
-
 
 
 

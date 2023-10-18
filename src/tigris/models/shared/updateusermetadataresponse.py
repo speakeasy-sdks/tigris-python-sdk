@@ -7,14 +7,12 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class UpdateUserMetadataResponseValue:
     pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class UpdateUserMetadataResponse:
     r"""Update of user metadata response"""

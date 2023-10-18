@@ -9,7 +9,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class RotateAppKeyResponse:
     r"""RotateAppKeyResponse returns the new app key with rotated secret"""

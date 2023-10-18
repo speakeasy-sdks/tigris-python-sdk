@@ -9,14 +9,12 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class TigrisDeleteProjectRequest:
     delete_project_request: shared_deleteprojectrequest.DeleteProjectRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Delete Project with this name. <p></p>**Note**: Deletes all resources under this project. Use with caution."""
     
-
 
 
 

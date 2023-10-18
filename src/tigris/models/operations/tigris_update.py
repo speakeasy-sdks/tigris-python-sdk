@@ -9,7 +9,6 @@ from ..shared import updateresponse as shared_updateresponse
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class TigrisUpdateRequest:
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
@@ -18,7 +17,6 @@ class TigrisUpdateRequest:
     r"""Project name whose db is under target  to update documents"""
     update_request: shared_updaterequest.UpdateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

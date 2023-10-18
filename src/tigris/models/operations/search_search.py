@@ -9,7 +9,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SearchSearchRequest:
     index: str = dataclasses.field(metadata={'path_param': { 'field_name': 'index', 'style': 'simple', 'explode': False }})
@@ -18,7 +17,6 @@ class SearchSearchRequest:
     r"""Project name whose db is under target to search documents from."""
     search_index_request: shared_searchindexrequest.SearchIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
-
 
 
 

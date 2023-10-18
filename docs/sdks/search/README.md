@@ -42,8 +42,8 @@ s = tigris.Tigris(
 req = operations.SearchCreateByIDRequest(
     create_by_id_request=shared.CreateByIDRequest(),
     id='<ID>',
-    index='Radon mRNA female',
-    project='Electric pioneer',
+    index='Bicycle',
+    project='mRNA',
 )
 
 res = s.search.create_document(req)
@@ -88,11 +88,11 @@ s = tigris.Tigris(
 req = operations.SearchCreateRequest(
     create_document_request=shared.CreateDocumentRequest(
         documents=[
-            'Assistant',
+            'Ohio',
         ],
     ),
-    index='Cadmium monitor West',
-    project='majestically Israeli',
+    index='Toyota',
+    project='Cadmium',
 )
 
 res = s.search.create_documents(req)
@@ -138,8 +138,8 @@ req = operations.SearchDeleteRequest(
             'times',
         ],
     ),
-    index='consequently',
-    project='Plastic Samarium Programmable',
+    index='Southwest',
+    project='Glover',
 )
 
 res = s.search.delete_documents(req)
@@ -179,8 +179,8 @@ s = tigris.Tigris(
 
 req = operations.SearchDeleteIndexRequest(
     delete_index_request=shared.DeleteIndexRequest(),
-    name='New Tandem Romania',
-    project='Executive minor Brooklyn',
+    name='Liaison',
+    project='Marketing',
 )
 
 res = s.search.delete_index(req)
@@ -235,8 +235,8 @@ req = operations.SearchSearchRequest(
             'Soft',
         ],
     ),
-    index='noxious Senior Terbium',
-    project='enterprise that',
+    index='green',
+    project='Salad',
 )
 
 res = s.search.find_documents(req)
@@ -279,8 +279,8 @@ req = operations.SearchGetRequest(
     ids=[
         'turquoise',
     ],
-    index='Loan Northwest',
-    project='Bugatti Federation',
+    index='navigating',
+    project='generating',
 )
 
 res = s.search.get_documents(req)
@@ -319,8 +319,8 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchGetIndexRequest(
-    name='reboot female',
-    project='male',
+    name='woman',
+    project='female',
 )
 
 res = s.search.get_index(req)
@@ -359,7 +359,7 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchListIndexesRequest(
-    project='dynamic',
+    project='Avon',
 )
 
 res = s.search.list_indexes(req)
@@ -400,8 +400,8 @@ s = tigris.Tigris(
 
 req = operations.SearchDeleteByQueryRequest(
     delete_by_query_request=shared.DeleteByQueryRequest(),
-    index='visible whose IB',
-    project='Wyoming',
+    index='unnaturally',
+    project='zowie',
 )
 
 res = s.search.query_delete_documents(req)
@@ -445,11 +445,11 @@ s = tigris.Tigris(
 req = operations.SearchCreateOrReplaceRequest(
     create_or_replace_document_request=shared.CreateOrReplaceDocumentRequest(
         documents=[
-            'female West Southeast',
+            'male',
         ],
     ),
-    index='Total phew',
-    project='gee Coupe Bicycle',
+    index='Avon',
+    project='before',
 )
 
 res = s.search.replace_documents(req)
@@ -493,11 +493,11 @@ s = tigris.Tigris(
 req = operations.SearchUpdateRequest(
     update_document_request=shared.UpdateDocumentRequest(
         documents=[
-            'Northwest',
+            'revolutionary',
         ],
     ),
-    index='West',
-    project='Jewelery black Functionality',
+    index='Strategist',
+    project='Jewelery',
 )
 
 res = s.search.update_documents(req)
@@ -537,8 +537,8 @@ s = tigris.Tigris(
 
 req = operations.SearchCreateOrUpdateIndexRequest(
     create_or_update_index_request=shared.CreateOrUpdateIndexRequest(),
-    name='maiores when male',
-    project='eius optical West',
+    name='Agent',
+    project='male',
 )
 
 res = s.search.update_index(req)

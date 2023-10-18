@@ -8,7 +8,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class AuthGetAccessTokenResponse:
     content_type: str = dataclasses.field()

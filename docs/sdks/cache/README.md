@@ -36,8 +36,8 @@ req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(
         options=shared.CreateCacheOptions(),
     ),
-    name='Electric pirouette',
-    project='Sausages ASCII',
+    name='neural',
+    project='Tasty',
 )
 
 res = s.cache.create(req)
@@ -77,8 +77,8 @@ s = tigris.Tigris(
 
 req = operations.CacheDeleteCacheRequest(
     delete_cache_request=shared.DeleteCacheRequest(),
-    name='Architect Cotton port',
-    project='qua',
+    name='roughly',
+    project='EXE',
 )
 
 res = s.cache.delete(req)
@@ -119,8 +119,8 @@ s = tigris.Tigris(
 req = operations.CacheDelRequest(
     del_request=shared.DelRequest(),
     key='<key>',
-    name='man Seamless before',
-    project='Diesel',
+    name='Orchestrator',
+    project='gray',
 )
 
 res = s.cache.delete_keys(req)
@@ -160,8 +160,8 @@ s = tigris.Tigris(
 
 req = operations.CacheGetRequest(
     key='<key>',
-    name='lux robust',
-    project='index',
+    name='man',
+    project='robust',
 )
 
 res = s.cache.get_key(req)
@@ -202,8 +202,8 @@ s = tigris.Tigris(
 req = operations.CacheGetSetRequest(
     get_set_request=shared.GetSetRequest(),
     key='<key>',
-    name='Bronze',
-    project='portal salmon',
+    name='black',
+    project='Direct',
 )
 
 res = s.cache.get_set_key(req)
@@ -242,7 +242,7 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheListCachesRequest(
-    project='Bronze Architect',
+    project='Future',
 )
 
 res = s.cache.list(req)
@@ -281,8 +281,8 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheKeysRequest(
-    name='Iodine invoice',
-    project='Synchronised',
+    name='Trans',
+    project='invoice',
 )
 
 res = s.cache.list_keys(req)
@@ -323,8 +323,8 @@ s = tigris.Tigris(
 req = operations.CacheSetRequest(
     set_request=shared.SetRequest(),
     key='<key>',
-    name='North',
-    project='synergize',
+    name='red',
+    project='Gloves',
 )
 
 res = s.cache.set_key(req)

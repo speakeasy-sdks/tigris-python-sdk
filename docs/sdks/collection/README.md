@@ -43,8 +43,8 @@ req = operations.TigrisCreateOrUpdateCollectionRequest(
         options=shared.CollectionOptions(),
         schema=shared.CreateOrUpdateCollectionRequestSchema(),
     ),
-    collection='Electric pirouette',
-    project='Sausages ASCII',
+    collection='neural',
+    project='Tasty',
 )
 
 res = s.collection.create(req)
@@ -90,8 +90,8 @@ req = operations.TigrisDeleteRequest(
             write_options=shared.WriteOptions(),
         ),
     ),
-    collection='Convertible consequently female',
-    project='Card',
+    collection='times',
+    project='Southwest',
 )
 
 res = s.collection.delete_documents(req)
@@ -133,8 +133,8 @@ req = operations.TigrisDescribeCollectionRequest(
     describe_collection_request=shared.DescribeCollectionRequest(
         options=shared.CollectionOptions(),
     ),
-    collection='morph Pickup',
-    project='Home',
+    collection='copy',
+    project='Luxurious',
 )
 
 res = s.collection.describe(req)
@@ -177,8 +177,8 @@ req = operations.TigrisDropCollectionRequest(
     drop_collection_request=shared.DropCollectionRequest(
         options=shared.CollectionOptions(),
     ),
-    collection='Tricycle Cummings',
-    project='reboot Northern',
+    collection='SSL',
+    project='an',
 )
 
 res = s.collection.drop(req)
@@ -236,8 +236,8 @@ req = operations.TigrisImportRequest(
             'calmly',
         ],
     ),
-    collection='Sedan Peru',
-    project='wherever Designer',
+    collection='transmitting',
+    project='Van',
 )
 
 res = s.collection.import_documents(req)
@@ -286,8 +286,8 @@ req = operations.TigrisInsertRequest(
             write_options=shared.WriteOptions(),
         ),
     ),
-    collection='magnetic Hong National',
-    project='Lemke',
+    collection='ew',
+    project='Won',
 )
 
 res = s.collection.insert_documents(req)
@@ -338,8 +338,8 @@ req = operations.TigrisReadRequest(
             collation=shared.Collation(),
         ),
     ),
-    collection='West farad',
-    project='Books yellow',
+    collection='Lead',
+    project='ivory',
 )
 
 res = s.collection.read_documents(req)
@@ -386,8 +386,8 @@ req = operations.TigrisReplaceRequest(
             write_options=shared.WriteOptions(),
         ),
     ),
-    collection='female West Southeast',
-    project='Total phew',
+    collection='male',
+    project='Avon',
 )
 
 res = s.collection.replace_documents(req)
@@ -445,8 +445,8 @@ req = operations.TigrisSearchRequest(
         ],
         sort=shared.SearchRequestSort(),
     ),
-    collection='blue Intranet Germanium',
-    project='Books degree Cambridgeshire',
+    collection='Hybrid',
+    project='Borders',
 )
 
 res = s.collection.search_documents(req)
@@ -493,8 +493,8 @@ req = operations.TigrisUpdateRequest(
             write_options=shared.WriteOptions(),
         ),
     ),
-    collection='Northwest',
-    project='West',
+    collection='revolutionary',
+    project='Strategist',
 )
 
 res = s.collection.update_documents(req)

@@ -9,14 +9,12 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class TigrisCreateAppKeyRequest:
     create_app_key_request: shared_createappkeyrequest.CreateAppKeyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Project name"""
     
-
 
 
 

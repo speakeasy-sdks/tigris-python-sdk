@@ -9,7 +9,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class SearchDeleteRequest:
     delete_document_request: shared_deletedocumentrequest.DeleteDocumentRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -18,7 +17,6 @@ class SearchDeleteRequest:
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""The project name."""
     
-
 
 
 

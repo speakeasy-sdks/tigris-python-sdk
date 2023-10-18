@@ -8,7 +8,6 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class CacheKeysRequest:
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
@@ -22,7 +21,6 @@ class CacheKeysRequest:
     pattern: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'pattern', 'style': 'form', 'explode': True }})
     r"""optional key pattern"""
     
-
 
 
 

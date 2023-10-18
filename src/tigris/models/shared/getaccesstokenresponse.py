@@ -8,7 +8,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class GetAccessTokenResponse:
     r"""The response of GetAccessToken which contains access_token and optionally refresh_token."""

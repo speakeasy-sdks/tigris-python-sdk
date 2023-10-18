@@ -8,7 +8,6 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class DeleteAppKeyResponse:
     r"""AppKeys returns the flag to convey if app key was deleted"""

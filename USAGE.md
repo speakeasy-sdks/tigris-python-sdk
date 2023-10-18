@@ -15,8 +15,8 @@ req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(
         options=shared.CreateCacheOptions(),
     ),
-    name='Electric pirouette',
-    project='Sausages ASCII',
+    name='neural',
+    project='Tasty',
 )
 
 res = s.cache.create(req)

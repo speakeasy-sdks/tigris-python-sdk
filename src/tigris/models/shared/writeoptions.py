@@ -4,7 +4,6 @@ from __future__ import annotations
 import dataclasses
 
 
-
 @dataclasses.dataclass
 class WriteOptions:
     r"""Additional options to modify write requests."""

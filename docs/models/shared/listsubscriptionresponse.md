@@ -5,4 +5,4 @@
 
 | Field              | Type               | Required           | Description        |
 | ------------------ | ------------------ | ------------------ | ------------------ |
-| `devices`          | list[*str*]        | :heavy_minus_sign: | N/A                |
+| `devices`          | List[*str*]        | :heavy_minus_sign: | N/A                |

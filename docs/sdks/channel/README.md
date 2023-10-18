@@ -31,8 +31,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeGetRTChannelRequest(
-    channel='Group Cambridgeshire',
-    project='reintermediate fuchsia Planner',
+    channel='motivating',
+    project='Account',
 )
 
 res = s.channel.get(req)
@@ -71,8 +71,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeReadMessagesRequest(
-    channel='parallelism',
-    project='sympathetic array',
+    channel='East',
+    project='Platinum',
 )
 
 res = s.channel.get_messages(req)
@@ -111,7 +111,7 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeGetRTChannelsRequest(
-    project='Bronze Architect',
+    project='Future',
 )
 
 res = s.channel.list(req)
@@ -150,8 +150,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeListSubscriptionsRequest(
-    channel='UTF8 doting Brazil',
-    project='Account Incredible North',
+    channel='internationalise',
+    project='which',
 )
 
 res = s.channel.list_subscriptions(req)
@@ -195,8 +195,8 @@ req = operations.RealtimeMessagesRequest(
             shared.Message(),
         ],
     ),
-    channel='Representative Manager',
-    project='Man',
+    channel='payment',
+    project='pronoun',
 )
 
 res = s.channel.push_messages(req)
@@ -235,8 +235,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimePresenceRequest(
-    channel='orchid AI second',
-    project='thankful Consultant',
+    channel='successfully',
+    project='Applications',
 )
 
 res = s.channel.realtime_presence(req)

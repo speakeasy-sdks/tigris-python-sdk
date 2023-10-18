@@ -31,7 +31,7 @@ req = operations.ManagementGetUserMetadataRequest(
     get_user_metadata_request=shared.GetUserMetadataRequest(
         value=shared.GetUserMetadataRequestValue(),
     ),
-    metadata_key='or Plastic',
+    metadata_key='Chief',
 )
 
 res = s.user.get_metadata(req)
@@ -73,7 +73,7 @@ req = operations.ManagementInsertUserMetadataRequest(
     insert_user_metadata_request=shared.InsertUserMetadataRequest(
         value=shared.InsertUserMetadataRequestValue(),
     ),
-    metadata_key='Curve Liaison calculate',
+    metadata_key='Diesel',
 )
 
 res = s.user.insert_metadata(req)
@@ -115,7 +115,7 @@ req = operations.ManagementUpdateUserMetadataRequest(
     update_user_metadata_request=shared.UpdateUserMetadataRequest(
         value=shared.UpdateUserMetadataRequestValue(),
     ),
-    metadata_key='platforms Concrete Tempe',
+    metadata_key='fate',
 )
 
 res = s.user.update_metadata(req)

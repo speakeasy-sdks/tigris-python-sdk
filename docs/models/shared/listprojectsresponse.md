@@ -5,4 +5,4 @@
 
 | Field                                                   | Type                                                    | Required                                                | Description                                             |
 | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
-| `projects`                                              | list[[ProjectInfo](../../models/shared/projectinfo.md)] | :heavy_minus_sign:                                      | List of the projects.                                   |
+| `projects`                                              | List[[ProjectInfo](../../models/shared/projectinfo.md)] | :heavy_minus_sign:                                      | List of the projects.                                   |

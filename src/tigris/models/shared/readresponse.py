@@ -8,7 +8,6 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class ReadResponseData:
     r"""Object containing the collection document."""
@@ -17,7 +16,6 @@ class ReadResponseData:
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class ReadResponse:
     data: Optional[ReadResponseData] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('data'), 'exclude': lambda f: f is None }})

@@ -9,14 +9,12 @@ from ..shared import status as shared_status
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class RealtimeMessagesRequest:
     channel: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channel', 'style': 'simple', 'explode': False }})
     messages_request: shared_messagesrequest.MessagesRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
-
 
 
 

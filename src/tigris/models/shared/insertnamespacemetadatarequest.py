@@ -7,14 +7,12 @@ from tigris import utils
 from typing import Optional
 
 
-
 @dataclasses.dataclass
 class InsertNamespaceMetadataRequestValue:
     pass
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
-
 @dataclasses.dataclass
 class InsertNamespaceMetadataRequest:
     r"""Request insertion of namespace metadata"""

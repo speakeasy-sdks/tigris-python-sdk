@@ -5,8 +5,7 @@ import dataclasses
 import requests as requests_http
 from ..shared import getdocumentresponse as shared_getdocumentresponse
 from ..shared import status as shared_status
-from typing import Optional
-
+from typing import List, Optional
 
 
 @dataclasses.dataclass
@@ -15,10 +14,9 @@ class SearchGetRequest:
     r"""index name where to create documents."""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Tigris project name."""
-    ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
+    ids: Optional[List[str]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'ids', 'style': 'form', 'explode': True }})
     r"""document id."""
     
-
 
 
 
