@@ -101,7 +101,7 @@ req = operations.ManagementGetNamespaceMetadataRequest(
     get_namespace_metadata_request=shared.GetNamespaceMetadataRequest(
         value=shared.GetNamespaceMetadataRequestValue(),
     ),
-    metadata_key='Chief',
+    metadata_key='string',
 )
 
 res = s.namespace.get_metadata(req)
@@ -143,7 +143,7 @@ req = operations.ManagementInsertNamespaceMetadataRequest(
     insert_namespace_metadata_request=shared.InsertNamespaceMetadataRequest(
         value=shared.InsertNamespaceMetadataRequestValue(),
     ),
-    metadata_key='Diesel',
+    metadata_key='string',
 )
 
 res = s.namespace.insert_metadata(req)
@@ -215,7 +215,7 @@ req = operations.ManagementUpdateNamespaceMetadataRequest(
     update_namespace_metadata_request=shared.UpdateNamespaceMetadataRequest(
         value=shared.UpdateNamespaceMetadataRequestValue(),
     ),
-    metadata_key='fate',
+    metadata_key='string',
 )
 
 res = s.namespace.update_metadata(req)

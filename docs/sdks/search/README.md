@@ -42,8 +42,8 @@ s = tigris.Tigris(
 req = operations.SearchCreateByIDRequest(
     create_by_id_request=shared.CreateByIDRequest(),
     id='<ID>',
-    index='Bicycle',
-    project='mRNA',
+    index='string',
+    project='string',
 )
 
 res = s.search.create_document(req)
@@ -88,11 +88,11 @@ s = tigris.Tigris(
 req = operations.SearchCreateRequest(
     create_document_request=shared.CreateDocumentRequest(
         documents=[
-            'Ohio',
+            'string',
         ],
     ),
-    index='Toyota',
-    project='Cadmium',
+    index='string',
+    project='string',
 )
 
 res = s.search.create_documents(req)
@@ -135,11 +135,11 @@ s = tigris.Tigris(
 req = operations.SearchDeleteRequest(
     delete_document_request=shared.DeleteDocumentRequest(
         ids=[
-            'times',
+            'string',
         ],
     ),
-    index='Southwest',
-    project='Glover',
+    index='string',
+    project='string',
 )
 
 res = s.search.delete_documents(req)
@@ -179,8 +179,8 @@ s = tigris.Tigris(
 
 req = operations.SearchDeleteIndexRequest(
     delete_index_request=shared.DeleteIndexRequest(),
-    name='Liaison',
-    project='Marketing',
+    name='string',
+    project='string',
 )
 
 res = s.search.delete_index(req)
@@ -226,17 +226,17 @@ req = operations.SearchSearchRequest(
     search_index_request=shared.SearchIndexRequest(
         collation=shared.Collation(),
         exclude_fields=[
-            'Cambridgeshire',
+            'string',
         ],
         include_fields=[
-            'Unbranded',
+            'string',
         ],
         search_fields=[
-            'Soft',
+            'string',
         ],
     ),
-    index='green',
-    project='Salad',
+    index='string',
+    project='string',
 )
 
 res = s.search.find_documents(req)
@@ -277,10 +277,10 @@ s = tigris.Tigris(
 
 req = operations.SearchGetRequest(
     ids=[
-        'turquoise',
+        'string',
     ],
-    index='navigating',
-    project='generating',
+    index='string',
+    project='string',
 )
 
 res = s.search.get_documents(req)
@@ -319,8 +319,8 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchGetIndexRequest(
-    name='woman',
-    project='female',
+    name='string',
+    project='string',
 )
 
 res = s.search.get_index(req)
@@ -359,7 +359,7 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchListIndexesRequest(
-    project='Avon',
+    project='string',
 )
 
 res = s.search.list_indexes(req)
@@ -400,8 +400,8 @@ s = tigris.Tigris(
 
 req = operations.SearchDeleteByQueryRequest(
     delete_by_query_request=shared.DeleteByQueryRequest(),
-    index='unnaturally',
-    project='zowie',
+    index='string',
+    project='string',
 )
 
 res = s.search.query_delete_documents(req)
@@ -445,11 +445,11 @@ s = tigris.Tigris(
 req = operations.SearchCreateOrReplaceRequest(
     create_or_replace_document_request=shared.CreateOrReplaceDocumentRequest(
         documents=[
-            'male',
+            'string',
         ],
     ),
-    index='Avon',
-    project='before',
+    index='string',
+    project='string',
 )
 
 res = s.search.replace_documents(req)
@@ -493,11 +493,11 @@ s = tigris.Tigris(
 req = operations.SearchUpdateRequest(
     update_document_request=shared.UpdateDocumentRequest(
         documents=[
-            'revolutionary',
+            'string',
         ],
     ),
-    index='Strategist',
-    project='Jewelery',
+    index='string',
+    project='string',
 )
 
 res = s.search.update_documents(req)
@@ -537,8 +537,8 @@ s = tigris.Tigris(
 
 req = operations.SearchCreateOrUpdateIndexRequest(
     create_or_update_index_request=shared.CreateOrUpdateIndexRequest(),
-    name='Agent',
-    project='male',
+    name='string',
+    project='string',
 )
 
 res = s.search.update_index(req)

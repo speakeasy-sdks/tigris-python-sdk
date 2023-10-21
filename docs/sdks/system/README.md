@@ -170,7 +170,7 @@ req = shared.QueryTimeSeriesMetricsRequest(
         ),
     ],
     space_aggregated_by=[
-        'Concrete',
+        'string',
     ],
 )
 
