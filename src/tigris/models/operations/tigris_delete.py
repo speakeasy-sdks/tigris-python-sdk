@@ -11,7 +11,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class TigrisDeleteRequest:
-    
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
     r"""Collection name where to insert documents."""
     delete_request: shared_deleterequest.DeleteRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -19,14 +18,19 @@ class TigrisDeleteRequest:
     r"""Project name whose db is under target to delete documents."""
     
 
+
+
 @dataclasses.dataclass
 class TigrisDeleteResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     delete_response: Optional[shared_deleteresponse.DeleteResponse] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

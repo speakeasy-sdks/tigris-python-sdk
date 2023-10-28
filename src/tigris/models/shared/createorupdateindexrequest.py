@@ -10,7 +10,6 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class CreateOrUpdateIndexRequest:
-    
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     r"""search index name."""
     only_create: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('only_create'), 'exclude': lambda f: f is None }})
@@ -20,3 +19,4 @@ class CreateOrUpdateIndexRequest:
     schema: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema'), 'exclude': lambda f: f is None }})
     r"""schema of the index. The schema specifications are same as JSON schema specification defined <a href=\\"https://json-schema.org/specification.html\\" title=\\"here\\">here</a>.<p></p> Schema example: `{  \\"title\\": \\"ecommerce_index\\",  \\"description\\": \\"an ecommerce store search index\\",  \\"properties\\": {    \\"name\\": {      \\"description\\": \\"Name of the product\\",      \\"type\\": \\"string\\",      \\"maxLength\\": 128    },    \\"brand\\": {      \\"description\\": \\"Brand of the product\\",      \\"type\\": \\"string\\"    },    \\"price\\": {      \\"description\\": \\"Price of the product\\",      \\"type\\": \\"number\\"    }  } }`"""
     
+

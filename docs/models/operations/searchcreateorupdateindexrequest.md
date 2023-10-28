@@ -1,0 +1,10 @@
+# SearchCreateOrUpdateIndexRequest
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `create_or_update_index_request`                                                       | [shared.CreateOrUpdateIndexRequest](../../models/shared/createorupdateindexrequest.md) | :heavy_check_mark:                                                                     | N/A                                                                                    |
+| `name`                                                                                 | *str*                                                                                  | :heavy_check_mark:                                                                     | search index name.                                                                     |
+| `project`                                                                              | *str*                                                                                  | :heavy_check_mark:                                                                     | Tigris project name.                                                                   |

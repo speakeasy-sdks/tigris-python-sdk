@@ -11,7 +11,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class TigrisReplaceRequest:
-    
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
     r"""Collection name where to replace documents."""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
@@ -19,14 +18,19 @@ class TigrisReplaceRequest:
     replace_request: shared_replacerequest.ReplaceRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
 @dataclasses.dataclass
 class TigrisReplaceResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     replace_response: Optional[shared_replaceresponse.ReplaceResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

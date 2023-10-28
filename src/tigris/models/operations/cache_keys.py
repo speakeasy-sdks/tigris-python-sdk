@@ -10,7 +10,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class CacheKeysRequest:
-    
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     r"""cache name"""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
@@ -23,14 +22,19 @@ class CacheKeysRequest:
     r"""optional key pattern"""
     
 
+
+
 @dataclasses.dataclass
 class CacheKeysResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     keys_response: Optional[shared_keysresponse.KeysResponse] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

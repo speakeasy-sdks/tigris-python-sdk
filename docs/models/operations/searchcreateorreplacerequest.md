@@ -1,0 +1,10 @@
+# SearchCreateOrReplaceRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `create_or_replace_document_request`                                                           | [shared.CreateOrReplaceDocumentRequest](../../models/shared/createorreplacedocumentrequest.md) | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `index`                                                                                        | *str*                                                                                          | :heavy_check_mark:                                                                             | index name where to create documents.                                                          |
+| `project`                                                                                      | *str*                                                                                          | :heavy_check_mark:                                                                             | Project name whose db is under target to insert documents.                                     |

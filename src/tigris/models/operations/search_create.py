@@ -11,7 +11,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class SearchCreateRequest:
-    
     create_document_request: shared_createdocumentrequest.CreateDocumentRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     index: str = dataclasses.field(metadata={'path_param': { 'field_name': 'index', 'style': 'simple', 'explode': False }})
     r"""index name where to create documents."""
@@ -19,14 +18,19 @@ class SearchCreateRequest:
     r"""Tigris project name."""
     
 
+
+
 @dataclasses.dataclass
 class SearchCreateResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     create_document_response: Optional[shared_createdocumentresponse.CreateDocumentResponse] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+
