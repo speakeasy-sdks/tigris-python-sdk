@@ -1,0 +1,10 @@
+# TigrisCreateOrUpdateCollectionRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `create_or_update_collection_request`                                                            | [shared.CreateOrUpdateCollectionRequest](../../models/shared/createorupdatecollectionrequest.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `collection`                                                                                     | *str*                                                                                            | :heavy_check_mark:                                                                               | Collection name to create.                                                                       |
+| `project`                                                                                        | *str*                                                                                            | :heavy_check_mark:                                                                               | Project name whose db is under target to create or update collection.                            |

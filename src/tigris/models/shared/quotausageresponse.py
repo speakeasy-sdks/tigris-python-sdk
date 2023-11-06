@@ -11,7 +11,6 @@ from typing import Optional
 @dataclasses.dataclass
 class QuotaUsageResponse:
     r"""Contains current quota usage"""
-    
     read_units: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ReadUnits'), 'exclude': lambda f: f is None }})
     r"""Number of read units used per second"""
     read_units_throttled: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ReadUnitsThrottled'), 'exclude': lambda f: f is None }})
@@ -25,3 +24,4 @@ class QuotaUsageResponse:
     write_units_throttled: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('WriteUnitsThrottled'), 'exclude': lambda f: f is None }})
     r"""Number of write units throttled per second. Units which was rejected with \\"resource exhausted error\\"."""
     
+

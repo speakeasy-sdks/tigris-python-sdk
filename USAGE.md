@@ -1,27 +1,26 @@
 <!-- Start SDK Example Usage -->
+
+
 ```python
 import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    security=shared.Security(
-        bearer_auth="Bearer YOUR_BEARER_TOKEN_HERE",
-    ),
+    bearer_auth="",
 )
 
 req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(
-        options=shared.CreateCacheOptions(
-            ttl_ms=548814,
-        ),
+        options=shared.CreateCacheOptions(),
     ),
-    name='Kelvin Sporer',
-    project='corrupti',
+    name='string',
+    project='string',
 )
 
 res = s.cache.create(req)
 
 if res.create_cache_response is not None:
     # handle response
+    pass
 ```
 <!-- End SDK Example Usage -->

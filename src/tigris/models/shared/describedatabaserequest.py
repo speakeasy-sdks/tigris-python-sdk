@@ -10,7 +10,6 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class DescribeDatabaseRequest:
-    
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
     r"""Optionally specify a database branch name to perform operation on"""
     project: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project'), 'exclude': lambda f: f is None }})
@@ -18,3 +17,4 @@ class DescribeDatabaseRequest:
     schema_format: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema_format'), 'exclude': lambda f: f is None }})
     r"""Return schema in the requested format. Format can be JSON, Go, TypeScript, Java. Default is JSON."""
     
+

@@ -5,14 +5,13 @@ import dataclasses
 from ..shared import indexdoc as shared_indexdoc
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class GetDocumentResponse:
-    r"""OK"""
-    
-    documents: Optional[list[shared_indexdoc.IndexDoc]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents'), 'exclude': lambda f: f is None }})
+    documents: Optional[List[shared_indexdoc.IndexDoc]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('documents'), 'exclude': lambda f: f is None }})
     r"""An array of documents."""
     
+

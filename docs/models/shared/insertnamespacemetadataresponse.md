@@ -1,0 +1,12 @@
+# InsertNamespaceMetadataResponse
+
+Insertion of namespace metadata response
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `metadata_key`                                                                                                | *Optional[str]*                                                                                               | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `namespace_id`                                                                                                | *Optional[int]*                                                                                               | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `value`                                                                                                       | [Optional[InsertNamespaceMetadataResponseValue]](../../models/shared/insertnamespacemetadataresponsevalue.md) | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |

@@ -11,20 +11,24 @@ from typing import Optional
 
 @dataclasses.dataclass
 class TigrisDeleteAppKeyRequest:
-    
     delete_app_key_request: shared_deleteappkeyrequest.DeleteAppKeyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""project name"""
     
 
+
+
 @dataclasses.dataclass
 class TigrisDeleteAppKeyResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     delete_app_key_response: Optional[shared_deleteappkeyresponse.DeleteAppKeyResponse] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

@@ -11,7 +11,6 @@ from typing import Optional
 
 @dataclasses.dataclass
 class SearchCreateByIDRequest:
-    
     create_by_id_request: shared_createbyidrequest.CreateByIDRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""document id."""
@@ -21,14 +20,19 @@ class SearchCreateByIDRequest:
     r"""Tigris project name."""
     
 
+
+
 @dataclasses.dataclass
 class SearchCreateByIDResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     create_by_id_response: Optional[shared_createbyidresponse.CreateByIDResponse] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

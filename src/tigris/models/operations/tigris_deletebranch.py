@@ -3,29 +3,34 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
+from ..shared import deletebranchrequest as shared_deletebranchrequest
 from ..shared import deletebranchresponse as shared_deletebranchresponse
 from ..shared import status as shared_status
-from typing import Any, Optional
+from typing import Optional
 
 
 @dataclasses.dataclass
 class TigrisDeleteBranchRequest:
-    
     branch: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
     r"""Name of the database branch to delete. <p></p>**Note**: `main` branch cannot be deleted, use DeleteProject instead"""
+    delete_branch_request: shared_deletebranchrequest.DeleteBranchRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Delete a database branch in this project"""
-    request_body: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
+
+
 
 @dataclasses.dataclass
 class TigrisDeleteBranchResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
     delete_branch_response: Optional[shared_deletebranchresponse.DeleteBranchResponse] = dataclasses.field(default=None)
     r"""OK"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+
