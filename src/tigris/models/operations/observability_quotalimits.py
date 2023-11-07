@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import quotalimitsresponse as shared_quotalimitsresponse
-from ..shared import status as shared_status
+from ...models.shared import quotalimitsresponse as shared_quotalimitsresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

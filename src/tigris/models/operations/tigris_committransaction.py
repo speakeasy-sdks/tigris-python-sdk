@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import committransactionrequest as shared_committransactionrequest
-from ..shared import committransactionresponse as shared_committransactionresponse
-from ..shared import status as shared_status
+from ...models.shared import committransactionrequest as shared_committransactionrequest
+from ...models.shared import committransactionresponse as shared_committransactionresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

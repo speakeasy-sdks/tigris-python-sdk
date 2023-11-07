@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import listnamespacesresponse as shared_listnamespacesresponse
-from ..shared import status as shared_status
+from ...models.shared import listnamespacesresponse as shared_listnamespacesresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

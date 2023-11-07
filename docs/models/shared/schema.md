@@ -1,6 +1,6 @@
-# ReadRequestFields
+# Schema
 
-To read specific fields from a document. Default is all.
+Collections schema
 
 
 ## Fields

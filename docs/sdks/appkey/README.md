@@ -1,5 +1,5 @@
 # AppKey
-(*app_key*)
+(*.app_key*)
 
 ## Overview
 
@@ -59,7 +59,7 @@ Lists all app keys visible to requesting actor.
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",

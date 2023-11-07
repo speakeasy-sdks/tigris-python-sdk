@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import responsemetadata as shared_responsemetadata
+from .responsemetadata import ResponseMetadata
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import List, Optional
@@ -13,7 +13,7 @@ from typing import List, Optional
 class ImportResponse:
     keys: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('keys'), 'exclude': lambda f: f is None }})
     r"""an array returns the value of the primary keys."""
-    metadata: Optional[shared_responsemetadata.ResponseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
+    metadata: Optional[ResponseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
     r"""Has metadata related to the documents stored."""
     status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('status'), 'exclude': lambda f: f is None }})
     r"""An enum with value set as \\"inserted\\" """

@@ -1,5 +1,5 @@
 # Cache
-(*cache*)
+(*.cache*)
 
 ## Overview
 
@@ -144,7 +144,7 @@ Reads an entry from cache
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -223,7 +223,7 @@ Lists all the caches for the given project
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -260,7 +260,7 @@ Lists all the key for this cache
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",

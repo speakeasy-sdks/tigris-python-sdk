@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import facetcount as shared_facetcount
-from ..shared import facetstats as shared_facetstats
+from .facetcount import FacetCount
+from .facetstats import FacetStats
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import List, Optional
@@ -12,8 +12,8 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class SearchFacet:
-    counts: Optional[List[shared_facetcount.FacetCount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('counts'), 'exclude': lambda f: f is None }})
-    stats: Optional[shared_facetstats.FacetStats] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stats'), 'exclude': lambda f: f is None }})
+    counts: Optional[List[FacetCount]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('counts'), 'exclude': lambda f: f is None }})
+    stats: Optional[FacetStats] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('stats'), 'exclude': lambda f: f is None }})
     r"""Additional stats for faceted field"""
     
 

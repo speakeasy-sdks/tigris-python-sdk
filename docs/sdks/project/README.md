@@ -1,5 +1,5 @@
 # Project
-(*project*)
+(*.project*)
 
 ## Overview
 
@@ -95,7 +95,6 @@ List returns all the projects.
 
 ```python
 import tigris
-from tigris.models import shared
 
 s = tigris.Tigris(
     bearer_auth="",

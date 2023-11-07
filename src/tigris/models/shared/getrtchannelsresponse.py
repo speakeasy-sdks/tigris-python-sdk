@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import channelmetadata as shared_channelmetadata
+from .channelmetadata import ChannelMetadata
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import List, Optional
@@ -11,6 +11,6 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class GetRTChannelsResponse:
-    channels: Optional[List[shared_channelmetadata.ChannelMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('channels'), 'exclude': lambda f: f is None }})
+    channels: Optional[List[ChannelMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('channels'), 'exclude': lambda f: f is None }})
     
 

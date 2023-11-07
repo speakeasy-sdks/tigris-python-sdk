@@ -1,5 +1,5 @@
 # System
-(*system*)
+(*.system*)
 
 ## Overview
 
@@ -21,7 +21,6 @@ This endpoint can be used to check the liveness of the server.
 
 ```python
 import tigris
-from tigris.models import shared
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -49,7 +48,6 @@ Provides the information about the server. This information includes returning t
 
 ```python
 import tigris
-from tigris.models import shared
 
 s = tigris.Tigris(
     bearer_auth="",

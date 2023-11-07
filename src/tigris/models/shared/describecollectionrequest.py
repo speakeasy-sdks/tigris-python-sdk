@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import collectionoptions as shared_collectionoptions
+from .collectionoptions import CollectionOptions
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import Optional
@@ -15,7 +15,7 @@ class DescribeCollectionRequest:
     r"""Optionally specify a database branch name to perform operation on"""
     collection: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection'), 'exclude': lambda f: f is None }})
     r"""Name of the collection."""
-    options: Optional[shared_collectionoptions.CollectionOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})
+    options: Optional[CollectionOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})
     r"""Collection requests modifying options."""
     project: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project'), 'exclude': lambda f: f is None }})
     r"""Project name whose db is under target to get description of its collection."""

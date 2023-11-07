@@ -1,6 +1,6 @@
-# SearchRequestSort
+# Fields
 
-Array of fields and corresponding sort orders to order the results `[{ "salary": "$desc" }]`
+To read specific fields from a document. Default is all.
 
 
 ## Fields

@@ -1,6 +1,6 @@
-# CollectionDescriptionSchema
+# Data
 
-Collections schema
+Object containing the collection document.
 
 
 ## Fields

@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import getrtchannelsresponse as shared_getrtchannelsresponse
-from ..shared import status as shared_status
+from ...models.shared import getrtchannelsresponse as shared_getrtchannelsresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

@@ -1,5 +1,5 @@
 # Collection
-(*collection*)
+(*.collection*)
 
 ## Overview
 
@@ -80,7 +80,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteRequest(
     delete_request=shared.DeleteRequest(
-        filter=shared.DeleteRequestFilter(),
+        filter=shared.Filter(),
         options=shared.DeleteRequestOptions(
             collation=shared.Collation(),
             write_options=shared.WriteOptions(),
@@ -217,7 +217,7 @@ req = operations.TigrisImportRequest(
             'string',
         ],
         documents=[
-            shared.ImportRequestDocuments(),
+            shared.Documents(),
         ],
         options=shared.ImportRequestOptions(
             write_options=shared.WriteOptions(),
@@ -318,7 +318,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisReadRequest(
     read_request=shared.ReadRequest(
-        fields=shared.ReadRequestFields(),
+        fields=shared.Fields(),
         filter=shared.ReadRequestFilter(),
         options=shared.ReadRequestOptions(
             collation=shared.Collation(),
@@ -416,7 +416,7 @@ req = operations.TigrisSearchRequest(
         exclude_fields=[
             'string',
         ],
-        facet=shared.SearchRequestFacet(),
+        facet=shared.Facet(),
         fields=shared.SearchRequestFields(),
         filter=shared.SearchRequestFilter(),
         include_fields=[
@@ -425,7 +425,7 @@ req = operations.TigrisSearchRequest(
         search_fields=[
             'string',
         ],
-        sort=shared.SearchRequestSort(),
+        sort=shared.Sort(),
     ),
     collection='string',
     project='string',

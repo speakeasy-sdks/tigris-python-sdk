@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import collation as shared_collation
+from .collation import Collation
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import List, Optional
@@ -11,7 +11,7 @@ from typing import List, Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class SearchIndexRequest:
-    collation: Optional[shared_collation.Collation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collation'), 'exclude': lambda f: f is None }})
+    collation: Optional[Collation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collation'), 'exclude': lambda f: f is None }})
     r"""A collation allows you to specify string comparison rules. Default is case-sensitive, to override it you can set this option to 'ci' that will apply to all the text fields in the filters."""
     exclude_fields: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('exclude_fields'), 'exclude': lambda f: f is None }})
     r"""Array of document field names to exclude from results. `include_fields`, if specified, takes precedence over `exclude_fields`."""

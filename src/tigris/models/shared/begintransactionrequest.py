@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import transactionoptions as shared_transactionoptions
+from .transactionoptions import TransactionOptions
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import Optional
@@ -14,7 +14,7 @@ class BeginTransactionRequest:
     r"""Start new transaction in project specified by \\"project\\"."""
     branch: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
     r"""Optionally specify a project branch name to perform operation on"""
-    options: Optional[shared_transactionoptions.TransactionOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})
+    options: Optional[TransactionOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('options'), 'exclude': lambda f: f is None }})
     r"""Options that can be used to modify the transaction semantics."""
     
 

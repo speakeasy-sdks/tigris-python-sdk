@@ -3,8 +3,8 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import querytimeseriesmetricsresponse as shared_querytimeseriesmetricsresponse
-from ..shared import status as shared_status
+from ...models.shared import querytimeseriesmetricsresponse as shared_querytimeseriesmetricsresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

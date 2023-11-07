@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import writeoptions as shared_writeoptions
+from .writeoptions import WriteOptions
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclasses.dataclass
 class InsertRequestOptions:
     r"""additional options for insert requests."""
-    write_options: Optional[shared_writeoptions.WriteOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_options'), 'exclude': lambda f: f is None }})
+    write_options: Optional[WriteOptions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('write_options'), 'exclude': lambda f: f is None }})
     r"""Additional options to modify write requests."""
     
 

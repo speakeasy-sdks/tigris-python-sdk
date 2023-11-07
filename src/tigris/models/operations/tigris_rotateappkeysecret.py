@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import rotateappkeyrequest as shared_rotateappkeyrequest
-from ..shared import rotateappkeyresponse as shared_rotateappkeyresponse
-from ..shared import status as shared_status
+from ...models.shared import rotateappkeyrequest as shared_rotateappkeyrequest
+from ...models.shared import rotateappkeyresponse as shared_rotateappkeyresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

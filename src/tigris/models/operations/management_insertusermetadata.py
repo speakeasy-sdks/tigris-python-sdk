@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import insertusermetadatarequest as shared_insertusermetadatarequest
-from ..shared import insertusermetadataresponse as shared_insertusermetadataresponse
-from ..shared import status as shared_status
+from ...models.shared import insertusermetadatarequest as shared_insertusermetadatarequest
+from ...models.shared import insertusermetadataresponse as shared_insertusermetadataresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

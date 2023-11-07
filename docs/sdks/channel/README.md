@@ -1,5 +1,5 @@
 # Channel
-(*channel*)
+(*.channel*)
 
 ## Overview
 
@@ -22,7 +22,7 @@ Get the details about a channel
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -60,7 +60,7 @@ Get all messages for a channel
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -98,7 +98,7 @@ Get all channels for your application project
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -135,7 +135,7 @@ Get the subscriptions details about a channel
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -216,7 +216,7 @@ Presence about the channel
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",

@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import searchrequest as shared_searchrequest
-from ..shared import status as shared_status
-from ..shared import streamingsearchresponse as shared_streamingsearchresponse
+from ...models.shared import searchrequest as shared_searchrequest
+from ...models.shared import status as shared_status
+from ...models.shared import streamingsearchresponse as shared_streamingsearchresponse
 from typing import Optional
 
 

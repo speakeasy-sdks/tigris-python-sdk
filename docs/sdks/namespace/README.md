@@ -1,5 +1,5 @@
 # Namespace
-(*namespace*)
+(*.namespace*)
 
 ## Overview
 
@@ -57,7 +57,6 @@ Get details for all namespaces
 
 ```python
 import tigris
-from tigris.models import shared
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -93,7 +92,7 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetNamespaceMetadataRequest(
     get_namespace_metadata_request=shared.GetNamespaceMetadataRequest(
-        value=shared.GetNamespaceMetadataRequestValue(),
+        value=shared.Value(),
     ),
     metadata_key='string',
 )
@@ -165,7 +164,6 @@ List all namespace
 
 ```python
 import tigris
-from tigris.models import shared
 
 s = tigris.Tigris(
     bearer_auth="",

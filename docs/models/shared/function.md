@@ -1,4 +1,4 @@
-# QueryTimeSeriesMetricsRequestFunction
+# Function
 
 
 ## Values

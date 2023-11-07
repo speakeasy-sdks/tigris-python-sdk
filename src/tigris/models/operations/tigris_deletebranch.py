@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import deletebranchrequest as shared_deletebranchrequest
-from ..shared import deletebranchresponse as shared_deletebranchresponse
-from ..shared import status as shared_status
+from ...models.shared import deletebranchrequest as shared_deletebranchrequest
+from ...models.shared import deletebranchresponse as shared_deletebranchresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

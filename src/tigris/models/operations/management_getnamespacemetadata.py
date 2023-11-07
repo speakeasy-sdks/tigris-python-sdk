@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import getnamespacemetadatarequest as shared_getnamespacemetadatarequest
-from ..shared import getnamespacemetadataresponse as shared_getnamespacemetadataresponse
-from ..shared import status as shared_status
+from ...models.shared import getnamespacemetadatarequest as shared_getnamespacemetadatarequest
+from ...models.shared import getnamespacemetadataresponse as shared_getnamespacemetadataresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

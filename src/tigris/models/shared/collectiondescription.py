@@ -2,14 +2,14 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import collectionmetadata as shared_collectionmetadata
+from .collectionmetadata import CollectionMetadata
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import Optional
 
 
 @dataclasses.dataclass
-class CollectionDescriptionSchema:
+class Schema:
     r"""Collections schema"""
     
 
@@ -20,8 +20,8 @@ class CollectionDescriptionSchema:
 class CollectionDescription:
     collection: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collection'), 'exclude': lambda f: f is None }})
     r"""Name of the collection."""
-    metadata: Optional[shared_collectionmetadata.CollectionMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
-    schema: Optional[CollectionDescriptionSchema] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema'), 'exclude': lambda f: f is None }})
+    metadata: Optional[CollectionMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
+    schema: Optional[Schema] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('schema'), 'exclude': lambda f: f is None }})
     r"""Collections schema"""
     size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('size'), 'exclude': lambda f: f is None }})
     r"""Collection size in bytes"""

@@ -1,5 +1,5 @@
 # Database
-(*database*)
+(*.database*)
 
 ## Overview
 
@@ -223,7 +223,7 @@ List all the collections present in the project passed in the request.
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -299,7 +299,7 @@ List database branches
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",

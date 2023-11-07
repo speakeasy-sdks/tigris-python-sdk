@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import readrequest as shared_readrequest
-from ..shared import status as shared_status
-from ..shared import streamingreadresponse as shared_streamingreadresponse
+from ...models.shared import readrequest as shared_readrequest
+from ...models.shared import status as shared_status
+from ...models.shared import streamingreadresponse as shared_streamingreadresponse
 from typing import Optional
 
 

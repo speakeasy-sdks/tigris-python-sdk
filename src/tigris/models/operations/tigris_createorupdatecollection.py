@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createorupdatecollectionrequest as shared_createorupdatecollectionrequest
-from ..shared import createorupdatecollectionresponse as shared_createorupdatecollectionresponse
-from ..shared import status as shared_status
+from ...models.shared import createorupdatecollectionrequest as shared_createorupdatecollectionrequest
+from ...models.shared import createorupdatecollectionresponse as shared_createorupdatecollectionresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

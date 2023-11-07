@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import collectiondescription as shared_collectiondescription
-from ..shared import databasemetadata as shared_databasemetadata
+from .collectiondescription import CollectionDescription
+from .databasemetadata import DatabaseMetadata
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import List, Optional
@@ -15,9 +15,9 @@ class DescribeDatabaseResponse:
     r"""A detailed description of the database and all the associated collections. Description of the collection includes schema details as well."""
     branches: Optional[List[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branches'), 'exclude': lambda f: f is None }})
     r"""List of all the branches in this database"""
-    collections: Optional[List[shared_collectiondescription.CollectionDescription]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collections'), 'exclude': lambda f: f is None }})
+    collections: Optional[List[CollectionDescription]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collections'), 'exclude': lambda f: f is None }})
     r"""A detailed description about all the collections. The description returns collection metadata and the schema."""
-    metadata: Optional[shared_databasemetadata.DatabaseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
+    metadata: Optional[DatabaseMetadata] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadata'), 'exclude': lambda f: f is None }})
     size: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('size'), 'exclude': lambda f: f is None }})
     r"""Sum of all the collections sizes present in this database"""
     

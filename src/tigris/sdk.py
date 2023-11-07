@@ -76,28 +76,28 @@ class Tigris:
     # Limitations
     <li>Do not rely on case to distinguish between databases or collections names.</li> <li>Database Name and Collection Name cannot be empty and can only have the characters matches the regex: <code>^[a-zA-Z]+[a-zA-Z0-9_]+$</code>.</li> <li>Duplicate field names are not allowed. </li> <li>The maximum allowed document size is 100KB.</li> <li>The maximum allowed transaction size is 10MB.</li>
     """
-    app_key: AppKey
-    r"""The application keys section provide APIs that can be used to manage application keys for your project. A single project can have one or more application keys."""
     auth: Auth
     r"""The auth section of API provides OAuth 2.0 APIs. Tigris supports pluggable OAuth provider. Pass the token in the headers for authentication, as an example `-H \\"Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6I\\"`(replace it with your token). All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail."""
-    cache: Cache
-    r"""The cache section provide APIs that can be used to perform cache operations."""
-    channel: Channel
-    r"""The realtime section provide APIs that can be used realtime operations."""
-    collection: Collection
-    r"""The Collections section provide APIs that can be used to manage collections. A collection can have one or more documents."""
-    database: Database
-    r"""The Database section provide APIs that can be used to interact with the database. A single Database can have one or more collections. A database is created automatically for you when you create a project."""
-    namespace: Namespace
-    r"""The Management section provide APIs that can be used to manage users, and app_keys."""
-    project: Project
-    r"""Every Tigris projects comes with a transactional document database built on FoundationDB, one of the most resilient and battle-tested open source distributed key-value store. A database is created automatically for you when you create a project."""
-    search: Search
-    r"""The search section provides you APIs that can be used to implement powerful apps with search experiences. You can manage storing documents on your own or you can simply integrate it with your database."""
     system: System
     r"""The Observability section has APIs that provides full visibility into the health, metrics, and monitoring of the Server."""
+    namespace: Namespace
+    r"""The Management section provide APIs that can be used to manage users, and app_keys."""
     user: User
     r"""A User on the Tigris Platform."""
+    project: Project
+    r"""Every Tigris projects comes with a transactional document database built on FoundationDB, one of the most resilient and battle-tested open source distributed key-value store. A database is created automatically for you when you create a project."""
+    app_key: AppKey
+    r"""The application keys section provide APIs that can be used to manage application keys for your project. A single project can have one or more application keys."""
+    cache: Cache
+    r"""The cache section provide APIs that can be used to perform cache operations."""
+    database: Database
+    r"""The Database section provide APIs that can be used to interact with the database. A single Database can have one or more collections. A database is created automatically for you when you create a project."""
+    collection: Collection
+    r"""The Collections section provide APIs that can be used to manage collections. A collection can have one or more documents."""
+    channel: Channel
+    r"""The realtime section provide APIs that can be used realtime operations."""
+    search: Search
+    r"""The search section provides you APIs that can be used to implement powerful apps with search experiences. You can manage storing documents on your own or you can simply integrate it with your database."""
 
     sdk_configuration: SDKConfiguration
 
@@ -140,15 +140,15 @@ class Tigris:
         self._init_sdks()
     
     def _init_sdks(self):
-        self.app_key = AppKey(self.sdk_configuration)
         self.auth = Auth(self.sdk_configuration)
-        self.cache = Cache(self.sdk_configuration)
-        self.channel = Channel(self.sdk_configuration)
-        self.collection = Collection(self.sdk_configuration)
-        self.database = Database(self.sdk_configuration)
-        self.namespace = Namespace(self.sdk_configuration)
-        self.project = Project(self.sdk_configuration)
-        self.search = Search(self.sdk_configuration)
         self.system = System(self.sdk_configuration)
+        self.namespace = Namespace(self.sdk_configuration)
         self.user = User(self.sdk_configuration)
+        self.project = Project(self.sdk_configuration)
+        self.app_key = AppKey(self.sdk_configuration)
+        self.cache = Cache(self.sdk_configuration)
+        self.database = Database(self.sdk_configuration)
+        self.collection = Collection(self.sdk_configuration)
+        self.channel = Channel(self.sdk_configuration)
+        self.search = Search(self.sdk_configuration)
     

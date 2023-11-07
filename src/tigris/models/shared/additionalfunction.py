@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import rollupfunction as shared_rollupfunction
+from .rollupfunction import RollupFunction
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclasses.dataclass
 class AdditionalFunction:
     r"""Additional function to apply on metrics query"""
-    rollup: Optional[shared_rollupfunction.RollupFunction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rollup'), 'exclude': lambda f: f is None }})
+    rollup: Optional[RollupFunction] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('rollup'), 'exclude': lambda f: f is None }})
     r"""Rollup function aggregates the slices of metrics returned by original query and lets you operate on the slices using aggregator and constructs the bigger slice of your choice of interval (specified in seconds)."""
     
 

@@ -1,5 +1,5 @@
 # Auth
-(*auth*)
+(*.auth*)
 
 ## Overview
 
@@ -19,7 +19,6 @@ Endpoint for receiving access token from Tigris Server. The endpoint requires Gr
 
 ```python
 import tigris
-from tigris.models import shared
 
 s = tigris.Tigris(
     bearer_auth="",

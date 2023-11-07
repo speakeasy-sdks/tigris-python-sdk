@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import importrequest as shared_importrequest
-from ..shared import importresponse as shared_importresponse
-from ..shared import status as shared_status
+from ...models.shared import importrequest as shared_importrequest
+from ...models.shared import importresponse as shared_importresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

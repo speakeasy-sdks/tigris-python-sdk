@@ -1,5 +1,5 @@
 # Search
-(*search*)
+(*.search*)
 
 ## Overview
 
@@ -257,7 +257,7 @@ Retrieves one or more documents by id. The response is an array of documents in 
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -298,7 +298,7 @@ Get information about a search index
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",
@@ -336,7 +336,7 @@ List search indexes
 
 ```python
 import tigris
-from tigris.models import operations, shared
+from tigris.models import operations
 
 s = tigris.Tigris(
     bearer_auth="",

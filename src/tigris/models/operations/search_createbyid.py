@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createbyidrequest as shared_createbyidrequest
-from ..shared import createbyidresponse as shared_createbyidresponse
-from ..shared import status as shared_status
+from ...models.shared import createbyidrequest as shared_createbyidrequest
+from ...models.shared import createbyidresponse as shared_createbyidresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

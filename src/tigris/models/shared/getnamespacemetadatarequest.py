@@ -8,7 +8,7 @@ from typing import Optional
 
 
 @dataclasses.dataclass
-class GetNamespaceMetadataRequestValue:
+class Value:
     pass
 
 
@@ -17,6 +17,6 @@ class GetNamespaceMetadataRequestValue:
 class GetNamespaceMetadataRequest:
     r"""Request namespace metadata"""
     metadata_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metadataKey'), 'exclude': lambda f: f is None }})
-    value: Optional[GetNamespaceMetadataRequestValue] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
+    value: Optional[Value] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
     
 

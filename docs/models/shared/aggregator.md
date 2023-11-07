@@ -1,4 +1,4 @@
-# RollupFunctionAggregator
+# Aggregator
 
 
 ## Values

@@ -47,7 +47,40 @@ if res.create_cache_response is not None:
 ## Available Resources and Operations
 
 
-### [app_key](docs/sdks/appkey/README.md)
+### [.auth](docs/sdks/auth/README.md)
+
+* [get](docs/sdks/auth/README.md#get) - Access Token
+
+### [.system](docs/sdks/system/README.md)
+
+* [get_health](docs/sdks/system/README.md#get_health) - Health Check
+* [get_server_info](docs/sdks/system/README.md#get_server_info) - Information about the server
+* [observability_quota_usage](docs/sdks/system/README.md#observability_quota_usage) - Queries current namespace quota usage
+* [query_quota_limits](docs/sdks/system/README.md#query_quota_limits) - Queries current namespace quota limits
+* [query_time_series_metrics](docs/sdks/system/README.md#query_time_series_metrics) - Queries time series metrics
+
+### [.namespace](docs/sdks/namespace/README.md)
+
+* [create](docs/sdks/namespace/README.md#create) - Creates a Namespace
+* [get](docs/sdks/namespace/README.md#get) - Describe the details of all namespaces
+* [get_metadata](docs/sdks/namespace/README.md#get_metadata) - Reads the Namespace Metadata
+* [insert_metadata](docs/sdks/namespace/README.md#insert_metadata) - Inserts Namespace Metadata
+* [list](docs/sdks/namespace/README.md#list) - Lists all Namespaces
+* [update_metadata](docs/sdks/namespace/README.md#update_metadata) - Updates Namespace Metadata
+
+### [.user](docs/sdks/user/README.md)
+
+* [get_metadata](docs/sdks/user/README.md#get_metadata) - Reads the User Metadata
+* [insert_metadata](docs/sdks/user/README.md#insert_metadata) - Inserts User Metadata
+* [update_metadata](docs/sdks/user/README.md#update_metadata) - Updates User Metadata
+
+### [.project](docs/sdks/project/README.md)
+
+* [create](docs/sdks/project/README.md#create) - Create Project
+* [delete_project](docs/sdks/project/README.md#delete_project) - Delete Project and all resources under project
+* [list](docs/sdks/project/README.md#list) - List Projects
+
+### [.app_key](docs/sdks/appkey/README.md)
 
 * [delete](docs/sdks/appkey/README.md#delete) - Deletes the app key
 * [list](docs/sdks/appkey/README.md#list) - List all the app keys
@@ -55,11 +88,7 @@ if res.create_cache_response is not None:
 * [tigris_create_app_key](docs/sdks/appkey/README.md#tigris_create_app_key) - Creates the app key
 * [update](docs/sdks/appkey/README.md#update) - Updates the description of the app key
 
-### [auth](docs/sdks/auth/README.md)
-
-* [get](docs/sdks/auth/README.md#get) - Access Token
-
-### [cache](docs/sdks/cache/README.md)
+### [.cache](docs/sdks/cache/README.md)
 
 * [create](docs/sdks/cache/README.md#create) - Creates the cache
 * [delete](docs/sdks/cache/README.md#delete) - Deletes the cache
@@ -70,16 +99,18 @@ if res.create_cache_response is not None:
 * [list_keys](docs/sdks/cache/README.md#list_keys) - Lists all the key for this cache
 * [set_key](docs/sdks/cache/README.md#set_key) - Sets an entry in the cache
 
-### [channel](docs/sdks/channel/README.md)
+### [.database](docs/sdks/database/README.md)
 
-* [get](docs/sdks/channel/README.md#get) - Get the details about a channel
-* [get_messages](docs/sdks/channel/README.md#get_messages) - Get all messages for a channel
-* [list](docs/sdks/channel/README.md#list) - Get all channels for your application project
-* [list_subscriptions](docs/sdks/channel/README.md#list_subscriptions) - Get the subscriptions details about a channel
-* [push_messages](docs/sdks/channel/README.md#push_messages) - push messages to a single channel
-* [realtime_presence](docs/sdks/channel/README.md#realtime_presence) - Presence about the channel
+* [begin_transaction](docs/sdks/database/README.md#begin_transaction) - Begin a transaction
+* [commit_transaction](docs/sdks/database/README.md#commit_transaction) - Commit a Transaction
+* [create_branch](docs/sdks/database/README.md#create_branch) - Create a database branch
+* [delete_branch](docs/sdks/database/README.md#delete_branch) - Delete a database branch
+* [describe](docs/sdks/database/README.md#describe) - Describe database
+* [list_collections](docs/sdks/database/README.md#list_collections) - List Collections
+* [rollback_transaction](docs/sdks/database/README.md#rollback_transaction) - Rollback a transaction
+* [tigris_list_branches](docs/sdks/database/README.md#tigris_list_branches) - List database branches
 
-### [collection](docs/sdks/collection/README.md)
+### [.collection](docs/sdks/collection/README.md)
 
 * [create](docs/sdks/collection/README.md#create) - Create or update a collection
 * [delete_documents](docs/sdks/collection/README.md#delete_documents) - Delete Documents
@@ -92,33 +123,16 @@ if res.create_cache_response is not None:
 * [search_documents](docs/sdks/collection/README.md#search_documents) - Search Documents.
 * [update_documents](docs/sdks/collection/README.md#update_documents) - Update Documents.
 
-### [database](docs/sdks/database/README.md)
+### [.channel](docs/sdks/channel/README.md)
 
-* [begin_transaction](docs/sdks/database/README.md#begin_transaction) - Begin a transaction
-* [commit_transaction](docs/sdks/database/README.md#commit_transaction) - Commit a Transaction
-* [create_branch](docs/sdks/database/README.md#create_branch) - Create a database branch
-* [delete_branch](docs/sdks/database/README.md#delete_branch) - Delete a database branch
-* [describe](docs/sdks/database/README.md#describe) - Describe database
-* [list_collections](docs/sdks/database/README.md#list_collections) - List Collections
-* [rollback_transaction](docs/sdks/database/README.md#rollback_transaction) - Rollback a transaction
-* [tigris_list_branches](docs/sdks/database/README.md#tigris_list_branches) - List database branches
+* [get](docs/sdks/channel/README.md#get) - Get the details about a channel
+* [get_messages](docs/sdks/channel/README.md#get_messages) - Get all messages for a channel
+* [list](docs/sdks/channel/README.md#list) - Get all channels for your application project
+* [list_subscriptions](docs/sdks/channel/README.md#list_subscriptions) - Get the subscriptions details about a channel
+* [push_messages](docs/sdks/channel/README.md#push_messages) - push messages to a single channel
+* [realtime_presence](docs/sdks/channel/README.md#realtime_presence) - Presence about the channel
 
-### [namespace](docs/sdks/namespace/README.md)
-
-* [create](docs/sdks/namespace/README.md#create) - Creates a Namespace
-* [get](docs/sdks/namespace/README.md#get) - Describe the details of all namespaces
-* [get_metadata](docs/sdks/namespace/README.md#get_metadata) - Reads the Namespace Metadata
-* [insert_metadata](docs/sdks/namespace/README.md#insert_metadata) - Inserts Namespace Metadata
-* [list](docs/sdks/namespace/README.md#list) - Lists all Namespaces
-* [update_metadata](docs/sdks/namespace/README.md#update_metadata) - Updates Namespace Metadata
-
-### [project](docs/sdks/project/README.md)
-
-* [create](docs/sdks/project/README.md#create) - Create Project
-* [delete_project](docs/sdks/project/README.md#delete_project) - Delete Project and all resources under project
-* [list](docs/sdks/project/README.md#list) - List Projects
-
-### [search](docs/sdks/search/README.md)
+### [.search](docs/sdks/search/README.md)
 
 * [create_document](docs/sdks/search/README.md#create_document) - Create a single document
 * [create_documents](docs/sdks/search/README.md#create_documents) - Create multiple documents
@@ -132,27 +146,11 @@ if res.create_cache_response is not None:
 * [replace_documents](docs/sdks/search/README.md#replace_documents) - Create or replace documents in an index
 * [update_documents](docs/sdks/search/README.md#update_documents) - Update documents in an index
 * [update_index](docs/sdks/search/README.md#update_index) - Creates or updates search index
-
-### [system](docs/sdks/system/README.md)
-
-* [get_health](docs/sdks/system/README.md#get_health) - Health Check
-* [get_server_info](docs/sdks/system/README.md#get_server_info) - Information about the server
-* [observability_quota_usage](docs/sdks/system/README.md#observability_quota_usage) - Queries current namespace quota usage
-* [query_quota_limits](docs/sdks/system/README.md#query_quota_limits) - Queries current namespace quota limits
-* [query_time_series_metrics](docs/sdks/system/README.md#query_time_series_metrics) - Queries time series metrics
-
-### [user](docs/sdks/user/README.md)
-
-* [get_metadata](docs/sdks/user/README.md#get_metadata) - Reads the User Metadata
-* [insert_metadata](docs/sdks/user/README.md#insert_metadata) - Inserts User Metadata
-* [update_metadata](docs/sdks/user/README.md#update_metadata) - Updates User Metadata
 <!-- End SDK Available Operations -->
 
 
 
 <!-- Start Dev Containers -->
-
-
 
 <!-- End Dev Containers -->
 
@@ -162,8 +160,6 @@ if res.create_cache_response is not None:
 # Error Handling
 
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or raise an error.  If Error objects are specified in your OpenAPI Spec, the SDK will raise the appropriate Error type.
-
-
 <!-- End Error Handling -->
 
 
@@ -182,24 +178,18 @@ You can override the default server globally by passing a server index to the `s
 
 For example:
 
-
 ```python
 import tigris
-from tigris.models import operations, shared
 
 s = tigris.Tigris(
+    server_idx=1,
     bearer_auth="",
-    server_idx=1
 )
 
-req = operations.TigrisDeleteAppKeyRequest(
-    delete_app_key_request=shared.DeleteAppKeyRequest(),
-    project='string',
-)
 
-res = s.app_key.delete(req)
+res = s.auth.get()
 
-if res.delete_app_key_response is not None:
+if res.get_access_token_response is not None:
     # handle response
     pass
 ```
@@ -209,24 +199,18 @@ if res.delete_app_key_response is not None:
 
 The default server can also be overridden globally by passing a URL to the `server_url: str` optional parameter when initializing the SDK client instance. For example:
 
-
 ```python
 import tigris
-from tigris.models import operations, shared
 
 s = tigris.Tigris(
+    server_url="https://api.preview.tigrisdata.cloud",
     bearer_auth="",
-    server_url="https://api.preview.tigrisdata.cloud"
 )
 
-req = operations.TigrisDeleteAppKeyRequest(
-    delete_app_key_request=shared.DeleteAppKeyRequest(),
-    project='string',
-)
 
-res = s.app_key.delete(req)
+res = s.auth.get()
 
-if res.delete_app_key_response is not None:
+if res.get_access_token_response is not None:
     # handle response
     pass
 ```
@@ -250,9 +234,39 @@ http_client = requests.Session()
 http_client.headers.update({'x-custom-header': 'someValue'})
 s = tigris.Tigris(client: http_client)
 ```
-
-
 <!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Authentication -->
+
+# Authentication
+
+## Per-Client Security Schemes
+
+Your SDK supports the following security scheme globally:
+
+| Name          | Type          | Scheme        |
+| ------------- | ------------- | ------------- |
+| `bearer_auth` | http          | HTTP Bearer   |
+
+To authenticate with the API the `bearer_auth` parameter must be set when initializing the SDK client instance. For example:
+
+```python
+import tigris
+
+s = tigris.Tigris(
+    bearer_auth="",
+)
+
+
+res = s.auth.get()
+
+if res.get_access_token_response is not None:
+    # handle response
+    pass
+```
+<!-- End Authentication -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

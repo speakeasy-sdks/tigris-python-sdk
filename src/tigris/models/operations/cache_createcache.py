@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createcacherequest as shared_createcacherequest
-from ..shared import createcacheresponse as shared_createcacheresponse
-from ..shared import status as shared_status
+from ...models.shared import createcacherequest as shared_createcacherequest
+from ...models.shared import createcacheresponse as shared_createcacheresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

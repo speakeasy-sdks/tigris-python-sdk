@@ -1,6 +1,6 @@
-# ReadResponseData
+# Sort
 
-Object containing the collection document.
+Array of fields and corresponding sort orders to order the results `[{ "salary": "$desc" }]`
 
 
 ## Fields

@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import begintransactionrequest as shared_begintransactionrequest
-from ..shared import begintransactionresponse as shared_begintransactionresponse
-from ..shared import status as shared_status
+from ...models.shared import begintransactionrequest as shared_begintransactionrequest
+from ...models.shared import begintransactionresponse as shared_begintransactionresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 

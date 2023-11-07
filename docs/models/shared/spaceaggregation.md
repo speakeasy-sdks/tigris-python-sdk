@@ -1,4 +1,4 @@
-# QueryTimeSeriesMetricsRequestSpaceAggregation
+# SpaceAggregation
 
 
 ## Values

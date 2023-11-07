@@ -3,9 +3,9 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import rollbacktransactionrequest as shared_rollbacktransactionrequest
-from ..shared import rollbacktransactionresponse as shared_rollbacktransactionresponse
-from ..shared import status as shared_status
+from ...models.shared import rollbacktransactionrequest as shared_rollbacktransactionrequest
+from ...models.shared import rollbacktransactionresponse as shared_rollbacktransactionresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 
