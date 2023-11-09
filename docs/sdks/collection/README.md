@@ -1,5 +1,5 @@
 # Collection
-(*.collection*)
+(*collection*)
 
 ## Overview
 
@@ -62,7 +62,11 @@ if res.create_or_update_collection_response is not None:
 ### Response
 
 **[operations.TigrisCreateOrUpdateCollectionResponse](../../models/operations/tigriscreateorupdatecollectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_documents
 
@@ -107,7 +111,11 @@ if res.delete_response is not None:
 ### Response
 
 **[operations.TigrisDeleteResponse](../../models/operations/tigrisdeleteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## describe
 
@@ -148,7 +156,11 @@ if res.describe_collection_response is not None:
 ### Response
 
 **[operations.TigrisDescribeCollectionResponse](../../models/operations/tigrisdescribecollectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## drop
 
@@ -190,7 +202,11 @@ if res.drop_collection_response is not None:
 ### Response
 
 **[operations.TigrisDropCollectionResponse](../../models/operations/tigrisdropcollectionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## import_documents
 
@@ -247,7 +263,11 @@ if res.import_response is not None:
 ### Response
 
 **[operations.TigrisImportResponse](../../models/operations/tigrisimportresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## insert_documents
 
@@ -295,7 +315,11 @@ if res.insert_response is not None:
 ### Response
 
 **[operations.TigrisInsertResponse](../../models/operations/tigrisinsertresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## read_documents
 
@@ -345,7 +369,11 @@ if res.streaming_read_response is not None:
 ### Response
 
 **[operations.TigrisReadResponse](../../models/operations/tigrisreadresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## replace_documents
 
@@ -391,7 +419,11 @@ if res.replace_response is not None:
 ### Response
 
 **[operations.TigrisReplaceResponse](../../models/operations/tigrisreplaceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## search_documents
 
@@ -448,7 +480,11 @@ if res.streaming_search_response is not None:
 ### Response
 
 **[operations.TigrisSearchResponse](../../models/operations/tigrissearchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_documents
 
@@ -494,4 +530,8 @@ if res.update_response is not None:
 ### Response
 
 **[operations.TigrisUpdateResponse](../../models/operations/tigrisupdateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

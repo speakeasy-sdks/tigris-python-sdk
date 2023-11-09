@@ -13,6 +13,7 @@ class Channel:
         self.sdk_configuration = sdk_config
         
     
+    
     def get(self, request: operations.RealtimeGetRTChannelRequest) -> operations.RealtimeGetRTChannelResponse:
         r"""Get the details about a channel"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -22,7 +23,10 @@ class Channel:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -47,6 +51,7 @@ class Channel:
         return res
 
     
+    
     def get_messages(self, request: operations.RealtimeReadMessagesRequest) -> operations.RealtimeReadMessagesResponse:
         r"""Get all messages for a channel"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -57,7 +62,10 @@ class Channel:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -82,6 +90,7 @@ class Channel:
         return res
 
     
+    
     def list(self, request: operations.RealtimeGetRTChannelsRequest) -> operations.RealtimeGetRTChannelsResponse:
         r"""Get all channels for your application project"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -91,7 +100,10 @@ class Channel:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -116,6 +128,7 @@ class Channel:
         return res
 
     
+    
     def list_subscriptions(self, request: operations.RealtimeListSubscriptionsRequest) -> operations.RealtimeListSubscriptionsResponse:
         r"""Get the subscriptions details about a channel"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -126,7 +139,10 @@ class Channel:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -151,6 +167,7 @@ class Channel:
         return res
 
     
+    
     def push_messages(self, request: operations.RealtimeMessagesRequest) -> operations.RealtimeMessagesResponse:
         r"""push messages to a single channel"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -165,7 +182,10 @@ class Channel:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -190,6 +210,7 @@ class Channel:
         return res
 
     
+    
     def realtime_presence(self, request: operations.RealtimePresenceRequest) -> operations.RealtimePresenceResponse:
         r"""Presence about the channel"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -199,7 +220,10 @@ class Channel:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')

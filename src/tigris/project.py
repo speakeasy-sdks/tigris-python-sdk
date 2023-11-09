@@ -13,6 +13,7 @@ class Project:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: operations.TigrisCreateProjectRequest) -> operations.TigrisCreateProjectResponse:
         r"""Create Project
         Creates a new project. Returns an AlreadyExists error with a status code 409 if the project already exists.
@@ -29,7 +30,10 @@ class Project:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -54,6 +58,7 @@ class Project:
         return res
 
     
+    
     def delete_project(self, request: operations.TigrisDeleteProjectRequest) -> operations.TigrisDeleteProjectResponse:
         r"""Delete Project and all resources under project
         Delete Project deletes all the collections in this project along with all of the documents, and associated metadata for these collections.
@@ -70,7 +75,10 @@ class Project:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -95,6 +103,7 @@ class Project:
         return res
 
     
+    
     def list(self) -> operations.TigrisListProjectsResponse:
         r"""List Projects
         List returns all the projects.
@@ -106,7 +115,10 @@ class Project:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')

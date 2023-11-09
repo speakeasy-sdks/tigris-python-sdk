@@ -1,5 +1,5 @@
 # Auth
-(*.auth*)
+(*auth*)
 
 ## Overview
 
@@ -36,4 +36,8 @@ if res.get_access_token_response is not None:
 ### Response
 
 **[operations.AuthGetAccessTokenResponse](../../models/operations/authgetaccesstokenresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

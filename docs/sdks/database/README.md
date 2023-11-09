@@ -1,5 +1,5 @@
 # Database
-(*.database*)
+(*database*)
 
 ## Overview
 
@@ -56,7 +56,11 @@ if res.begin_transaction_response is not None:
 ### Response
 
 **[operations.TigrisBeginTransactionResponse](../../models/operations/tigrisbegintransactionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## commit_transaction
 
@@ -95,7 +99,11 @@ if res.commit_transaction_response is not None:
 ### Response
 
 **[operations.TigrisCommitTransactionResponse](../../models/operations/tigriscommittransactionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_branch
 
@@ -134,7 +142,11 @@ if res.create_branch_response is not None:
 ### Response
 
 **[operations.TigrisCreateBranchResponse](../../models/operations/tigriscreatebranchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_branch
 
@@ -174,7 +186,11 @@ if res.delete_branch_response is not None:
 ### Response
 
 **[operations.TigrisDeleteBranchResponse](../../models/operations/tigrisdeletebranchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## describe
 
@@ -213,7 +229,11 @@ if res.describe_database_response is not None:
 ### Response
 
 **[operations.TigrisDescribeDatabaseResponse](../../models/operations/tigrisdescribedatabaseresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_collections
 
@@ -250,7 +270,11 @@ if res.list_collections_response is not None:
 ### Response
 
 **[operations.TigrisListCollectionsResponse](../../models/operations/tigrislistcollectionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## rollback_transaction
 
@@ -289,7 +313,11 @@ if res.rollback_transaction_response is not None:
 ### Response
 
 **[operations.TigrisRollbackTransactionResponse](../../models/operations/tigrisrollbacktransactionresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## tigris_list_branches
 
@@ -326,4 +354,8 @@ if res.list_branches_response is not None:
 ### Response
 
 **[operations.TigrisListBranchesResponse](../../models/operations/tigrislistbranchesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

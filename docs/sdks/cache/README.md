@@ -1,5 +1,5 @@
 # Cache
-(*.cache*)
+(*cache*)
 
 ## Overview
 
@@ -55,7 +55,11 @@ if res.create_cache_response is not None:
 ### Response
 
 **[operations.CacheCreateCacheResponse](../../models/operations/cachecreatecacheresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete
 
@@ -94,7 +98,11 @@ if res.delete_cache_response is not None:
 ### Response
 
 **[operations.CacheDeleteCacheResponse](../../models/operations/cachedeletecacheresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_keys
 
@@ -134,7 +142,11 @@ if res.del_response is not None:
 ### Response
 
 **[operations.CacheDelResponse](../../models/operations/cachedelresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_key
 
@@ -173,7 +185,11 @@ if res.get_response is not None:
 ### Response
 
 **[operations.CacheGetResponse](../../models/operations/cachegetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_set_key
 
@@ -213,7 +229,11 @@ if res.get_set_response is not None:
 ### Response
 
 **[operations.CacheGetSetResponse](../../models/operations/cachegetsetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list
 
@@ -250,7 +270,11 @@ if res.list_caches_response is not None:
 ### Response
 
 **[operations.CacheListCachesResponse](../../models/operations/cachelistcachesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_keys
 
@@ -288,7 +312,11 @@ if res.keys_response is not None:
 ### Response
 
 **[operations.CacheKeysResponse](../../models/operations/cachekeysresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## set_key
 
@@ -328,4 +356,8 @@ if res.set_response is not None:
 ### Response
 
 **[operations.CacheSetResponse](../../models/operations/cachesetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

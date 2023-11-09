@@ -13,6 +13,7 @@ class System:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_health(self) -> operations.HealthAPIHealthResponse:
         r"""Health Check
         This endpoint can be used to check the liveness of the server.
@@ -24,7 +25,10 @@ class System:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -49,6 +53,7 @@ class System:
         return res
 
     
+    
     def get_server_info(self) -> operations.ObservabilityGetInfoResponse:
         r"""Information about the server
         Provides the information about the server. This information includes returning the server version, etc.
@@ -60,7 +65,10 @@ class System:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -85,6 +93,7 @@ class System:
         return res
 
     
+    
     def observability_quota_usage(self, request: shared.QuotaUsageRequest) -> operations.ObservabilityQuotaUsageResponse:
         r"""Queries current namespace quota usage
         Returns current namespace quota limits
@@ -101,7 +110,10 @@ class System:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -126,6 +138,7 @@ class System:
         return res
 
     
+    
     def query_quota_limits(self, request: shared.QuotaLimitsRequest) -> operations.ObservabilityQuotaLimitsResponse:
         r"""Queries current namespace quota limits
         Returns current namespace quota limits
@@ -142,7 +155,10 @@ class System:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -167,6 +183,7 @@ class System:
         return res
 
     
+    
     def query_time_series_metrics(self, request: shared.QueryTimeSeriesMetricsRequest) -> operations.ObservabilityQueryTimeSeriesMetricsResponse:
         r"""Queries time series metrics
         Queries time series metrics
@@ -183,7 +200,10 @@ class System:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

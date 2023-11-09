@@ -13,6 +13,7 @@ class Collection:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: operations.TigrisCreateOrUpdateCollectionRequest) -> operations.TigrisCreateOrUpdateCollectionResponse:
         r"""Create or update a collection
         Creates a new collection or atomically upgrades the collection to the new schema provided in the request.
@@ -33,7 +34,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -58,6 +62,7 @@ class Collection:
         return res
 
     
+    
     def delete_documents(self, request: operations.TigrisDeleteRequest) -> operations.TigrisDeleteResponse:
         r"""Delete Documents
         Delete a range of documents in the collection using the condition provided in the filter.
@@ -74,7 +79,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -99,6 +107,7 @@ class Collection:
         return res
 
     
+    
     def describe(self, request: operations.TigrisDescribeCollectionRequest) -> operations.TigrisDescribeCollectionResponse:
         r"""Describe Collection
         Returns the information related to the collection. This can be used to retrieve the schema or size of the collection.
@@ -115,7 +124,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -140,6 +152,7 @@ class Collection:
         return res
 
     
+    
     def drop(self, request: operations.TigrisDropCollectionRequest) -> operations.TigrisDropCollectionResponse:
         r"""Drop Collection
         Drops the collection inside this project. This API deletes all of the
@@ -157,7 +170,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -182,6 +198,7 @@ class Collection:
         return res
 
     
+    
     def import_documents(self, request: operations.TigrisImportRequest) -> operations.TigrisImportResponse:
         r"""Import Documents
         Imports documents into the collection.
@@ -203,7 +220,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -228,6 +248,7 @@ class Collection:
         return res
 
     
+    
     def insert_documents(self, request: operations.TigrisInsertRequest) -> operations.TigrisInsertResponse:
         r"""Insert Documents
         Inserts new documents in the collection and returns an AlreadyExists error if any of the documents
@@ -246,7 +267,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -271,6 +295,7 @@ class Collection:
         return res
 
     
+    
     def read_documents(self, request: operations.TigrisReadRequest) -> operations.TigrisReadResponse:
         r"""Read Documents
         Reads a range of documents from the collection, or messages from a collection in case of event streaming. Tigris does not require you to
@@ -292,7 +317,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -317,6 +345,7 @@ class Collection:
         return res
 
     
+    
     def replace_documents(self, request: operations.TigrisReplaceRequest) -> operations.TigrisReplaceResponse:
         r"""Insert or Replace Documents
         Inserts the documents or replaces the existing documents in the collections.
@@ -333,7 +362,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -358,6 +390,7 @@ class Collection:
         return res
 
     
+    
     def search_documents(self, request: operations.TigrisSearchRequest) -> operations.TigrisSearchResponse:
         r"""Search Documents.
         Searches a collection for the documents matching the query, or messages in case of event streaming. A search can be
@@ -377,7 +410,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -402,6 +438,7 @@ class Collection:
         return res
 
     
+    
     def update_documents(self, request: operations.TigrisUpdateRequest) -> operations.TigrisUpdateResponse:
         r"""Update Documents.
         Update a range of documents in the collection using the condition provided in the filter.
@@ -418,7 +455,10 @@ class Collection:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('PUT', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

@@ -1,5 +1,5 @@
 # Project
-(*.project*)
+(*project*)
 
 ## Overview
 
@@ -47,7 +47,11 @@ if res.create_project_response is not None:
 ### Response
 
 **[operations.TigrisCreateProjectResponse](../../models/operations/tigriscreateprojectresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_project
 
@@ -85,7 +89,11 @@ if res.delete_project_response is not None:
 ### Response
 
 **[operations.TigrisDeleteProjectResponse](../../models/operations/tigrisdeleteprojectresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list
 
@@ -112,4 +120,8 @@ if res.list_projects_response is not None:
 ### Response
 
 **[operations.TigrisListProjectsResponse](../../models/operations/tigrislistprojectsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

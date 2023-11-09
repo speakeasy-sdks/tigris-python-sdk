@@ -1,5 +1,5 @@
 # AppKey
-(*.app_key*)
+(*app_key*)
 
 ## Overview
 
@@ -49,7 +49,11 @@ if res.delete_app_key_response is not None:
 ### Response
 
 **[operations.TigrisDeleteAppKeyResponse](../../models/operations/tigrisdeleteappkeyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list
 
@@ -86,7 +90,11 @@ if res.list_app_keys_response is not None:
 ### Response
 
 **[operations.TigrisListAppKeysResponse](../../models/operations/tigrislistappkeysresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## rotate
 
@@ -124,7 +132,11 @@ if res.rotate_app_key_response is not None:
 ### Response
 
 **[operations.TigrisRotateAppKeySecretResponse](../../models/operations/tigrisrotateappkeysecretresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## tigris_create_app_key
 
@@ -162,7 +174,11 @@ if res.create_app_key_response is not None:
 ### Response
 
 **[operations.TigrisCreateAppKeyResponse](../../models/operations/tigriscreateappkeyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update
 
@@ -200,4 +216,8 @@ if res.update_app_key_response is not None:
 ### Response
 
 **[operations.TigrisUpdateAppKeyResponse](../../models/operations/tigrisupdateappkeyresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Channel
-(*.channel*)
+(*channel*)
 
 ## Overview
 
@@ -50,7 +50,11 @@ if res.get_rt_channel_response is not None:
 ### Response
 
 **[operations.RealtimeGetRTChannelResponse](../../models/operations/realtimegetrtchannelresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_messages
 
@@ -88,7 +92,11 @@ if res.read_messages_response is not None:
 ### Response
 
 **[operations.RealtimeReadMessagesResponse](../../models/operations/realtimereadmessagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list
 
@@ -125,7 +133,11 @@ if res.get_rt_channels_response is not None:
 ### Response
 
 **[operations.RealtimeGetRTChannelsResponse](../../models/operations/realtimegetrtchannelsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_subscriptions
 
@@ -163,7 +175,11 @@ if res.list_subscription_response is not None:
 ### Response
 
 **[operations.RealtimeListSubscriptionsResponse](../../models/operations/realtimelistsubscriptionsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## push_messages
 
@@ -206,7 +222,11 @@ if res.messages_response is not None:
 ### Response
 
 **[operations.RealtimeMessagesResponse](../../models/operations/realtimemessagesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## realtime_presence
 
@@ -244,4 +264,8 @@ if res.presence_response is not None:
 ### Response
 
 **[operations.RealtimePresenceResponse](../../models/operations/realtimepresenceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

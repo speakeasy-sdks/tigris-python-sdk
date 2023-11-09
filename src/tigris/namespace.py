@@ -13,6 +13,7 @@ class Namespace:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: shared.CreateNamespaceRequest) -> operations.CreateNamespaceResponse:
         r"""Creates a Namespace
         Creates a new namespace, if it does not exist
@@ -29,7 +30,10 @@ class Namespace:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -54,6 +58,7 @@ class Namespace:
         return res
 
     
+    
     def get(self) -> operations.ManagementDescribeNamespacesResponse:
         r"""Describe the details of all namespaces
         Get details for all namespaces
@@ -65,7 +70,10 @@ class Namespace:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -90,6 +98,7 @@ class Namespace:
         return res
 
     
+    
     def get_metadata(self, request: operations.ManagementGetNamespaceMetadataRequest) -> operations.ManagementGetNamespaceMetadataResponse:
         r"""Reads the Namespace Metadata
         GetNamespaceMetadata inserts the user metadata object
@@ -106,7 +115,10 @@ class Namespace:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -131,6 +143,7 @@ class Namespace:
         return res
 
     
+    
     def insert_metadata(self, request: operations.ManagementInsertNamespaceMetadataRequest) -> operations.ManagementInsertNamespaceMetadataResponse:
         r"""Inserts Namespace Metadata
         InsertNamespaceMetadata inserts the namespace metadata object
@@ -147,7 +160,10 @@ class Namespace:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -172,6 +188,7 @@ class Namespace:
         return res
 
     
+    
     def list(self) -> operations.ManagementListNamespacesResponse:
         r"""Lists all Namespaces
         List all namespace
@@ -183,7 +200,10 @@ class Namespace:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -208,6 +228,7 @@ class Namespace:
         return res
 
     
+    
     def update_metadata(self, request: operations.ManagementUpdateNamespaceMetadataRequest) -> operations.ManagementUpdateNamespaceMetadataResponse:
         r"""Updates Namespace Metadata
         UpdateNamespaceMetadata updates the user metadata object
@@ -224,7 +245,10 @@ class Namespace:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

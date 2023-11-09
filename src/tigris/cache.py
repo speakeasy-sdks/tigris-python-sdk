@@ -13,6 +13,7 @@ class Cache:
         self.sdk_configuration = sdk_config
         
     
+    
     def create(self, request: operations.CacheCreateCacheRequest) -> operations.CacheCreateCacheResponse:
         r"""Creates the cache"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -27,7 +28,10 @@ class Cache:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -52,6 +56,7 @@ class Cache:
         return res
 
     
+    
     def delete(self, request: operations.CacheDeleteCacheRequest) -> operations.CacheDeleteCacheResponse:
         r"""Deletes the cache"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -66,7 +71,10 @@ class Cache:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -91,6 +99,7 @@ class Cache:
         return res
 
     
+    
     def delete_keys(self, request: operations.CacheDelRequest) -> operations.CacheDelResponse:
         r"""Deletes an entry from cache"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -105,7 +114,10 @@ class Cache:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('DELETE', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -130,6 +142,7 @@ class Cache:
         return res
 
     
+    
     def get_key(self, request: operations.CacheGetRequest) -> operations.CacheGetResponse:
         r"""Reads an entry from cache"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -139,7 +152,10 @@ class Cache:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -164,6 +180,7 @@ class Cache:
         return res
 
     
+    
     def get_set_key(self, request: operations.CacheGetSetRequest) -> operations.CacheGetSetResponse:
         r"""Sets an entry in the cache and returns the previous value if exists"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -178,7 +195,10 @@ class Cache:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -203,6 +223,7 @@ class Cache:
         return res
 
     
+    
     def list(self, request: operations.CacheListCachesRequest) -> operations.CacheListCachesResponse:
         r"""Lists all the caches for the given project"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -212,7 +233,10 @@ class Cache:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -237,6 +261,7 @@ class Cache:
         return res
 
     
+    
     def list_keys(self, request: operations.CacheKeysRequest) -> operations.CacheKeysResponse:
         r"""Lists all the key for this cache"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -247,7 +272,10 @@ class Cache:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('GET', url, params=query_params, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -272,6 +300,7 @@ class Cache:
         return res
 
     
+    
     def set_key(self, request: operations.CacheSetRequest) -> operations.CacheSetResponse:
         r"""Sets an entry in the cache"""
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -286,7 +315,10 @@ class Cache:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

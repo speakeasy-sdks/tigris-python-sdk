@@ -1,5 +1,5 @@
 # Namespace
-(*.namespace*)
+(*namespace*)
 
 ## Overview
 
@@ -47,7 +47,11 @@ if res.create_namespace_response is not None:
 ### Response
 
 **[operations.CreateNamespaceResponse](../../models/operations/createnamespaceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get
 
@@ -74,7 +78,11 @@ if res.describe_namespaces_response is not None:
 ### Response
 
 **[operations.ManagementDescribeNamespacesResponse](../../models/operations/managementdescribenamespacesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_metadata
 
@@ -114,7 +122,11 @@ if res.get_namespace_metadata_response is not None:
 ### Response
 
 **[operations.ManagementGetNamespaceMetadataResponse](../../models/operations/managementgetnamespacemetadataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## insert_metadata
 
@@ -154,7 +166,11 @@ if res.insert_namespace_metadata_response is not None:
 ### Response
 
 **[operations.ManagementInsertNamespaceMetadataResponse](../../models/operations/managementinsertnamespacemetadataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list
 
@@ -181,7 +197,11 @@ if res.list_namespaces_response is not None:
 ### Response
 
 **[operations.ManagementListNamespacesResponse](../../models/operations/managementlistnamespacesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_metadata
 
@@ -221,4 +241,8 @@ if res.update_namespace_metadata_response is not None:
 ### Response
 
 **[operations.ManagementUpdateNamespaceMetadataResponse](../../models/operations/managementupdatenamespacemetadataresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

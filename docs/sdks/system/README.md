@@ -1,5 +1,5 @@
 # System
-(*.system*)
+(*system*)
 
 ## Overview
 
@@ -38,7 +38,11 @@ if res.health_check_response is not None:
 ### Response
 
 **[operations.HealthAPIHealthResponse](../../models/operations/healthapihealthresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_server_info
 
@@ -65,7 +69,11 @@ if res.get_info_response is not None:
 ### Response
 
 **[operations.ObservabilityGetInfoResponse](../../models/operations/observabilitygetinforesponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## observability_quota_usage
 
@@ -100,7 +108,11 @@ if res.quota_usage_response is not None:
 ### Response
 
 **[operations.ObservabilityQuotaUsageResponse](../../models/operations/observabilityquotausageresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## query_quota_limits
 
@@ -135,7 +147,11 @@ if res.quota_limits_response is not None:
 ### Response
 
 **[operations.ObservabilityQuotaLimitsResponse](../../models/operations/observabilityquotalimitsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## query_time_series_metrics
 
@@ -179,4 +195,8 @@ if res.query_time_series_metrics_response is not None:
 ### Response
 
 **[operations.ObservabilityQueryTimeSeriesMetricsResponse](../../models/operations/observabilityquerytimeseriesmetricsresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

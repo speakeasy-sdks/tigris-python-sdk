@@ -13,6 +13,7 @@ class User:
         self.sdk_configuration = sdk_config
         
     
+    
     def get_metadata(self, request: operations.ManagementGetUserMetadataRequest) -> operations.ManagementGetUserMetadataResponse:
         r"""Reads the User Metadata
         GetUserMetadata inserts the user metadata object
@@ -29,7 +30,10 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -54,6 +58,7 @@ class User:
         return res
 
     
+    
     def insert_metadata(self, request: operations.ManagementInsertUserMetadataRequest) -> operations.ManagementInsertUserMetadataResponse:
         r"""Inserts User Metadata
         insertUserMetadata inserts the user metadata object
@@ -70,7 +75,10 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')
@@ -95,6 +103,7 @@ class User:
         return res
 
     
+    
     def update_metadata(self, request: operations.ManagementUpdateUserMetadataRequest) -> operations.ManagementUpdateUserMetadataResponse:
         r"""Updates User Metadata
         updateUserMetadata updates the user metadata object
@@ -111,7 +120,10 @@ class User:
         headers['Accept'] = 'application/json'
         headers['user-agent'] = self.sdk_configuration.user_agent
         
-        client = self.sdk_configuration.security_client
+        if callable(self.sdk_configuration.security):
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security())
+        else:
+            client = utils.configure_security_client(self.sdk_configuration.client, self.sdk_configuration.security)
         
         http_res = client.request('POST', url, data=data, files=form, headers=headers)
         content_type = http_res.headers.get('Content-Type')

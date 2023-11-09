@@ -1,5 +1,5 @@
 # Search
-(*.search*)
+(*search*)
 
 ## Overview
 
@@ -61,7 +61,11 @@ if res.create_by_id_response is not None:
 ### Response
 
 **[operations.SearchCreateByIDResponse](../../models/operations/searchcreatebyidresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## create_documents
 
@@ -108,7 +112,11 @@ if res.create_document_response is not None:
 ### Response
 
 **[operations.SearchCreateResponse](../../models/operations/searchcreateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_documents
 
@@ -153,7 +161,11 @@ if res.delete_document_response is not None:
 ### Response
 
 **[operations.SearchDeleteResponse](../../models/operations/searchdeleteresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## delete_index
 
@@ -192,7 +204,11 @@ if res.delete_index_response is not None:
 ### Response
 
 **[operations.SearchDeleteIndexResponse](../../models/operations/searchdeleteindexresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## find_documents
 
@@ -246,7 +262,11 @@ if res.search_index_response is not None:
 ### Response
 
 **[operations.SearchSearchResponse](../../models/operations/searchsearchresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_documents
 
@@ -288,7 +308,11 @@ if res.get_document_response is not None:
 ### Response
 
 **[operations.SearchGetResponse](../../models/operations/searchgetresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## get_index
 
@@ -326,7 +350,11 @@ if res.get_index_response is not None:
 ### Response
 
 **[operations.SearchGetIndexResponse](../../models/operations/searchgetindexresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## list_indexes
 
@@ -363,7 +391,11 @@ if res.list_indexes_response is not None:
 ### Response
 
 **[operations.SearchListIndexesResponse](../../models/operations/searchlistindexesresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## query_delete_documents
 
@@ -403,7 +435,11 @@ if res.delete_by_query_response is not None:
 ### Response
 
 **[operations.SearchDeleteByQueryResponse](../../models/operations/searchdeletebyqueryresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## replace_documents
 
@@ -449,7 +485,11 @@ if res.create_or_replace_document_response is not None:
 ### Response
 
 **[operations.SearchCreateOrReplaceResponse](../../models/operations/searchcreateorreplaceresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_documents
 
@@ -495,7 +535,11 @@ if res.update_document_response is not None:
 ### Response
 
 **[operations.SearchUpdateResponse](../../models/operations/searchupdateresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## update_index
 
@@ -534,4 +578,8 @@ if res.create_or_update_index_response is not None:
 ### Response
 
 **[operations.SearchCreateOrUpdateIndexResponse](../../models/operations/searchcreateorupdateindexresponse.md)**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
