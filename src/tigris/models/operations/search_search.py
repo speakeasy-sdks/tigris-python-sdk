@@ -24,10 +24,10 @@ class SearchSearchRequest:
 class SearchSearchResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
-    r"""Raw HTTP response; suitable for custom response parsing"""
     search_index_response: Optional[shared_searchindexresponse.SearchIndexResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
