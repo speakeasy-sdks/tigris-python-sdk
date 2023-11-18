@@ -18,6 +18,7 @@ src/tigris/utils/__init__.py
 src/tigris/utils/retries.py
 src/tigris/utils/utils.py
 src/tigris/models/errors/sdkerror.py
+tests/helpers.py
 src/tigris/models/operations/auth_getaccesstoken.py
 src/tigris/models/operations/healthapi_health.py
 src/tigris/models/operations/observability_getinfo.py
