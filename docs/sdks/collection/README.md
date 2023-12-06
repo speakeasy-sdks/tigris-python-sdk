@@ -84,7 +84,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteRequest(
     delete_request=shared.DeleteRequest(
-        filter=shared.Filter(),
+        filter_=shared.Filter(),
         options=shared.DeleteRequestOptions(
             collation=shared.Collation(),
             write_options=shared.WriteOptions(),
@@ -343,7 +343,7 @@ s = tigris.Tigris(
 req = operations.TigrisReadRequest(
     read_request=shared.ReadRequest(
         fields=shared.Fields(),
-        filter=shared.ReadRequestFilter(),
+        filter_=shared.ReadRequestFilter(),
         options=shared.ReadRequestOptions(
             collation=shared.Collation(),
         ),
@@ -450,7 +450,7 @@ req = operations.TigrisSearchRequest(
         ],
         facet=shared.Facet(),
         fields=shared.SearchRequestFields(),
-        filter=shared.SearchRequestFilter(),
+        filter_=shared.SearchRequestFilter(),
         include_fields=[
             'string',
         ],
@@ -503,7 +503,7 @@ s = tigris.Tigris(
 req = operations.TigrisUpdateRequest(
     update_request=shared.UpdateRequest(
         fields=shared.UpdateRequestFields(),
-        filter=shared.UpdateRequestFilter(),
+        filter_=shared.UpdateRequestFilter(),
         options=shared.UpdateRequestOptions(
             collation=shared.Collation(),
             write_options=shared.WriteOptions(),

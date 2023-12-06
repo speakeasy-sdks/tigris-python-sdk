@@ -251,7 +251,6 @@ src/tigris/models/__init__.py
 src/tigris/models/errors/__init__.py
 src/tigris/models/operations/__init__.py
 src/tigris/models/shared/__init__.py
-USAGE.md
 docs/models/operations/authgetaccesstokenresponse.md
 docs/models/operations/healthapihealthresponse.md
 docs/models/operations/observabilitygetinforesponse.md
@@ -486,7 +485,7 @@ docs/models/shared/createorupdatecollectionrequest.md
 docs/models/shared/collectionoptions.md
 docs/models/shared/deleteresponse.md
 docs/models/shared/responsemetadata.md
-docs/models/shared/filter.md
+docs/models/shared/filter_.md
 docs/models/shared/deleterequest.md
 docs/models/shared/deleterequestoptions.md
 docs/models/shared/writeoptions.md
@@ -582,4 +581,5 @@ docs/sdks/database/README.md
 docs/sdks/collection/README.md
 docs/sdks/channel/README.md
 docs/sdks/search/README.md
+USAGE.md
 .gitattributes
