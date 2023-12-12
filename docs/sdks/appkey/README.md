@@ -24,7 +24,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.TigrisDeleteAppKeyRequest(
@@ -66,7 +66,7 @@ import tigris
 from tigris.models import operations
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.TigrisListAppKeysRequest(
@@ -107,7 +107,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.TigrisRotateAppKeySecretRequest(
@@ -149,7 +149,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.TigrisCreateAppKeyRequest(
@@ -191,7 +191,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.TigrisUpdateAppKeyRequest(

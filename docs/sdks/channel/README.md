@@ -25,7 +25,7 @@ import tigris
 from tigris.models import operations
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.RealtimeGetRTChannelRequest(
@@ -67,7 +67,7 @@ import tigris
 from tigris.models import operations
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.RealtimeReadMessagesRequest(
@@ -109,7 +109,7 @@ import tigris
 from tigris.models import operations
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.RealtimeGetRTChannelsRequest(
@@ -150,7 +150,7 @@ import tigris
 from tigris.models import operations
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.RealtimeListSubscriptionsRequest(
@@ -192,7 +192,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.RealtimeMessagesRequest(
@@ -239,7 +239,7 @@ import tigris
 from tigris.models import operations
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.RealtimePresenceRequest(

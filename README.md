@@ -27,7 +27,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.CacheCreateCacheRequest(
@@ -169,7 +169,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 import tigris
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -207,7 +207,7 @@ import tigris
 
 s = tigris.Tigris(
     server_idx=1,
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -227,7 +227,7 @@ import tigris
 
 s = tigris.Tigris(
     server_url="https://api.preview.tigrisdata.cloud",
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -275,7 +275,7 @@ To authenticate with the API the `bearer_auth` parameter must be set when initia
 import tigris
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 

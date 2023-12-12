@@ -22,7 +22,7 @@ class Namespace:
         
         url = base_url + '/v1/management/namespaces/create'
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, shared.CreateNamespaceRequest, "request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -107,7 +107,7 @@ class Namespace:
         
         url = utils.generate_url(operations.ManagementGetNamespaceMetadataRequest, base_url, '/v1/management/namespace/metadata/{metadataKey}/get', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "get_namespace_metadata_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ManagementGetNamespaceMetadataRequest, "get_namespace_metadata_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -152,7 +152,7 @@ class Namespace:
         
         url = utils.generate_url(operations.ManagementInsertNamespaceMetadataRequest, base_url, '/v1/management/namespace/metadata/{metadataKey}/insert', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "insert_namespace_metadata_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ManagementInsertNamespaceMetadataRequest, "insert_namespace_metadata_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -237,7 +237,7 @@ class Namespace:
         
         url = utils.generate_url(operations.ManagementUpdateNamespaceMetadataRequest, base_url, '/v1/management/namespace/metadata/{metadataKey}/update', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "update_namespace_metadata_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ManagementUpdateNamespaceMetadataRequest, "update_namespace_metadata_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

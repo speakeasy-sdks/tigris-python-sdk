@@ -20,7 +20,7 @@ class Cache:
         
         url = utils.generate_url(operations.CacheCreateCacheRequest, base_url, '/v1/projects/{project}/caches/{name}/create', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_cache_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CacheCreateCacheRequest, "create_cache_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -63,7 +63,7 @@ class Cache:
         
         url = utils.generate_url(operations.CacheDeleteCacheRequest, base_url, '/v1/projects/{project}/caches/{name}/delete', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "delete_cache_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CacheDeleteCacheRequest, "delete_cache_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -106,7 +106,7 @@ class Cache:
         
         url = utils.generate_url(operations.CacheDelRequest, base_url, '/v1/projects/{project}/caches/{name}/{key}/delete', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "del_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CacheDelRequest, "del_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -187,7 +187,7 @@ class Cache:
         
         url = utils.generate_url(operations.CacheGetSetRequest, base_url, '/v1/projects/{project}/caches/{name}/{key}/getset', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "get_set_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CacheGetSetRequest, "get_set_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -307,7 +307,7 @@ class Cache:
         
         url = utils.generate_url(operations.CacheSetRequest, base_url, '/v1/projects/{project}/caches/{name}/{key}/set', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "set_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.CacheSetRequest, "set_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

@@ -22,7 +22,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.TigrisCreateProjectRequest(
@@ -64,7 +64,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.TigrisDeleteProjectRequest(
@@ -105,7 +105,7 @@ List returns all the projects.
 import tigris
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 

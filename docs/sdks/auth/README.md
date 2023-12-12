@@ -21,7 +21,7 @@ Endpoint for receiving access token from Tigris Server. The endpoint requires Gr
 import tigris
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 

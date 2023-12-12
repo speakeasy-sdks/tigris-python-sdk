@@ -34,7 +34,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchCreateByIDRequest(
@@ -82,7 +82,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchCreateRequest(
@@ -131,7 +131,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchDeleteRequest(
@@ -178,7 +178,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchDeleteIndexRequest(
@@ -225,7 +225,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchSearchRequest(
@@ -280,7 +280,7 @@ import tigris
 from tigris.models import operations
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchGetRequest(
@@ -325,7 +325,7 @@ import tigris
 from tigris.models import operations
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchGetIndexRequest(
@@ -367,7 +367,7 @@ import tigris
 from tigris.models import operations
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchListIndexesRequest(
@@ -409,7 +409,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchDeleteByQueryRequest(
@@ -455,7 +455,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchCreateOrReplaceRequest(
@@ -505,7 +505,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchUpdateRequest(
@@ -552,7 +552,7 @@ import tigris
 from tigris.models import operations, shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = operations.SearchCreateOrUpdateIndexRequest(

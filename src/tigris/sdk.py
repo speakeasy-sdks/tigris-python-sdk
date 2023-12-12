@@ -15,7 +15,7 @@ from .system import System
 from .user import User
 from tigris import utils
 from tigris.models import shared
-from typing import Callable, Dict, Union
+from typing import Dict
 
 class Tigris:
     r"""Tigris API Reference: # Overview
@@ -102,7 +102,7 @@ class Tigris:
     sdk_configuration: SDKConfiguration
 
     def __init__(self,
-                 bearer_auth: Union[str,Callable[[], str]],
+                 bearer_auth: str ,
                  server_idx: int = None,
                  server_url: str = None,
                  url_params: Dict[str, str] = None,

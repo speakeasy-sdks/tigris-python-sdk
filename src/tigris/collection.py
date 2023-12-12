@@ -26,7 +26,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisCreateOrUpdateCollectionRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/createOrUpdate', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_or_update_collection_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisCreateOrUpdateCollectionRequest, "create_or_update_collection_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -71,7 +71,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisDeleteRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/documents/delete', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "delete_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisDeleteRequest, "delete_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -116,7 +116,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisDescribeCollectionRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/describe', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "describe_collection_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisDescribeCollectionRequest, "describe_collection_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -162,7 +162,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisDropCollectionRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/drop', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "drop_collection_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisDropCollectionRequest, "drop_collection_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -212,7 +212,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisImportRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/documents/import', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "import_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisImportRequest, "import_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -259,7 +259,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisInsertRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/documents/insert', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "insert_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisInsertRequest, "insert_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -309,7 +309,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisReadRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/documents/read', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "read_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisReadRequest, "read_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -354,7 +354,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisReplaceRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/documents/replace', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "replace_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisReplaceRequest, "replace_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -402,7 +402,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisSearchRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/documents/search', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "search_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisSearchRequest, "search_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -447,7 +447,7 @@ class Collection:
         
         url = utils.generate_url(operations.TigrisUpdateRequest, base_url, '/v1/projects/{project}/database/collections/{collection}/documents/update', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "update_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisUpdateRequest, "update_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

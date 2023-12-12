@@ -22,7 +22,7 @@ class User:
         
         url = utils.generate_url(operations.ManagementGetUserMetadataRequest, base_url, '/v1/management/users/metadata/{metadataKey}/get', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "get_user_metadata_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ManagementGetUserMetadataRequest, "get_user_metadata_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -67,7 +67,7 @@ class User:
         
         url = utils.generate_url(operations.ManagementInsertUserMetadataRequest, base_url, '/v1/management/users/metadata/{metadataKey}/insert', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "insert_user_metadata_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ManagementInsertUserMetadataRequest, "insert_user_metadata_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -112,7 +112,7 @@ class User:
         
         url = utils.generate_url(operations.ManagementUpdateUserMetadataRequest, base_url, '/v1/management/users/metadata/{metadataKey}/update', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "update_user_metadata_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.ManagementUpdateUserMetadataRequest, "update_user_metadata_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

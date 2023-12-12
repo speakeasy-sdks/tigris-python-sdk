@@ -25,7 +25,7 @@ class Search:
         
         url = utils.generate_url(operations.SearchCreateByIDRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/{id}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_by_id_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchCreateByIDRequest, "create_by_id_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -74,7 +74,7 @@ class Search:
         
         url = utils.generate_url(operations.SearchCreateRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_document_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchCreateRequest, "create_document_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -121,7 +121,7 @@ class Search:
         
         url = utils.generate_url(operations.SearchDeleteRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "delete_document_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchDeleteRequest, "delete_document_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -164,7 +164,7 @@ class Search:
         
         url = utils.generate_url(operations.SearchDeleteIndexRequest, base_url, '/v1/projects/{project}/search/indexes/{name}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "delete_index_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchDeleteIndexRequest, "delete_index_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -213,7 +213,7 @@ class Search:
         
         url = utils.generate_url(operations.SearchSearchRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/search', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "search_index_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchSearchRequest, "search_index_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -378,7 +378,7 @@ class Search:
         
         url = utils.generate_url(operations.SearchDeleteByQueryRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents/deleteByQuery', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "delete_by_query_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchDeleteByQueryRequest, "delete_by_query_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -426,7 +426,7 @@ class Search:
         
         url = utils.generate_url(operations.SearchCreateOrReplaceRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_or_replace_document_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchCreateOrReplaceRequest, "create_or_replace_document_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -474,7 +474,7 @@ class Search:
         
         url = utils.generate_url(operations.SearchUpdateRequest, base_url, '/v1/projects/{project}/search/indexes/{index}/documents', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "update_document_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchUpdateRequest, "update_document_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -517,7 +517,7 @@ class Search:
         
         url = utils.generate_url(operations.SearchCreateOrUpdateIndexRequest, base_url, '/v1/projects/{project}/search/indexes/{name}', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_or_update_index_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.SearchCreateOrUpdateIndexRequest, "create_or_update_index_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

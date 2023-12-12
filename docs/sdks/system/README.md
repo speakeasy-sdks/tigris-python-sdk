@@ -23,7 +23,7 @@ This endpoint can be used to check the liveness of the server.
 import tigris
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -54,7 +54,7 @@ Provides the information about the server. This information includes returning t
 import tigris
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 
@@ -86,7 +86,7 @@ import tigris
 from tigris.models import shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = shared.QuotaUsageRequest()
@@ -125,7 +125,7 @@ import tigris
 from tigris.models import shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = shared.QuotaLimitsRequest()
@@ -164,7 +164,7 @@ import tigris
 from tigris.models import shared
 
 s = tigris.Tigris(
-    bearer_auth="",
+    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
 req = shared.QueryTimeSeriesMetricsRequest(

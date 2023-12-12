@@ -22,7 +22,7 @@ class Project:
         
         url = utils.generate_url(operations.TigrisCreateProjectRequest, base_url, '/v1/projects/{project}/create', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_project_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisCreateProjectRequest, "create_project_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -67,7 +67,7 @@ class Project:
         
         url = utils.generate_url(operations.TigrisDeleteProjectRequest, base_url, '/v1/projects/{project}/delete', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "delete_project_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisDeleteProjectRequest, "delete_project_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

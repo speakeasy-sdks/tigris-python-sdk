@@ -24,7 +24,7 @@ class Database:
         
         url = utils.generate_url(operations.TigrisBeginTransactionRequest, base_url, '/v1/projects/{project}/database/transactions/begin', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "begin_transaction_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisBeginTransactionRequest, "begin_transaction_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -70,7 +70,7 @@ class Database:
         
         url = utils.generate_url(operations.TigrisCommitTransactionRequest, base_url, '/v1/projects/{project}/database/transactions/commit', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "commit_transaction_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisCommitTransactionRequest, "commit_transaction_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -115,7 +115,7 @@ class Database:
         
         url = utils.generate_url(operations.TigrisCreateBranchRequest, base_url, '/v1/projects/{project}/database/branches/{branch}/create', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_branch_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisCreateBranchRequest, "create_branch_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -161,7 +161,7 @@ class Database:
         
         url = utils.generate_url(operations.TigrisDeleteBranchRequest, base_url, '/v1/projects/{project}/database/branches/{branch}/delete', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "delete_branch_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisDeleteBranchRequest, "delete_branch_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -207,7 +207,7 @@ class Database:
         
         url = utils.generate_url(operations.TigrisDescribeDatabaseRequest, base_url, '/v1/projects/{project}/database/describe', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "describe_database_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisDescribeDatabaseRequest, "describe_database_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -294,7 +294,7 @@ class Database:
         
         url = utils.generate_url(operations.TigrisRollbackTransactionRequest, base_url, '/v1/projects/{project}/database/transactions/rollback', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "rollback_transaction_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisRollbackTransactionRequest, "rollback_transaction_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:

@@ -22,7 +22,7 @@ class AppKey:
         
         url = utils.generate_url(operations.TigrisDeleteAppKeyRequest, base_url, '/v1/projects/{project}/apps/keys/delete', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "delete_app_key_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisDeleteAppKeyRequest, "delete_app_key_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -107,7 +107,7 @@ class AppKey:
         
         url = utils.generate_url(operations.TigrisRotateAppKeySecretRequest, base_url, '/v1/projects/{project}/apps/keys/rotate', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "rotate_app_key_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisRotateAppKeySecretRequest, "rotate_app_key_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -152,7 +152,7 @@ class AppKey:
         
         url = utils.generate_url(operations.TigrisCreateAppKeyRequest, base_url, '/v1/projects/{project}/apps/keys/create', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "create_app_key_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisCreateAppKeyRequest, "create_app_key_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
@@ -197,7 +197,7 @@ class AppKey:
         
         url = utils.generate_url(operations.TigrisUpdateAppKeyRequest, base_url, '/v1/projects/{project}/apps/keys/update', request)
         headers = {}
-        req_content_type, data, form = utils.serialize_request_body(request, "update_app_key_request", False, False, 'json')
+        req_content_type, data, form = utils.serialize_request_body(request, operations.TigrisUpdateAppKeyRequest, "update_app_key_request", False, False, 'json')
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         if data is None and form is None:
