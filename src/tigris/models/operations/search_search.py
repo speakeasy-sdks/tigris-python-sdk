@@ -11,11 +11,11 @@ from typing import Optional
 
 @dataclasses.dataclass
 class SearchSearchRequest:
+    search_index_request: shared_searchindexrequest.SearchIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     index: str = dataclasses.field(metadata={'path_param': { 'field_name': 'index', 'style': 'simple', 'explode': False }})
     r"""The index name to search documents from."""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Project name whose db is under target to search documents from."""
-    search_index_request: shared_searchindexrequest.SearchIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 
@@ -24,10 +24,10 @@ class SearchSearchRequest:
 class SearchSearchResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     search_index_response: Optional[shared_searchindexresponse.SearchIndexResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)

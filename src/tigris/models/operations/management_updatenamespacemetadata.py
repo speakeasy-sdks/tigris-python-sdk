@@ -11,8 +11,8 @@ from typing import Optional
 
 @dataclasses.dataclass
 class ManagementUpdateNamespaceMetadataRequest:
-    metadata_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'metadataKey', 'style': 'simple', 'explode': False }})
     update_namespace_metadata_request: shared_updatenamespacemetadatarequest.UpdateNamespaceMetadataRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    metadata_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'metadataKey', 'style': 'simple', 'explode': False }})
     
 
 
@@ -21,10 +21,10 @@ class ManagementUpdateNamespaceMetadataRequest:
 class ManagementUpdateNamespaceMetadataResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     update_namespace_metadata_response: Optional[shared_updatenamespacemetadataresponse.UpdateNamespaceMetadataResponse] = dataclasses.field(default=None)

@@ -11,11 +11,11 @@ from typing import Optional
 
 @dataclasses.dataclass
 class TigrisSearchRequest:
+    search_request: shared_searchrequest.SearchRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
     r"""Collection name to search documents from."""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Project name whose db is under target to search documents from."""
-    search_request: shared_searchrequest.SearchRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 
@@ -24,10 +24,10 @@ class TigrisSearchRequest:
 class TigrisSearchResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     streaming_search_response: Optional[shared_streamingsearchresponse.StreamingSearchResponse] = dataclasses.field(default=None)

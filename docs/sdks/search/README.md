@@ -284,11 +284,11 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchGetRequest(
+    index='string',
+    project='string',
     ids=[
         'string',
     ],
-    index='string',
-    project='string',
 )
 
 res = s.search.get_documents(req)

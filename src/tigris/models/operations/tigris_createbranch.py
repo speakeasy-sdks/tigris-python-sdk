@@ -11,9 +11,9 @@ from typing import Optional
 
 @dataclasses.dataclass
 class TigrisCreateBranchRequest:
+    create_branch_request: shared_createbranchrequest.CreateBranchRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     branch: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
     r"""Name of the database branch to be created. <p></p>**Note**: `main` is a reserved branch name for primary database and is automatically created with CreateProject"""
-    create_branch_request: shared_createbranchrequest.CreateBranchRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Create a database branch in this project"""
     
@@ -24,10 +24,10 @@ class TigrisCreateBranchRequest:
 class TigrisCreateBranchResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     create_branch_response: Optional[shared_createbranchresponse.CreateBranchResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)

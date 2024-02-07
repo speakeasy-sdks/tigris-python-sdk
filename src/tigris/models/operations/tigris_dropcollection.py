@@ -11,9 +11,9 @@ from typing import Optional
 
 @dataclasses.dataclass
 class TigrisDropCollectionRequest:
+    drop_collection_request: shared_dropcollectionrequest.DropCollectionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     collection: str = dataclasses.field(metadata={'path_param': { 'field_name': 'collection', 'style': 'simple', 'explode': False }})
     r"""Collection name to delete."""
-    drop_collection_request: shared_dropcollectionrequest.DropCollectionRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Project name whose db is under target to delete collection."""
     
@@ -24,10 +24,10 @@ class TigrisDropCollectionRequest:
 class TigrisDropCollectionResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     drop_collection_response: Optional[shared_dropcollectionresponse.DropCollectionResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)

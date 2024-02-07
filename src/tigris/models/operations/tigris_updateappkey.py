@@ -11,9 +11,9 @@ from typing import Optional
 
 @dataclasses.dataclass
 class TigrisUpdateAppKeyRequest:
+    update_app_key_request: shared_updateappkeyrequest.UpdateAppKeyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""project name -  this is not allowed to update"""
-    update_app_key_request: shared_updateappkeyrequest.UpdateAppKeyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
 
 
@@ -22,10 +22,10 @@ class TigrisUpdateAppKeyRequest:
 class TigrisUpdateAppKeyResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     update_app_key_response: Optional[shared_updateappkeyresponse.UpdateAppKeyResponse] = dataclasses.field(default=None)

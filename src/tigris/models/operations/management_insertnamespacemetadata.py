@@ -21,10 +21,10 @@ class ManagementInsertNamespaceMetadataRequest:
 class ManagementInsertNamespaceMetadataResponse:
     content_type: str = dataclasses.field()
     r"""HTTP response content type for this operation"""
-    raw_response: requests_http.Response = dataclasses.field()
-    r"""Raw HTTP response; suitable for custom response parsing"""
     status_code: int = dataclasses.field()
     r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     insert_namespace_metadata_response: Optional[shared_insertnamespacemetadataresponse.InsertNamespaceMetadataResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
