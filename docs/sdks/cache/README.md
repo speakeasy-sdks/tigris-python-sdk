@@ -31,9 +31,7 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheCreateCacheRequest(
-    create_cache_request=shared.CreateCacheRequest(
-        options=shared.CreateCacheOptions(),
-    ),
+    create_cache_request=shared.CreateCacheRequest(),
     name='string',
     project='string',
 )

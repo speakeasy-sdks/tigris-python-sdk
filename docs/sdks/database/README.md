@@ -33,9 +33,7 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisBeginTransactionRequest(
-    begin_transaction_request=shared.BeginTransactionRequest(
-        options=shared.TransactionOptions(),
-    ),
+    begin_transaction_request=shared.BeginTransactionRequest(),
     project='string',
 )
 

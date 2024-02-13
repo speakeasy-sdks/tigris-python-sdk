@@ -167,16 +167,7 @@ s = tigris.Tigris(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
 )
 
-req = shared.QueryTimeSeriesMetricsRequest(
-    additional_functions=[
-        shared.AdditionalFunction(
-            rollup=shared.RollupFunction(),
-        ),
-    ],
-    space_aggregated_by=[
-        'string',
-    ],
-)
+req = shared.QueryTimeSeriesMetricsRequest()
 
 res = s.system.query_time_series_metrics(req)
 

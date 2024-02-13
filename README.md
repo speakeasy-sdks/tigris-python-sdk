@@ -31,9 +31,7 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheCreateCacheRequest(
-    create_cache_request=shared.CreateCacheRequest(
-        options=shared.CreateCacheOptions(),
-    ),
+    create_cache_request=shared.CreateCacheRequest(),
     name='string',
     project='string',
 )
@@ -167,6 +165,7 @@ Handling errors in this SDK should largely match your expectations.  All operati
 
 ```python
 import tigris
+from tigris.models import errors
 
 s = tigris.Tigris(
     bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
@@ -177,7 +176,7 @@ res = None
 try:
     res = s.auth.get()
 except errors.SDKError as e:
-    print(e)  # handle exception
+    # handle exception
     raise(e)
 
 if res.get_access_token_response is not None:

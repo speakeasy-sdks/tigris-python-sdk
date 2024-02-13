@@ -196,11 +196,7 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeMessagesRequest(
-    messages_request=shared.MessagesRequest(
-        messages=[
-            shared.Message(),
-        ],
-    ),
+    messages_request=shared.MessagesRequest(),
     channel='string',
     project='string',
 )
