@@ -27,7 +27,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateProjectRequest(
     create_project_request=shared.CreateProjectRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.project.create(req)
@@ -69,7 +69,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteProjectRequest(
     delete_project_request=shared.DeleteProjectRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.project.delete_project(req)

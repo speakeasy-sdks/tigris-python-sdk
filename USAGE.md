@@ -9,8 +9,8 @@ s = tigris.Tigris(
 
 req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(),
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.cache.create(req)

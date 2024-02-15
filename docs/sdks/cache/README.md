@@ -32,8 +32,8 @@ s = tigris.Tigris(
 
 req = operations.CacheCreateCacheRequest(
     create_cache_request=shared.CreateCacheRequest(),
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.cache.create(req)
@@ -75,8 +75,8 @@ s = tigris.Tigris(
 
 req = operations.CacheDeleteCacheRequest(
     delete_cache_request=shared.DeleteCacheRequest(),
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.cache.delete(req)
@@ -119,8 +119,8 @@ s = tigris.Tigris(
 req = operations.CacheDelRequest(
     del_request=shared.DelRequest(),
     key='<key>',
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.cache.delete_keys(req)
@@ -162,8 +162,8 @@ s = tigris.Tigris(
 
 req = operations.CacheGetRequest(
     key='<key>',
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.cache.get_key(req)
@@ -206,8 +206,8 @@ s = tigris.Tigris(
 req = operations.CacheGetSetRequest(
     get_set_request=shared.GetSetRequest(),
     key='<key>',
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.cache.get_set_key(req)
@@ -248,7 +248,7 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheListCachesRequest(
-    project='string',
+    project='<value>',
 )
 
 res = s.cache.list(req)
@@ -289,8 +289,8 @@ s = tigris.Tigris(
 )
 
 req = operations.CacheKeysRequest(
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.cache.list_keys(req)
@@ -333,8 +333,8 @@ s = tigris.Tigris(
 req = operations.CacheSetRequest(
     set_request=shared.SetRequest(),
     key='<key>',
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.cache.set_key(req)

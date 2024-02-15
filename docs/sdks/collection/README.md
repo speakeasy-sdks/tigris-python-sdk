@@ -38,8 +38,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateOrUpdateCollectionRequest(
     create_or_update_collection_request=shared.CreateOrUpdateCollectionRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.create(req)
@@ -81,8 +81,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteRequest(
     delete_request=shared.DeleteRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.delete_documents(req)
@@ -124,8 +124,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisDescribeCollectionRequest(
     describe_collection_request=shared.DescribeCollectionRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.describe(req)
@@ -168,8 +168,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisDropCollectionRequest(
     drop_collection_request=shared.DropCollectionRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.drop(req)
@@ -216,8 +216,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisImportRequest(
     import_request=shared.ImportRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.import_documents(req)
@@ -261,8 +261,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisInsertRequest(
     insert_request=shared.InsertRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.insert_documents(req)
@@ -309,8 +309,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisReadRequest(
     read_request=shared.ReadRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.read_documents(req)
@@ -352,8 +352,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisReplaceRequest(
     replace_request=shared.ReplaceRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.replace_documents(req)
@@ -398,8 +398,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisSearchRequest(
     search_request=shared.SearchRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.search_documents(req)
@@ -441,8 +441,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisUpdateRequest(
     update_request=shared.UpdateRequest(),
-    collection='string',
-    project='string',
+    collection='<value>',
+    project='<value>',
 )
 
 res = s.collection.update_documents(req)

@@ -29,7 +29,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteAppKeyRequest(
     delete_app_key_request=shared.DeleteAppKeyRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.app_key.delete(req)
@@ -70,7 +70,7 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisListAppKeysRequest(
-    project='string',
+    project='<value>',
 )
 
 res = s.app_key.list(req)
@@ -112,7 +112,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisRotateAppKeySecretRequest(
     rotate_app_key_request=shared.RotateAppKeyRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.app_key.rotate(req)
@@ -154,7 +154,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateAppKeyRequest(
     create_app_key_request=shared.CreateAppKeyRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.app_key.tigris_create_app_key(req)
@@ -196,7 +196,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisUpdateAppKeyRequest(
     update_app_key_request=shared.UpdateAppKeyRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.app_key.update(req)

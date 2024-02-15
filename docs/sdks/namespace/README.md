@@ -100,7 +100,7 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetNamespaceMetadataRequest(
     get_namespace_metadata_request=shared.GetNamespaceMetadataRequest(),
-    metadata_key='string',
+    metadata_key='<value>',
 )
 
 res = s.namespace.get_metadata(req)
@@ -142,7 +142,7 @@ s = tigris.Tigris(
 
 req = operations.ManagementInsertNamespaceMetadataRequest(
     insert_namespace_metadata_request=shared.InsertNamespaceMetadataRequest(),
-    metadata_key='string',
+    metadata_key='<value>',
 )
 
 res = s.namespace.insert_metadata(req)
@@ -215,7 +215,7 @@ s = tigris.Tigris(
 
 req = operations.ManagementUpdateNamespaceMetadataRequest(
     update_namespace_metadata_request=shared.UpdateNamespaceMetadataRequest(),
-    metadata_key='string',
+    metadata_key='<value>',
 )
 
 res = s.namespace.update_metadata(req)

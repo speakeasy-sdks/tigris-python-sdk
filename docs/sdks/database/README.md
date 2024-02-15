@@ -34,7 +34,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisBeginTransactionRequest(
     begin_transaction_request=shared.BeginTransactionRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.database.begin_transaction(req)
@@ -77,7 +77,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisCommitTransactionRequest(
     commit_transaction_request=shared.CommitTransactionRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.database.commit_transaction(req)
@@ -119,8 +119,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisCreateBranchRequest(
     create_branch_request=shared.CreateBranchRequest(),
-    branch='string',
-    project='string',
+    branch='<value>',
+    project='<value>',
 )
 
 res = s.database.create_branch(req)
@@ -163,8 +163,8 @@ s = tigris.Tigris(
 
 req = operations.TigrisDeleteBranchRequest(
     delete_branch_request=shared.DeleteBranchRequest(),
-    branch='string',
-    project='string',
+    branch='<value>',
+    project='<value>',
 )
 
 res = s.database.delete_branch(req)
@@ -207,7 +207,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisDescribeDatabaseRequest(
     describe_database_request=shared.DescribeDatabaseRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.database.describe(req)
@@ -248,7 +248,7 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisListCollectionsRequest(
-    project='string',
+    project='<value>',
 )
 
 res = s.database.list_collections(req)
@@ -291,7 +291,7 @@ s = tigris.Tigris(
 
 req = operations.TigrisRollbackTransactionRequest(
     rollback_transaction_request=shared.RollbackTransactionRequest(),
-    project='string',
+    project='<value>',
 )
 
 res = s.database.rollback_transaction(req)
@@ -332,7 +332,7 @@ s = tigris.Tigris(
 )
 
 req = operations.TigrisListBranchesRequest(
-    project='string',
+    project='<value>',
 )
 
 res = s.database.tigris_list_branches(req)

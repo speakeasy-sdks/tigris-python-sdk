@@ -29,8 +29,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeGetRTChannelRequest(
-    channel='string',
-    project='string',
+    channel='<value>',
+    project='<value>',
 )
 
 res = s.channel.get(req)
@@ -71,8 +71,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeReadMessagesRequest(
-    channel='string',
-    project='string',
+    channel='<value>',
+    project='<value>',
 )
 
 res = s.channel.get_messages(req)
@@ -113,7 +113,7 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeGetRTChannelsRequest(
-    project='string',
+    project='<value>',
 )
 
 res = s.channel.list(req)
@@ -154,8 +154,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimeListSubscriptionsRequest(
-    channel='string',
-    project='string',
+    channel='<value>',
+    project='<value>',
 )
 
 res = s.channel.list_subscriptions(req)
@@ -197,8 +197,8 @@ s = tigris.Tigris(
 
 req = operations.RealtimeMessagesRequest(
     messages_request=shared.MessagesRequest(),
-    channel='string',
-    project='string',
+    channel='<value>',
+    project='<value>',
 )
 
 res = s.channel.push_messages(req)
@@ -239,8 +239,8 @@ s = tigris.Tigris(
 )
 
 req = operations.RealtimePresenceRequest(
-    channel='string',
-    project='string',
+    channel='<value>',
+    project='<value>',
 )
 
 res = s.channel.realtime_presence(req)

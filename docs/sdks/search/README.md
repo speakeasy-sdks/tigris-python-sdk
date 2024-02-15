@@ -39,9 +39,9 @@ s = tigris.Tigris(
 
 req = operations.SearchCreateByIDRequest(
     create_by_id_request=shared.CreateByIDRequest(),
-    id='<ID>',
-    index='string',
-    project='string',
+    id='<id>',
+    index='<value>',
+    project='<value>',
 )
 
 res = s.search.create_document(req)
@@ -87,8 +87,8 @@ s = tigris.Tigris(
 
 req = operations.SearchCreateRequest(
     create_document_request=shared.CreateDocumentRequest(),
-    index='string',
-    project='string',
+    index='<value>',
+    project='<value>',
 )
 
 res = s.search.create_documents(req)
@@ -132,8 +132,8 @@ s = tigris.Tigris(
 
 req = operations.SearchDeleteRequest(
     delete_document_request=shared.DeleteDocumentRequest(),
-    index='string',
-    project='string',
+    index='<value>',
+    project='<value>',
 )
 
 res = s.search.delete_documents(req)
@@ -175,8 +175,8 @@ s = tigris.Tigris(
 
 req = operations.SearchDeleteIndexRequest(
     delete_index_request=shared.DeleteIndexRequest(),
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.search.delete_index(req)
@@ -222,8 +222,8 @@ s = tigris.Tigris(
 
 req = operations.SearchSearchRequest(
     search_index_request=shared.SearchIndexRequest(),
-    index='string',
-    project='string',
+    index='<value>',
+    project='<value>',
 )
 
 res = s.search.find_documents(req)
@@ -265,8 +265,8 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchGetRequest(
-    index='string',
-    project='string',
+    index='<value>',
+    project='<value>',
 )
 
 res = s.search.get_documents(req)
@@ -307,8 +307,8 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchGetIndexRequest(
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.search.get_index(req)
@@ -349,7 +349,7 @@ s = tigris.Tigris(
 )
 
 req = operations.SearchListIndexesRequest(
-    project='string',
+    project='<value>',
 )
 
 res = s.search.list_indexes(req)
@@ -392,8 +392,8 @@ s = tigris.Tigris(
 
 req = operations.SearchDeleteByQueryRequest(
     delete_by_query_request=shared.DeleteByQueryRequest(),
-    index='string',
-    project='string',
+    index='<value>',
+    project='<value>',
 )
 
 res = s.search.query_delete_documents(req)
@@ -438,8 +438,8 @@ s = tigris.Tigris(
 
 req = operations.SearchCreateOrReplaceRequest(
     create_or_replace_document_request=shared.CreateOrReplaceDocumentRequest(),
-    index='string',
-    project='string',
+    index='<value>',
+    project='<value>',
 )
 
 res = s.search.replace_documents(req)
@@ -484,8 +484,8 @@ s = tigris.Tigris(
 
 req = operations.SearchUpdateRequest(
     update_document_request=shared.UpdateDocumentRequest(),
-    index='string',
-    project='string',
+    index='<value>',
+    project='<value>',
 )
 
 res = s.search.update_documents(req)
@@ -527,8 +527,8 @@ s = tigris.Tigris(
 
 req = operations.SearchCreateOrUpdateIndexRequest(
     create_or_update_index_request=shared.CreateOrUpdateIndexRequest(),
-    name='string',
-    project='string',
+    name='<value>',
+    project='<value>',
 )
 
 res = s.search.update_index(req)

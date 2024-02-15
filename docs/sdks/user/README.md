@@ -27,7 +27,7 @@ s = tigris.Tigris(
 
 req = operations.ManagementGetUserMetadataRequest(
     get_user_metadata_request=shared.GetUserMetadataRequest(),
-    metadata_key='string',
+    metadata_key='<value>',
 )
 
 res = s.user.get_metadata(req)
@@ -69,7 +69,7 @@ s = tigris.Tigris(
 
 req = operations.ManagementInsertUserMetadataRequest(
     insert_user_metadata_request=shared.InsertUserMetadataRequest(),
-    metadata_key='string',
+    metadata_key='<value>',
 )
 
 res = s.user.insert_metadata(req)
@@ -111,7 +111,7 @@ s = tigris.Tigris(
 
 req = operations.ManagementUpdateUserMetadataRequest(
     update_user_metadata_request=shared.UpdateUserMetadataRequest(),
-    metadata_key='string',
+    metadata_key='<value>',
 )
 
 res = s.user.update_metadata(req)
