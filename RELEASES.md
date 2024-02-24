@@ -347,3 +347,11 @@ Based on:
 - Speakeasy CLI 1.180.0 (2.258.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [python v0.7.1] .
+
+## 2024-02-24 00:24:31
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 https://prod.speakeasyapi.dev/v1/apis/tigris-api/version/0.0.1/schema/download
+- Speakeasy CLI 1.193.4 (2.272.4) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [python v0.7.2] .

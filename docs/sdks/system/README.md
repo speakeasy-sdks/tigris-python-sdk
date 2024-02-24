@@ -22,9 +22,7 @@ This endpoint can be used to check the liveness of the server.
 ```python
 import tigris
 
-s = tigris.Tigris(
-    bearer_auth="<YOUR_BEARER_TOKEN_HERE>",
-)
+s = tigris.Tigris()
 
 
 res = s.system.get_health()
