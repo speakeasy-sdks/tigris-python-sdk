@@ -4,17 +4,17 @@ management:
   docChecksum: db7bd8f69518c551928aef7eb16008e2
   docVersion: 0.0.1
   speakeasyVersion: internal
-  generationVersion: 2.272.4
-  releaseVersion: 0.7.2
-  configChecksum: a8a769e3c79497220366454ff4acb467
+  generationVersion: 2.275.4
+  releaseVersion: 0.8.0
+  configChecksum: e4947b0f41d047fca169a37f9da0ca9d
   repoURL: https://github.com/speakeasy-sdks/tigris-python-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/tigris-python-sdk.git
 features:
   python:
-    core: 4.4.7
+    core: 4.5.0
     examples: 2.81.3
-    globalSecurity: 2.83.3
+    globalSecurity: 2.83.4
     globalServerURLs: 2.82.1
     nameOverrides: 2.81.1
 generatedFiles:
@@ -603,3 +603,6 @@ generatedFiles:
   - docs/sdks/search/README.md
   - USAGE.md
   - .gitattributes
+  - src/tigris/_hooks/sdkhooks.py
+  - src/tigris/_hooks/types.py
+  - src/tigris/_hooks/__init__.py
