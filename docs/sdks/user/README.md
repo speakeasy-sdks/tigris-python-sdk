@@ -35,6 +35,7 @@ res = s.user.get_metadata(req)
 if res.get_user_metadata_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -77,6 +78,7 @@ res = s.user.insert_metadata(req)
 if res.insert_user_metadata_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -119,6 +121,7 @@ res = s.user.update_metadata(req)
 if res.update_user_metadata_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

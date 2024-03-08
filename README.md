@@ -41,6 +41,7 @@ res = s.cache.create(req)
 if res.create_cache_response is not None:
     # handle response
     pass
+
 ```
 <!-- End SDK Example Usage [usage] -->
 
@@ -182,6 +183,7 @@ except errors.SDKError as e:
 if res.get_access_token_response is not None:
     # handle response
     pass
+
 ```
 <!-- End Error Handling [errors] -->
 
@@ -215,6 +217,7 @@ res = s.auth.get()
 if res.get_access_token_response is not None:
     # handle response
     pass
+
 ```
 
 
@@ -235,6 +238,7 @@ res = s.auth.get()
 if res.get_access_token_response is not None:
     # handle response
     pass
+
 ```
 <!-- End Server Selection [server] -->
 
@@ -283,6 +287,7 @@ res = s.auth.get()
 if res.get_access_token_response is not None:
     # handle response
     pass
+
 ```
 <!-- End Authentication [security] -->
 

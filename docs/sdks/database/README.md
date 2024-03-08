@@ -42,6 +42,7 @@ res = s.database.begin_transaction(req)
 if res.begin_transaction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -85,6 +86,7 @@ res = s.database.commit_transaction(req)
 if res.commit_transaction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -128,6 +130,7 @@ res = s.database.create_branch(req)
 if res.create_branch_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -172,6 +175,7 @@ res = s.database.delete_branch(req)
 if res.delete_branch_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -215,6 +219,7 @@ res = s.database.describe(req)
 if res.describe_database_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -256,6 +261,7 @@ res = s.database.list_collections(req)
 if res.list_collections_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -299,6 +305,7 @@ res = s.database.rollback_transaction(req)
 if res.rollback_transaction_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -340,6 +347,7 @@ res = s.database.tigris_list_branches(req)
 if res.list_branches_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -47,6 +47,7 @@ res = s.collection.create(req)
 if res.create_or_update_collection_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -90,6 +91,7 @@ res = s.collection.delete_documents(req)
 if res.delete_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -133,6 +135,7 @@ res = s.collection.describe(req)
 if res.describe_collection_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -177,6 +180,7 @@ res = s.collection.drop(req)
 if res.drop_collection_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -225,6 +229,7 @@ res = s.collection.import_documents(req)
 if res.import_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -270,6 +275,7 @@ res = s.collection.insert_documents(req)
 if res.insert_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -318,6 +324,7 @@ res = s.collection.read_documents(req)
 if res.streaming_read_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -361,6 +368,7 @@ res = s.collection.replace_documents(req)
 if res.replace_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -407,6 +415,7 @@ res = s.collection.search_documents(req)
 if res.streaming_search_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -450,6 +459,7 @@ res = s.collection.update_documents(req)
 if res.update_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

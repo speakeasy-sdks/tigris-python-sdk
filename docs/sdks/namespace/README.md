@@ -35,6 +35,7 @@ res = s.namespace.create(req)
 if res.create_namespace_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -72,6 +73,7 @@ res = s.namespace.get()
 if res.describe_namespaces_response is not None:
     # handle response
     pass
+
 ```
 
 
@@ -108,6 +110,7 @@ res = s.namespace.get_metadata(req)
 if res.get_namespace_metadata_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -150,6 +153,7 @@ res = s.namespace.insert_metadata(req)
 if res.insert_namespace_metadata_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -187,6 +191,7 @@ res = s.namespace.list()
 if res.list_namespaces_response is not None:
     # handle response
     pass
+
 ```
 
 
@@ -223,6 +228,7 @@ res = s.namespace.update_metadata(req)
 if res.update_namespace_metadata_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -49,6 +49,7 @@ res = s.search.create_document(req)
 if res.create_by_id_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -96,6 +97,7 @@ res = s.search.create_documents(req)
 if res.create_document_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -141,6 +143,7 @@ res = s.search.delete_documents(req)
 if res.delete_document_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -184,6 +187,7 @@ res = s.search.delete_index(req)
 if res.delete_index_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -231,6 +235,7 @@ res = s.search.find_documents(req)
 if res.search_index_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -274,6 +279,7 @@ res = s.search.get_documents(req)
 if res.get_document_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -316,6 +322,7 @@ res = s.search.get_index(req)
 if res.get_index_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -357,6 +364,7 @@ res = s.search.list_indexes(req)
 if res.list_indexes_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -401,6 +409,7 @@ res = s.search.query_delete_documents(req)
 if res.delete_by_query_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -447,6 +456,7 @@ res = s.search.replace_documents(req)
 if res.create_or_replace_document_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -493,6 +503,7 @@ res = s.search.update_documents(req)
 if res.update_document_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters
@@ -536,6 +547,7 @@ res = s.search.update_index(req)
 if res.create_or_update_index_response is not None:
     # handle response
     pass
+
 ```
 
 ### Parameters

@@ -30,6 +30,7 @@ res = s.auth.get()
 if res.get_access_token_response is not None:
     # handle response
     pass
+
 ```
 
 
