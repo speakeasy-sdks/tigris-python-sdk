@@ -3,27 +3,32 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createprojectresponse as shared_createprojectresponse
-from ..shared import status as shared_status
-from typing import Any, Optional
+from ...models.shared import createprojectrequest as shared_createprojectrequest
+from ...models.shared import createprojectresponse as shared_createprojectresponse
+from ...models.shared import status as shared_status
+from typing import Optional
 
 
 @dataclasses.dataclass
 class TigrisCreateProjectRequest:
-    
+    create_project_request: shared_createprojectrequest.CreateProjectRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Create project with this name."""
-    request_body: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
+
+
 
 @dataclasses.dataclass
 class TigrisCreateProjectResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     create_project_response: Optional[shared_createprojectresponse.CreateProjectResponse] = dataclasses.field(default=None)
     r"""OK"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

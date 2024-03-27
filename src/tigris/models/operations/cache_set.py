@@ -3,32 +3,36 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import setrequest as shared_setrequest
-from ..shared import setresponse as shared_setresponse
-from ..shared import status as shared_status
+from ...models.shared import setrequest as shared_setrequest
+from ...models.shared import setresponse as shared_setresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 
 @dataclasses.dataclass
 class CacheSetRequest:
-    
+    set_request: shared_setrequest.SetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'key', 'style': 'simple', 'explode': False }})
     r"""cache key"""
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     r"""cache name"""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Tigris project name"""
-    set_request: shared_setrequest.SetRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
+
+
 
 @dataclasses.dataclass
 class CacheSetResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     set_response: Optional[shared_setresponse.SetResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

@@ -2,17 +2,16 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import cachemetadata as shared_cachemetadata
+from .cachemetadata import CacheMetadata
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ListCachesResponse:
-    r"""OK"""
-    
-    caches: Optional[list[shared_cachemetadata.CacheMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('caches'), 'exclude': lambda f: f is None }})
+    caches: Optional[List[CacheMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('caches'), 'exclude': lambda f: f is None }})
     r"""List of caches metadata"""
     
+

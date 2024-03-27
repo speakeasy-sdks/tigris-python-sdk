@@ -11,7 +11,6 @@ from typing import Optional
 @dataclasses.dataclass
 class UpdateAppKeyRequest:
     r"""To update the description of the app key"""
-    
     description: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('description'), 'exclude': lambda f: f is None }})
     r"""A new human readable app description"""
     id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
@@ -19,3 +18,4 @@ class UpdateAppKeyRequest:
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     r"""A new human readable app name"""
     
+

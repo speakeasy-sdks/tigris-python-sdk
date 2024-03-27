@@ -3,15 +3,14 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createorupdateindexrequest as shared_createorupdateindexrequest
-from ..shared import createorupdateindexresponse as shared_createorupdateindexresponse
-from ..shared import status as shared_status
+from ...models.shared import createorupdateindexrequest as shared_createorupdateindexrequest
+from ...models.shared import createorupdateindexresponse as shared_createorupdateindexresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 
 @dataclasses.dataclass
 class SearchCreateOrUpdateIndexRequest:
-    
     create_or_update_index_request: shared_createorupdateindexrequest.CreateOrUpdateIndexRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'name', 'style': 'simple', 'explode': False }})
     r"""search index name."""
@@ -19,14 +18,19 @@ class SearchCreateOrUpdateIndexRequest:
     r"""Tigris project name."""
     
 
+
+
 @dataclasses.dataclass
 class SearchCreateOrUpdateIndexResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     create_or_update_index_response: Optional[shared_createorupdateindexresponse.CreateOrUpdateIndexResponse] = dataclasses.field(default=None)
     r"""OK"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

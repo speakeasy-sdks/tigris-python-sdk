@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import appkey as shared_appkey
+from .appkey import AppKey
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import Optional
@@ -12,7 +12,7 @@ from typing import Optional
 @dataclasses.dataclass
 class UpdateAppKeyResponse:
     r"""Returns response for updating the app key description"""
-    
-    updated_app_key: Optional[shared_appkey.AppKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_app_key'), 'exclude': lambda f: f is None }})
+    updated_app_key: Optional[AppKey] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('updated_app_key'), 'exclude': lambda f: f is None }})
     r"""An user AppKey"""
     
+

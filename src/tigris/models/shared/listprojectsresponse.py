@@ -2,17 +2,16 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import projectinfo as shared_projectinfo
+from .projectinfo import ProjectInfo
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
-from typing import Optional
+from typing import List, Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ListProjectsResponse:
-    r"""OK"""
-    
-    projects: Optional[list[shared_projectinfo.ProjectInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('projects'), 'exclude': lambda f: f is None }})
+    projects: Optional[List[ProjectInfo]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('projects'), 'exclude': lambda f: f is None }})
     r"""List of the projects."""
     
+

@@ -3,26 +3,30 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import listcachesresponse as shared_listcachesresponse
-from ..shared import status as shared_status
+from ...models.shared import listcachesresponse as shared_listcachesresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 
 @dataclasses.dataclass
 class CacheListCachesRequest:
-    
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Tigris project name"""
     
 
+
+
 @dataclasses.dataclass
 class CacheListCachesResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     list_caches_response: Optional[shared_listcachesresponse.ListCachesResponse] = dataclasses.field(default=None)
     r"""OK"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

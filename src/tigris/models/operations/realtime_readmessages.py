@@ -3,14 +3,13 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import readmessagesresponse as shared_readmessagesresponse
-from ..shared import status as shared_status
+from ...models.shared import readmessagesresponse as shared_readmessagesresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 
 @dataclasses.dataclass
 class RealtimeReadMessagesRequest:
-    
     channel: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channel', 'style': 'simple', 'explode': False }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     end: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'end', 'style': 'form', 'explode': True }})
@@ -21,14 +20,19 @@ class RealtimeReadMessagesRequest:
     start: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'start', 'style': 'form', 'explode': True }})
     
 
+
+
 @dataclasses.dataclass
 class RealtimeReadMessagesResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     read_messages_response: Optional[shared_readmessagesresponse.ReadMessagesResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

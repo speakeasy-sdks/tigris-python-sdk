@@ -11,7 +11,6 @@ from typing import Optional
 @dataclasses.dataclass
 class FacetStats:
     r"""Additional stats for faceted field"""
-    
     avg: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('avg'), 'exclude': lambda f: f is None }})
     r"""Average of all values in a field. Only available for numeric fields"""
     count: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('count'), 'exclude': lambda f: f is None }})
@@ -23,3 +22,4 @@ class FacetStats:
     sum: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sum'), 'exclude': lambda f: f is None }})
     r"""Sum of all values in a field. Only available for numeric fields"""
     
+

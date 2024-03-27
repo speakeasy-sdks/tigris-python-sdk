@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import dataclasses
-from ..shared import collation as shared_collation
+from .collation import Collation
 from dataclasses_json import Undefined, dataclass_json
 from tigris import utils
 from typing import Optional
@@ -12,8 +12,7 @@ from typing import Optional
 @dataclasses.dataclass
 class ReadRequestOptions:
     r"""Options that can be used to modify the results, for example \\"limit\\" to control the number of documents returned by the server."""
-    
-    collation: Optional[shared_collation.Collation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collation'), 'exclude': lambda f: f is None }})
+    collation: Optional[Collation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('collation'), 'exclude': lambda f: f is None }})
     r"""A collation allows you to specify string comparison rules. Default is case-sensitive, to override it you can set this option to 'ci' that will apply to all the text fields in the filters."""
     limit: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('limit'), 'exclude': lambda f: f is None }})
     r"""Limit the number of documents returned by the read operation."""
@@ -22,3 +21,4 @@ class ReadRequestOptions:
     skip: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('skip'), 'exclude': lambda f: f is None }})
     r"""Number of documents to skip before starting to return resulting documents."""
     
+

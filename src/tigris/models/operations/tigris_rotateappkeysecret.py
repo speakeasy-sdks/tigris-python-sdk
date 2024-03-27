@@ -3,28 +3,32 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import rotateappkeyrequest as shared_rotateappkeyrequest
-from ..shared import rotateappkeyresponse as shared_rotateappkeyresponse
-from ..shared import status as shared_status
+from ...models.shared import rotateappkeyrequest as shared_rotateappkeyrequest
+from ...models.shared import rotateappkeyresponse as shared_rotateappkeyresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 
 @dataclasses.dataclass
 class TigrisRotateAppKeySecretRequest:
-    
+    rotate_app_key_request: shared_rotateappkeyrequest.RotateAppKeyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""project name"""
-    rotate_app_key_request: shared_rotateappkeyrequest.RotateAppKeyRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
+
+
 
 @dataclasses.dataclass
 class TigrisRotateAppKeySecretResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     rotate_app_key_response: Optional[shared_rotateappkeyresponse.RotateAppKeyResponse] = dataclasses.field(default=None)
     r"""OK"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

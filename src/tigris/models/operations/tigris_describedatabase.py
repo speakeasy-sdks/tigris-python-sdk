@@ -3,28 +3,32 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import describedatabaserequest as shared_describedatabaserequest
-from ..shared import describedatabaseresponse as shared_describedatabaseresponse
-from ..shared import status as shared_status
+from ...models.shared import describedatabaserequest as shared_describedatabaserequest
+from ...models.shared import describedatabaseresponse as shared_describedatabaseresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 
 @dataclasses.dataclass
 class TigrisDescribeDatabaseRequest:
-    
     describe_database_request: shared_describedatabaserequest.DescribeDatabaseRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Project name whose db is under target to get description."""
     
 
+
+
 @dataclasses.dataclass
 class TigrisDescribeDatabaseResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     describe_database_response: Optional[shared_describedatabaseresponse.DescribeDatabaseResponse] = dataclasses.field(default=None)
     r"""OK"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

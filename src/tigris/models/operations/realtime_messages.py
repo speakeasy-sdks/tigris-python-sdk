@@ -3,28 +3,32 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import messagesrequest as shared_messagesrequest
-from ..shared import messagesresponse as shared_messagesresponse
-from ..shared import status as shared_status
+from ...models.shared import messagesrequest as shared_messagesrequest
+from ...models.shared import messagesresponse as shared_messagesresponse
+from ...models.shared import status as shared_status
 from typing import Optional
 
 
 @dataclasses.dataclass
 class RealtimeMessagesRequest:
-    
-    channel: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channel', 'style': 'simple', 'explode': False }})
     messages_request: shared_messagesrequest.MessagesRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    channel: str = dataclasses.field(metadata={'path_param': { 'field_name': 'channel', 'style': 'simple', 'explode': False }})
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     
 
+
+
 @dataclasses.dataclass
 class RealtimeMessagesResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     messages_response: Optional[shared_messagesresponse.MessagesResponse] = dataclasses.field(default=None)
     r"""OK"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

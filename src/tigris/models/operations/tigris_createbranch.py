@@ -3,29 +3,34 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import createbranchresponse as shared_createbranchresponse
-from ..shared import status as shared_status
-from typing import Any, Optional
+from ...models.shared import createbranchrequest as shared_createbranchrequest
+from ...models.shared import createbranchresponse as shared_createbranchresponse
+from ...models.shared import status as shared_status
+from typing import Optional
 
 
 @dataclasses.dataclass
 class TigrisCreateBranchRequest:
-    
+    create_branch_request: shared_createbranchrequest.CreateBranchRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     branch: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch', 'style': 'simple', 'explode': False }})
     r"""Name of the database branch to be created. <p></p>**Note**: `main` is a reserved branch name for primary database and is automatically created with CreateProject"""
     project: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project', 'style': 'simple', 'explode': False }})
     r"""Create a database branch in this project"""
-    request_body: dict[str, Any] = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     
+
+
 
 @dataclasses.dataclass
 class TigrisCreateBranchResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     create_branch_response: Optional[shared_createbranchresponse.CreateBranchResponse] = dataclasses.field(default=None)
     r"""OK"""
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     
+

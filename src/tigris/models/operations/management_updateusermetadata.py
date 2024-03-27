@@ -3,27 +3,31 @@
 from __future__ import annotations
 import dataclasses
 import requests as requests_http
-from ..shared import status as shared_status
-from ..shared import updateusermetadatarequest as shared_updateusermetadatarequest
-from ..shared import updateusermetadataresponse as shared_updateusermetadataresponse
+from ...models.shared import status as shared_status
+from ...models.shared import updateusermetadatarequest as shared_updateusermetadatarequest
+from ...models.shared import updateusermetadataresponse as shared_updateusermetadataresponse
 from typing import Optional
 
 
 @dataclasses.dataclass
 class ManagementUpdateUserMetadataRequest:
-    
-    metadata_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'metadataKey', 'style': 'simple', 'explode': False }})
     update_user_metadata_request: shared_updateusermetadatarequest.UpdateUserMetadataRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
+    metadata_key: str = dataclasses.field(metadata={'path_param': { 'field_name': 'metadataKey', 'style': 'simple', 'explode': False }})
     
+
+
 
 @dataclasses.dataclass
 class ManagementUpdateUserMetadataResponse:
-    
     content_type: str = dataclasses.field()
+    r"""HTTP response content type for this operation"""
     status_code: int = dataclasses.field()
-    raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
+    r"""HTTP response status code for this operation"""
+    raw_response: requests_http.Response = dataclasses.field()
+    r"""Raw HTTP response; suitable for custom response parsing"""
     status: Optional[shared_status.Status] = dataclasses.field(default=None)
     r"""Default error response"""
     update_user_metadata_response: Optional[shared_updateusermetadataresponse.UpdateUserMetadataResponse] = dataclasses.field(default=None)
     r"""OK"""
     
+
